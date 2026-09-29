@@ -127,8 +127,14 @@ nav:
       - ¿Qué hago si un documento es rechazado?: facturacion-electronica/documento-rechazado.md
       - ¿Cómo emito un documento soporte?: facturacion-electronica/documento-soporte.md
       - ¿Cómo registro una resolución de la DIAN?: facturacion-electronica/resoluciones.md
+  - Impuestos:
+      - impuestos/index.md
+      - ¿Cómo creo un impuesto o una retención?: impuestos/crear-impuesto.md
+      - ¿Qué es y cómo creo un catálogo de impuestos?: impuestos/catalogo-impuestos.md
+      - ¿Cómo se aplican las retenciones?: impuestos/retenciones.md
   - Finanzas:
       - finanzas/index.md
+      - ¿Qué es un anticipo y cómo se maneja?: finanzas/anticipos.md
       - ¿Cómo registro un pago de un cliente?: finanzas/registrar-ingreso.md
       - ¿Cómo registro un pago a un proveedor?: finanzas/registrar-egreso.md
   - Más módulos:
@@ -138,6 +144,7 @@ nav:
       - Restaurante: restaurante/index.md
       - Administración: administracion/index.md
   - Ayuda:
+      - Glosario (¿qué es…?): glosario.md
       - Soluciones rápidas:
           - soluciones-rapidas/index.md
           - Acceso al sistema: soluciones-rapidas/acceso.md

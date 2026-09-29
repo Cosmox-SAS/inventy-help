@@ -15,6 +15,7 @@ Todo lo relacionado con el dinero está en el menú **Tesorería**.
 
 - [¿Cómo registro un pago de un cliente?](registrar-ingreso.md) (Ingresos)
 - [¿Cómo registro un pago a un proveedor?](registrar-egreso.md) (Egresos)
+- [¿Qué es un anticipo y cómo se maneja?](anticipos.md)
 - [¿Cómo abro la caja?](../pos/abrir-caja.md) y [¿Cómo cierro la caja?](../pos/cierre-de-caja.md)
 
 ## ¿Qué hay en Tesorería?

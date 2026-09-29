@@ -2,7 +2,7 @@
 
 > Generado con `python scripts/check_docs.py --estado > gestion/estado-articulos.md`. No editar a mano.
 
-**Pendiente de validación:** 48
+**Pendiente de validación:** 54
 
 | Módulo | Artículo | Tipo | Estado | Capturas pendientes | Validaciones pendientes | Revisado |
 |---|---|---|---|---|---|---|
@@ -22,11 +22,16 @@
 | finanzas | [Finanzas](../docs/finanzas/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | finanzas | [¿Cómo registro un pago a un proveedor?](../docs/finanzas/registrar-egreso.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | finanzas | [¿Cómo registro un pago de un cliente?](../docs/finanzas/registrar-ingreso.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
+| finanzas | [¿Qué es un anticipo y cómo se maneja en Inventy?](../docs/finanzas/anticipos.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-29 |
+| impuestos | [Impuestos y retenciones](../docs/impuestos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
+| impuestos | [¿Cómo creo un impuesto o una retención?](../docs/impuestos/crear-impuesto.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-29 |
+| impuestos | [¿Cómo se aplican las retenciones?](../docs/impuestos/retenciones.md) | rapida | Pendiente de validación | 0 | 1 | 2026-09-29 |
+| impuestos | [¿Qué es y cómo creo un catálogo de impuestos?](../docs/impuestos/catalogo-impuestos.md) | rapida | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | pos | [Punto de venta (POS)](../docs/pos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | pos | [Soluciones rápidas: POS y caja](../docs/soluciones-rapidas/pos-caja.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | pos | [¿Cómo abro la caja?](../docs/pos/abrir-caja.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | pos | [¿Cómo cierro la caja?](../docs/pos/cierre-de-caja.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
-| pos | [¿Cómo vendo en el POS?](../docs/pos/vender-en-pos.md) | tutorial | Pendiente de validación | 2 | 1 | 2026-09-29 |
+| pos | [¿Cómo vendo en el POS?](../docs/pos/vender-en-pos.md) | tutorial | Pendiente de validación | 2 | 0 | 2026-09-29 |
 | primeros-pasos | [Bienvenido a Inventy](../docs/primeros-pasos/bienvenida.md) | concepto | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | primeros-pasos | [Conociendo la pantalla principal](../docs/primeros-pasos/pantalla-principal.md) | concepto | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | primeros-pasos | [Primeros pasos](../docs/primeros-pasos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
@@ -46,6 +51,7 @@
 | recursos-humanos | [Nómina y recursos humanos](../docs/recursos-humanos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | restaurante | [Restaurante](../docs/restaurante/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | soporte | [Contactar a soporte](../docs/soporte.md) | referencia | Pendiente de validación | 0 | 1 | 2026-09-29 |
+| soporte | [Glosario: ¿qué es…?](../docs/glosario.md) | referencia | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | soporte | [Preguntas frecuentes](../docs/preguntas-frecuentes.md) | faq | Pendiente de validación | 0 | 1 | 2026-09-29 |
 | soporte | [Soluciones rápidas: acceso al sistema](../docs/soluciones-rapidas/acceso.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | soporte | [Soluciones rápidas](../docs/soluciones-rapidas/index.md) | indice | Pendiente de validación | 0 | 1 | 2026-09-29 |

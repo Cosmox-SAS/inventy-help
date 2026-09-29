@@ -27,6 +27,14 @@ Escribe tu duda en el **buscador** de la parte superior (por ejemplo: *cerrar ca
 
 </div>
 
+## ¿No entiendes un término?
+
+<div class="tarjetas" markdown>
+
+[**:material-book-alphabet: Glosario: ¿qué es…?**<span>Anticipo, retención, catálogo de impuestos, CUFE, kardex… en dos líneas.</span>](glosario.md)
+
+</div>
+
 ## Temas
 
 <div class="tarjetas" markdown>
@@ -43,7 +51,9 @@ Escribe tu duda en el **buscador** de la parte superior (por ejemplo: *cerrar ca
 
 [**:material-file-check: Facturación electrónica**<span>Emisión, estados y rechazos DIAN.</span>](facturacion-electronica/index.md)
 
-[**:material-bank: Finanzas**<span>Pagos de clientes y a proveedores.</span>](finanzas/index.md)
+[**:material-bank: Finanzas**<span>Pagos, anticipos, cajas y bancos.</span>](finanzas/index.md)
+
+[**:material-percent: Impuestos y retenciones**<span>Catálogos, IVA, retefuente, reteIVA.</span>](impuestos/index.md)
 
 [**:material-calculator: Contabilidad**<span>Plan de cuentas, asientos e informes.</span>](contabilidad/index.md)
 

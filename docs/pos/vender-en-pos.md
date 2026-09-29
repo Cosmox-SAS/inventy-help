@@ -80,7 +80,7 @@ Cada clic agrega una unidad al carrito.
 
 ## Ventas a crédito
 
-Si el cliente pagará después, elige el medio de pago a **crédito** e indica el **Plazo (días)** o la **Fecha de vencimiento**. [PENDIENTE DE VALIDACIÓN FUNCIONAL: nombre exacto del medio de pago a crédito.]
+Si el cliente pagará después, elige el medio de pago de tipo **Crédito** (cada empresa le pone su nombre en <span class="ruta">Ventas › Ajustes › Medios de Pago</span>) e indica el **Plazo (días)** o la **Fecha de vencimiento**.
 
 - Si la venta supera el **cupo de crédito** del cliente, verás: *“El saldo a crédito supera el cupo disponible del cliente…”*. Cobra una parte con otro medio o reduce el valor a crédito.
 - Si tu empresa exige autorización, un supervisor puede aprobar el cupo extra escribiendo su **PIN** en **Autorización de supervisor**.

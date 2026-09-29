@@ -83,6 +83,20 @@ tags:
 ??? question "¿Por qué no veo un menú que mi compañero sí ve?"
     Depende del plan, de los módulos activos y de los permisos de tu rol. Ver [solución](soluciones-rapidas/usuarios.md#no-veo-un-menu-o-una-opcion).
 
+## Conceptos
+
+??? question "¿Qué es el catálogo de impuestos?"
+    Un paquete de impuestos que se asigna a cada producto: qué se cobra al venderlo y qué se paga al comprarlo. Ver [guía](impuestos/catalogo-impuestos.md).
+
+??? question "¿Cómo se aplican las retenciones?"
+    Se configuran en la ficha del cliente o proveedor (Retefuente, Reteiva, Reteica) y Inventy las calcula solo en cada factura. Ver [guía](impuestos/retenciones.md).
+
+??? question "¿Qué es un anticipo?"
+    Dinero pagado antes de la factura. Queda como saldo a favor y luego se aplica. Ver [guía](finanzas/anticipos.md).
+
+??? question "No entiendo un término"
+    Búscalo en el [Glosario](glosario.md).
+
 ## Soporte
 
 ??? question "¿Qué información envío a soporte?"
