@@ -21,7 +21,7 @@ El módulo **Restaurante** adapta el POS a la operación de restaurantes, cafete
 | | **Tablero de pedidos** | Vista de los pedidos del POS por estado. |
 | | **Estaciones de preparación** | Cocina, bar, etc. Cada producto se envía a su estación. |
 | | **Mesas** | Distribución visual de las mesas del local. |
-| Domicilios | **Repartidores**, **Liquidación** | Domiciliarios y liquidación de sus entregas. |
+| Domicilios | **Repartidores**, **Liquidación** | Domiciliarios y liquidación de sus entregas. Ver [guía](domicilios.md). |
 | Propinas | **Colaboradores**, **Liquidación**, **Reporte** | Reparto de propinas al equipo. |
 
 ## Opciones de configuración
@@ -44,5 +44,4 @@ Con el módulo activo, el POS permite elegir el **tipo de pedido** (por ejemplo,
 | Configurar mesas y estaciones de preparación | Por redactar |
 | Crear productos de restaurante (tipo de producto y estación) | Por redactar |
 | Tomar un pedido a la mesa y cobrarlo | Por redactar |
-| Pedidos a domicilio y liquidación de repartidores | Por redactar |
 | Propinas: configuración y liquidación | Por redactar |

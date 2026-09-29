@@ -141,7 +141,9 @@ nav:
       - Contabilidad: contabilidad/index.md
       - Distribución: distribucion/index.md
       - Nómina y recursos humanos: recursos-humanos/index.md
-      - Restaurante: restaurante/index.md
+      - Restaurante:
+          - restaurante/index.md
+          - ¿Cómo manejo los domicilios y pago a los domiciliarios?: restaurante/domicilios.md
       - Administración: administracion/index.md
   - Ayuda:
       - Glosario (¿qué es…?): glosario.md

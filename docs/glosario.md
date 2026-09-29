@@ -94,6 +94,9 @@ Documento electrónico que reemplaza la tirilla del POS ante la DIAN. · <span c
 ### Documento soporte { #documento-soporte }
 Documento electrónico que **tú** generas cuando le compras a un proveedor **no obligado a facturar**. · [Guía](facturacion-electronica/documento-soporte.md)
 
+### Domicilio { #domicilio }
+Pedido del restaurante que se entrega en la dirección del cliente, con un costo de domicilio. · <span class="ruta">Ventas › POS › Domicilio</span> · [Guía](restaurante/domicilios.md)
+
 ## E
 
 ### Egreso { #egreso }
@@ -136,6 +139,9 @@ Precios especiales para ciertos clientes o sedes. Orden: lista del cliente → l
 
 ### Lote { #lote }
 Grupo de unidades con la misma fecha de vencimiento. Se activa en Módulos › Inventario y en el producto (**Controlar por lote y vencimiento**).
+
+### Liquidación de domicilios { #liquidacion-de-domicilios }
+Pago al repartidor de la suma de los costos de domicilio de sus pedidos en un rango de fechas. · <span class="ruta">Restaurante › Domicilios › Liquidación</span> · [Guía](restaurante/domicilios.md)
 
 ## M
 
@@ -194,6 +200,9 @@ Cobro de facturas a crédito. Se registra como **Ingreso** tipo *Recaudo de cart
 
 ### Remisión { #remision }
 Documento para entregar mercancía **antes** de facturarla. Luego se factura en una o varias facturas. Se activa en Módulos › Ventas.
+
+### Repartidor { #repartidor }
+Domiciliario que entrega pedidos. Se crea a partir de un proveedor (tercero). · <span class="ruta">Restaurante › Repartidores</span> · [Guía](restaurante/domicilios.md)
 
 ### Resolución { #resolucion }
 Autorización de la DIAN con el prefijo y rango de números para documentos electrónicos. · <span class="ruta">Fiscal › Resoluciones</span> · [Guía](facturacion-electronica/resoluciones.md)

@@ -2,7 +2,7 @@
 
 > Generado con `python scripts/check_docs.py --estado > gestion/estado-articulos.md`. No editar a mano.
 
-**Pendiente de validación:** 54
+**Pendiente de validación:** 55
 
 | Módulo | Artículo | Tipo | Estado | Capturas pendientes | Validaciones pendientes | Revisado |
 |---|---|---|---|---|---|---|
@@ -50,6 +50,7 @@
 | productos-inventario | [¿Cómo hago un traslado entre sedes?](../docs/productos-inventario/traslados.md) | rapida | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | recursos-humanos | [Nómina y recursos humanos](../docs/recursos-humanos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | restaurante | [Restaurante](../docs/restaurante/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
+| restaurante | [¿Cómo manejo los domicilios y cómo le pago a los domiciliarios?](../docs/restaurante/domicilios.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | soporte | [Contactar a soporte](../docs/soporte.md) | referencia | Pendiente de validación | 0 | 1 | 2026-09-29 |
 | soporte | [Glosario: ¿qué es…?](../docs/glosario.md) | referencia | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | soporte | [Preguntas frecuentes](../docs/preguntas-frecuentes.md) | faq | Pendiente de validación | 0 | 1 | 2026-09-29 |
