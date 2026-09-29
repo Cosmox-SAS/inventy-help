@@ -33,7 +33,7 @@ scripts/check_docs.py  Validaciones documentales
 ## Cómo agregar o actualizar un artículo
 
 1. Crea una rama: `git switch -c docs/pos-consignaciones`.
-2. Copia la plantilla (`plantillas/tutorial.md` o `plantillas/solucion-rapida.md`) a la carpeta del módulo.
+2. Copia la plantilla a la carpeta del módulo. Por defecto usa `plantillas/guia-rapida.md` (pasos directos). Usa `plantillas/tutorial.md` solo si el proceso necesita explicación, y `plantillas/solucion-rapida.md` para problemas.
 3. Redacta siguiendo `gestion/guia-de-estilo.md`. Usa los nombres **exactos** de la interfaz.
 4. Agrega el artículo al `nav` de `mkdocs.yml`.
 5. Valida:

@@ -5,7 +5,7 @@ Revisa cada artículo de docs/ y falla (código 1) si encuentra errores:
 
 - Metadatos obligatorios (title, description, estado, tipo, modulo, revisado).
 - Estado de revisión válido.
-- Tutoriales con todas las secciones de la plantilla, en orden.
+- Tutoriales y guías rápidas con todas las secciones de su plantilla, en orden.
 - Soluciones rápidas con PROBLEMA / CAUSA / SOLUCIÓN / ESCALAR / INFORMACIÓN.
 - Artículos "publicado" sin capturas ni validaciones pendientes.
 - Sin lenguaje técnico de desarrollo.
@@ -35,7 +35,7 @@ ESTADOS = {
     "publicado": "Publicado",
     "requiere-actualizacion": "Requiere actualización",
 }
-TIPOS = {"tutorial", "solucion", "concepto", "indice", "faq", "referencia"}
+TIPOS = {"tutorial", "rapida", "solucion", "concepto", "indice", "faq", "referencia"}
 CAMPOS_OBLIGATORIOS = ("title", "description", "estado", "tipo", "modulo", "revisado")
 
 SECCIONES_TUTORIAL = [
@@ -47,6 +47,7 @@ SECCIONES_TUTORIAL = [
     "¿Necesitas ayuda?",
     "Artículos relacionados",
 ]
+SECCIONES_RAPIDA = ["Pasos", "Si algo falla", "Relacionados"]
 CAMPOS_SOLUCION = ["PROBLEMA", "CAUSA", "SOLUCIÓN", "ESCALAR A SOPORTE", "INFORMACIÓN PARA SOPORTE"]
 
 PENDIENTES = re.compile(r"CAPTURA PENDIENTE|PENDIENTE DE VALIDACIÓN FUNCIONAL", re.I)
@@ -99,15 +100,16 @@ def validar(path: Path) -> list[str]:
 
     sin_codigo = FENCE.sub("", cuerpo)
 
-    if tipo == "tutorial":
+    secciones = {"tutorial": SECCIONES_TUTORIAL, "rapida": SECCIONES_RAPIDA}.get(tipo)
+    if secciones:
         encontrados = [h.group(1).strip() for h in H2.finditer(sin_codigo)]
-        faltan = [s for s in SECCIONES_TUTORIAL if s not in encontrados]
+        faltan = [s for s in secciones if s not in encontrados]
         if faltan:
-            errores.append(f"tutorial sin secciones: {', '.join(faltan)}")
+            errores.append(f"{tipo} sin secciones: {', '.join(faltan)}")
         else:
-            orden = [encontrados.index(s) for s in SECCIONES_TUTORIAL]
+            orden = [encontrados.index(s) for s in secciones]
             if orden != sorted(orden):
-                errores.append("las secciones del tutorial no siguen el orden de la plantilla")
+                errores.append(f"las secciones de la guía {tipo} no siguen el orden de la plantilla")
 
     if tipo == "solucion":
         bloques = re.split(r"^## ", sin_codigo, flags=re.M)[1:]

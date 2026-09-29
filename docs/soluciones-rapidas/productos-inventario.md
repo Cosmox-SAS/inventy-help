@@ -64,7 +64,7 @@ tags:
 
 **CAUSA:** para aprobar hay que estar asignado a la **sede de origen**, tener el permiso y **no** ser quien lo solicitó. Para recibir hay que estar en la **sede de destino** con permiso, o ser quien lo solicitó.
 
-**SOLUCIÓN:** revisa la sede asignada al usuario en <span class="ruta">Configuración › Usuarios</span> y los permisos de su rol. Ver [¿Cómo hago un traslado entre sedes?](../productos-inventario/traslados.md#problemas-frecuentes).
+**SOLUCIÓN:** revisa la sede asignada al usuario en <span class="ruta">Configuración › Usuarios</span> y los permisos de su rol. Ver [¿Cómo hago un traslado entre sedes?](../productos-inventario/traslados.md#si-algo-falla).
 
 **ESCALAR A SOPORTE:** si todo está bien configurado y los botones no aparecen.
 

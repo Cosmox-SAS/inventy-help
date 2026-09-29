@@ -42,7 +42,7 @@
 | productos-inventario | [¿Cuánto inventario tengo?](../docs/productos-inventario/consultar-existencias.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | productos-inventario | [¿Cómo creo un producto?](../docs/productos-inventario/crear-producto.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | productos-inventario | [¿Cómo hago un ajuste de inventario?](../docs/productos-inventario/ajuste-inventario.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
-| productos-inventario | [¿Cómo hago un traslado entre sedes?](../docs/productos-inventario/traslados.md) | tutorial | Pendiente de validación | 2 | 1 | 2026-09-29 |
+| productos-inventario | [¿Cómo hago un traslado entre sedes?](../docs/productos-inventario/traslados.md) | rapida | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | recursos-humanos | [Nómina y recursos humanos](../docs/recursos-humanos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | restaurante | [Restaurante](../docs/restaurante/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | soporte | [Contactar a soporte](../docs/soporte.md) | referencia | Pendiente de validación | 0 | 1 | 2026-09-29 |

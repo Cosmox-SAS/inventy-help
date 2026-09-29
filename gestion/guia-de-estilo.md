@@ -6,6 +6,19 @@
 
 Empresarios, administradores, contadores, vendedores, cajeros, auxiliares de inventario y empleados. **No** escribimos para desarrolladores.
 
+## Formato por defecto: guía rápida
+
+Para el equipo comercial de Inventy (y para cualquier usuario con prisa), las guías van **al grano**: plantilla `plantillas/guia-rapida.md` (`tipo: rapida`).
+
+- Solo **Pasos**, **Si algo falla** y **Relacionados**.
+- Un paso = una línea, con la ruta del menú y el botón exacto: `Inventario › Traslados › **Nuevo traslado**`.
+- Sin explicar conceptos, sin “¿para qué sirve?”, sin párrafos introductorios.
+- Si el proceso lo hacen varias personas, agrupa los pasos por rol en una línea en negrita (**Aprobar** (sede de origen)).
+- Cierra con `✅ Listo:` y el resultado en una línea.
+- Problemas en tabla de dos columnas: *Problema | Solución*, una línea cada una.
+
+La plantilla larga (`plantillas/tutorial.md`, `tipo: tutorial`) queda solo para procesos que de verdad necesiten contexto (por ejemplo, facturación electrónica ante la DIAN).
+
 ## Voz y tono
 
 - Español de Colombia, claro y profesional. Tuteo (“ingresa”, “selecciona”).
