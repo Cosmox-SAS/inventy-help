@@ -28,6 +28,7 @@ gestion/               Documentos internos (no se publican)
   guia-de-estilo.md               Reglas de redacción, capturas y estados
   estado-articulos.md             Tablero generado con el estado de cada artículo
 scripts/check_docs.py  Validaciones documentales
+scripts/sync_erp.py    Detecta cambios de interfaz en inventy-erp (hook tras cada pull)
 ```
 
 ## Cómo agregar o actualizar un artículo
@@ -54,13 +55,31 @@ scripts/check_docs.py  Validaciones documentales
 - Un artículo con `CAPTURA PENDIENTE` o `PENDIENTE DE VALIDACIÓN FUNCIONAL` no puede pasar a `publicado` (lo bloquea `check_docs.py`).
 - Para pasar a `validado`, una persona sigue los pasos en Inventy (empresa de demostración) y confirma que funcionan.
 
+## Sincronización automática con inventy-erp
+
+Cada vez que haces `git pull` en tu copia local de **inventy-erp**, un hook revisa qué cambió en la interfaz y actualiza este repo:
+
+1. Compara los textos visibles (botones, campos, mensajes, menús, estados, permisos) antes y después del pull.
+2. Si una guía cita un texto que **ya no existe en ninguna parte** de Inventy, la marca como `requiere-actualizacion` (el portal muestra el aviso automáticamente).
+3. Escribe `gestion/cambios-erp.md` con las guías afectadas, posibles textos de reemplazo, cambios del menú y pantallas nuevas sin guía.
+
+No hace commit ni push, y nunca bloquea el pull.
+
+```bash
+sh scripts/instalar_hook.sh ../inventy-erp                 # instalar (una vez por máquina)
+sh scripts/instalar_hook.sh --desinstalar ../inventy-erp   # quitar
+python3 scripts/sync_erp.py --desde HEAD~20 --simular      # revisar un rango a mano, sin modificar nada
+```
+
+Los hooks viven en `inventy-erp/.git/hooks` (no se versionan): cada persona que lo quiera debe instalarlo en su máquina.
+
 ## Mantenimiento con cada versión de Inventy
 
 Cuando `inventy-erp` publique un release que cambie pantallas, menús o mensajes:
 
-1. Revisar el changelog del release.
-2. Marcar como `requiere-actualizacion` los artículos afectados.
-3. Actualizar texto y capturas, y volver a validar.
+1. Revisar `gestion/cambios-erp.md` (se genera solo tras el pull).
+2. Actualizar texto y capturas de las guías marcadas como `requiere-actualizacion`.
+3. Volver a validar y cambiar su estado.
 
 ## Publicación
 
