@@ -66,6 +66,9 @@ tags:
 ??? question "Mi factura fue rechazada, ¿la hago de nuevo?"
     **No.** Revisa **Ver error**, corrige la causa y usa **Reenviar documento electrónico**. Ver [guía](facturacion-electronica/documento-rechazado.md).
 
+??? question "¿Cómo genero un documento soporte?"
+    Se genera desde la **factura de compra** de un proveedor marcado como **No obligado a facturar**. Ver [¿Cómo emito un documento soporte electrónico?](facturacion-electronica/documento-soporte.md).
+
 ??? question "¿Cómo le reenvío la factura al cliente?"
     En <span class="ruta">Fiscal › Documentos</span>, usa **Enviar email**.
 

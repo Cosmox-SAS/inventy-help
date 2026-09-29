@@ -9,6 +9,8 @@ permisos:
   - Ver facturas de venta
   - Crear facturas de venta
 revisado: 2026-09-29
+search:
+  boost: 2
 tags:
   - Ventas
   - Facturación

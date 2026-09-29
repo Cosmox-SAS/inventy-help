@@ -9,6 +9,8 @@ permisos:
   - Acceder al POS
   - Ver cajas
 revisado: 2026-09-29
+search:
+  boost: 2
 tags:
   - POS
   - Caja

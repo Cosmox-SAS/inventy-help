@@ -70,7 +70,7 @@ Para registrar lo que te facturó un proveedor. Al validarla, Inventy **suma la 
 
 - La factura aparece en <span class="ruta">Compras › Facturas</span> con su **Total COP** y **Saldo COP**.
 - El inventario de los productos aumenta en la sede.
-- Si el proveedor no está obligado a facturar y tu empresa emite automáticamente, se genera el **documento soporte electrónico**.
+- Si el proveedor no está obligado a facturar, se genera el **documento soporte electrónico** (automáticamente o con **Emitir documento soporte**). Ver [¿Cómo emito un documento soporte?](../facturacion-electronica/documento-soporte.md).
 
 ## Problemas frecuentes
 
@@ -99,4 +99,5 @@ Para registrar lo que te facturó un proveedor. Al validarla, Inventy **suma la 
 ## Artículos relacionados
 
 - [¿Cómo registro un pago a un proveedor?](../finanzas/registrar-egreso.md)
+- [¿Cómo emito un documento soporte electrónico?](../facturacion-electronica/documento-soporte.md)
 - [¿Cuánto inventario tengo?](../productos-inventario/consultar-existencias.md)

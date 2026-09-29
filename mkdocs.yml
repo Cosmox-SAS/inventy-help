@@ -124,6 +124,7 @@ nav:
       - ¿Qué significa cada estado?: facturacion-electronica/estados-documento.md
       - ¿Cómo emito una factura electrónica?: facturacion-electronica/emitir-factura-electronica.md
       - ¿Qué hago si un documento es rechazado?: facturacion-electronica/documento-rechazado.md
+      - ¿Cómo emito un documento soporte?: facturacion-electronica/documento-soporte.md
       - ¿Cómo registro una resolución de la DIAN?: facturacion-electronica/resoluciones.md
   - Finanzas:
       - finanzas/index.md

@@ -14,6 +14,7 @@ Usa el menú **Compras** para registrar lo que le compras a tus proveedores. Al 
 ## Guías disponibles
 
 - [¿Cómo registro una factura de compra?](registrar-factura-compra.md)
+- [¿Cómo emito un documento soporte electrónico?](../facturacion-electronica/documento-soporte.md) (compras a proveedores no obligados a facturar)
 
 ## ¿Qué hay en el menú Compras?
 
@@ -35,4 +36,4 @@ Usa el menú **Compras** para registrar lo que le compras a tus proveedores. Al 
 
 ## Próximamente
 
-Crear proveedores · Órdenes de compra · Legalización de gastos · Devoluciones de compra · Documento soporte.
+Crear proveedores · Órdenes de compra · Legalización de gastos · Devoluciones de compra.

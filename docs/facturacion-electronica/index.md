@@ -18,7 +18,7 @@ Inventy envía tus documentos a la DIAN a través de un proveedor tecnológico y
 | Factura electrónica de venta | Una factura de venta o una venta del POS. |
 | Documento Equivalente POS | Una venta del POS. [PENDIENTE DE VALIDACIÓN FUNCIONAL: cuándo aplica cada uno.] |
 | Nota crédito electrónica | Una devolución de venta. |
-| Documento soporte electrónico | Una factura de compra a un proveedor **no obligado a facturar**. |
+| Documento soporte electrónico | Una factura de compra a un proveedor **no obligado a facturar**. Ver [guía](documento-soporte.md). |
 | Nota de ajuste al documento soporte | Una devolución de compra sobre un documento soporte. |
 | Nómina electrónica | El módulo de Nómina. |
 
@@ -34,6 +34,7 @@ Inventy envía tus documentos a la DIAN a través de un proveedor tecnológico y
 - [¿Qué significa cada estado?](estados-documento.md)
 - [¿Cómo emito una factura electrónica?](emitir-factura-electronica.md)
 - [¿Qué hago si un documento es rechazado?](documento-rechazado.md)
+- [¿Cómo emito un documento soporte electrónico?](documento-soporte.md)
 - [¿Cómo registro una resolución de la DIAN?](resoluciones.md)
 - [Soluciones rápidas: facturación electrónica](../soluciones-rapidas/facturacion-electronica.md)
 

@@ -5,11 +5,16 @@ estado: pendiente-validacion
 tipo: referencia
 modulo: soporte
 revisado: 2026-09-29
+search:
+  boost: 0.5
 tags:
   - Soporte
 ---
 
 # Contactar a soporte
+
+!!! tip "¿Buscabas el documento soporte electrónico?"
+    Es otro tema: ver [¿Cómo emito un documento soporte electrónico?](facturacion-electronica/documento-soporte.md).
 
 <p class="tambien-se-busca">También se busca como: ayuda, asesor, mesa de ayuda, reportar un error, hablar con alguien.</p>
 

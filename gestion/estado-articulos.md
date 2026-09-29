@@ -2,7 +2,7 @@
 
 > Generado con `python scripts/check_docs.py --estado > gestion/estado-articulos.md`. No editar a mano.
 
-**Pendiente de validación:** 46
+**Pendiente de validación:** 47
 
 | Módulo | Artículo | Tipo | Estado | Capturas pendientes | Validaciones pendientes | Revisado |
 |---|---|---|---|---|---|---|
@@ -14,6 +14,7 @@
 | distribucion | [Distribución](../docs/distribucion/index.md) | indice | Pendiente de validación | 0 | 1 | 2026-09-29 |
 | facturacion-electronica | [Facturación electrónica](../docs/facturacion-electronica/index.md) | indice | Pendiente de validación | 0 | 2 | 2026-09-29 |
 | facturacion-electronica | [Soluciones rápidas: facturación electrónica](../docs/soluciones-rapidas/facturacion-electronica.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |
+| facturacion-electronica | [¿Cómo emito un documento soporte electrónico?](../docs/facturacion-electronica/documento-soporte.md) | tutorial | Pendiente de validación | 2 | 2 | 2026-09-29 |
 | facturacion-electronica | [¿Cómo emito una factura electrónica?](../docs/facturacion-electronica/emitir-factura-electronica.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | facturacion-electronica | [¿Cómo registro una resolución de la DIAN?](../docs/facturacion-electronica/resoluciones.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | facturacion-electronica | [¿Qué hago si un documento electrónico es rechazado?](../docs/facturacion-electronica/documento-rechazado.md) | tutorial | Pendiente de validación | 1 | 1 | 2026-09-29 |
