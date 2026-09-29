@@ -29,6 +29,7 @@ gestion/               Documentos internos (no se publican)
   estado-articulos.md             Tablero generado con el estado de cada artículo
 scripts/check_docs.py  Validaciones documentales
 scripts/sync_erp.py    Detecta cambios de interfaz en inventy-erp (hook tras cada pull)
+scripts/actualizar_guias.sh, claude_actualizar.sh, prompt_actualizacion.md  Actualización automática con Claude Code
 ```
 
 ## Cómo agregar o actualizar un artículo
@@ -55,31 +56,40 @@ scripts/sync_erp.py    Detecta cambios de interfaz en inventy-erp (hook tras cad
 - Un artículo con `CAPTURA PENDIENTE` o `PENDIENTE DE VALIDACIÓN FUNCIONAL` no puede pasar a `publicado` (lo bloquea `check_docs.py`).
 - Para pasar a `validado`, una persona sigue los pasos en Inventy (empresa de demostración) y confirma que funcionan.
 
-## Sincronización automática con inventy-erp
+## Actualización automática con cada pull de inventy-erp
 
-Cada vez que haces `git pull` en tu copia local de **inventy-erp**, un hook revisa qué cambió en la interfaz y actualiza este repo:
+Cada vez que haces `git pull` en tu copia local de **inventy-erp**:
 
-1. Compara los textos visibles (botones, campos, mensajes, menús, estados, permisos) antes y después del pull.
-2. Si una guía cita un texto que **ya no existe en ninguna parte** de Inventy, la marca como `requiere-actualizacion` (el portal muestra el aviso automáticamente).
-3. Escribe `gestion/cambios-erp.md` con las guías afectadas, posibles textos de reemplazo, cambios del menú y pantallas nuevas sin guía.
-
-No hace commit ni push, y nunca bloquea el pull.
+1. Un hook compara los textos que ve el usuario (botones, campos, mensajes, menús, estados, permisos) antes y después del pull.
+2. Si alguna guía cita un texto que **ya no existe en ninguna parte** de Inventy, o aparecen/desaparecen opciones de menú, se crea la rama `actualizacion/erp-<commit>` en una carpeta aparte (`../inventy-help-actualizaciones/`). Tu `main` y tus cambios en curso no se tocan.
+3. **Claude Code** corre en segundo plano sobre esa rama: lee el código nuevo del ERP (solo lectura), corrige las guías con los nombres exactos, crea guías rápidas para opciones de menú nuevas, valida el sitio y hace commit en la rama.
+4. Recibes una notificación de macOS. Revisas y unes:
 
 ```bash
-sh scripts/instalar_hook.sh ../inventy-erp                 # instalar (una vez por máquina)
-sh scripts/instalar_hook.sh --desinstalar ../inventy-erp   # quitar
-python3 scripts/sync_erp.py --desde HEAD~20 --simular      # revisar un rango a mano, sin modificar nada
+git diff main...actualizacion/erp-<commit>          # revisar
+git merge actualizacion/erp-<commit>                 # aceptar
+git worktree remove ../inventy-help-actualizaciones/erp-<commit> && git branch -d actualizacion/erp-<commit>
 ```
 
-Los hooks viven en `inventy-erp/.git/hooks` (no se versionan): cada persona que lo quiera debe instalarlo en su máquina.
+Nunca bloquea el pull, nunca modifica inventy-erp y nunca hace push. Las guías tocadas quedan en `pendiente-validacion` (o `requiere-actualizacion` si no se pudo verificar): una persona debe validarlas.
+
+| Qué | Cómo |
+|---|---|
+| Instalar (una vez por máquina) | `sh scripts/instalar_hook.sh ../inventy-erp` |
+| Quitar | `sh scripts/instalar_hook.sh --desinstalar ../inventy-erp` |
+| Solo marcar guías, sin Claude | crear el archivo `.sin-actualizacion-automatica` o `export INVENTY_HELP_AUTO=0` |
+| Tope de gasto por ejecución | `export INVENTY_HELP_PRESUPUESTO=5` (USD, por defecto 5) |
+| Ver el progreso | `tail -f .logs/erp-<commit>.log` |
+| Revisar un rango a mano | `python3 scripts/sync_erp.py --desde HEAD~20 --simular` |
+| Cambiar las instrucciones de Claude | editar `scripts/prompt_actualizacion.md` |
 
 ## Mantenimiento con cada versión de Inventy
 
 Cuando `inventy-erp` publique un release que cambie pantallas, menús o mensajes:
 
-1. Revisar `gestion/cambios-erp.md` (se genera solo tras el pull).
-2. Actualizar texto y capturas de las guías marcadas como `requiere-actualizacion`.
-3. Volver a validar y cambiar su estado.
+1. Revisar la rama `actualizacion/erp-<commit>` y su `gestion/cambios-erp.md` (se generan solos tras el pull).
+2. Unirla a `main`, completar capturas y lo que quedó `requiere-actualizacion`.
+3. Validar en Inventy y cambiar el estado.
 
 ## Publicación
 
