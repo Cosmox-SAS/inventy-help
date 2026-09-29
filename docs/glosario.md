@@ -237,6 +237,9 @@ Mover mercancía de una sede a otra: solicitar → aprobar → recibir. · [Guí
 
 ## V
 
+### Varias cuentas por mesa { #varias-cuentas-por-mesa }
+Que cada cliente de una mesa tenga su propia cuenta y pague por separado. Solo aparece tras activar **Habilitar pedidos a la mesa**. · <span class="ruta">Configuración › Módulos › Restaurante</span> · [Guía](restaurante/varias-cuentas-mesa.md)
+
 ### Validar { #validar }
 Confirmar un documento. Desde ese momento afecta inventario, cartera y contabilidad, y **ya no se puede editar**.
 

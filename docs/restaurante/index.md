@@ -28,7 +28,7 @@ El módulo **Restaurante** adapta el POS a la operación de restaurantes, cafete
 
 En <span class="ruta">Configuración › Módulos › Restaurante</span> puedes activar:
 
-- **Habilitar pedidos a la mesa** y **Permitir varias cuentas por mesa**.
+- **Habilitar pedidos a la mesa** y, una vez activo, **Permitir varias cuentas por mesa** ([guía](varias-cuentas-mesa.md)).
 - **Habilitar pedidos a domicilio**, **Valor del domicilio obligatorio** y **Pagar el domicilio al repartidor al instante**.
 - **Porcentaje de propina** sugerido y el texto de advertencia de la prefactura.
 - **Mostrar desglose en la tirilla**.

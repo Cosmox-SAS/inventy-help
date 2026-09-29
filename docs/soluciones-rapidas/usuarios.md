@@ -26,6 +26,7 @@ tags:
 **SOLUCIÓN:**
 
 1. Usa la búsqueda del menú (<kbd>Ctrl</kbd> + <kbd>K</kbd>) por si la opción está en otro lugar.
+    Si es una opción de configuración, revisa [Todas las opciones de Módulos](../primeros-pasos/opciones-modulos.md): algunas solo aparecen después de activar otra.
 2. Pide al administrador que revise las tres condiciones.
 3. Después del cambio, **recarga la página**.
 

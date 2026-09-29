@@ -2,7 +2,7 @@
 
 > Generado con `python scripts/check_docs.py --estado > gestion/estado-articulos.md`. No editar a mano.
 
-**Pendiente de validación:** 55
+**Pendiente de validación:** 57
 
 | Módulo | Artículo | Tipo | Estado | Capturas pendientes | Validaciones pendientes | Revisado |
 |---|---|---|---|---|---|---|
@@ -36,6 +36,7 @@
 | primeros-pasos | [Conociendo la pantalla principal](../docs/primeros-pasos/pantalla-principal.md) | concepto | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | primeros-pasos | [Primeros pasos](../docs/primeros-pasos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | primeros-pasos | [Recomendaciones para comenzar](../docs/primeros-pasos/recomendaciones.md) | concepto | Pendiente de validación | 0 | 0 | 2026-09-29 |
+| primeros-pasos | [Todas las opciones de Configuración › Módulos (y por qué no me aparece una)](../docs/primeros-pasos/opciones-modulos.md) | referencia | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | primeros-pasos | [¿Cómo activo o desactivo módulos?](../docs/primeros-pasos/activar-modulos.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | primeros-pasos | [¿Cómo agrego usuarios a mi empresa?](../docs/primeros-pasos/crear-usuarios.md) | tutorial | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | primeros-pasos | [¿Cómo configuro los datos de mi empresa?](../docs/primeros-pasos/configurar-empresa.md) | tutorial | Pendiente de validación | 1 | 1 | 2026-09-29 |
@@ -50,6 +51,7 @@
 | productos-inventario | [¿Cómo hago un traslado entre sedes?](../docs/productos-inventario/traslados.md) | rapida | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | recursos-humanos | [Nómina y recursos humanos](../docs/recursos-humanos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | restaurante | [Restaurante](../docs/restaurante/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
+| restaurante | [¿Cómo activo varias cuentas en una misma mesa?](../docs/restaurante/varias-cuentas-mesa.md) | rapida | Pendiente de validación | 1 | 1 | 2026-09-29 |
 | restaurante | [¿Cómo manejo los domicilios y cómo le pago a los domiciliarios?](../docs/restaurante/domicilios.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | soporte | [Contactar a soporte](../docs/soporte.md) | referencia | Pendiente de validación | 0 | 1 | 2026-09-29 |
 | soporte | [Glosario: ¿qué es…?](../docs/glosario.md) | referencia | Pendiente de validación | 0 | 0 | 2026-09-29 |

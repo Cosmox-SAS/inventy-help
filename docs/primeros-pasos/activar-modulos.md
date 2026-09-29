@@ -41,6 +41,9 @@ Inventy se adapta a tu negocio. En **Configuración de módulos** decides qué p
 
 ## Opciones que más se consultan
 
+Lista completa, con qué debe estar activo para que aparezca cada opción: [Todas las opciones de Módulos](opciones-modulos.md).
+
+
 | Módulo | Opción | Qué hace |
 |---|---|---|
 | Ventas | **Permitir ventas de contado sin sesión de caja** | Permite vender en efectivo sin tener una caja abierta. |

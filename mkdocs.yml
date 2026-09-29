@@ -98,6 +98,7 @@ nav:
       - Conociendo la pantalla principal: primeros-pasos/pantalla-principal.md
       - ¿Cómo configuro los datos de mi empresa?: primeros-pasos/configurar-empresa.md
       - ¿Cómo activo o desactivo módulos?: primeros-pasos/activar-modulos.md
+      - Todas las opciones de Módulos: primeros-pasos/opciones-modulos.md
       - ¿Cómo agrego usuarios a mi empresa?: primeros-pasos/crear-usuarios.md
       - ¿Cómo funcionan los roles y permisos?: primeros-pasos/roles-y-permisos.md
       - Recomendaciones para comenzar: primeros-pasos/recomendaciones.md
@@ -144,6 +145,7 @@ nav:
       - Restaurante:
           - restaurante/index.md
           - ¿Cómo manejo los domicilios y pago a los domiciliarios?: restaurante/domicilios.md
+          - ¿Cómo activo varias cuentas en una misma mesa?: restaurante/varias-cuentas-mesa.md
       - Administración: administracion/index.md
   - Ayuda:
       - Glosario (¿qué es…?): glosario.md
