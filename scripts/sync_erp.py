@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import json
 import re
 import subprocess
 import sys
@@ -119,6 +120,7 @@ def main() -> int:
     parser.add_argument("--desde", default="ORIG_HEAD", help="versión anterior (por defecto ORIG_HEAD)")
     parser.add_argument("--hasta", default="HEAD", help="versión nueva (por defecto HEAD)")
     parser.add_argument("--simular", action="store_true", help="muestra el resultado sin modificar archivos")
+    parser.add_argument("--json", help="además, guarda el resultado en este archivo JSON")
     args = parser.parse_args()
 
     erp = Path(args.erp).resolve()
@@ -218,6 +220,26 @@ def main() -> int:
         lineas += ["<details><summary>Archivos con cambios de texto</summary>", "", *detalle_archivos, "", "</details>", ""]
 
     bloque = "\n".join(lineas)
+    if args.json:
+        Path(args.json).write_text(
+            json.dumps(
+                {
+                    "desde": desde,
+                    "hasta": hasta,
+                    "commit": asunto,
+                    "guias_afectadas": {
+                        p.relative_to(DOCS).as_posix(): {t: sorted(r) for t, r in textos.items()}
+                        for p, textos in sorted(afectadas.items())
+                    },
+                    "menu_nuevo": menu_nuevo,
+                    "menu_quitado": menu_quitado,
+                    "pantallas_nuevas": pantallas_nuevas,
+                },
+                ensure_ascii=False,
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
     if args.simular:
         print(bloque)
         return 0
