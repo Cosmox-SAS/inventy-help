@@ -1,0 +1,83 @@
+---
+title: Preguntas frecuentes
+description: Respuestas cortas a las dudas más comunes sobre Inventy, organizadas por tarea.
+estado: pendiente-validacion
+tipo: faq
+modulo: soporte
+revisado: 2026-09-29
+tags:
+  - Preguntas frecuentes
+---
+
+# Preguntas frecuentes
+
+## Empezar
+
+??? question "¿Cómo ingreso a Inventy?"
+    Con tu correo y contraseña en la pantalla **Inicia sesión**. Ver [¿Cómo ingreso?](primeros-pasos/ingresar.md).
+
+??? question "¿Cómo recupero mi contraseña?"
+    En **Inicia sesión**, haz clic en **¿Olvidaste tu contraseña?** y sigue el enlace que llega a tu correo. Ver [guía](primeros-pasos/recuperar-contrasena.md).
+
+??? question "¿Por dónde empiezo a configurar mi empresa?"
+    Sigue la lista de [Recomendaciones para comenzar](primeros-pasos/recomendaciones.md).
+
+??? question "¿Puedo usar Inventy desde el celular?"
+    Sí. Inventy funciona en el navegador del celular o la tableta. Los vendedores y repartidores de **Distribución** usan además la app móvil. [PENDIENTE DE VALIDACIÓN FUNCIONAL: pantallas optimizadas para celular.]
+
+## Vender
+
+??? question "¿Cómo hago una factura?"
+    Para ventas rápidas, usa el [POS](pos/vender-en-pos.md). Para ventas de oficina o a crédito, usa [Ventas › Facturas](ventas/crear-factura-venta.md).
+
+??? question "¿Puedo editar una factura después de validarla?"
+    No. Una factura validada no se edita: se corrige con una [devolución](ventas/devolucion-venta.md). Por eso, antes de validar, Inventy te pide confirmar.
+
+??? question "¿Puedo tener varias ventas abiertas al tiempo en el POS?"
+    Sí. Usa **Nuevo pedido** para abrir otra venta en una pestaña aparte.
+
+??? question "¿Cómo le doy descuento a un producto en el POS?"
+    Usa **Editar descuento** en la línea del carrito. Si no aparece, el administrador debe activar **Descuento manual por producto en el POS** en <span class="ruta">Configuración › Módulos › Ventas</span>.
+
+## Caja
+
+??? question "¿Cómo cierro la caja?"
+    Desde el POS con **Cerrar caja**: escribe el **Efectivo contado**, decide el destino del dinero y confirma. Ver [¿Cómo cierro la caja?](pos/cierre-de-caja.md).
+
+??? question "Cerré la caja con un valor equivocado, ¿qué hago?"
+    Un supervisor puede usar **Corregir arqueo** o **Reabrir cierre** en <span class="ruta">Tesorería › Caja › Sesiones</span>.
+
+## Inventario
+
+??? question "¿Cómo puedo saber cuánto inventario tengo?"
+    En <span class="ruta">Inventario › Stock</span>. Ver [¿Cuánto inventario tengo?](productos-inventario/consultar-existencias.md).
+
+??? question "¿Cómo cargo el inventario inicial?"
+    Con un [ajuste de inventario](productos-inventario/ajuste-inventario.md) de entrada. Si son muchos productos, usa **Importar ajuste**.
+
+??? question "¿Puedo vender si no tengo existencias?"
+    Solo si el administrador activó **Permitir stock negativo** en <span class="ruta">Configuración › Módulos › Inventario</span>.
+
+## Facturación electrónica
+
+??? question "¿Cómo sé si la DIAN aceptó mi factura?"
+    En <span class="ruta">Fiscal › Documentos</span>. Si dice **Aceptado** o **Aceptado con observaciones**, es válida. Ver [estados](facturacion-electronica/estados-documento.md).
+
+??? question "Mi factura fue rechazada, ¿la hago de nuevo?"
+    **No.** Revisa **Ver error**, corrige la causa y usa **Reenviar documento electrónico**. Ver [guía](facturacion-electronica/documento-rechazado.md).
+
+??? question "¿Cómo le reenvío la factura al cliente?"
+    En <span class="ruta">Fiscal › Documentos</span>, usa **Enviar email**.
+
+## Usuarios
+
+??? question "¿Cómo creo un usuario?"
+    En <span class="ruta">Configuración › Usuarios</span>, con **Invitar usuario** o **Nuevo usuario**. Ver [guía](primeros-pasos/crear-usuarios.md).
+
+??? question "¿Por qué no veo un menú que mi compañero sí ve?"
+    Depende del plan, de los módulos activos y de los permisos de tu rol. Ver [solución](soluciones-rapidas/usuarios.md#no-veo-un-menu-o-una-opcion).
+
+## Soporte
+
+??? question "¿Qué información envío a soporte?"
+    Nombre de la empresa, tu correo, pantalla, número del documento, fecha y hora, y una captura del error. **Nunca tu contraseña.** Ver [Contactar a soporte](soporte.md).

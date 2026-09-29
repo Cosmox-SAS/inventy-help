@@ -1,0 +1,148 @@
+site_name: Centro de Ayuda Inventy
+site_description: Guías paso a paso para usar Inventy ERP en tu empresa.
+site_author: Inventy
+# Ajustar al dominio definitivo antes de publicar (necesario para enlaces directos y mapa del sitio).
+# site_url: https://ayuda.inventy.co/
+copyright: Inventy ERP · Centro de Ayuda
+
+docs_dir: docs
+strict: true
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+theme:
+  name: material
+  language: es
+  custom_dir: overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  font:
+    text: Inter
+  icon:
+    logo: material/lifebuoy
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - toc.follow
+
+extra_css:
+  - assets/stylesheets/ayuda.css
+
+plugins:
+  - search:
+      lang: es
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - toc:
+      permalink: "#"
+      title: En esta guía
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.keys
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  # Estados de revisión permitidos en el campo `estado` de cada artículo.
+  estados:
+    borrador: Borrador
+    pendiente-validacion: Pendiente de validación
+    validado: Validado funcionalmente
+    publicado: Publicado
+    requiere-actualizacion: Requiere actualización
+
+nav:
+  - Inicio: index.md
+  - Primeros pasos:
+      - primeros-pasos/index.md
+      - Bienvenido a Inventy: primeros-pasos/bienvenida.md
+      - ¿Cómo ingreso a Inventy?: primeros-pasos/ingresar.md
+      - ¿Cómo recupero mi contraseña?: primeros-pasos/recuperar-contrasena.md
+      - Conociendo la pantalla principal: primeros-pasos/pantalla-principal.md
+      - ¿Cómo configuro los datos de mi empresa?: primeros-pasos/configurar-empresa.md
+      - ¿Cómo activo o desactivo módulos?: primeros-pasos/activar-modulos.md
+      - ¿Cómo agrego usuarios a mi empresa?: primeros-pasos/crear-usuarios.md
+      - ¿Cómo funcionan los roles y permisos?: primeros-pasos/roles-y-permisos.md
+      - Recomendaciones para comenzar: primeros-pasos/recomendaciones.md
+  - Productos e inventario:
+      - productos-inventario/index.md
+      - ¿Cómo creo un producto?: productos-inventario/crear-producto.md
+      - ¿Cuánto inventario tengo?: productos-inventario/consultar-existencias.md
+      - ¿Cómo hago un ajuste de inventario?: productos-inventario/ajuste-inventario.md
+  - Compras:
+      - compras/index.md
+      - ¿Cómo registro una factura de compra?: compras/registrar-factura-compra.md
+  - Ventas:
+      - ventas/index.md
+      - ¿Cómo creo un cliente?: ventas/crear-cliente.md
+      - ¿Cómo hago una factura de venta?: ventas/crear-factura-venta.md
+      - ¿Cómo registro una devolución de venta?: ventas/devolucion-venta.md
+  - Punto de venta:
+      - pos/index.md
+      - ¿Cómo abro la caja?: pos/abrir-caja.md
+      - ¿Cómo vendo en el POS?: pos/vender-en-pos.md
+      - ¿Cómo cierro la caja?: pos/cierre-de-caja.md
+  - Facturación electrónica:
+      - facturacion-electronica/index.md
+      - ¿Qué significa cada estado?: facturacion-electronica/estados-documento.md
+      - ¿Cómo emito una factura electrónica?: facturacion-electronica/emitir-factura-electronica.md
+      - ¿Qué hago si un documento es rechazado?: facturacion-electronica/documento-rechazado.md
+      - ¿Cómo registro una resolución de la DIAN?: facturacion-electronica/resoluciones.md
+  - Finanzas:
+      - finanzas/index.md
+      - ¿Cómo registro un pago de un cliente?: finanzas/registrar-ingreso.md
+      - ¿Cómo registro un pago a un proveedor?: finanzas/registrar-egreso.md
+  - Más módulos:
+      - Contabilidad: contabilidad/index.md
+      - Distribución: distribucion/index.md
+      - Nómina y recursos humanos: recursos-humanos/index.md
+      - Restaurante: restaurante/index.md
+      - Administración: administracion/index.md
+  - Ayuda:
+      - Soluciones rápidas:
+          - soluciones-rapidas/index.md
+          - Acceso al sistema: soluciones-rapidas/acceso.md
+          - POS y caja: soluciones-rapidas/pos-caja.md
+          - Facturación electrónica: soluciones-rapidas/facturacion-electronica.md
+          - Productos e inventario: soluciones-rapidas/productos-inventario.md
+          - Ventas: soluciones-rapidas/ventas.md
+          - Usuarios y permisos: soluciones-rapidas/usuarios.md
+      - Preguntas frecuentes: preguntas-frecuentes.md
+      - Contactar a soporte: soporte.md

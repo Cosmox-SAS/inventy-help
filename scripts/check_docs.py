@@ -1,0 +1,185 @@
+#!/usr/bin/env python3
+"""Validaciones documentales del Centro de Ayuda Inventy.
+
+Revisa cada artículo de docs/ y falla (código 1) si encuentra errores:
+
+- Metadatos obligatorios (title, description, estado, tipo, modulo, revisado).
+- Estado de revisión válido.
+- Tutoriales con todas las secciones de la plantilla, en orden.
+- Soluciones rápidas con PROBLEMA / CAUSA / SOLUCIÓN / ESCALAR / INFORMACIÓN.
+- Artículos "publicado" sin capturas ni validaciones pendientes.
+- Sin lenguaje técnico de desarrollo.
+- Sin pedir contraseñas ni datos sensibles en la información para soporte.
+
+Uso:
+    python scripts/check_docs.py            # valida
+    python scripts/check_docs.py --estado   # imprime el tablero de estado en Markdown
+"""
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import re
+import sys
+from pathlib import Path
+
+import yaml
+
+ROOT = Path(__file__).resolve().parent.parent
+DOCS = ROOT / "docs"
+
+ESTADOS = {
+    "borrador": "Borrador",
+    "pendiente-validacion": "Pendiente de validación",
+    "validado": "Validado funcionalmente",
+    "publicado": "Publicado",
+    "requiere-actualizacion": "Requiere actualización",
+}
+TIPOS = {"tutorial", "solucion", "concepto", "indice", "faq", "referencia"}
+CAMPOS_OBLIGATORIOS = ("title", "description", "estado", "tipo", "modulo", "revisado")
+
+SECCIONES_TUTORIAL = [
+    "¿Para qué sirve?",
+    "Antes de comenzar",
+    "Paso a paso",
+    "Resultado esperado",
+    "Problemas frecuentes",
+    "¿Necesitas ayuda?",
+    "Artículos relacionados",
+]
+CAMPOS_SOLUCION = ["PROBLEMA", "CAUSA", "SOLUCIÓN", "ESCALAR A SOPORTE", "INFORMACIÓN PARA SOPORTE"]
+
+PENDIENTES = re.compile(r"CAPTURA PENDIENTE|PENDIENTE DE VALIDACIÓN FUNCIONAL", re.I)
+TERMINOS_TECNICOS = re.compile(
+    r"\b(controlador|controller|endpoint|tenant|backend|frontend|base de datos|payload|migraci[oó]n|API)\b"
+)
+DATOS_SENSIBLES = re.compile(r"contraseña|clave|PIN|c[oó]digo de verificaci[oó]n|tarjeta", re.I)
+FRONT_MATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
+H2 = re.compile(r"^## +(.+?)\s*(\{.*\})?\s*$", re.M)
+FENCE = re.compile(r"^```.*?^```", re.S | re.M)
+
+
+def leer(path: Path) -> tuple[dict, str]:
+    texto = path.read_text(encoding="utf-8")
+    match = FRONT_MATTER.match(texto)
+    if not match:
+        return {}, texto
+    return yaml.safe_load(match.group(1)) or {}, texto[match.end():]
+
+
+def validar(path: Path) -> list[str]:
+    rel = path.relative_to(DOCS)
+    meta, cuerpo = leer(path)
+    errores: list[str] = []
+
+    if rel.as_posix() == "index.md":
+        return errores  # la portada no lleva estado de revisión
+
+    for campo in CAMPOS_OBLIGATORIOS:
+        if not meta.get(campo):
+            errores.append(f"falta el metadato '{campo}'")
+
+    estado = meta.get("estado")
+    if estado and estado not in ESTADOS:
+        errores.append(f"estado '{estado}' no válido (usa: {', '.join(ESTADOS)})")
+
+    tipo = meta.get("tipo")
+    if tipo and tipo not in TIPOS:
+        errores.append(f"tipo '{tipo}' no válido (usa: {', '.join(sorted(TIPOS))})")
+
+    revisado = meta.get("revisado")
+    if revisado and not isinstance(revisado, dt.date):
+        errores.append("'revisado' debe ser una fecha AAAA-MM-DD")
+
+    sin_codigo = FENCE.sub("", cuerpo)
+
+    if tipo == "tutorial":
+        encontrados = [h.group(1).strip() for h in H2.finditer(sin_codigo)]
+        faltan = [s for s in SECCIONES_TUTORIAL if s not in encontrados]
+        if faltan:
+            errores.append(f"tutorial sin secciones: {', '.join(faltan)}")
+        else:
+            orden = [encontrados.index(s) for s in SECCIONES_TUTORIAL]
+            if orden != sorted(orden):
+                errores.append("las secciones del tutorial no siguen el orden de la plantilla")
+
+    if tipo == "solucion":
+        bloques = re.split(r"^## ", sin_codigo, flags=re.M)[1:]
+        if not bloques:
+            errores.append("solución rápida sin problemas (## ...)")
+        for bloque in bloques:
+            titulo = bloque.splitlines()[0].strip()
+            faltan = [c for c in CAMPOS_SOLUCION if f"**{c}" not in bloque and f" {c}" not in bloque]
+            if faltan:
+                errores.append(f"'{titulo}': faltan {', '.join(faltan)}")
+            for linea in bloque.splitlines():
+                if "INFORMACIÓN PARA SOPORTE" in linea and DATOS_SENSIBLES.search(linea.split(":**", 1)[-1]):
+                    errores.append(f"'{titulo}': la información para soporte pide datos sensibles")
+
+    if estado in ("publicado", "validado") and PENDIENTES.search(sin_codigo):
+        if estado == "publicado" or "VALIDACIÓN" in PENDIENTES.search(sin_codigo).group(0).upper():
+            errores.append(f"estado '{estado}' con contenido pendiente (captura o validación)")
+
+    for n, linea in enumerate(sin_codigo.splitlines(), 1):
+        if TERMINOS_TECNICOS.search(linea):
+            errores.append(f"lenguaje técnico en línea {n}: {TERMINOS_TECNICOS.search(linea).group(0)!r}")
+
+    return errores
+
+
+def tablero(articulos: list[Path]) -> str:
+    filas = []
+    conteo: dict[str, int] = {}
+    for path in articulos:
+        meta, cuerpo = leer(path)
+        estado = meta.get("estado", "—")
+        conteo[estado] = conteo.get(estado, 0) + 1
+        capturas = len(re.findall(r"CAPTURA PENDIENTE", cuerpo))
+        validaciones = len(re.findall(r"PENDIENTE DE VALIDACIÓN FUNCIONAL", cuerpo))
+        filas.append(
+            f"| {meta.get('modulo', '—')} | [{meta.get('title', path.stem)}](../docs/{path.relative_to(DOCS).as_posix()}) "
+            f"| {meta.get('tipo', '—')} | {ESTADOS.get(estado, estado)} | {capturas} | {validaciones} | {meta.get('revisado', '—')} |"
+        )
+    resumen = " · ".join(f"**{ESTADOS.get(k, k)}:** {v}" for k, v in sorted(conteo.items()))
+    return "\n".join(
+        [
+            "# Tablero de estado de artículos",
+            "",
+            "> Generado con `python scripts/check_docs.py --estado > gestion/estado-articulos.md`. No editar a mano.",
+            "",
+            resumen,
+            "",
+            "| Módulo | Artículo | Tipo | Estado | Capturas pendientes | Validaciones pendientes | Revisado |",
+            "|---|---|---|---|---|---|---|",
+            *sorted(filas),
+            "",
+        ]
+    )
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--estado", action="store_true", help="imprime el tablero de estado en Markdown")
+    args = parser.parse_args()
+
+    articulos = sorted(p for p in DOCS.rglob("*.md") if p.relative_to(DOCS).as_posix() != "index.md")
+
+    if args.estado:
+        print(tablero(articulos))
+        return 0
+
+    total = 0
+    for path in [DOCS / "index.md", *articulos]:
+        for error in validar(path):
+            total += 1
+            print(f"{path.relative_to(ROOT)}: {error}")
+
+    if total:
+        print(f"\n✗ {total} problema(s) en {len(articulos) + 1} archivos.")
+        return 1
+    print(f"✓ {len(articulos) + 1} archivos revisados sin problemas.")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,27 @@
+name: Validar Centro de Ayuda
+
+# Solo valida. La publicación se configura aparte, cuando se autorice el hosting.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Validaciones documentales (metadatos, plantilla, estados, lenguaje)
+        run: python scripts/check_docs.py
+
+      - name: Construir el sitio (falla con enlaces rotos)
+        run: mkdocs build --strict

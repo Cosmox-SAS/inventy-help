@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% set estado = page.meta.estado if page and page.meta else None %}
+  {% if estado and estado != "publicado" %}
+    {% set etiqueta = config.extra.estados[estado] if estado in config.extra.estados else estado %}
+    <div class="estado-revision estado-{{ estado }}" role="note">
+      <strong>{{ etiqueta }}.</strong>
+      {% if estado == "requiere-actualizacion" %}
+        Esta guía puede no coincidir con la versión actual de Inventy. Si algo no corresponde, contacta a soporte.
+      {% else %}
+        Esta guía aún está en revisión y puede cambiar. Si encuentras una diferencia con lo que ves en Inventy, avísanos.
+      {% endif %}
+    </div>
+  {% endif %}
+  {{ super() }}
+  {% if page and page.meta and page.meta.revisado %}
+    <p class="ultima-revision">Última revisión: {{ page.meta.revisado }}</p>
+  {% endif %}
+{% endblock %}
