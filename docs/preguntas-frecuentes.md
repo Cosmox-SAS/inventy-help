@@ -55,6 +55,9 @@ tags:
 ??? question "¿Cómo cargo el inventario inicial?"
     Con un [ajuste de inventario](productos-inventario/ajuste-inventario.md) de entrada. Si son muchos productos, usa **Importar ajuste**.
 
+??? question "¿Cómo paso mercancía de una sede a otra?"
+    Con un traslado: se **solicita**, lo **aprueba** la sede de origen y lo **recibe** la sede de destino. Ver [¿Cómo hago un traslado entre sedes?](productos-inventario/traslados.md).
+
 ??? question "¿Puedo vender si no tengo existencias?"
     Solo si el administrador activó **Permitir stock negativo** en <span class="ruta">Configuración › Módulos › Inventario</span>.
 

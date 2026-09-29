@@ -106,6 +106,7 @@ nav:
       - ¿Cómo creo un producto?: productos-inventario/crear-producto.md
       - ¿Cuánto inventario tengo?: productos-inventario/consultar-existencias.md
       - ¿Cómo hago un ajuste de inventario?: productos-inventario/ajuste-inventario.md
+      - ¿Cómo hago un traslado entre sedes?: productos-inventario/traslados.md
   - Compras:
       - compras/index.md
       - ¿Cómo registro una factura de compra?: compras/registrar-factura-compra.md

@@ -64,7 +64,10 @@ def leer(path: Path) -> tuple[dict, str]:
     match = FRONT_MATTER.match(texto)
     if not match:
         return {}, texto
-    return yaml.safe_load(match.group(1)) or {}, texto[match.end():]
+    try:
+        return yaml.safe_load(match.group(1)) or {}, texto[match.end():]
+    except yaml.YAMLError as error:
+        return {"_error_yaml": str(error).splitlines()[0]}, texto[match.end():]
 
 
 def validar(path: Path) -> list[str]:
@@ -74,6 +77,9 @@ def validar(path: Path) -> list[str]:
 
     if rel.as_posix() == "index.md":
         return errores  # la portada no lleva estado de revisión
+
+    if "_error_yaml" in meta:
+        return [f"metadatos mal escritos (usa comillas si el texto tiene ':'): {meta['_error_yaml']}"]
 
     for campo in CAMPOS_OBLIGATORIOS:
         if not meta.get(campo):

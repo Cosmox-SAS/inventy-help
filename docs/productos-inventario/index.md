@@ -14,6 +14,7 @@ revisado: 2026-09-29
 - [¿Cómo creo un producto?](crear-producto.md)
 - [¿Cuánto inventario tengo?](consultar-existencias.md)
 - [¿Cómo hago un ajuste de inventario?](ajuste-inventario.md)
+- [¿Cómo hago un traslado entre sedes?](traslados.md)
 - [Soluciones rápidas: productos e inventario](../soluciones-rapidas/productos-inventario.md)
 
 ## ¿Qué hay en el menú Inventario?
@@ -27,10 +28,10 @@ revisado: 2026-09-29
 | **Movimientos** / **Kardex** | Historial de entradas y salidas de cada producto. |
 | **Ajuste de inventario** | Corrige existencias por pérdidas, daños, sobrantes o saldo inicial. |
 | **Conteo físico** | Cuenta tu inventario real y compáralo con el sistema. |
-| **Traslados** | Mueve mercancía de una sede a otra. |
+| **Traslados** | Mueve mercancía de una sede a otra. Ver [guía](traslados.md). |
 | **Etiquetas de productos** | Imprime etiquetas con código de barras. |
 | Lotes, Seriales, Presentaciones | Solo si tu empresa los activó. |
 
 ## Próximamente
 
-Editar productos · Categorías · Unidades de medida · Importar productos · Servicios · Variantes · Kits · Traslados · Conteo físico · Kardex · Etiquetas · Lotes y vencimientos · Seriales.
+Editar productos · Categorías · Unidades de medida · Importar productos · Servicios · Variantes · Kits · Conteo físico · Kardex · Etiquetas · Lotes y vencimientos · Seriales.
