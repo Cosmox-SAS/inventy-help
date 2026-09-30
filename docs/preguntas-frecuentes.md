@@ -44,6 +44,9 @@ tags:
 ??? question "¿Cómo cierro la caja?"
     Desde el POS con **Cerrar caja**: escribe el **Efectivo contado**, decide el destino del dinero y confirma. Ver [¿Cómo cierro la caja?](pos/cierre-de-caja.md).
 
+??? question "¿Un cajero puede usar la caja principal?"
+    Sí. Las cajas no se asignan a personas: cualquier usuario puede abrir cualquier caja **de su sede**, si está **libre** (nadie más la tiene abierta) y él no tiene otra caja abierta. Para vender necesita el permiso **Acceder al POS**. Solo vende en la caja que **él mismo** abrió, y solo quien la abrió puede cerrarla. Ver [¿Cómo abro la caja?](pos/abrir-caja.md).
+
 ??? question "Cerré la caja con un valor equivocado, ¿qué hago?"
     Un supervisor puede usar **Corregir arqueo** o **Reabrir cierre** en <span class="ruta">Tesorería › Caja › Sesiones</span>.
 

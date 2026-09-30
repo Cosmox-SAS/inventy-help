@@ -48,6 +48,10 @@ tags:
 | *No tienes permiso para abrir una caja.* | Pide el permiso al administrador. |
 | El monto base aparece ya escrito | Es lo que dejó el cierre anterior. Verifica que coincida con el efectivo del cajón. |
 | *Debes abrir una caja antes de registrar una venta.* | Abre la caja con estos pasos. |
+| *Esta caja ya tiene una sesión abierta.* | Otra persona tiene abierta esa caja. Que la cierre quien la abrió, o elige otra caja. |
+| *Ya tienes una sesión de caja abierta…* | Solo puedes tener una caja abierta a la vez. Cierra la que tienes. |
+| *La caja no pertenece a la sede activa.* | Solo se abren cajas de **tu sede**. Revisa la sede asignada a tu usuario en <span class="ruta">Configuración › Usuarios</span>. |
+| No aparece la caja que quiero (ej. *Caja principal*) | Es de otra sede, está inactiva o ya está abierta por otra persona. |
 
 ## Relacionados
 
