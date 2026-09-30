@@ -1,0 +1,38 @@
+guia: restaurante/domicilios.md
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Repartidores
+      - abrir: 'button:has-text("Nuevo Repartidor"), a:has-text("Nuevo Repartidor")'
+      - pausa: 600
+    resaltar: 'role=dialog'
+    recortar: 'role=dialog'
+  - paso: 2
+    acciones:
+      - tecla: Escape
+      - menu: POS
+      - esperar: '[data-testid="pos-order-type-selector"]'
+    resaltar: '[data-testid="pos-order-type-selector"]'
+  - paso: 3
+    acciones:
+      - abrir: '[data-testid="pos-order-type-selector"] >> text=Domicilio'
+      - esperar: '[data-testid="pos-modal-delivery"]'
+    resaltar: '[data-testid="pos-modal-delivery"]'
+    recortar: 'role=dialog'
+  - paso: 4
+    acciones:
+      - tecla: Escape
+    resaltar: 'aside [data-testid="pos-submit-order"]'
+  - paso: 5
+    acciones:
+      - menu: Tablero de pedidos
+      - esperar: '[data-testid="orders-board"]'
+    resaltar: '[data-testid="orders-board"]'
+  - paso: 6
+    acciones:
+      - menu: Liquidación
+      - abrir: 'a:has-text("Nueva liquidación"), button:has-text("Nueva liquidación")'
+      - esperar: 'text=Datos de la liquidación'
+    resaltar: 'text=Datos de la liquidación >> xpath=ancestor::section[1]'
+  - paso: 7
+    resaltar: 'text=Total a liquidar >> xpath=ancestor::div[2]'

@@ -1,0 +1,20 @@
+guia: compras/registrar-factura-compra.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/purchase-invoices
+      - esperar: 'text=Facturas de Compra'
+    resaltar: 'a:has-text("Nueva Factura"), button:has-text("Nueva Factura")'
+  - paso: 2
+    acciones:
+      - abrir: 'a:has-text("Nueva Factura"), button:has-text("Nueva Factura")'
+      - esperar: 'text=Nueva Factura de Compra'
+    resaltar: 'text=Completa la factura con el documento del proveedor >> xpath=ancestor::div[2]'
+  - paso: 3
+    resaltar: 'text=Compra Directa >> xpath=ancestor::div[2]'
+  - paso: 4
+    resaltar: 'text=Información General >> xpath=ancestor::section[1]'
+  - paso: 5
+    resaltar: 'text=Ítems de la Factura >> xpath=ancestor::section[1]'
+  - paso: 6
+    resaltar: 'button:has-text("Registrar Factura")'

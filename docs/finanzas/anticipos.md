@@ -1,14 +1,13 @@
 ---
-title: ¿Qué es un anticipo y cómo se maneja en Inventy?
-description: Registra anticipos de clientes y a proveedores, y aplícalos en facturas, POS y pagos.
+title: "¿Qué es un anticipo y cómo se maneja en Inventy?"
+description: "Pasos para registrar un anticipo de cliente y usarlo después."
 estado: pendiente-validacion
 tipo: rapida
 modulo: finanzas
-menu: Tesorería › Ingresos  ·  Tesorería › Egresos
+menu: "Tesorería › Ingresos"
 permisos:
   - Gestionar ingresos
-  - Gestionar egresos
-revisado: 2026-09-29
+revisado: 2026-09-30
 search:
   boost: 2
 tags:
@@ -20,59 +19,47 @@ tags:
 
 <p class="tambien-se-busca">También se busca como: anticipo, abono previo, saldo a favor, pago por adelantado, depósito del cliente, separado, adelanto a proveedor.</p>
 
-**Qué es:** dinero que se paga **antes** de que exista la factura.
+**Qué es:** dinero que el cliente paga **antes** de la factura. Queda como **saldo a favor** y luego se aplica a sus compras.
 
-- **Anticipo de cliente:** el cliente te paga por adelantado → queda como **saldo a favor** del cliente.
-- **Anticipo a proveedor:** tú le pagas por adelantado al proveedor → queda como saldo a tu favor con él.
-
-Después, ese saldo se **aplica** a una o varias facturas.
+**Antes de empezar:** debe existir un medio de pago de tipo **Anticipo de cliente** en <span class="ruta">Ventas › Ajustes › Medios de Pago</span>.
 
 ## Pasos
 
-**Registrar un anticipo de cliente**
+**Paso 1.** Ingresa a <span class="ruta">Tesorería › Ingresos</span> y haz clic en **Nuevo ingreso**.
 
-1. <span class="ruta">Tesorería › Ingresos</span> › **Nuevo ingreso**.
-2. **Tipo de movimiento**: **Anticipo de cliente**.
-3. **Cliente**, **Destino** (caja o banco), **Medio de pago**, **Ingreso Total**.
-4. **Finalizar ingreso**.
+![Paso 1: botón Nuevo ingreso](../assets/capturas/finanzas/anticipos/paso-1.png)
 
-**Usar el anticipo del cliente**
+**Paso 2.** Elige **Tipo de movimiento**: **Anticipo de cliente**, el **Cliente**, el **Destino**, el **Medio de pago** y el **Ingreso Total**.
 
-- **En una factura** (<span class="ruta">Ventas › Facturas › Nueva Factura</span>): **Medio de Pago** › elige el medio tipo **Anticipo de cliente**. Verás el **Saldo a favor**. Aquí el anticipo debe cubrir el total.
-- **En el POS**: al cobrar, elige el medio **Anticipo de cliente** (solo aparece si el cliente tiene saldo). Puedes pagar una parte con anticipo y el resto con otro medio.
-- **En un recaudo** (<span class="ruta">Tesorería › Ingresos</span>): usa **Anticipos aplicados** para cruzar el saldo con facturas pendientes.
+![Paso 2: formulario de anticipo](../assets/capturas/finanzas/anticipos/paso-2.png)
 
-**Registrar un anticipo a proveedor**
+**Paso 3.** Haz clic en **Finalizar ingreso**. El cliente queda con **saldo a favor**.
 
-1. <span class="ruta">Tesorería › Egresos</span> › **Nuevo egreso**.
-2. **Tipo de movimiento**: **Anticipo a proveedor**.
-3. **Proveedor**, **Fuente del pago**, **Egreso Total**.
-4. **Finalizar egreso**.
+![Paso 3: botón Finalizar ingreso](../assets/capturas/finanzas/anticipos/paso-3.png)
 
-**Usar el anticipo al proveedor**
+**Paso 4.** Para usarlo en el POS: al cobrar, elige el medio **Anticipo de cliente** (solo aparece si el cliente tiene saldo). Puedes pagar el resto con otro medio.
 
-1. <span class="ruta">Tesorería › Egresos</span> › **Nuevo egreso** › **Pago a proveedor**.
-2. **Fuente del pago**: **Anticipo**.
-3. En **Anticipos aplicados**, elige el anticipo y asígnalo a las facturas.
-4. **Finalizar egreso**.
+![Paso 4: medio Anticipo de cliente en el POS](../assets/capturas/finanzas/anticipos/paso-4.png)
 
-✅ Listo: el saldo del anticipo baja y las facturas quedan pagadas o abonadas.
+**Paso 5.** Para usarlo en una factura: en **Medio de Pago** elige **Anticipo de cliente**. Verás el **Saldo a favor**; aquí debe cubrir el total.
 
-!!! note "Requisito"
-    Para usar anticipos de clientes debe existir un **medio de pago** de tipo **Anticipo de cliente** en <span class="ruta">Ventas › Ajustes › Medios de Pago</span>.
+![Paso 5: anticipo en la factura de venta](../assets/capturas/finanzas/anticipos/paso-5.png)
+
+✅ **Listo:** el saldo a favor baja y la venta queda pagada con el anticipo.
+
+!!! info "Anticipo a proveedor"
+    <span class="ruta">Tesorería › Egresos</span> › **Nuevo egreso** › Tipo **Anticipo a proveedor** › **Finalizar egreso**. Para usarlo: nuevo egreso **Pago a proveedor** con **Fuente del pago: Anticipo** y aplícalo en **Anticipos aplicados**.
 
 ## Si algo falla
 
 | Problema | Solución |
 |---|---|
-| No aparece el medio **Anticipo de cliente** en el POS | El cliente no tiene saldo a favor, o no existe el medio de pago tipo *Anticipo de cliente*. |
-| *Este cliente no tiene anticipos disponibles* | El cliente no tiene saldo. Regístrale primero el anticipo. |
-| *La suma de los anticipos aplicados debe ser igual al valor total* | Ajusta los valores hasta que cuadren con el total del pago. |
-| En la factura no me deja pagar solo una parte con anticipo | En **Facturas** el anticipo debe cubrir el total. Para pago parcial, usa el POS o aplica el anticipo después con un ingreso. |
-| ¿Dónde veo cuánto saldo a favor tiene un cliente? | Al elegir el medio **Anticipo de cliente** en una factura se muestra el **Saldo a favor**. |
+| No aparece **Anticipo de cliente** en el POS | El cliente no tiene saldo, o no existe el medio de pago de ese tipo. |
+| *Este cliente no tiene anticipos disponibles* | Regístrale primero el anticipo (pasos 1 a 3). |
+| *La suma de los anticipos aplicados debe ser igual al valor total* | Ajusta los valores hasta cuadrar con el total. |
+| En la factura no me deja pagar solo una parte | En **Facturas** el anticipo cubre el total. Para pago parcial usa el POS. |
 
 ## Relacionados
 
 - [¿Cómo registro un pago de un cliente?](registrar-ingreso.md)
-- [¿Cómo registro un pago a un proveedor?](registrar-egreso.md)
 - [¿Cómo vendo en el POS?](../pos/vender-en-pos.md)

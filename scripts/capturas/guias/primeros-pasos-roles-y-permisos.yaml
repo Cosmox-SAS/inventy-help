@@ -1,0 +1,25 @@
+guia: primeros-pasos/roles-y-permisos.md
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Roles y Permisos
+      - esperar: 'text=Roles y Permisos'
+    resaltar: 'main'
+  - paso: 2
+    resaltar: 'button:has-text("Nuevo rol")'
+  - paso: 3
+    acciones:
+      - abrir: 'button:has-text("Nuevo rol")'
+      - esperar: 'text=Crear Nuevo Rol'
+      - llenar: { 'input[placeholder="Ej: Supervisor, Operador..."]': 'Cajero' }
+    resaltar: 'input[placeholder="Ej: Supervisor, Operador..."]'
+    recortar: 'role=dialog'
+  - paso: 4
+    acciones:
+      - llenar: { 'input[placeholder="Buscar permisos..."]': 'caja' }
+      - pausa: 500
+    resaltar: 'role=dialog >> input[placeholder="Buscar permisos..."] >> xpath=ancestor::div[2]'
+    recortar: 'role=dialog'
+  - paso: 5
+    resaltar: 'role=dialog >> button:has-text("Crear Rol")'
+    recortar: 'role=dialog'

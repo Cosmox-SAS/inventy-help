@@ -1,0 +1,19 @@
+guia: impuestos/retenciones.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/suppliers
+      - abrir: 'tbody tr a >> nth=0'
+      - pausa: 800
+      - abrir: 'a:has-text("Editar"), button:has-text("Editar")'
+      - esperar: 'text=Retenciones'
+    resaltar: 'main'
+  - paso: 2
+    resaltar: 'text=Retenciones >> xpath=ancestor::section[1]'
+  - paso: 3
+    acciones:
+      - ir: /{tenant}/customers/create
+      - esperar: 'text=Calcular retención en la fuente por'
+    resaltar: 'text=Calcular retención en la fuente por >> xpath=..'
+  - paso: 4
+    manual: resumen de una factura con retenciones aplicadas (Total a pagar con la retención restada)

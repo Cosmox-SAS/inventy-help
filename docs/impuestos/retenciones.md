@@ -1,14 +1,14 @@
 ---
-title: ¿Cómo se aplican las retenciones?
-description: Configura Retefuente, ReteIVA y ReteICA en clientes y proveedores, y cómo Inventy las calcula en las facturas.
+title: "¿Cómo se aplican las retenciones?"
+description: "Pasos para configurar Retefuente, ReteIVA y ReteICA en clientes y proveedores."
 estado: pendiente-validacion
 tipo: rapida
 modulo: impuestos
-menu: Ventas › Clientes  ·  Compras › Proveedores
+menu: "Ventas › Clientes · Compras › Proveedores"
 permisos:
   - Editar clientes
   - Editar proveedores
-revisado: 2026-09-29
+revisado: 2026-09-30
 search:
   boost: 2
 tags:
@@ -20,47 +20,47 @@ tags:
 
 <p class="tambien-se-busca">También se busca como: retención en la fuente, retefuente, reteiva, reteica, me retienen, retener a proveedor, autorretenedor, base mínima retención, retención por línea.</p>
 
-**Qué es:** una retención es una parte del pago que **no se entrega** al tercero, sino que se retiene para pagarla a la DIAN o al municipio.
+**Qué es:** parte del pago que no se entrega al tercero, sino que se retiene para pagarla a la DIAN o al municipio. En compras tú retienes al proveedor; en ventas el cliente te retiene a ti.
 
-- **En compras:** tú le retienes al **proveedor** (pagas menos).
-- **En ventas:** el **cliente** te retiene a ti (te paga menos).
+**Antes de empezar:** crea las retenciones como impuestos de tipo **Retención** ([guía](crear-impuesto.md)).
 
 ## Pasos
 
-**1. Crea las retenciones**: <span class="ruta">Fiscal › Catálogo de Impuestos › Impuestos y retenciones</span> › **Nuevo Impuesto** › Tipo **Retención**. Ver [guía](crear-impuesto.md).
+**Paso 1.** Abre el cliente (<span class="ruta">Ventas › Clientes</span>) o el proveedor (<span class="ruta">Compras › Proveedores</span>) y edítalo.
 
-**2. Configúralas en el tercero** (cliente o proveedor):
+![Paso 1: ficha del tercero en edición](../assets/capturas/impuestos/retenciones/paso-1.png)
 
-1. Abre el cliente (<span class="ruta">Ventas › Clientes</span>) o proveedor (<span class="ruta">Compras › Proveedores</span>) › edítalo.
-2. Sección **Retenciones**: elige el impuesto en **Retefuente**, **Reteiva** y/o **Reteica** (y su cuenta contable si usas contabilidad).
-3. **Calcular retención en la fuente por**:
-    - **Total de factura** → aplica la Retefuente del tercero sobre el total.
-    - **Línea** → aplica la retención que trae el **catálogo de impuestos de cada producto**.
-4. Guarda.
+**Paso 2.** En la sección **Retenciones**, elige el impuesto en **Retefuente**, **Reteiva** y/o **Reteica** (y su cuenta contable si usas contabilidad).
 
-**3. Factura normal.** Inventy calcula las retenciones solo. En la factura puedes cambiar **Calcular retención en la fuente por** para ese documento.
+![Paso 2: sección Retenciones](../assets/capturas/impuestos/retenciones/paso-2.png)
 
-✅ Listo: las retenciones aparecen en el resumen de la factura y restan del **Total a pagar**.
+**Paso 3.** En **Calcular retención en la fuente por**, elige **Total de factura** (usa la Retefuente del tercero) o **Línea** (usa la del catálogo de cada producto).
 
-## Cómo calcula Inventy
+![Paso 3: campo Calcular retención en la fuente por](../assets/capturas/impuestos/retenciones/paso-3.png)
 
-| Retención | Base | Cuándo se aplica |
-|---|---|---|
-| **Retefuente** (Total de factura) | Subtotal de la factura | Si el tercero tiene Retefuente y la base supera la **Base Mínima**. |
-| **Retefuente** (Línea) | Subtotal de cada producto, agrupado por retención | Según el catálogo de cada producto, si la suma supera la **Base Mínima**. En compras, solo si el proveedor tiene Retefuente configurada. |
-| **ReteIVA** | El **IVA** de la factura (no el subtotal) | Si el tercero tiene Reteiva. |
-| **ReteICA** | [PENDIENTE DE VALIDACIÓN FUNCIONAL: base usada] | Si el tercero tiene Reteica. |
+**Paso 4.** Guarda. En las facturas de ese tercero, Inventy calcula las retenciones solo y las resta del **Total a pagar**.
+
+![Paso 4: retenciones en el resumen de la factura](../assets/capturas/impuestos/retenciones/paso-4.png)
+
+✅ **Listo:** las retenciones se aplican automáticamente en cada factura de ese cliente o proveedor.
+
+??? info "¿Cómo calcula Inventy cada retención?"
+    | Retención | Base | Cuándo se aplica |
+    |---|---|---|
+    | **Retefuente** (Total de factura) | Subtotal de la factura | Si el tercero tiene Retefuente y supera la **Base Mínima**. |
+    | **Retefuente** (Línea) | Subtotal de cada producto, agrupado | Según el catálogo de cada producto. En compras, solo si el proveedor tiene Retefuente. |
+    | **ReteIVA** | El **IVA** de la factura | Si el tercero tiene Reteiva. |
+    | **ReteICA** | [PENDIENTE DE VALIDACIÓN FUNCIONAL: base usada] | Si el tercero tiene Reteica. |
 
 ## Si algo falla
 
 | Problema | Solución |
 |---|---|
-| No se aplicó la retención | 1) ¿El tercero la tiene configurada? 2) ¿La base supera la **Base Mínima**? 3) ¿Está bien elegido **Línea / Total de factura**? |
-| Al cobrar una factura con retención pide un valor | En el ingreso aparece *Ingresa el valor de abono para la factura con retención antes de finalizar*: escribe cuánto abona el cliente a esa factura. |
-| No sé qué porcentaje usar | Eso lo define tu contador según la norma vigente. |
+| No se aplicó la retención | ¿El tercero la tiene configurada? ¿La base supera la **Base Mínima**? ¿Está bien elegido **Línea / Total de factura**? |
+| Al cobrar una factura con retención pide un valor | Escribe cuánto abona el cliente a esa factura. |
+| No sé qué porcentaje usar | Lo define tu contador según la norma vigente. |
 
 ## Relacionados
 
 - [¿Cómo creo un impuesto o una retención?](crear-impuesto.md)
 - [¿Qué es y cómo creo un catálogo de impuestos?](catalogo-impuestos.md)
-- [¿Cómo registro una factura de compra?](../compras/registrar-factura-compra.md)

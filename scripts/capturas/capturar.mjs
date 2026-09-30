@@ -156,6 +156,10 @@ async function ejecutarPaso(page, paso, ctx) {
                 await objetivo.click();
                 break;
             }
+            case 'llenar_credenciales':
+                await localizar(page, 'input[name="email"]').fill(ctx.env.INVENTY_DEMO_EMAIL);
+                await localizar(page, 'input[name="password"]').fill('••••••••');
+                break;
             case 'llenar':
                 for (const [sel, texto] of Object.entries(valor)) await localizar(page, sel).fill(String(texto));
                 break;
@@ -211,7 +215,8 @@ async function main() {
         console.log(`\n▶ ${guia.guia}`);
 
         try {
-            ctx.tenant = await sesion(page, env);
+            // `sin_sesion: true` para guías de acceso (login, recuperar contraseña).
+            ctx.tenant = guia.sin_sesion ? null : await sesion(page, env);
         } catch (error) {
             console.log(`  ✗ No se pudo iniciar sesión: ${error.message}`);
             resultados.push({ guia: guia.guia, paso: '—', ok: false, detalle: `Inicio de sesión: ${error.message}` });
@@ -222,6 +227,12 @@ async function main() {
         for (const paso of guia.pasos) {
             const destino = path.join(dirGuia, `paso-${paso.paso}.png`);
             const relativo = path.relative(path.join(RAIZ, 'docs'), destino);
+            if (paso.manual) {
+                // Pantallas que el robot no puede alcanzar (correos, otra persona, app móvil).
+                resultados.push({ guia: guia.guia, paso: paso.paso, ok: false, detalle: `Captura manual: ${paso.manual}` });
+                console.log(`  · Paso ${paso.paso}: captura manual (${paso.manual})`);
+                continue;
+            }
             try {
                 await ejecutarPaso(page, paso, ctx);
                 const recorte = paso.recortar ? await localizar(page, paso.recortar).boundingBox() : null;

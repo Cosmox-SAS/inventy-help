@@ -1,14 +1,14 @@
 ---
-title: ¿Cómo configuro los datos de mi empresa?
-description: Registra la razón social, NIT, logo, dirección y datos de contacto de tu empresa.
+title: "¿Cómo configuro los datos de mi empresa?"
+description: "Pasos para registrar razón social, NIT, logo y contacto de la empresa."
 estado: pendiente-validacion
-tipo: tutorial
+tipo: rapida
 modulo: primeros-pasos
-menu: Configuración › Empresa
+menu: "Configuración › Empresa"
 permisos:
   - Ver empresa
   - Editar empresa
-revisado: 2026-09-29
+revisado: 2026-09-30
 tags:
   - Configuración
   - Empresa
@@ -16,66 +16,47 @@ tags:
 
 # ¿Cómo configuro los datos de mi empresa?
 
-<p class="tambien-se-busca">También se busca como: NIT, razón social, logo, datos de la empresa, dirección, cambiar logo de la factura, información de la compañía.</p>
+<p class="tambien-se-busca">También se busca como: NIT, razón social, logo, datos de la empresa, dirección, cambiar logo de la factura.</p>
 
-## ¿Para qué sirve?
+**Antes de empezar:** ten a mano el RUT y el logo (PNG o JPG, máximo 2 MB).
 
-Los datos de tu empresa aparecen en tus facturas, tirillas y documentos electrónicos. Tenerlos correctos evita rechazos y confusiones con tus clientes.
+## Pasos
 
-**Úsala cuando:** empiezas a usar Inventy, cambias de dirección o teléfono, o quieres poner tu logo en los documentos.
+**Paso 1.** Ingresa a <span class="ruta">Configuración › Empresa</span>.
 
-## Antes de comenzar
+![Paso 1: pantalla Información de la empresa](../assets/capturas/primeros-pasos/configurar-empresa/paso-1.png)
 
-- [ ] Ten a mano el **RUT** de la empresa (tipo y número de identificación, razón social).
-- [ ] Ten el **logo** en PNG o JPG, de máximo **2 MB**.
-- [ ] Permiso para ver y editar la empresa (normalmente, rol Administrador).
+**Paso 2.** Haz clic en el botón para editar. Se abre **Editar empresa**.
 
-## Paso a paso
+![Paso 2: formulario Editar empresa](../assets/capturas/primeros-pasos/configurar-empresa/paso-2.png)
 
-**Paso 1.** Ingresa al menú <span class="ruta">Configuración › Empresa</span>. Verás la pantalla **Información de la empresa**.
+**Paso 3.** En **Identidad de la empresa**, sube el **Logo de la empresa**.
 
-**Paso 2.** Haz clic en el botón para editar. Se abre **Editar empresa**. [PENDIENTE DE VALIDACIÓN FUNCIONAL: nombre exacto del botón.]
+![Paso 3: logo de la empresa](../assets/capturas/primeros-pasos/configurar-empresa/paso-3.png)
 
-!!! captura "CAPTURA PENDIENTE"
-    Formulario **Editar empresa** con las secciones Identidad, Información legal, Representante legal e Información de contacto.
+**Paso 4.** En **Información legal**, completa tipo y número de identificación, **Razón social** y nombre comercial.
 
-**Paso 3.** Completa las secciones:
+![Paso 4: información legal](../assets/capturas/primeros-pasos/configurar-empresa/paso-4.png)
 
-| Sección | Campo | Qué escribir | ¿Obligatorio? |
-|---|---|---|---|
-| Identidad de la empresa | Logo de la empresa | Imagen PNG o JPG hasta 2 MB. | No |
-| Información legal | Tipo de identificación y Número de identificación | Normalmente NIT, tal como aparece en el RUT. | Según el caso |
-| | **Razón social** | Nombre legal (ej. *Corporativo Global S.A.S.*). | **Sí** |
-| | Nombre comercial | Nombre con el que te conocen tus clientes. | No |
-| Representante legal | Nombre completo | Nombre del representante legal. | No |
-| Información de contacto | Correo, Teléfono fijo, Teléfono móvil | Datos de contacto de la empresa. | No |
-| | País, Departamento / Estado, Municipio / Ciudad, Dirección | Selecciona primero el país, luego el departamento y después el municipio. | No |
+**Paso 5.** Completa **Representante legal** e **Información de contacto** (correo, teléfonos, país, departamento, municipio y dirección).
 
-**Paso 4.** Guarda los cambios.
+![Paso 5: información de contacto](../assets/capturas/primeros-pasos/configurar-empresa/paso-5.png)
 
-## Resultado esperado
+**Paso 6.** Guarda los cambios.
 
-La pantalla **Información de la empresa** muestra los datos actualizados. Los documentos que generes a partir de ahora usarán la nueva información.
+![Paso 6: botón para guardar](../assets/capturas/primeros-pasos/configurar-empresa/paso-6.png)
 
-!!! warning "El NIT y la facturación electrónica"
-    Si tu empresa ya está habilitada para facturación electrónica, **no cambies el NIT ni la razón social** sin hablar antes con soporte: deben coincidir con lo registrado ante la DIAN.
+✅ **Listo:** los documentos que generes usarán los datos nuevos.
 
-## Problemas frecuentes
+## Si algo falla
 
-??? question "No puedo elegir el municipio"
-    Primero debes elegir el **país** y luego el **departamento**. El campo muestra *“Seleccione un departamento primero”* hasta que lo hagas.
+| Problema | Solución |
+|---|---|
+| No puedo elegir el municipio | Elige primero el país y luego el departamento. |
+| No sube el logo | Debe ser PNG o JPG de máximo 2 MB. |
+| Ya facturo electrónicamente y quiero cambiar el NIT o la razón social | Habla antes con [soporte](../soporte.md): deben coincidir con la DIAN. |
 
-??? question "No me deja subir el logo"
-    Revisa que la imagen sea **PNG o JPG** y pese **menos de 2 MB**.
-
-??? question "No veo la opción Empresa en Configuración"
-    Tu rol no tiene permiso para ver la empresa. Pídeselo al administrador.
-
-## ¿Necesitas ayuda?
-
-Contacta a soporte si necesitas cambiar el NIT o la razón social de una empresa que ya factura electrónicamente. [Ver cómo contactar a soporte](../soporte.md).
-
-## Artículos relacionados
+## Relacionados
 
 - [¿Cómo activo o desactivo módulos?](activar-modulos.md)
 - [¿Cómo registro una resolución de la DIAN?](../facturacion-electronica/resoluciones.md)

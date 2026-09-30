@@ -28,6 +28,7 @@ gestion/               Documentos internos (no se publican)
   guia-de-estilo.md               Reglas de redacción, capturas y estados
   estado-articulos.md             Tablero generado con el estado de cada artículo
 scripts/check_docs.py  Validaciones documentales
+scripts/capturas/      Robot de capturas (capturar.mjs, placeholders.mjs, guias/*.yaml)
 scripts/sync_erp.py    Detecta cambios de interfaz en inventy-erp (hook tras cada pull)
 scripts/actualizar_guias.sh, claude_actualizar.sh, prompt_actualizacion.md  Actualización automática con Claude Code
 ```
@@ -55,6 +56,24 @@ scripts/actualizar_guias.sh, claude_actualizar.sh, prompt_actualizacion.md  Actu
 - Todo artículo que no esté `publicado` muestra un aviso en el portal.
 - Un artículo con `CAPTURA PENDIENTE` o `PENDIENTE DE VALIDACIÓN FUNCIONAL` no puede pasar a `publicado` (lo bloquea `check_docs.py`).
 - Para pasar a `validado`, una persona sigue los pasos en Inventy (empresa de demostración) y confirma que funcionan.
+
+## Capturas de pantalla automáticas
+
+Cada paso de cada guía lleva una captura real. Un robot (Playwright + Google Chrome) entra al **ambiente demo** de Inventy, recorre la guía y toma la foto con el botón del paso resaltado.
+
+```bash
+npm install                                  # una vez
+cp .env.capturas.example .env.capturas       # y completa URL, correo y contraseña del usuario DEMO
+npm run capturas                             # todas las guías
+npm run capturas -- pos/cierre-de-caja       # solo una guía
+npm run capturas -- --ver                    # viendo el navegador
+npm run capturas:placeholders                # imágenes "Captura pendiente" para las que falten
+```
+
+- Recorridos por guía: `scripts/capturas/guias/*.yaml` (acciones: `menu`, `ir`, `abrir`, `llenar`, `escribir`, `tecla`, `esperar`, `pausa`; `resaltar`, `recortar`, `manual`, `sin_sesion`).
+- **Nunca guarda datos en la demo:** bloquea clics en *Guardar, Confirmar, Crear, Validar, Aprobar…* salvo que el paso tenga `guarda_datos: true` y se corra con `CAPTURAS_PERMITIR_GUARDAR=1`. Toma la foto justo antes de confirmar.
+- Resultado en `gestion/capturas-reporte.md` (pasos que fallaron y pasos de captura manual).
+- `.env.capturas` no se sube a Git. Usa solo un usuario de una **empresa de demostración**.
 
 ## Actualización automática con cada pull de inventy-erp
 

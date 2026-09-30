@@ -1,83 +1,53 @@
 ---
-title: ¿Cómo funcionan los roles y permisos?
-description: Crea roles como Cajero o Contador y decide qué puede hacer cada uno.
+title: "¿Cómo creo un rol y le doy permisos?"
+description: "Pasos para crear un rol (Cajero, Bodega…) y elegir sus permisos."
 estado: pendiente-validacion
-tipo: tutorial
+tipo: rapida
 modulo: primeros-pasos
-menu: Configuración › Roles y Permisos
+menu: "Configuración › Roles y Permisos"
 permisos:
   - Gestionar permisos
-revisado: 2026-09-29
+revisado: 2026-09-30
 tags:
   - Usuarios
   - Permisos
 ---
 
-# ¿Cómo funcionan los roles y permisos?
+# ¿Cómo creo un rol y le doy permisos?
 
 <p class="tambien-se-busca">También se busca como: perfiles, accesos, restringir, bloquear opción, dar permiso, rol de cajero, rol de vendedor.</p>
 
-## ¿Para qué sirve?
-
-Un **rol** es un conjunto de **permisos**. En lugar de dar permisos persona por persona, creas roles como *Cajero*, *Bodega* o *Contador* y se los asignas a los usuarios.
-
-Ejemplo: el rol *Cajero* puede usar el POS y abrir y cerrar caja, pero no ver la contabilidad.
-
-## Antes de comenzar
-
-- [ ] Tener el permiso **Gestionar permisos** (normalmente, rol Administrador).
-- [ ] Tener claro qué tareas hace cada cargo en tu empresa.
-
-## Paso a paso
-
-### Crear un rol
+## Pasos
 
 **Paso 1.** Ingresa a <span class="ruta">Configuración › Roles y Permisos</span>.
 
-**Paso 2.** Haz clic en **Nuevo rol**. Se abre **Crear Nuevo Rol**.
+![Paso 1: lista de roles](../assets/capturas/primeros-pasos/roles-y-permisos/paso-1.png)
 
-**Paso 3.** Escribe el nombre del rol (por ejemplo, *Supervisor* u *Operador*).
+**Paso 2.** Haz clic en **Nuevo rol**.
 
-**Paso 4.** Usa **Buscar permisos...** para encontrar y marcar los permisos que necesita. Están agrupados por módulo.
+![Paso 2: botón Nuevo rol](../assets/capturas/primeros-pasos/roles-y-permisos/paso-2.png)
 
-!!! captura "CAPTURA PENDIENTE"
-    Ventana **Crear Nuevo Rol** con permisos agrupados por módulo y algunos marcados.
+**Paso 3.** Escribe el nombre del rol (ej. *Cajero*).
+
+![Paso 3: nombre del rol](../assets/capturas/primeros-pasos/roles-y-permisos/paso-3.png)
+
+**Paso 4.** Busca con **Buscar permisos...** y marca los permisos que necesita.
+
+![Paso 4: lista de permisos](../assets/capturas/primeros-pasos/roles-y-permisos/paso-4.png)
 
 **Paso 5.** Haz clic en **Crear Rol**.
 
-### Cambiar los permisos de un rol
+![Paso 5: botón Crear Rol](../assets/capturas/primeros-pasos/roles-y-permisos/paso-5.png)
 
-**Paso 1.** En la lista de roles, abre las acciones del rol.
+✅ **Listo:** asigna el rol a los usuarios en <span class="ruta">Configuración › Usuarios</span>. Para cambiar permisos después: acciones del rol › **Gestionar permisos**.
 
-**Paso 2.** Elige **Gestionar permisos** para marcar o desmarcar permisos, o **Editar nombre** para renombrarlo.
+## Si algo falla
 
-**Paso 3.** Guarda los cambios.
+| Problema | Solución |
+|---|---|
+| *El nombre del rol es obligatorio.* / *Todavía no seleccionaste permisos.* | Escribe un nombre y marca al menos un permiso. |
+| Di el permiso y el usuario no ve el menú | Revisa que el módulo esté activo y que el usuario recargue la página. |
 
-## Resultado esperado
-
-El rol aparece en la lista con la cantidad de **Usuarios con rol** y **Permisos asignados**. Los usuarios con ese rol ven los cambios al recargar la página.
-
-## Recomendaciones
-
-- Da a cada rol **solo lo que necesita**. Es más fácil agregar un permiso después que corregir un error.
-- Cuidado con permisos de **eliminar**, **anular** y **reabrir cierre de caja**: dáselos solo a personas de confianza.
-- Para vendedores y repartidores que usan la **app móvil**, pide a soporte la lista de permisos recomendados.
-
-## Problemas frecuentes
-
-??? question "“El nombre del rol es obligatorio.” / “Todavía no seleccionaste permisos.”"
-    Para crear un rol debes escribir un nombre **y** marcar al menos un permiso.
-
-??? question "Di el permiso pero el usuario sigue sin ver el menú"
-    1. Revisa que el **módulo** esté activo en <span class="ruta">Configuración › Módulos</span>.
-    2. Pide al usuario que **recargue la página** o cierre sesión y vuelva a entrar.
-    3. Revisa que el usuario tenga asignado **ese** rol en <span class="ruta">Configuración › Usuarios</span>.
-
-## ¿Necesitas ayuda?
-
-[Contacta a soporte](../soporte.md) si no encuentras un permiso para una tarea. Indica el **nombre del rol** y **qué debe poder hacer** el usuario.
-
-## Artículos relacionados
+## Relacionados
 
 - [¿Cómo agrego usuarios a mi empresa?](crear-usuarios.md)
-- [Soluciones rápidas: usuarios y permisos](../soluciones-rapidas/usuarios.md)

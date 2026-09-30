@@ -1,0 +1,20 @@
+guia: primeros-pasos/configurar-empresa.md
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Empresa
+      - esperar: 'text=Información de la empresa'
+    resaltar: 'a:has-text("Editar"), button:has-text("Editar")'
+  - paso: 2
+    acciones:
+      - abrir: 'a:has-text("Editar"), button:has-text("Editar")'
+      - esperar: 'text=Editar empresa'
+    resaltar: 'text=Identidad de la empresa >> xpath=ancestor::section[1]'
+  - paso: 3
+    resaltar: 'text=Logo de la empresa >> xpath=ancestor::div[2]'
+  - paso: 4
+    resaltar: 'text=Información legal >> xpath=ancestor::section[1]'
+  - paso: 5
+    resaltar: 'text=Información de contacto >> xpath=ancestor::section[1]'
+  - paso: 6
+    resaltar: 'footer button[type="submit"], button:has-text("Guardar")'

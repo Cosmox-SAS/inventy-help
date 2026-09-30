@@ -1,0 +1,13 @@
+guia: primeros-pasos/activar-modulos.md
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Módulos
+      - esperar: 'text=Configuración de módulos'
+    resaltar: 'main'
+  - paso: 2
+    resaltar: 'nav:has-text("Ventas"), aside:has-text("Ventas") >> nth=-1'
+  - paso: 3
+    resaltar: '[role="switch"] >> nth=0'
+  - paso: 4
+    resaltar: 'text=Descuento manual por producto en el POS >> xpath=ancestor::div[3]'

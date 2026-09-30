@@ -1,0 +1,24 @@
+guia: primeros-pasos/crear-usuarios.md
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Usuarios
+      - esperar: 'text=Nuevo usuario'
+    resaltar: 'a:has-text("Invitaciones")'
+  - paso: 2
+    acciones:
+      - abrir: 'a:has-text("Invitaciones")'
+      - esperar: 'text=Invitar usuario'
+    resaltar: 'button:has-text("Invitar usuario")'
+  - paso: 3
+    acciones:
+      - abrir: 'button:has-text("Invitar usuario")'
+      - esperar: 'role=dialog'
+      - llenar: { 'role=dialog >> input >> nth=0': 'María Gómez', 'role=dialog >> input[type="email"]': 'maria@empresa.com' }
+    resaltar: 'role=dialog'
+    recortar: 'role=dialog'
+  - paso: 4
+    resaltar: 'role=dialog >> button:has-text("Enviar invitación")'
+    recortar: 'role=dialog'
+  - paso: 5
+    manual: pantalla Aceptar invitación (se abre desde el correo de invitación)

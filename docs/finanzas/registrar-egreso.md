@@ -1,13 +1,13 @@
 ---
-title: ¿Cómo registro un pago a un proveedor?
-description: Registra el pago de facturas de compra o un anticipo a un proveedor.
+title: "¿Cómo registro un pago a un proveedor?"
+description: "Pasos para registrar el pago de facturas de compra."
 estado: pendiente-validacion
-tipo: tutorial
+tipo: rapida
 modulo: finanzas
-menu: Tesorería › Operación › Egresos
+menu: "Tesorería › Egresos"
 permisos:
   - Gestionar egresos
-revisado: 2026-09-29
+revisado: 2026-09-30
 tags:
   - Tesorería
   - Proveedores
@@ -16,67 +16,43 @@ tags:
 
 # ¿Cómo registro un pago a un proveedor?
 
-<p class="tambien-se-busca">También se busca como: egreso, pagar proveedor, comprobante de egreso, abono a proveedor, pagar factura de compra, registrar gasto, anticipo a proveedor.</p>
+<p class="tambien-se-busca">También se busca como: egreso, pagar proveedor, comprobante de egreso, abono a proveedor, pagar factura de compra, registrar gasto.</p>
 
-## ¿Para qué sirve?
+**Antes de empezar:** la factura del proveedor debe estar registrada ([factura de compra](../compras/registrar-factura-compra.md)).
 
-Cuando pagas una o varias facturas de un proveedor, registras un **egreso**. Así baja lo que le debes, el dinero sale de tu caja o banco y se genera la contabilidad.
-
-!!! info "¿Quieres registrar un gasto?"
-    Primero registra la **factura del gasto** como [factura de compra](../compras/registrar-factura-compra.md). Después, registra su **pago** aquí.
-
-## Antes de comenzar
-
-- [ ] Que el proveedor tenga **facturas de compra pendientes** (para pagos).
-- [ ] Una **caja abierta** o una **cuenta bancaria** de donde sale el dinero.
-- [ ] Permiso: **Gestionar egresos**.
-
-## Paso a paso
+## Pasos
 
 **Paso 1.** Ingresa a <span class="ruta">Tesorería › Egresos</span> y haz clic en **Nuevo egreso**.
 
-**Paso 2. Información del egreso.**
+![Paso 1: botón Nuevo egreso](../assets/capturas/finanzas/registrar-egreso/paso-1.png)
 
-| Campo | Qué hacer |
+**Paso 2.** Elige **Tipo de movimiento**: **Pago a proveedor**, y el **Proveedor**.
+
+![Paso 2: tipo de movimiento y proveedor](../assets/capturas/finanzas/registrar-egreso/paso-2.png)
+
+**Paso 3.** Completa **Centro de costo**, **Fecha del pago**, **Fuente del pago** (caja o banco) y **Egreso Total**.
+
+![Paso 3: información del egreso](../assets/capturas/finanzas/registrar-egreso/paso-3.png)
+
+**Paso 4.** En **Distribución del egreso**, asigna el valor a las facturas que pagas hasta que **Por distribuir** quede en cero.
+
+![Paso 4: distribución del egreso](../assets/capturas/finanzas/registrar-egreso/paso-4.png)
+
+**Paso 5.** Haz clic en **Finalizar egreso** y confirma.
+
+![Paso 5: botón Finalizar egreso](../assets/capturas/finanzas/registrar-egreso/paso-5.png)
+
+✅ **Listo:** baja lo que le debes al proveedor y el dinero sale de la caja o banco.
+
+## Si algo falla
+
+| Problema | Solución |
 |---|---|
-| **Fecha de egreso** | Fecha del registro. |
-| **Tipo de movimiento** | **Pago a proveedor** o **Anticipo a proveedor**. |
-| **Proveedor** | A quién le pagas. |
-| **Centro de costo** | El que corresponda. |
-| **Fecha del pago** | Cuándo se hizo el pago. |
-| **Fuente del pago** | **Caja** o **Cuenta bancaria** de donde sale el dinero. |
-| **Egreso Total** | Valor pagado. |
-| Comprobante (opcional) | Número del comprobante o voucher. |
+| *No hay destinos disponibles…* | Necesitas una caja abierta o una cuenta bancaria. |
+| *La suma de las asignaciones debe ser igual al valor total* | Ajusta hasta que **Por distribuir** quede en cero. |
+| Quiero borrar un egreso | Solo se eliminan los que están en **borrador**. |
 
-**Paso 3. Distribución del egreso.** Asigna el valor a las facturas que estás pagando hasta que **Por distribuir** quede en cero.
+## Relacionados
 
-!!! captura "CAPTURA PENDIENTE"
-    Formulario **Nuevo egreso** con la Distribución del egreso completa.
-
-**Paso 4.** Elige **Guardar borrador** o **Finalizar egreso** y confirma.
-
-## Resultado esperado
-
-- El egreso queda finalizado en <span class="ruta">Tesorería › Egresos</span>.
-- El saldo de las facturas de compra baja.
-- El dinero sale de la caja o cuenta bancaria elegida.
-
-## Problemas frecuentes
-
-??? question "“No hay destinos disponibles: habilita el módulo bancario o abre una caja.”"
-    Necesitas una caja **abierta** o una **cuenta bancaria** activa.
-
-??? question "“La suma de las asignaciones debe ser igual al valor total”"
-    Ajusta los valores asignados a las facturas hasta que **Por distribuir** quede en cero.
-
-??? question "Quiero borrar un egreso"
-    Solo se pueden eliminar egresos en **borrador**: *“Se eliminará este egreso en borrador y su distribución.”*
-
-## ¿Necesitas ayuda?
-
-[Contacta a soporte](../soporte.md) con el **proveedor**, los **números de factura** y el **valor** pagado.
-
-## Artículos relacionados
-
+- [¿Qué es un anticipo y cómo se maneja?](anticipos.md)
 - [¿Cómo registro una factura de compra?](../compras/registrar-factura-compra.md)
-- [¿Cómo registro un pago de un cliente?](registrar-ingreso.md)

@@ -1,0 +1,18 @@
+guia: finanzas/registrar-egreso.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/expenses
+      - esperar: 'text=Nuevo egreso'
+    resaltar: 'a:has-text("Nuevo egreso"), button:has-text("Nuevo egreso")'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/expenses/create
+      - esperar: 'text=Información del egreso'
+    resaltar: 'text=Tipo de movimiento * >> xpath=..'
+  - paso: 3
+    resaltar: 'text=Información del egreso >> xpath=ancestor::section[1]'
+  - paso: 4
+    resaltar: 'text=Distribución del egreso >> xpath=ancestor::section[1]'
+  - paso: 5
+    resaltar: 'button:has-text("Finalizar egreso")'

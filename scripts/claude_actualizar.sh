@@ -53,7 +53,7 @@ set -- \
         "Bash($PYTHON scripts/check_docs.py:*)" \
         "Bash($MKDOCS build:*)" \
     --disallowedTools \
-        "Edit(/$ERP_DIR/**)" "Edit(scripts/**)" "Edit(.github/**)" \
+        "Edit(/$ERP_DIR/**)" "Edit(scripts/*.py)" "Edit(scripts/*.sh)" "Edit(scripts/*.md)" "Edit(scripts/capturas/*.mjs)" "Edit(.github/**)" \
     --max-budget-usd "$PRESUPUESTO"
 
 if [ -n "${INVENTY_HELP_MODELO:-}" ]; then

@@ -1,0 +1,19 @@
+guia: restaurante/varias-cuentas-mesa.md
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Módulos
+      - abrir: 'text=Restaurante >> nth=0'
+      - pausa: 600
+    resaltar: 'main'
+  - paso: 2
+    resaltar: 'text=Habilitar pedidos a la mesa >> xpath=ancestor::div[3]'
+  - paso: 3
+    resaltar: 'text=Permitir varias cuentas por mesa >> xpath=ancestor::div[3]'
+  - paso: 4
+    acciones:
+      - menu: POS
+      - esperar: '[data-testid="pos-order-type-selector"]'
+    resaltar: '[data-testid="pos-order-type-selector"]'
+  - paso: 5
+    resaltar: '[data-testid="pos-sale-tabs"]'

@@ -19,7 +19,7 @@ tags:
 
 **CAUSA:** falta un dato obligatorio o hay un dato repetido. Los más comunes: *“El nombre es requerido.”*, *“La unidad de medida es requerida.”*, *“El código de barras ya existe en el sistema.”*, catálogo de impuestos vacío (obligatorio si usas contabilidad).
 
-**SOLUCIÓN:** revisa cada mensaje en rojo. Ver [¿Cómo creo un producto?](../productos-inventario/crear-producto.md#problemas-frecuentes).
+**SOLUCIÓN:** revisa cada mensaje en rojo. Ver [¿Cómo creo un producto?](../productos-inventario/crear-producto.md#si-algo-falla).
 
 **ESCALAR A SOPORTE:** si no aparece ningún mensaje y el producto no se guarda.
 

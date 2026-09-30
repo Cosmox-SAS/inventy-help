@@ -11,7 +11,10 @@ Empresarios, administradores, contadores, vendedores, cajeros, auxiliares de inv
 Para el equipo comercial de Inventy (y para cualquier usuario con prisa), las guías van **al grano**: plantilla `plantillas/guia-rapida.md` (`tipo: rapida`).
 
 - Solo **Pasos**, **Si algo falla** y **Relacionados**.
-- Un paso = una línea, con la ruta del menú y el botón exacto: `Inventario › Traslados › **Nuevo traslado**`.
+- Los pasos van de principio a fin, numerados `**Paso N.**`, y **cada paso lleva su captura** justo debajo:
+  `![Paso N: descripción corta](../assets/capturas/<modulo>/<guia>/paso-N.png)`.
+- Cada guía tiene su recorrido de captura en `scripts/capturas/guias/<modulo>-<guia>.yaml` (qué hace el robot en cada paso y qué resalta).
+- Un paso = una acción, con la ruta del menú y el botón exacto: `Inventario › Traslados › **Nuevo traslado**`.
 - Sin explicar conceptos, sin “¿para qué sirve?”, sin párrafos introductorios.
 - Si el proceso lo hacen varias personas, agrupa los pasos por rol en una línea en negrita (**Aprobar** (sede de origen)).
 - Cierra con `✅ Listo:` y el resultado en una línea.
@@ -47,6 +50,9 @@ La plantilla larga (`plantillas/tutorial.md`, `tipo: tutorial`) queda solo para 
 
 ## Capturas de pantalla
 
+- Se toman **automáticamente** con `npm run capturas` en el ambiente demo (ver README). El robot resalta el elemento de cada paso.
+- Mientras no exista la captura real, `npm run capturas:placeholders` crea una imagen gris *Captura pendiente* y la anota en `docs/assets/capturas/pendientes.txt`.
+- Pasos que el robot no alcanza (correos, otra persona, app móvil) se marcan `manual:` en el YAML y se toman a mano con el mismo nombre de archivo.
 - Solo capturas **reales** de Inventy, tomadas en una empresa de demostración (sin datos de clientes reales).
 - Guardar en `docs/assets/capturas/<modulo>/<guia>-<n>.png`, ancho 1440 px (escritorio) o 390 px (móvil).
 - Resaltar con recuadros o flechas en el color de acento; nunca tapar texto relevante.

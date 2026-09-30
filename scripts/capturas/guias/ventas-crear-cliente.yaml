@@ -1,0 +1,20 @@
+guia: ventas/crear-cliente.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/customers
+      - esperar: 'text=Nuevo cliente'
+    resaltar: 'a:has-text("Nuevo cliente"), button:has-text("Nuevo cliente")'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/customers/create
+      - esperar: 'text=Registra un nuevo cliente en el sistema.'
+    resaltar: 'text=Adjunta el RUT del cliente en PDF. >> xpath=ancestor::div[2]'
+  - paso: 3
+    resaltar: 'text=Tipo de documento * >> xpath=ancestor::section[1]'
+  - paso: 4
+    resaltar: 'text=Información de contacto >> xpath=ancestor::section[1]'
+  - paso: 5
+    resaltar: 'text=Datos del rol de cliente >> xpath=ancestor::section[1]'
+  - paso: 6
+    resaltar: 'button:has-text("Guardar cliente")'

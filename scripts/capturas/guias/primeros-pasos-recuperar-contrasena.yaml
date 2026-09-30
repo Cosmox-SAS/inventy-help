@@ -1,0 +1,17 @@
+guia: primeros-pasos/recuperar-contrasena.md
+sin_sesion: true
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /login
+    resaltar: 'a:has-text("¿Olvidaste tu contraseña?")'
+  - paso: 2
+    acciones:
+      - abrir: 'a:has-text("¿Olvidaste tu contraseña?")'
+      - esperar: 'text=Enviar enlace de recuperación'
+      - llenar: { 'input[name="email"]': 'usuario@empresa.com' }
+    resaltar: 'button:has-text("Enviar enlace de recuperación")'
+  - paso: 3
+    manual: correo de recuperación en la bandeja de entrada (ocultar datos personales)
+  - paso: 4
+    manual: pantalla Restablecer contraseña (se abre desde el enlace del correo)

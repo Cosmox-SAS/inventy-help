@@ -1,78 +1,48 @@
 ---
-title: ¿Cómo ingreso a Inventy?
-description: Inicia sesión en Inventy con tu correo y contraseña.
+title: "¿Cómo ingreso a Inventy?"
+description: "Pasos para iniciar sesión en Inventy."
 estado: pendiente-validacion
-tipo: tutorial
+tipo: rapida
 modulo: primeros-pasos
-menu: Pantalla de inicio de sesión
+menu: "Pantalla Inicia sesión"
 permisos: []
-revisado: 2026-09-29
+revisado: 2026-09-30
 tags:
   - Acceso
-  - Primeros pasos
 ---
 
 # ¿Cómo ingreso a Inventy?
 
 <p class="tambien-se-busca">También se busca como: iniciar sesión, entrar, login, acceder, loguearme, ingresar al sistema.</p>
 
-## ¿Para qué sirve?
+**Antes de empezar:** tener un usuario creado por el administrador o haber aceptado una invitación.
 
-Para entrar a tu cuenta y trabajar con la información de tu empresa.
+## Pasos
 
-## Antes de comenzar
+**Paso 1.** Abre la dirección de Inventy en tu navegador. Verás **Inicia sesión**.
 
-- [ ] Tener un **usuario creado** por el administrador de tu empresa, o haber aceptado una **invitación** que llegó a tu correo.
-- [ ] Conocer la **dirección web** de Inventy de tu empresa. [PENDIENTE DE VALIDACIÓN FUNCIONAL: dirección oficial de acceso.]
+![Paso 1: pantalla Inicia sesión](../assets/capturas/primeros-pasos/ingresar/paso-1.png)
 
-## Paso a paso
+**Paso 2.** En **Correo electrónico** escribe tu correo y en **Contraseña** tu contraseña.
 
-**Paso 1.** Abre la dirección de Inventy en tu navegador. Verás la pantalla **Inicia sesión** con el mensaje *“Bienvenido de nuevo, por favor ingresa tus datos.”*
+![Paso 2: correo y contraseña](../assets/capturas/primeros-pasos/ingresar/paso-2.png)
 
-!!! captura "CAPTURA PENDIENTE"
-    Pantalla **Inicia sesión** con los campos Correo electrónico y Contraseña resaltados.
+**Paso 3.** Haz clic en **Iniciar sesión**.
 
-**Paso 2.** En **Correo electrónico**, escribe el correo con el que te registraron (por ejemplo, `usuario@empresa.com`).
+![Paso 3: botón Iniciar sesión](../assets/capturas/primeros-pasos/ingresar/paso-3.png)
 
-**Paso 3.** En **Contraseña**, escribe tu contraseña. Puedes usar el ícono del ojo para ver lo que escribiste.
+✅ **Listo:** entras al **Inicio** de tu empresa.
 
-**Paso 4.** Haz clic en **Iniciar sesión**.
+## Si algo falla
 
-## Resultado esperado
+| Problema | Solución |
+|---|---|
+| *Estas credenciales no coinciden con nuestros registros.* | Revisa correo y contraseña (y **Bloq Mayús**). Si no la recuerdas, [recupérala](recuperar-contrasena.md). |
+| *Demasiados intentos de acceso…* | Espera los segundos que indica y vuelve a intentar. |
+| Me pide un código de autenticación | Tu cuenta tiene verificación en dos pasos: escribe el código de tu app de autenticación. |
+| Entré y veo *Tu espacio de trabajo está listo* | Tu rol no tiene permiso de estadísticas; usa el menú lateral. |
 
-Entras al **Inicio** de Inventy, donde verás un saludo y, si tienes permiso, los indicadores de tu negocio. Ver [Conociendo la pantalla principal](pantalla-principal.md).
-
-## Problemas frecuentes
-
-??? question "“Estas credenciales no coinciden con nuestros registros.”"
-    **Por qué pasa:** el correo o la contraseña no son correctos.
-
-    **Qué hacer:**
-
-    1. Revisa que el correo esté bien escrito, sin espacios al inicio o al final.
-    2. Revisa que no tengas activada la tecla **Bloq Mayús**.
-    3. Si no recuerdas la contraseña, usa [¿Olvidaste tu contraseña?](recuperar-contrasena.md).
-
-??? question "“Demasiados intentos de acceso. Por favor intente nuevamente en … segundos.”"
-    **Por qué pasa:** se hicieron varios intentos fallidos seguidos y el sistema bloqueó temporalmente el ingreso para proteger tu cuenta.
-
-    **Qué hacer:** espera los segundos que indica el mensaje y vuelve a intentarlo con cuidado. Si no recuerdas la contraseña, recupérala.
-
-??? question "Me pide un código de autenticación"
-    **Por qué pasa:** tu cuenta tiene activada la **autenticación en dos pasos**.
-
-    **Qué hacer:** abre la aplicación de autenticación de tu celular y escribe el código que muestra. Si perdiste el celular, usa uno de tus **códigos de recuperación**. [PENDIENTE DE VALIDACIÓN FUNCIONAL: esta pantalla aparece actualmente en inglés.]
-
-??? question "Ingresé pero no veo ningún menú o no veo los indicadores"
-    **Por qué pasa:** tu rol todavía no tiene permisos asignados, o no tiene el permiso para ver las estadísticas. En ese caso verás el mensaje *“Tu espacio de trabajo está listo”*.
-
-    **Qué hacer:** pide al administrador de tu empresa que revise tu rol en <span class="ruta">Configuración › Roles y Permisos</span>.
-
-## ¿Necesitas ayuda?
-
-Contacta a soporte si después de recuperar tu contraseña sigues sin poder ingresar. Envía tu **correo de acceso**, el **nombre de tu empresa** y una **captura del mensaje**. [Ver cómo contactar a soporte](../soporte.md). **Nunca compartas tu contraseña.**
-
-## Artículos relacionados
+## Relacionados
 
 - [¿Cómo recupero mi contraseña?](recuperar-contrasena.md)
-- [Soluciones rápidas: acceso al sistema](../soluciones-rapidas/acceso.md)
+- [Conociendo la pantalla principal](pantalla-principal.md)

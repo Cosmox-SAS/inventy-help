@@ -1,0 +1,13 @@
+guia: primeros-pasos/ingresar.md
+sin_sesion: true
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /login
+    resaltar: 'form'
+  - paso: 2
+    acciones:
+      - llenar_credenciales: true
+    resaltar: 'input[name="password"]'
+  - paso: 3
+    resaltar: 'button[type="submit"]'

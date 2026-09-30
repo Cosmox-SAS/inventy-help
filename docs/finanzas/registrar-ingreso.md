@@ -1,13 +1,13 @@
 ---
-title: ¿Cómo registro un pago de un cliente?
-description: Registra el recaudo de facturas a crédito o un anticipo de un cliente.
+title: "¿Cómo registro un pago de un cliente?"
+description: "Pasos para registrar el recaudo de facturas a crédito."
 estado: pendiente-validacion
-tipo: tutorial
+tipo: rapida
 modulo: finanzas
-menu: Tesorería › Operación › Ingresos
+menu: "Tesorería › Ingresos"
 permisos:
   - Gestionar ingresos
-revisado: 2026-09-29
+revisado: 2026-09-30
 tags:
   - Tesorería
   - Cartera
@@ -15,67 +15,43 @@ tags:
 
 # ¿Cómo registro un pago de un cliente?
 
-<p class="tambien-se-busca">También se busca como: recaudo, abono, cliente pagó, recibo de caja, cobrar cartera, pago de factura a crédito, anticipo de cliente.</p>
+<p class="tambien-se-busca">También se busca como: recaudo, abono, cliente pagó, recibo de caja, cobrar cartera, pago de factura a crédito.</p>
 
-## ¿Para qué sirve?
+**Antes de empezar:** necesitas una caja abierta o una cuenta bancaria donde entra el dinero.
 
-Cuando un cliente te paga una factura a crédito (total o parcial), registras un **ingreso**. Así su saldo baja, el dinero entra a tu caja o banco y se genera la contabilidad.
-
-También sirve para registrar un **anticipo**: dinero que el cliente te paga antes de comprar. Después lo podrás aplicar a sus facturas.
-
-## Antes de comenzar
-
-- [ ] Que el cliente tenga **facturas a crédito pendientes** (para recaudo).
-- [ ] Una **caja abierta** o una **cuenta bancaria** donde entra el dinero.
-- [ ] Permiso: **Gestionar ingresos**.
-
-## Paso a paso
+## Pasos
 
 **Paso 1.** Ingresa a <span class="ruta">Tesorería › Ingresos</span> y haz clic en **Nuevo ingreso**.
 
-**Paso 2. Información del ingreso.**
+![Paso 1: botón Nuevo ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-1.png)
 
-| Campo | Qué hacer |
+**Paso 2.** Elige **Tipo de movimiento**: **Recaudo de cartera**, y el **Cliente**.
+
+![Paso 2: tipo de movimiento y cliente](../assets/capturas/finanzas/registrar-ingreso/paso-2.png)
+
+**Paso 3.** Completa **Centro de costo**, **Fecha del pago**, **Destino** (caja o banco), **Medio de pago** e **Ingreso Total**.
+
+![Paso 3: información del ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-3.png)
+
+**Paso 4.** En **Distribución del ingreso**, asigna el valor a las facturas que paga hasta que diga **Distribución completa**.
+
+![Paso 4: distribución del ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-4.png)
+
+**Paso 5.** Haz clic en **Finalizar ingreso** y confirma.
+
+![Paso 5: botón Finalizar ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-5.png)
+
+✅ **Listo:** las facturas bajan su saldo (o quedan **Pagadas**) y el dinero entra a la caja o banco.
+
+## Si algo falla
+
+| Problema | Solución |
 |---|---|
-| **Fecha de ingreso** | Fecha del registro. |
-| **Tipo de movimiento** | **Recaudo de cartera** (paga facturas) o **Anticipo de cliente**. |
-| **Cliente** | Quién paga. |
-| **Centro de costo** | El que corresponda. |
-| **Fecha del pago** | Cuándo pagó el cliente. |
-| **Destino** | **Caja** o **Cuenta bancaria** donde entra el dinero. |
-| **Medio de pago** | Efectivo, transferencia electrónica, etc. |
-| **Ingreso Total** | Valor recibido. |
-| Comprobante (opcional) | Número del comprobante o voucher. |
+| *No hay destinos disponibles: habilita el módulo bancario o abre una caja.* | [Abre una caja](../pos/abrir-caja.md) o crea una cuenta bancaria. |
+| *La suma de las asignaciones debe ser igual al valor total* | Ajusta hasta que **Por distribuir** quede en cero. |
+| *Ingresa el valor de abono para la factura con retención antes de finalizar* | Escribe cuánto abona a esa factura. |
 
-!!! captura "CAPTURA PENDIENTE"
-    Formulario de ingreso con la sección Distribución del ingreso y dos facturas asignadas.
+## Relacionados
 
-**Paso 3. Distribución del ingreso** (en recaudo). Asigna el valor recibido a las facturas que el cliente está pagando. El contador **Por distribuir** debe llegar a cero: verás **Distribución completa**.
-
-**Paso 4.** Elige **Guardar borrador** o **Finalizar ingreso** y confirma.
-
-## Resultado esperado
-
-- El ingreso queda finalizado en <span class="ruta">Tesorería › Ingresos</span>.
-- El saldo de las facturas baja (o quedan **Pagadas**).
-- El dinero aparece en la caja o cuenta bancaria elegida.
-
-## Problemas frecuentes
-
-??? question "“No hay destinos disponibles: habilita el módulo bancario o abre una caja.”"
-    Necesitas una caja **abierta** o una **cuenta bancaria**. [Abre una caja](../pos/abrir-caja.md) o pide al administrador que cree la cuenta.
-
-??? question "“La suma de las asignaciones debe ser igual al valor total”"
-    Lo que asignaste a las facturas no suma el **Ingreso Total**. Ajusta los valores hasta que **Por distribuir** quede en cero.
-
-??? question "“Ingresa el valor de abono para la factura con retención antes de finalizar”"
-    Una de las facturas tiene retención. Escribe cuánto se abona a esa factura.
-
-## ¿Necesitas ayuda?
-
-[Contacta a soporte](../soporte.md) con el **cliente**, los **números de factura** y el **valor** del pago.
-
-## Artículos relacionados
-
+- [¿Qué es un anticipo y cómo se maneja?](anticipos.md)
 - [¿Cómo hago una factura de venta?](../ventas/crear-factura-venta.md)
-- [¿Cómo registro un pago a un proveedor?](registrar-egreso.md)

@@ -1,13 +1,13 @@
 ---
-title: ¿Cuánto inventario tengo?
-description: Consulta las existencias y el valor de tu inventario por producto y por sede.
+title: "¿Cuánto inventario tengo?"
+description: "Pasos para consultar existencias y valor del inventario por sede."
 estado: pendiente-validacion
-tipo: tutorial
+tipo: rapida
 modulo: productos-inventario
-menu: Inventario › Existencias › Stock
+menu: "Inventario › Stock"
 permisos:
   - Ver stock
-revisado: 2026-09-29
+revisado: 2026-09-30
 tags:
   - Inventario
   - Stock
@@ -17,62 +17,40 @@ tags:
 
 <p class="tambien-se-busca">También se busca como: existencias, stock, saldo de inventario, cuánto me queda, unidades disponibles, valor del inventario, inventario por bodega.</p>
 
-## ¿Para qué sirve?
-
-Para saber **cuántas unidades** tienes de cada producto en cada sede y **cuánto vale** tu inventario.
-
-## Antes de comenzar
-
-- [ ] Tu empresa debe tener activo el módulo **Inventario**.
-- [ ] Permiso: **Ver stock**. Para descargar a Excel: **Exportar stock a Excel**.
-
-## Paso a paso
+## Pasos
 
 **Paso 1.** Ingresa a <span class="ruta">Inventario › Stock</span>.
 
-**Paso 2.** Arriba verás el **Total empresa**: el valor del inventario sumando todas las sedes.
+![Paso 1: pantalla Stock](../assets/capturas/productos-inventario/consultar-existencias/paso-1.png)
 
-!!! captura "CAPTURA PENDIENTE"
-    Pantalla **Stock** con el Total empresa, filtros y la tabla de existencias.
+**Paso 2.** Mira el **Total empresa**: el valor del inventario de todas las sedes.
+
+![Paso 2: Total empresa](../assets/capturas/productos-inventario/consultar-existencias/paso-2.png)
 
 **Paso 3.** Busca el producto en **Buscar por código o sede...** o filtra por categoría.
 
-**Paso 4.** Lee la tabla: para cada producto y sede verás las existencias, el **Costo sin IVA**, el **Costo con IVA** y el **Valor Inventario**.
+![Paso 3: buscador de stock](../assets/capturas/productos-inventario/consultar-existencias/paso-3.png)
 
-**Paso 5.** Usa **Ver detalle** para ver más información de un producto en una sede. Si hay unidades **reservadas** (por ejemplo, en pedidos o traslados pendientes), puedes ver el origen de la reserva.
+**Paso 4.** Revisa la fila: existencias, **Costo sin IVA**, **Costo con IVA** y **Valor Inventario**. Usa **Ver detalle** para más información.
 
-**Paso 6. (Opcional)** Haz clic en **Exportar Excel** para descargar el listado.
+![Paso 4: tabla de existencias](../assets/capturas/productos-inventario/consultar-existencias/paso-4.png)
 
-## Resultado esperado
+**Paso 5.** (Opcional) Haz clic en **Exportar Excel**.
 
-Conoces las existencias y el valor de cada producto por sede.
+![Paso 5: botón Exportar Excel](../assets/capturas/productos-inventario/consultar-existencias/paso-5.png)
 
-## Otras consultas útiles
+✅ **Listo:** conoces las unidades y el valor de cada producto por sede.
 
-| Quiero saber… | Ve a… |
+## Si algo falla
+
+| Problema | Solución |
 |---|---|
-| Qué productos están por agotarse | <span class="ruta">Inventario › Alertas de stock</span> |
-| Por qué cambió la cantidad de un producto | <span class="ruta">Inventario › Movimientos</span> o **Kardex** |
-| Qué lotes están por vencer | <span class="ruta">Inventario › Lotes por vencer</span> (si usas lotes) |
+| *No hay stock registrado* | Aún no hay movimientos: registra una compra o un ajuste de entrada. |
+| Un producto no aparece | Puede estar marcado **No maneja inventario** o no tener movimientos. |
+| No cuadra con la bodega | Revisa el **Kardex** del producto y haz un **Conteo físico** o un [ajuste](ajuste-inventario.md). |
+| Productos por agotarse | <span class="ruta">Inventario › Alertas de stock</span>. |
 
-## Problemas frecuentes
-
-??? question "“No hay stock registrado”"
-    Todavía no hay movimientos de inventario. Registra una [compra](../compras/registrar-factura-compra.md) o un [ajuste de entrada](ajuste-inventario.md).
-
-??? question "Un producto no aparece en el stock"
-    - Puede estar marcado como **No maneja inventario**.
-    - Puede que nunca haya tenido movimientos.
-    - Revisa el filtro de categoría y la búsqueda.
-
-??? question "El stock en Inventy no coincide con lo que hay en la bodega"
-    Revisa el **Kardex** del producto para ver cada entrada y salida. Si hay diferencias reales, haz un **Conteo físico** o un [ajuste de inventario](ajuste-inventario.md).
-
-## ¿Necesitas ayuda?
-
-[Contacta a soporte](../soporte.md) si una cantidad no se explica con los movimientos. Envía el **código del producto**, la **sede** y la cantidad que esperabas ver.
-
-## Artículos relacionados
+## Relacionados
 
 - [¿Cómo hago un ajuste de inventario?](ajuste-inventario.md)
-- [¿Cómo creo un producto?](crear-producto.md)
+- [¿Cómo hago un traslado entre sedes?](traslados.md)

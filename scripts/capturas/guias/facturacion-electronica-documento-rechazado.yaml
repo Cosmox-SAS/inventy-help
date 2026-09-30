@@ -1,0 +1,24 @@
+guia: facturacion-electronica/documento-rechazado.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/electronic-documents
+      - esperar: 'text=Documentos electrónicos'
+    resaltar: 'input[placeholder="Buscar por número, CUFE..."]'
+  - paso: 2
+    acciones:
+      - abrir: 'tbody tr:has-text("Rechazado") button >> nth=-1'
+      - pausa: 400
+    resaltar: 'text=Ver error'
+  - paso: 3
+    acciones:
+      - abrir: 'text=Ver error'
+      - esperar: 'role=dialog'
+    resaltar: 'role=dialog'
+    recortar: 'role=dialog'
+  - paso: 4
+    acciones:
+      - tecla: Escape
+      - abrir: 'tbody tr:has-text("Rechazado") button >> nth=-1'
+      - pausa: 400
+    resaltar: 'text=Reenviar documento electrónico'

@@ -1,14 +1,14 @@
 ---
-title: ¿Qué es y cómo creo un catálogo de impuestos?
-description: Qué es el catálogo de impuestos y pasos para crearlo y asignarlo a los productos.
+title: "¿Qué es y cómo creo un catálogo de impuestos?"
+description: "Pasos para crear un catálogo de impuestos y asignarlo a los productos."
 estado: pendiente-validacion
 tipo: rapida
 modulo: impuestos
-menu: Fiscal › Impuestos › Catálogo de Impuestos
+menu: "Fiscal › Catálogo de Impuestos"
 permisos:
   - Ver catálogo de impuestos
   - Crear catálogo de impuestos
-revisado: 2026-09-29
+revisado: 2026-09-30
 search:
   boost: 2
 tags:
@@ -20,39 +20,48 @@ tags:
 
 <p class="tambien-se-busca">También se busca como: catálogo de impuestos, grupo de impuestos, impuestos del producto, configurar IVA del producto, régimen, cuentas de impuestos.</p>
 
-**Qué es:** un **paquete de impuestos** que se le asigna a un producto. Dice qué impuestos (y retenciones) se cobran **al venderlo** y cuáles se pagan **al comprarlo**, y en qué cuentas contables se registran.
+**Qué es:** un **paquete de impuestos** que se asigna a un producto: qué se cobra al venderlo y qué se paga al comprarlo.
 
-Ejemplo: catálogo *“Gravado 19 %”* → Venta: IVA 19 % · Compra: IVA 19 %. Todos los productos con IVA 19 % usan ese mismo catálogo.
+**Antes de empezar:** crea antes los impuestos que vas a usar ([guía](crear-impuesto.md)).
 
 ## Pasos
 
-**Antes:** crea los impuestos y retenciones que vas a usar. Ver [¿Cómo creo un impuesto?](crear-impuesto.md).
+**Paso 1.** Ingresa a <span class="ruta">Fiscal › Catálogo de Impuestos</span> y haz clic en **Nuevo Catálogo**.
 
-1. <span class="ruta">Fiscal › Catálogo de Impuestos</span> › **Nuevo Catálogo**.
-2. **Nombre del Catálogo**: ej. *Gravado 19 %*, *Excluido*, *INC 8 %*.
-3. **Impuestos de Ventas** › **Agregar Impuesto** › busca y agrega cada impuesto que cobras al vender.
-4. **Impuestos de Compras** › **Agregar Impuesto** › agrega cada impuesto que pagas al comprar.
-5. Si usas contabilidad, elige las cuentas: **Cuenta del impuesto**, **Cuenta de devolución**, **Cuenta Base (Base Gravable)**, **Cuenta Costo de Inventario**, **Cuenta Valor de Inventario** (pídelas a tu contador).
-6. **Crear Catálogo**.
-7. Asígnalo a los productos: <span class="ruta">Inventario › Productos</span> › producto › **Catálogo de impuestos**.
+![Paso 1: botón Nuevo Catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-1.png)
 
-✅ Listo: al vender o comprar ese producto, Inventy calcula sus impuestos solo.
+**Paso 2.** Escribe el **Nombre del Catálogo** (ej. *Gravado 19 %*).
 
-!!! captura "CAPTURA PENDIENTE"
-    Formulario **Nuevo Catálogo de Impuestos** con IVA 19 % en ventas y compras.
+![Paso 2: nombre del catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-2.png)
+
+**Paso 3.** En **Impuestos de Ventas**, usa **Agregar Impuesto** para cada impuesto que cobras al vender, con su cuenta.
+
+![Paso 3: impuestos de ventas](../assets/capturas/impuestos/catalogo-impuestos/paso-3.png)
+
+**Paso 4.** En **Impuestos de Compras**, agrega cada impuesto que pagas al comprar, con su cuenta.
+
+![Paso 4: impuestos de compras](../assets/capturas/impuestos/catalogo-impuestos/paso-4.png)
+
+**Paso 5.** Haz clic en **Crear Catálogo**.
+
+![Paso 5: botón Crear Catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-5.png)
+
+**Paso 6.** Asígnalo a cada producto: <span class="ruta">Inventario › Productos</span> › producto › **Catálogo de impuestos**.
+
+![Paso 6: campo Catálogo de impuestos en el producto](../assets/capturas/impuestos/catalogo-impuestos/paso-6.png)
+
+✅ **Listo:** al vender o comprar ese producto, Inventy calcula sus impuestos solo.
 
 ## Si algo falla
 
 | Problema | Solución |
 |---|---|
-| Aparece **Configuración contable incompleta** / **Cuentas por configurar** | Falta una cuenta contable en el catálogo. Complétala (con tu contador). |
-| *El asiento contable no está balanceado* al facturar | El catálogo del producto tiene cuentas vacías. Revisa el catálogo. |
-| No me deja crear el producto sin catálogo | Si usas contabilidad, el catálogo es obligatorio en el producto. |
-| El producto no cobra IVA | Revisa que su catálogo tenga el IVA en **Impuestos de Ventas**. |
-| ¿Cuántos catálogos creo? | Uno por cada combinación distinta de impuestos (ej. gravado 19 %, gravado 5 %, excluido, exento). |
+| Aparece **Configuración contable incompleta** / **Cuentas por configurar** | Falta una cuenta contable en el catálogo: complétala con tu contador. |
+| *El asiento contable no está balanceado* al facturar | El catálogo del producto tiene cuentas vacías. |
+| El producto no cobra IVA | Revisa que el catálogo tenga el IVA en **Impuestos de Ventas**. |
+| ¿Cuántos catálogos creo? | Uno por cada combinación de impuestos (gravado 19 %, 5 %, excluido…). |
 
 ## Relacionados
 
 - [¿Cómo creo un impuesto o una retención?](crear-impuesto.md)
 - [¿Cómo creo un producto?](../productos-inventario/crear-producto.md)
-- [¿Cómo se aplican las retenciones?](retenciones.md)

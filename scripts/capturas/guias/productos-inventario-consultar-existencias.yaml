@@ -1,0 +1,15 @@
+guia: productos-inventario/consultar-existencias.md
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Stock
+      - esperar: 'text=Exportar Excel'
+    resaltar: 'main'
+  - paso: 2
+    resaltar: 'text=Total empresa >> xpath=ancestor::div[2]'
+  - paso: 3
+    resaltar: 'input[placeholder="Buscar por código o sede..."]'
+  - paso: 4
+    resaltar: 'table'
+  - paso: 5
+    resaltar: 'a:has-text("Exportar Excel"), button:has-text("Exportar Excel")'

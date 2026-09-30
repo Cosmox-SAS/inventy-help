@@ -1,0 +1,18 @@
+guia: facturacion-electronica/documento-soporte.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/suppliers
+      - abrir: 'tbody tr a >> nth=0'
+      - pausa: 800
+    resaltar: 'text=No obligado a facturar'
+    detener_si_falla: false
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/purchase-invoices/create
+      - esperar: 'text=Nueva Factura de Compra'
+    resaltar: 'text=Requiere documento soporte electrónico >> xpath=ancestor::div[2]'
+  - paso: 3
+    resaltar: 'button:has-text("Registrar Factura")'
+  - paso: 4
+    manual: detalle de una factura de compra validada de un proveedor no obligado a facturar, con el botón Emitir documento soporte

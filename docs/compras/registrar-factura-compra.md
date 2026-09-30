@@ -1,13 +1,13 @@
 ---
-title: ¿Cómo registro una factura de compra?
-description: Registra la factura de un proveedor para ingresar la mercancía al inventario y la cuenta por pagar.
+title: "¿Cómo registro una factura de compra?"
+description: "Pasos para registrar la factura de un proveedor e ingresar la mercancía."
 estado: pendiente-validacion
-tipo: tutorial
+tipo: rapida
 modulo: compras
-menu: Compras › Operación › Facturas
+menu: "Compras › Facturas"
 permisos:
   - Crear facturas de compra
-revisado: 2026-09-29
+revisado: 2026-09-30
 tags:
   - Compras
   - Proveedores
@@ -17,87 +17,48 @@ tags:
 
 <p class="tambien-se-busca">También se busca como: registrar compra, ingresar mercancía, entrada de mercancía, factura de proveedor, cargar compra, registrar gasto con factura.</p>
 
-## ¿Para qué sirve?
+**Antes de empezar:** el módulo Compras debe estar activo. Ten el XML o ZIP de la factura del proveedor.
 
-Para registrar lo que te facturó un proveedor. Al validarla, Inventy **suma la mercancía a tu inventario**, registra lo que le **debes al proveedor** y genera la contabilidad.
+## Pasos
 
-## Antes de comenzar
+**Paso 1.** Ingresa a <span class="ruta">Compras › Facturas</span> y haz clic en **Nueva Factura**.
 
-- [ ] Ten la factura del proveedor (idealmente el **XML o ZIP** de su factura electrónica).
-- [ ] Los productos deben existir en tu catálogo (o créalos durante el registro).
-- [ ] Tu empresa debe tener activo el módulo **Compras**.
-- [ ] Permiso: **Crear facturas de compra**.
+![Paso 1: botón Nueva Factura](../assets/capturas/compras/registrar-factura-compra/paso-1.png)
 
-## Paso a paso
+**Paso 2.** (Recomendado) Sube el **XML o ZIP** de la factura en **Completa la factura con el documento del proveedor**. Revisa los datos que leyó la IA.
 
-**Paso 1.** Ingresa a <span class="ruta">Compras › Facturas</span> y haz clic en **Nueva Factura**. Se abre **Nueva Factura de Compra**.
+![Paso 2: lectura del documento del proveedor](../assets/capturas/compras/registrar-factura-compra/paso-2.png)
 
-**Paso 2. (Recomendado) Completa la factura con el documento del proveedor.** Sube el **XML o ZIP** de la factura electrónica (también acepta PDF o imagen). Inventy lee el documento y busca el proveedor y los productos en tu catálogo.
+**Paso 3.** Elige el modo: **Compra Directa** o **Con Orden de Compra**.
 
-!!! warning "Verifica los datos leídos"
-    Los valores que la IA leyó del documento aparecen marcados: *“Este valor lo leyó la IA del documento. Verifícalo.”* Compáralos siempre con la factura.
+![Paso 3: modo de registro](../assets/capturas/compras/registrar-factura-compra/paso-3.png)
 
-!!! captura "CAPTURA PENDIENTE"
-    Zona **Completa la factura con el documento del proveedor** y un campo marcado como leído por la IA.
+**Paso 4.** Completa **Proveedor**, **Centro de costo**, **N° Factura Proveedor**, **Fecha de emisión** y **Cuenta a Pagar (Neto)**.
 
-**Paso 3. Elige el modo de registro:**
+![Paso 4: información general](../assets/capturas/compras/registrar-factura-compra/paso-4.png)
 
-| Modo | Úsalo cuando |
+**Paso 5.** En **Ítems de la Factura**, haz clic en **Agregar ítem** y registra cada producto con cantidad y precio.
+
+![Paso 5: ítems de la factura](../assets/capturas/compras/registrar-factura-compra/paso-5.png)
+
+**Paso 6.** Revisa el **Total a pagar** y haz clic en **Registrar Factura**. Confirma en **¿Validar factura?**
+
+![Paso 6: botón Registrar Factura](../assets/capturas/compras/registrar-factura-compra/paso-6.png)
+
+✅ **Listo:** la factura queda validada, el inventario sube y queda la deuda con el proveedor.
+
+## Si algo falla
+
+| Problema | Solución |
 |---|---|
-| **Compra Directa** | Compraste sin orden de compra. Agregas los ítems a mano. |
-| **Con Orden de Compra** | La compra viene de una orden de compra. Los ítems se cargan desde la orden. |
-| **Asiento Manual** | [PENDIENTE DE VALIDACIÓN FUNCIONAL: casos de uso.] |
+| *El número de factura ya existe para este proveedor.* | Ya se registró: búscala en la lista. |
+| *No encontramos este proveedor* | Usa **Crear proveedor** o elige uno existente. |
+| *No se pudo leer el documento.* | Usa el XML o ZIP original, o registra a mano. |
+| *El precio debe ser mayor a 0.* | Todos los ítems deben tener precio. |
+| *El asiento contable no está balanceado* | Falta una cuenta contable: pide a tu contador revisar productos, impuestos o la cuenta a pagar. |
+| El proveedor no está obligado a facturar | Ver [documento soporte](../facturacion-electronica/documento-soporte.md). |
 
-**Paso 4. Información General.**
-
-| Campo | Qué escribir |
-|---|---|
-| **Proveedor** | Búscalo. Si no existe, puedes crearlo. |
-| **Centro de costo** | El que corresponda. |
-| **Orden de Compra** | Solo en modo *Con Orden de Compra*. |
-| **N° Factura Proveedor** | El número de la factura del proveedor (ej. `FE-001234`). |
-| **Fecha de emisión** | La fecha de la factura. |
-| Plazo de pago (días) / Fecha de vencimiento | Cuándo debes pagarla. |
-| Calcular retención en la fuente por | Si le practicas retención al proveedor. |
-| **Cuenta a Pagar (Neto)** | Cuenta contable de la deuda con el proveedor. |
-| Requiere documento soporte electrónico | Se marca solo si el proveedor **no está obligado a facturar**. |
-
-**Paso 5. Ítems de la Factura.** Haz clic en **Agregar ítem** y registra cada producto con cantidad, precio y descuento. En modo *Con Orden de Compra*, los ítems se cargan de la orden.
-
-**Paso 6.** Revisa el **Total a pagar** y elige **Guardar borrador** o **Registrar Factura**. Confirma en **¿Validar factura?**
-
-## Resultado esperado
-
-- La factura aparece en <span class="ruta">Compras › Facturas</span> con su **Total COP** y **Saldo COP**.
-- El inventario de los productos aumenta en la sede.
-- Si el proveedor no está obligado a facturar, se genera el **documento soporte electrónico** (automáticamente o con **Emitir documento soporte**). Ver [¿Cómo emito un documento soporte?](../facturacion-electronica/documento-soporte.md).
-
-## Problemas frecuentes
-
-??? question "“El número de factura ya existe para este proveedor.” / “Esta factura ya está registrada”"
-    Esa factura ya se registró. Búscala en la lista por número o proveedor.
-
-??? question "“No encontramos este proveedor”"
-    El proveedor del documento no está en tu lista. Revisa los datos y usa **Crear proveedor**, o selecciona uno existente.
-
-??? question "“No se pudo leer el documento.”"
-    Prueba con el **XML** o el **ZIP** original de la factura electrónica. Si no lo tienes, registra la factura a mano.
-
-??? question "“El precio debe ser mayor a 0.”"
-    Todos los ítems deben tener precio.
-
-??? question "“El asiento contable no está balanceado”"
-    Falta una cuenta contable en algún producto, impuesto o en la **Cuenta a Pagar**. Pide a tu contador que la revise.
-
-??? question "Cambié de modo y se borraron los ítems"
-    Al cambiar entre *Compra Directa* y *Con Orden de Compra*, Inventy limpia los ítems cargados (te lo advierte antes de hacerlo).
-
-## ¿Necesitas ayuda?
-
-[Contacta a soporte](../soporte.md) con el **número de la factura del proveedor**, el **nombre del proveedor** y el archivo XML si el problema es con la lectura del documento.
-
-## Artículos relacionados
+## Relacionados
 
 - [¿Cómo registro un pago a un proveedor?](../finanzas/registrar-egreso.md)
 - [¿Cómo emito un documento soporte electrónico?](../facturacion-electronica/documento-soporte.md)
-- [¿Cuánto inventario tengo?](../productos-inventario/consultar-existencias.md)

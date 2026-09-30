@@ -1,14 +1,14 @@
 ---
-title: ¿Cómo hago un ajuste de inventario?
-description: Registra entradas o salidas manuales de inventario por pérdidas, daños, sobrantes o saldo inicial.
+title: "¿Cómo hago un ajuste de inventario?"
+description: "Pasos para registrar entradas o salidas manuales de inventario."
 estado: pendiente-validacion
-tipo: tutorial
+tipo: rapida
 modulo: productos-inventario
-menu: Inventario › Existencias › Ajuste de inventario
+menu: "Inventario › Ajuste de inventario"
 permisos:
   - Ver ajustes de inventario
   - Crear ajustes de inventario
-revisado: 2026-09-29
+revisado: 2026-09-30
 tags:
   - Inventario
   - Ajustes
@@ -16,68 +16,37 @@ tags:
 
 # ¿Cómo hago un ajuste de inventario?
 
-<p class="tambien-se-busca">También se busca como: corregir inventario, entrada de inventario, salida de inventario, dar de baja, producto dañado, pérdida, faltante, sobrante, inventario inicial, cargar existencias.</p>
+<p class="tambien-se-busca">También se busca como: corregir inventario, entrada de inventario, salida de inventario, dar de baja, producto dañado, pérdida, sobrante, inventario inicial, cargar existencias.</p>
 
-## ¿Para qué sirve?
-
-Para corregir las existencias cuando no corresponden a una compra ni a una venta. Ejemplos:
-
-- Cargar el **inventario inicial** cuando empiezas a usar Inventy.
-- Registrar productos **dañados, vencidos o perdidos** (salida).
-- Registrar un **sobrante** encontrado en la bodega (entrada).
-
-## Antes de comenzar
-
-- [ ] Los productos deben estar [creados](crear-producto.md).
-- [ ] Permisos: **Ver ajustes de inventario** y **Crear ajustes de inventario**.
-
-## Paso a paso
+## Pasos
 
 **Paso 1.** Ingresa a <span class="ruta">Inventario › Ajuste de inventario</span> y haz clic en **Nuevo ajuste**.
 
-**Paso 2. Datos del ajuste.** Selecciona la **Sede** y describe el motivo general (ej. *“Inventario inicial”* o *“Productos vencidos de marzo”*).
+![Paso 1: botón Nuevo ajuste](../assets/capturas/productos-inventario/ajuste-inventario/paso-1.png)
 
-!!! captura "CAPTURA PENDIENTE"
-    Formulario de ajuste con Datos del ajuste y dos líneas (una de entrada y una de salida).
+**Paso 2.** Elige la **Sede** y escribe el motivo (ej. *Inventario inicial*).
 
-**Paso 3. Líneas del ajuste.** Haz clic en **Agregar linea** y, para cada producto:
+![Paso 2: datos del ajuste](../assets/capturas/productos-inventario/ajuste-inventario/paso-2.png)
 
-1. Elige el **Tipo de ajuste**: entrada (aumenta) o salida (disminuye).
-2. Busca el producto.
-3. Escribe la cantidad.
-4. Si quieres, agrega una nota a la línea.
+**Paso 3.** Haz clic en **Agregar linea**, elige el **Tipo de ajuste** (entrada o salida), el producto y la cantidad. Repite por cada producto.
 
-**Paso 4.** Elige:
+![Paso 3: líneas del ajuste](../assets/capturas/productos-inventario/ajuste-inventario/paso-3.png)
 
-- **Guardar borrador**: lo guardas sin aplicarlo. Puedes seguir editándolo.
-- **Confirmar ajuste**: aplica los cambios al inventario.
+**Paso 4.** Haz clic en **Confirmar ajuste** y confirma.
 
-!!! warning "Revisa antes de confirmar"
-    *“Al confirmar se aplicaran las entradas y salidas al inventario. Luego no podras editarlo ni eliminarlo.”*
+![Paso 4: botón Confirmar ajuste](../assets/capturas/productos-inventario/ajuste-inventario/paso-4.png)
 
-!!! tip "¿Muchos productos? Importa el ajuste"
-    Usa **Importar ajuste** para cargar las líneas desde un archivo. Es la forma más rápida de cargar el inventario inicial.
+✅ **Listo:** el ajuste queda **Completado** y el stock cambia. Ya no se puede editar.
 
-## Resultado esperado
+## Si algo falla
 
-El ajuste queda **Completado** y las existencias cambian en <span class="ruta">Inventario › Stock</span>. En **Movimientos** y **Kardex** verás el ajuste como origen del cambio.
+| Problema | Solución |
+|---|---|
+| *Stock insuficiente…* | Estás sacando más de lo que hay en esa sede. Revisa cantidad y sede. |
+| *El ajuste deja stock por debajo del reservado.* | Parte del stock está reservado (pedido o traslado). Saca menos. |
+| Me equivoqué en un ajuste confirmado | Haz otro ajuste en sentido contrario, o pide que lo anulen (permiso **Anular ajustes de inventario**). |
+| ¿Muchos productos? | Usa **Importar ajuste**. |
 
-## Problemas frecuentes
-
-??? question "“Stock insuficiente…” al confirmar una salida"
-    Estás sacando más unidades de las que hay en esa sede. Revisa la cantidad o la sede seleccionada. (Si tu empresa activó **Permitir stock negativo**, este mensaje no aparece.)
-
-??? question "“El ajuste deja stock por debajo del reservado.”"
-    Parte de ese stock está **reservado** (por ejemplo, para un pedido o traslado). Reduce la cantidad de salida o libera primero la reserva.
-
-??? question "Me equivoqué en un ajuste ya confirmado"
-    No se puede editar. Haz un **nuevo ajuste** en sentido contrario para corregirlo, o pide a un usuario con el permiso **Anular ajustes de inventario** que lo anule.
-
-## ¿Necesitas ayuda?
-
-[Contacta a soporte](../soporte.md) con el **código del ajuste**, la **sede** y el mensaje de error.
-
-## Artículos relacionados
+## Relacionados
 
 - [¿Cuánto inventario tengo?](consultar-existencias.md)
-- [¿Cómo creo un producto?](crear-producto.md)

@@ -1,0 +1,23 @@
+guia: productos-inventario/crear-producto.md
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Productos
+      - esperar: 'text=Nuevo Producto'
+    resaltar: 'a:has-text("Nuevo Producto"), button:has-text("Nuevo Producto")'
+  - paso: 2
+    acciones:
+      - abrir: 'a:has-text("Nuevo Producto"), button:has-text("Nuevo Producto")'
+      - esperar: 'text=Crear producto'
+      - llenar: { '#name': 'Café molido 500 g', '#barcode': '7701234567890' }
+    resaltar: '#name'
+  - paso: 3
+    resaltar: 'text=Unidad de medida * >> xpath=..'
+  - paso: 4
+    acciones:
+      - llenar: { '#sale_price': '18500', '#cost': '11000' }
+    resaltar: 'text=Precio e impuestos >> xpath=ancestor::section[1]'
+  - paso: 5
+    resaltar: 'text=Comportamiento del producto >> xpath=ancestor::section[1]'
+  - paso: 6
+    resaltar: 'button:has-text("Crear Producto")'

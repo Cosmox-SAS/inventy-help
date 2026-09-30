@@ -1,0 +1,24 @@
+guia: impuestos/catalogo-impuestos.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/tax-catalogs
+      - esperar: 'text=Catálogos de Impuestos'
+    resaltar: 'a:has-text("Nuevo Catálogo"), button:has-text("Nuevo Catálogo")'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/tax-catalogs/create
+      - esperar: 'text=Nuevo Catálogo de Impuestos'
+      - llenar: { 'input[placeholder="Ej: Régimen Común 2026"]': 'Gravado 19 %' }
+    resaltar: 'input[placeholder="Ej: Régimen Común 2026"]'
+  - paso: 3
+    resaltar: 'text=Impuestos de Ventas >> xpath=ancestor::section[1]'
+  - paso: 4
+    resaltar: 'text=Impuestos de Compras >> xpath=ancestor::section[1]'
+  - paso: 5
+    resaltar: 'button:has-text("Crear Catálogo")'
+  - paso: 6
+    acciones:
+      - ir: /{tenant}/products/create
+      - esperar: 'text=Precio e impuestos'
+    resaltar: 'text=Catálogo de impuestos >> xpath=ancestor::div[1]'

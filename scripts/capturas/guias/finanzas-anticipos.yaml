@@ -1,0 +1,18 @@
+guia: finanzas/anticipos.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/income
+      - esperar: 'text=Nuevo ingreso'
+    resaltar: 'a:has-text("Nuevo ingreso"), button:has-text("Nuevo ingreso")'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/income/create
+      - esperar: 'text=Información del ingreso'
+    resaltar: 'text=Información del ingreso >> xpath=ancestor::section[1]'
+  - paso: 3
+    resaltar: 'button:has-text("Finalizar ingreso")'
+  - paso: 4
+    manual: ventana Cobrar venta del POS con el medio Anticipo de cliente (cliente con saldo a favor)
+  - paso: 5
+    manual: factura de venta con Medio de Pago Anticipo de cliente mostrando el Saldo a favor

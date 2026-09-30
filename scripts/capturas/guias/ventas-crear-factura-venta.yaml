@@ -1,0 +1,24 @@
+guia: ventas/crear-factura-venta.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/sale-invoices
+      - esperar: 'text=Facturas de Venta'
+    resaltar: 'a:has-text("Nueva Factura"), button:has-text("Nueva Factura")'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/sale-invoices/create
+      - esperar: 'text=Nueva Factura de Venta'
+    resaltar: 'text=Cliente * >> xpath=..'
+  - paso: 3
+    resaltar: 'text=Forma de pago * >> xpath=..'
+  - paso: 4
+    resaltar: 'text=Ítems de la Factura >> xpath=ancestor::section[1]'
+  - paso: 5
+    resaltar: 'button:has-text("Validar factura")'
+  - paso: 6
+    acciones:
+      - ir: /{tenant}/sale-invoices
+      - abrir: 'tbody tr:has-text("Validada") a >> nth=0'
+      - esperar: 'text=Detalle de la factura de venta.'
+    resaltar: 'button:has-text("Emitir electrónica")'

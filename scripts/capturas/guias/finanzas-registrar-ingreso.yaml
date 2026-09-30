@@ -1,0 +1,18 @@
+guia: finanzas/registrar-ingreso.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/income
+      - esperar: 'text=Nuevo ingreso'
+    resaltar: 'a:has-text("Nuevo ingreso"), button:has-text("Nuevo ingreso")'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/income/create
+      - esperar: 'text=Información del ingreso'
+    resaltar: 'text=Tipo de movimiento * >> xpath=..'
+  - paso: 3
+    resaltar: 'text=Información del ingreso >> xpath=ancestor::section[1]'
+  - paso: 4
+    resaltar: 'text=Distribución del ingreso >> xpath=ancestor::section[1]'
+  - paso: 5
+    resaltar: 'button:has-text("Finalizar ingreso")'

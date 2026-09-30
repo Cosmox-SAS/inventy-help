@@ -1,0 +1,18 @@
+guia: facturacion-electronica/resoluciones.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/electronic-documents/resolutions
+      - esperar: 'main'
+    resaltar: 'main a[href$="/resolutions/create"], main button:has-text("Nueva")'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/electronic-documents/resolutions/create
+      - esperar: 'text=Datos de la resolución'
+    resaltar: 'text=Datos de la resolución >> xpath=ancestor::section[1]'
+  - paso: 3
+    resaltar: 'text=Rango de numeración >> xpath=ancestor::section[1]'
+  - paso: 4
+    resaltar: 'text=Alcance y estado >> xpath=ancestor::section[1]'
+  - paso: 5
+    resaltar: 'button:has-text("Crear resolución")'

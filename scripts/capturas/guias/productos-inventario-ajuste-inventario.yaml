@@ -1,0 +1,19 @@
+guia: productos-inventario/ajuste-inventario.md
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Ajuste de inventario
+      - esperar: 'text=Nuevo ajuste'
+    resaltar: 'a:has-text("Nuevo ajuste"), button:has-text("Nuevo ajuste")'
+  - paso: 2
+    acciones:
+      - abrir: 'a:has-text("Nuevo ajuste"), button:has-text("Nuevo ajuste")'
+      - esperar: 'text=Datos del ajuste'
+    resaltar: 'text=Datos del ajuste >> xpath=ancestor::section[1]'
+  - paso: 3
+    acciones:
+      - abrir: 'button:has-text("Agregar linea")'
+      - pausa: 500
+    resaltar: 'text=Lineas del ajuste >> xpath=ancestor::section[1]'
+  - paso: 4
+    resaltar: 'button:has-text("Confirmar ajuste")'

@@ -1,16 +1,16 @@
 ---
-title: ¿Cómo manejo los domicilios y cómo le pago a los domiciliarios?
-description: "Pasos para configurar domicilios, despacharlos desde el POS y pagarle a los repartidores: al instante o por liquidación."
+title: "¿Cómo manejo los domicilios y le pago a los domiciliarios?"
+description: "Pasos para configurar domicilios, despacharlos y pagarle al repartidor."
 estado: pendiente-validacion
 tipo: rapida
 modulo: restaurante
-menu: Restaurante › Domicilios
+menu: "Restaurante › Domicilios"
 permisos:
   - Ver repartidores
   - Ver liquidaciones de domicilios
   - Crear liquidaciones de domicilios
   - Pagar liquidaciones de domicilios
-revisado: 2026-09-29
+revisado: 2026-09-30
 search:
   boost: 2
 tags:
@@ -18,66 +18,57 @@ tags:
   - Domicilios
 ---
 
-# ¿Cómo manejo los domicilios y cómo le pago a los domiciliarios?
+# ¿Cómo manejo los domicilios y le pago a los domiciliarios?
 
 <p class="tambien-se-busca">También se busca como: domicilio, delivery, domiciliario, repartidor, mensajero, pagar domicilios, liquidar domiciliario, costo del domicilio, pedido a domicilio.</p>
 
-<span class="ruta">Restaurante › Domicilios</span>
+**Antes de empezar:** activa **Habilitar pedidos a domicilio** y el **Ítem de servicio de domicilio** en <span class="ruta">Configuración › Módulos › Restaurante</span>, y crea al domiciliario como **proveedor**.
 
 ## Pasos
 
-**1. Configurar (una sola vez)**
+**Paso 1.** Ingresa a <span class="ruta">Restaurante › Repartidores</span> › **Nuevo Repartidor**, elige el **Proveedor (tercero)**, marca **Repartidor activo** y haz clic en **Crear repartidor**.
 
-1. <span class="ruta">Configuración › Módulos › Restaurante</span>:
-    - Activa **Habilitar pedidos a domicilio**.
-    - **Ítem de servicio de domicilio**: el servicio que se cobra en la factura (créalo antes en <span class="ruta">Inventario › Servicios</span>).
-    - (Opcional) **Valor del domicilio obligatorio**.
-    - (Opcional) **Pagar el domicilio al repartidor al instante**.
-    - **Cuenta contable de gasto de domicilios** (si usas contabilidad).
-2. Crea cada domiciliario como **proveedor** (<span class="ruta">Compras › Proveedores</span>).
-3. <span class="ruta">Restaurante › Repartidores</span> › **Nuevo Repartidor** › elige el **Proveedor (tercero)** › marca **Repartidor activo** › **Crear repartidor**.
+![Paso 1: formulario Nuevo repartidor](../assets/capturas/restaurante/domicilios/paso-1.png)
 
-**2. Tomar un domicilio (POS)**
+**Paso 2.** En <span class="ruta">Ventas › POS</span>, elige el tipo de pedido **Domicilio**.
 
-4. <span class="ruta">Ventas › POS</span> › elige el tipo de pedido **Domicilio**.
-5. En **Datos del domicilio**: busca o crea el cliente, **Dirección de entrega**, **Punto de referencia** y el **costo del domicilio**.
-6. Agrega los productos › **Realizar pedido**.
+![Paso 2: tipo de pedido Domicilio](../assets/capturas/restaurante/domicilios/paso-2.png)
 
-**3. Despachar**
+**Paso 3.** En **Datos del domicilio**, busca o crea el cliente, la **Dirección de entrega**, el **Punto de referencia** y el costo del domicilio.
 
-7. <span class="ruta">Restaurante › Tablero de pedidos</span> › abre el pedido › **Asignar repartidor**.
-8. Cambia el pedido a **En camino** y luego a **Entregado**.
-9. Cobra y factura el pedido.
+![Paso 3: ventana Datos del domicilio](../assets/capturas/restaurante/domicilios/paso-3.png)
 
-**4. Pagarle al domiciliario** (elige una forma)
+**Paso 4.** Agrega los productos y haz clic en **Realizar pedido**.
 
-- **Al instante (automático):** si activaste **Pagar el domicilio al repartidor al instante**, al facturar (o al asignar el repartidor) Inventy registra solo la **salida de caja** por el valor del domicilio. No haces nada más.
-- **Por liquidación (al final del día o de la semana):**
-    1. <span class="ruta">Restaurante › Domicilios › Liquidación</span> › **Nueva liquidación**.
-    2. Elige **Sede - centro de costo**, **Repartidor**, **Fecha inicio** y **Fecha fin**.
-    3. Revisa **Domicilios pendientes por liquidar** y el **Total a liquidar**.
-    4. **Fuente del pago**: caja abierta, banco o **Efectivo (sin caja abierta)**.
-    5. **Confirmar liquidación**.
-    6. (Opcional) **Imprimir tirilla** para que el domiciliario firme.
+![Paso 4: botón Realizar pedido](../assets/capturas/restaurante/domicilios/paso-4.png)
 
-✅ Listo: al domiciliario se le paga la **suma de los costos de domicilio** de sus pedidos, y queda registrado el egreso y el gasto.
+**Paso 5.** En <span class="ruta">Restaurante › Tablero de pedidos</span>, abre el pedido y haz clic en **Asignar repartidor**. Luego márcalo **En camino** y **Entregado**, y factúralo.
+
+![Paso 5: tablero de pedidos y Asignar repartidor](../assets/capturas/restaurante/domicilios/paso-5.png)
+
+**Paso 6.** Para pagarle: <span class="ruta">Restaurante › Domicilios › Liquidación</span> › **Nueva liquidación**. Elige **Sede - centro de costo**, **Repartidor**, **Fecha inicio** y **Fecha fin**.
+
+![Paso 6: formulario Nueva liquidación](../assets/capturas/restaurante/domicilios/paso-6.png)
+
+**Paso 7.** Revisa los **Domicilios pendientes por liquidar** y el **Total a liquidar**, elige la **Fuente del pago** y haz clic en **Confirmar liquidación**.
+
+![Paso 7: total y Confirmar liquidación](../assets/capturas/restaurante/domicilios/paso-7.png)
+
+✅ **Listo:** al domiciliario se le paga la suma de los costos de domicilio de sus pedidos. Puedes **Imprimir tirilla** para que firme.
 
 ## Si algo falla
 
 | Problema | Solución |
 |---|---|
-| No aparece el menú **Domicilios** o el tipo de pedido Domicilio | Activa **Habilitar pedidos a domicilio** en Módulos › Restaurante (y el POS debe estar activo). |
-| *Primero tienes que asignarle un repartidor antes de entregarlo* | Asigna el repartidor antes de marcar **En camino** o **Entregado**. |
-| *El costo del domicilio es obligatorio y debe ser mayor que 0* | Está activo **Valor del domicilio obligatorio**. Escribe el costo. |
-| El repartidor no aparece para asignar | Revisa que esté **Repartidor activo** en <span class="ruta">Restaurante › Repartidores</span>. |
-| *No hay domicilios pendientes por liquidar para este repartidor en el rango de fechas seleccionado* | Solo se liquidan domicilios **facturados**, con ese repartidor, en esa sede y fechas, que no se hayan pagado antes (ni al instante). Revisa fechas y sede. |
-| Un domicilio no aparece en la liquidación | Se facturó con **devolución confirmada**, ya se pagó al instante o ya está en otra liquidación. |
-| *El total supera el saldo disponible de la cuenta* | La caja o banco elegido no tiene saldo suficiente. Elige otra fuente. |
-| *No se generará asiento contable…* | Falta la **Cuenta contable de gasto de domicilios** en Módulos › Restaurante. |
-| Liquidé mal | Abre la liquidación › **Más acciones** › anúlala con un motivo y créala de nuevo. |
+| Quiero pagarle en cada pedido, sin liquidar | Activa **Pagar el domicilio al repartidor al instante** en Módulos › Restaurante: la salida de caja se registra sola. |
+| *Primero tienes que asignarle un repartidor antes de entregarlo.* | Asigna el repartidor antes de marcar En camino o Entregado. |
+| *El costo del domicilio es obligatorio y debe ser mayor que 0.* | Escribe el costo del domicilio. |
+| *No hay domicilios pendientes por liquidar…* | Solo entran pedidos **facturados**, de esa sede y fechas, no pagados antes. |
+| *El total supera el saldo disponible de la cuenta.* | Elige otra fuente del pago. |
+| *No se generará asiento contable…* | Configura la **Cuenta contable de gasto de domicilios**. |
+| Liquidé mal | En el detalle: **Más acciones › Anular** y créala de nuevo. |
 
 ## Relacionados
 
-- [Restaurante](index.md)
-- [¿Cómo abro la caja?](../pos/abrir-caja.md)
-- [¿Cómo registro un pago a un proveedor?](../finanzas/registrar-egreso.md)
+- [¿Cómo activo varias cuentas en una misma mesa?](varias-cuentas-mesa.md)
+- [Todas las opciones de Módulos](../primeros-pasos/opciones-modulos.md)

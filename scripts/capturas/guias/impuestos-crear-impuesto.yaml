@@ -1,0 +1,21 @@
+guia: impuestos/crear-impuesto.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/tax-catalogs
+      - esperar: 'text=Catálogos de Impuestos'
+    resaltar: 'a:has-text("Impuestos y retenciones"), button:has-text("Impuestos y retenciones")'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/taxes
+      - esperar: 'text=Nuevo Impuesto'
+    resaltar: 'button:has-text("Nuevo Impuesto"), a:has-text("Nuevo Impuesto")'
+  - paso: 3
+    acciones:
+      - abrir: 'button:has-text("Nuevo Impuesto"), a:has-text("Nuevo Impuesto")'
+      - esperar: 'text=Agrega un nuevo impuesto o retención.'
+    resaltar: 'role=dialog'
+    recortar: 'role=dialog'
+  - paso: 4
+    resaltar: 'role=dialog >> button:has-text("Crear Impuesto")'
+    recortar: 'role=dialog'

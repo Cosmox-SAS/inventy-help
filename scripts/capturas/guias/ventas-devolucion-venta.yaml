@@ -1,0 +1,16 @@
+guia: ventas/devolucion-venta.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/sale-returns
+      - esperar: 'main'
+    resaltar: 'main a[href$="/sale-returns/create"], main button:has-text("Nueva")'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/sale-returns/create
+      - esperar: 'text=Nueva Devolución de Venta'
+    resaltar: 'text=Información General >> xpath=ancestor::section[1]'
+  - paso: 3
+    resaltar: 'text=Ítems a Devolver >> xpath=ancestor::section[1]'
+  - paso: 4
+    resaltar: 'text=Total a devolver >> xpath=..'
