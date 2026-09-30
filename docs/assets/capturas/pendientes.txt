@@ -4,6 +4,13 @@ assets/capturas/compras/registrar-factura-compra/paso-3.png
 assets/capturas/compras/registrar-factura-compra/paso-4.png
 assets/capturas/compras/registrar-factura-compra/paso-5.png
 assets/capturas/compras/registrar-factura-compra/paso-6.png
+assets/capturas/contabilidad/cuentas-auxiliares/paso-1.png
+assets/capturas/contabilidad/cuentas-auxiliares/paso-2.png
+assets/capturas/contabilidad/cuentas-auxiliares/paso-3.png
+assets/capturas/contabilidad/cuentas-auxiliares/paso-4.png
+assets/capturas/contabilidad/cuentas-auxiliares/paso-5.png
+assets/capturas/contabilidad/cuentas-auxiliares/paso-6.png
+assets/capturas/contabilidad/cuentas-auxiliares/paso-7.png
 assets/capturas/facturacion-electronica/documento-rechazado/paso-1.png
 assets/capturas/facturacion-electronica/documento-rechazado/paso-2.png
 assets/capturas/facturacion-electronica/documento-rechazado/paso-3.png

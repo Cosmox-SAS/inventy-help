@@ -30,7 +30,7 @@ Inventy genera la contabilidad **automáticamente** a partir de tus operaciones:
 | Guía | Estado |
 |---|---|
 | Configuración contable inicial | Por redactar |
-| Plan de cuentas: consultar, crear e importar cuentas | Por redactar |
+| Plan de cuentas y cuentas auxiliares | [Guía](cuentas-auxiliares.md) |
 | Asientos contables: consultar y registrar un asiento manual | Por redactar |
 | Relación entre ventas, compras y contabilidad | Por redactar |
 | Informes: balance de prueba, libro auxiliar, estado de resultados y balance general | Por redactar |

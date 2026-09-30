@@ -77,6 +77,9 @@ Contar el inventario real y compararlo con el sistema para corregir diferencias.
 ### Crédito (cupo de crédito) { #credito }
 Vender para que el cliente pague después. El **Límite de crédito** del cliente es el máximo que te puede deber. · Ficha del cliente · [Guía](ventas/crear-cliente.md)
 
+### Cuenta auxiliar { #cuenta-auxiliar }
+Último nivel del plan de cuentas (subcuenta + 3 dígitos). Es donde se registran los movimientos. · <span class="ruta">Contabilidad › Plan de Cuentas</span> · [Guía](contabilidad/cuentas-auxiliares.md)
+
 ### CUFE / CUDE { #cufe-cude }
 Código único que la DIAN asigna a una factura electrónica (CUFE) o a otros documentos como notas crédito (CUDE). Sirve para verificarlos. · <span class="ruta">Fiscal › Documentos</span>
 

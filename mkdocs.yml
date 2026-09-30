@@ -147,7 +147,9 @@ nav:
       - ¿Cómo registro un pago de un cliente?: finanzas/registrar-ingreso.md
       - ¿Cómo registro un pago a un proveedor?: finanzas/registrar-egreso.md
   - Más módulos:
-      - Contabilidad: contabilidad/index.md
+      - Contabilidad:
+          - contabilidad/index.md
+          - ¿Cómo se implementan las cuentas auxiliares?: contabilidad/cuentas-auxiliares.md
       - Distribución: distribucion/index.md
       - Nómina y recursos humanos: recursos-humanos/index.md
       - Restaurante:

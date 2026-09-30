@@ -2,7 +2,7 @@
 
 > Generado con `python scripts/check_docs.py --estado > gestion/estado-articulos.md`. No editar a mano.
 
-**Pendiente de validación:** 57
+**Pendiente de validación:** 58
 
 | Módulo | Artículo | Tipo | Estado | Capturas pendientes | Validaciones pendientes | Revisado |
 |---|---|---|---|---|---|---|
@@ -11,6 +11,7 @@
 | compras | [Compras](../docs/compras/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | compras | [¿Cómo registro una factura de compra?](../docs/compras/registrar-factura-compra.md) | rapida | Pendiente de validación | 6 | 0 | 2026-09-30 |
 | contabilidad | [Contabilidad](../docs/contabilidad/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
+| contabilidad | [¿Cómo se implementan las cuentas auxiliares?](../docs/contabilidad/cuentas-auxiliares.md) | rapida | Pendiente de validación | 7 | 0 | 2026-09-30 |
 | distribucion | [Distribución](../docs/distribucion/index.md) | indice | Pendiente de validación | 0 | 1 | 2026-09-29 |
 | facturacion-electronica | [Facturación electrónica](../docs/facturacion-electronica/index.md) | indice | Pendiente de validación | 0 | 2 | 2026-09-29 |
 | facturacion-electronica | [Soluciones rápidas: facturación electrónica](../docs/soluciones-rapidas/facturacion-electronica.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |

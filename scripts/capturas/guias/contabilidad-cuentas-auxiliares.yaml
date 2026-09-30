@@ -1,0 +1,34 @@
+guia: contabilidad/cuentas-auxiliares.md
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Plan de Cuentas
+      - esperar: 'text=Gestiona el plan único de cuentas (PUC) del negocio.'
+    resaltar: 'main'
+  - paso: 2
+    resaltar: 'button:has-text("Cargar auxiliares por defecto")'
+  - paso: 3
+    acciones:
+      - abrir: 'button:has-text("Cargar auxiliares por defecto")'
+      - esperar: 'role=dialog'
+      - pausa: 1500
+    resaltar: 'role=dialog'
+    recortar: 'role=dialog'
+  - paso: 4
+    acciones:
+      - tecla: Escape
+    resaltar: 'button:has-text("Nueva Cuenta Auxiliar")'
+  - paso: 5
+    acciones:
+      - abrir: 'button:has-text("Nueva Cuenta Auxiliar")'
+      - esperar: 'text=Cuenta padre *'
+    resaltar: 'text=Cuenta padre * >> xpath=..'
+    recortar: 'role=dialog'
+  - paso: 6
+    acciones:
+      - llenar: { 'input[placeholder="Ej: CAJA MENOR SEDE NORTE"]': 'CAJA MENOR SEDE NORTE' }
+    resaltar: 'input[placeholder="Ej: CAJA MENOR SEDE NORTE"]'
+    recortar: 'role=dialog'
+  - paso: 7
+    resaltar: 'role=dialog >> button:has-text("Crear cuenta")'
+    recortar: 'role=dialog'
