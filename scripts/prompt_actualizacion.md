@@ -18,10 +18,11 @@ Eres el redactor del Centro de Ayuda de Inventy ERP (este repositorio, MkDocs Ma
     - Si no pudiste verificarlo: deja `estado: requiere-actualizacion` y escribe en el lugar exacto `[PENDIENTE DE VALIDACIÓN FUNCIONAL: qué falta confirmar]`.
 3. Por cada opción de `menu_nuevo` que sea una función para el usuario final: crea una guía nueva con `plantillas/guia-rapida.md` (`estado: borrador`, pasos directos con captura por paso, sin explicar conceptos) y su recorrido `scripts/capturas/guias/<modulo>-<guia>.yaml`; agrégala al `nav` de `mkdocs.yml` en su sección y enlázala desde el `index.md` del módulo. Si una opción de `menu_quitado` tiene guía, márcala `requiere-actualizacion` y explica en la guía qué desapareció.
 4. Si un término nuevo lo amerita, agrégalo a `docs/glosario.md` (dos líneas, ruta del menú y enlace).
-5. Valida y corrige hasta que ambos comandos pasen sin errores:
+5. Si agregaste pasos o guías, crea sus imágenes provisionales con `node scripts/capturas/placeholders.mjs`.
+6. Valida y corrige hasta que ambos comandos pasen sin errores:
     - `{PYTHON} scripts/check_docs.py`
     - `{MKDOCS} build --strict`
-6. Al final de la sección más reciente de `gestion/cambios-erp.md`, agrega `### Qué actualizó Claude` con una línea por guía (qué cambió y si quedó verificada o pendiente) y la lista de guías nuevas.
+7. Al final de la sección más reciente de `gestion/cambios-erp.md`, agrega `### Qué actualizó Claude` con una línea por guía (qué cambió y si quedó verificada o pendiente) y la lista de guías nuevas.
 
 ## Reglas
 

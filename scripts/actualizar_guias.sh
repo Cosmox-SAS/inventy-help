@@ -33,6 +33,8 @@ fi
 
 BASE="$(git -C "$HELP_DIR" rev-parse --verify -q refs/heads/main || git -C "$HELP_DIR" rev-parse HEAD)"
 git -C "$HELP_DIR" worktree add -q -b "$RAMA" "$WT" "$BASE"
+# Dependencias de Node compartidas (robot de capturas e imágenes provisionales).
+[ -d "$HELP_DIR/node_modules" ] && ln -s "$HELP_DIR/node_modules" "$WT/node_modules"
 
 "$PYTHON" "$WT/scripts/sync_erp.py" --erp "$ERP_DIR" --desde "$DESDE" --hasta "$HASTA" --json "$JSON" | sed 's/^/  /'
 

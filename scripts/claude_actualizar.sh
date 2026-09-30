@@ -52,6 +52,7 @@ set -- \
         "Bash(git -C $ERP_DIR log:*)" \
         "Bash($PYTHON scripts/check_docs.py:*)" \
         "Bash($MKDOCS build:*)" \
+        "Bash(node scripts/capturas/placeholders.mjs)" \
     --disallowedTools \
         "Edit(/$ERP_DIR/**)" "Edit(scripts/*.py)" "Edit(scripts/*.sh)" "Edit(scripts/*.md)" "Edit(scripts/capturas/*.mjs)" "Edit(.github/**)" \
     --max-budget-usd "$PRESUPUESTO"
@@ -70,6 +71,7 @@ if [ "$(git -C "$ERP_DIR" status --porcelain)" != "$ERP_ESTADO_ANTES" ]; then
     avisar "⚠️ Se detectaron cambios en inventy-erp durante la actualización. Revísalos con git status."
 fi
 
+node scripts/capturas/placeholders.mjs >/dev/null 2>&1 || true
 VALIDACION="ok"
 "$PYTHON" scripts/check_docs.py || VALIDACION="falló check_docs"
 "$MKDOCS" build --strict -q || VALIDACION="falló mkdocs build"
