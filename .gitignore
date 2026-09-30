@@ -5,5 +5,5 @@ __pycache__/
 .DS_Store
 .logs/
 .sin-actualizacion-automatica
-node_modules/
+node_modules
 .env.capturas
