@@ -1,0 +1,21 @@
+guia: pos/abrir-caja.md
+# Requiere que el usuario demo NO tenga una caja abierta.
+pasos:
+  - paso: 1
+    acciones:
+      - menu: POS
+      - esperar: '[data-testid="pos-root"]'
+    resaltar: 'role=dialog'
+  - paso: 2
+    acciones:
+      - esperar: 'role=dialog >> text=Abrir caja'
+    resaltar: 'role=dialog >> role=combobox'
+    recortar: 'role=dialog'
+  - paso: 3
+    acciones:
+      - llenar: { '#pos-open-cash-opening-amount': '200000' }
+    resaltar: '#pos-open-cash-opening-amount'
+    recortar: 'role=dialog'
+  - paso: 4
+    resaltar: 'button[type="submit"][form="pos-open-cash-session-form"]'
+    recortar: 'role=dialog'

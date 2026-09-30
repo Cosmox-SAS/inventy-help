@@ -1,14 +1,14 @@
 ---
 title: ¿Cómo cierro la caja?
-description: Cuenta el efectivo, registra el arqueo y decide qué hacer con el dinero al terminar el turno.
+description: Pasos para cerrar la caja, contar el efectivo y decidir qué hacer con el dinero.
 estado: pendiente-validacion
-tipo: tutorial
+tipo: rapida
 modulo: pos
-menu: Ventas › POS  ·  Tesorería › Caja › Cajas
+menu: Ventas › POS
 permisos:
   - Acceder al POS
   - Ver cajas
-revisado: 2026-09-29
+revisado: 2026-09-30
 search:
   boost: 2
 tags:
@@ -20,87 +20,48 @@ tags:
 
 <p class="tambien-se-busca">También se busca como: cierre de caja, cuadre de caja, arqueo, cerrar turno, cuadrar caja, entregar caja, faltante, sobrante, descuadre.</p>
 
-## ¿Para qué sirve?
+**Antes de empezar:** cuenta el efectivo del cajón (billetes y monedas).
 
-Al cerrar la caja **cuentas el efectivo** que hay en el cajón y lo registras en Inventy. El sistema lo compara con lo que *debería* haber según las ventas y movimientos del turno, y te dice si la caja **cuadra**, tiene **sobrante** o **faltante**.
+## Pasos
 
-**Úsala cuando:** terminas tu turno o al final del día.
+**Paso 1.** En el POS, haz clic en **Cerrar caja** en la barra superior.
 
-## Antes de comenzar
+![Paso 1: botón Cerrar caja en la barra del POS](../assets/capturas/pos/cierre-de-caja/paso-1.png)
 
-- [ ] Tener una **caja abierta** a tu nombre.
-- [ ] **Contar el efectivo** del cajón (billetes y monedas).
-- [ ] Decidir con tu supervisor qué se hará con el dinero: dejarlo en caja, consignarlo al banco o retirarlo.
+**Paso 2.** Revisa el **Resumen del arqueo** (hora de apertura y monto base).
 
-## Paso a paso
+![Paso 2: resumen del arqueo](../assets/capturas/pos/cierre-de-caja/paso-2.png)
 
-**Paso 1.** Desde el POS, haz clic en **Cerrar caja** en la barra superior. También puedes hacerlo desde <span class="ruta">Tesorería › Caja › Cajas</span> con la acción **Cerrar caja**.
+**Paso 3.** En **Efectivo contado**, escribe el total que contaste.
 
-**Paso 2.** Revisa el **Resumen del arqueo**: fecha y hora de **Apertura** y **Monto base**.
+![Paso 3: campo Efectivo contado](../assets/capturas/pos/cierre-de-caja/paso-3.png)
 
-!!! captura "CAPTURA PENDIENTE"
-    Ventana **Cerrar caja** con el resumen del arqueo, el campo Efectivo contado y los destinos del dinero.
+**Paso 4.** Elige el **Destino del monto base** (**Dejar en caja** o **Egresar**) y el **Destino del excedente** (**Dejar en caja** o **Consignar** a una **Cuenta bancaria**).
 
-**Paso 3.** En **Efectivo contado**, escribe el total del efectivo que contaste.
+![Paso 4: destino del dinero](../assets/capturas/pos/cierre-de-caja/paso-4.png)
 
-**Paso 4.** Decide qué pasa con el dinero:
+**Paso 5.** Si quieres, escribe **Observaciones** y haz clic en **Cerrar caja**.
 
-| Parte del dinero | Opciones | Qué significa |
-|---|---|---|
-| **Destino del monto base** | **Dejar en caja** · **Egresar** | La base puede quedarse para el siguiente turno o retirarse de la caja. |
-| **Destino del excedente** (lo que supera la base) | **Dejar en caja** · **Consignar** | El excedente puede quedarse o consignarse a una **Cuenta bancaria**. |
+![Paso 5: botón Cerrar caja del formulario](../assets/capturas/pos/cierre-de-caja/paso-5.png)
 
-- Si eliges **Consignar**, selecciona la **Cuenta bancaria**. *(Solo aparece si tu empresa usa el módulo de bancos y tiene cuentas activas.)*
-- Si eliges **Egresar**, escribe el **Motivo del egreso** (ej. *pago a proveedor*).
+**Paso 6.** En **Confirmar cierre de caja**, lee el mensaje y haz clic en **Confirmar cierre**. Si dice que el monto es muy distinto al esperado, vuelve a escribir el monto y el **Motivo**.
 
-**Paso 5.** Si quieres, escribe **Observaciones** del arqueo.
+![Paso 6: ventana Confirmar cierre de caja](../assets/capturas/pos/cierre-de-caja/paso-6.png)
 
-**Paso 6.** Haz clic en **Cerrar caja**. Inventy verifica el conteo (verás *Verificando...*).
+✅ **Listo:** la caja queda **Cerrada**. El comprobante se imprime desde <span class="ruta">Tesorería › Caja › Sesiones</span> › **Imprimir cierre**.
 
-**Paso 7.** En la ventana **Confirmar cierre de caja**, revisa el mensaje:
+## Si algo falla
 
-- Si la caja **cuadra**, verás *“¿Confirmas el cierre de caja?…”*.
-- Si **no cuadra**, verás *“Con el valor ingresado, la caja queda descuadrada. Verifica el conteo antes de confirmar.”* Vuelve a contar antes de continuar.
-- Si el monto es **muy distinto** a lo esperado, verás *“El monto contado es muy distinto al esperado. Verifica que no falte o sobre un cero o la coma decimal.”* Para continuar, debes **volver a escribir el monto contado** y explicar el **Motivo**.
+| Problema | Solución |
+|---|---|
+| *La caja queda descuadrada* | Vuelve a contar. Revisa pagos con tarjeta registrados como efectivo. Si es real, cierra y explícalo en **Observaciones**. |
+| *El monto contado es muy distinto al esperado…* | Revisa que no sobre o falte un cero. Si es correcto, reescribe el monto y el motivo. |
+| *El monto no coincide con el valor contado.* | El monto reescrito debe ser idéntico al primero. |
+| No aparece **Consignar** | Tu empresa no tiene bancos activos o no hay cuentas bancarias activas. |
+| Cerré con un valor equivocado | Un supervisor usa **Corregir arqueo** o **Reabrir cierre** en <span class="ruta">Tesorería › Caja › Sesiones</span>. |
+| *No tienes permiso para imprimir este cierre.* | Pide el permiso al administrador. |
 
-**Paso 8.** Haz clic en **Confirmar cierre**.
-
-## Resultado esperado
-
-- La caja queda **Cerrada** y aparece en <span class="ruta">Tesorería › Caja › Sesiones</span>.
-- Desde **Sesiones** puedes usar **Imprimir cierre** para obtener el comprobante.
-- Si elegiste consignar, el dinero queda registrado en la cuenta bancaria.
-
-## Si te equivocaste en el cierre
-
-Desde <span class="ruta">Tesorería › Caja › Sesiones</span>, un usuario autorizado puede:
-
-- **Corregir arqueo:** cambia el valor contado. Debes explicar por qué se corrige. La sesión queda marcada como *“Este arqueo fue corregido”*.
-- **Reabrir cierre:** vuelve a abrir el último cierre. *Esto revertirá la consignación y los ajustes del cierre.* Requiere el permiso **Reabrir cierre de caja**.
-
-## Problemas frecuentes
-
-??? question "La caja queda descuadrada"
-    1. Vuelve a contar el efectivo con calma.
-    2. Revisa si hubo pagos con tarjeta o transferencia registrados como efectivo (o al revés).
-    3. Revisa si alguien sacó dinero sin registrarlo.
-    4. Si la diferencia es real, cierra de todas formas y explica la situación en **Observaciones**. Tu supervisor podrá revisarla.
-
-??? question "No aparece la opción Consignar"
-    Tu empresa no tiene el módulo de bancos activo o no hay **cuentas bancarias activas**. El administrador debe crearlas en <span class="ruta">Tesorería › Bancos › Cuentas bancarias</span>.
-
-??? question "“El monto no coincide con el valor contado.”"
-    En la confirmación de un monto anómalo, el valor que volviste a escribir es diferente del primero. Escríbelo exactamente igual.
-
-??? question "“No tienes permiso para imprimir este cierre.” / “La sesión no está cerrada.”"
-    Solo se pueden imprimir sesiones **cerradas**, y tu rol debe tener permiso. Pídeselo al administrador.
-
-## ¿Necesitas ayuda?
-
-[Contacta a soporte](../soporte.md) si no puedes cerrar la caja o si un cierre muestra valores que no corresponden a las ventas del día. Envía el **nombre de la caja**, la **fecha de la sesión** y una **captura del resumen**.
-
-## Artículos relacionados
+## Relacionados
 
 - [¿Cómo abro la caja?](abrir-caja.md)
 - [¿Cómo vendo en el POS?](vender-en-pos.md)
-- [Soluciones rápidas: POS y caja](../soluciones-rapidas/pos-caja.md)

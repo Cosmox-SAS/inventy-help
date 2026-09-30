@@ -1,0 +1,37 @@
+guia: productos-inventario/traslados.md
+# Pasos 5-7 usan traslados que ya existan en la demo (Solicitado y Aprobado).
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Traslados
+      - esperar: 'text=Traslados de inventario'
+    resaltar: 'a:has-text("Nuevo traslado"), button:has-text("Nuevo traslado")'
+  - paso: 2
+    acciones:
+      - abrir: 'a:has-text("Nuevo traslado"), button:has-text("Nuevo traslado")'
+      - esperar: 'text=Datos del traslado'
+    resaltar: 'text=Datos del traslado >> xpath=ancestor::section[1]'
+  - paso: 3
+    acciones:
+      - abrir: 'button:has-text("Agregar producto")'
+      - pausa: 500
+    resaltar: 'text=Productos a trasladar >> xpath=ancestor::section[1]'
+  - paso: 4
+    resaltar: 'button:has-text("Solicitar traslado")'
+  - paso: 5
+    acciones:
+      - menu: Traslados
+      - esperar: 'text=Traslados de inventario'
+    resaltar: 'table'
+  - paso: 6
+    acciones:
+      - abrir: 'tr:has-text("Solicitado") a >> nth=0'
+      - esperar: 'text=Productos del traslado'
+    resaltar: 'button:has-text("Aprobar")'
+    detener_si_falla: false
+  - paso: 7
+    acciones:
+      - menu: Traslados
+      - abrir: 'tr:has-text("Aprobado") a >> nth=0'
+      - esperar: 'text=Productos del traslado'
+    resaltar: 'button:has-text("Recibir")'

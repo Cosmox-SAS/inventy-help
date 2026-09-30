@@ -1,0 +1,36 @@
+guia: pos/vender-en-pos.md
+# Requiere caja abierta y al menos un producto con existencias.
+# Variable de la demo: producto que se busca.
+pasos:
+  - paso: 1
+    acciones:
+      - menu: POS
+      - esperar: '[data-testid="pos-catalog"]'
+    resaltar: '[data-testid="pos-catalog"]'
+  - paso: 2
+    acciones:
+      - escribir: { '[data-testid="pos-search"] input, input[placeholder="Buscar producto…"]': 'a' }
+      - pausa: 800
+    resaltar: 'input[placeholder="Buscar producto…"]'
+  - paso: 3
+    acciones:
+      - abrir: '[data-testid="pos-catalog"] button >> nth=0'
+      - pausa: 500
+    resaltar: '[data-testid="pos-cart"]'
+  - paso: 4
+    resaltar: '[data-testid="pos-cart"] li >> nth=0'
+  - paso: 5
+    resaltar: '[data-testid="pos-cart"] >> text=/Consumidor Final|Seleccionar cliente/'
+  - paso: 6
+    resaltar: 'aside [data-testid="pos-submit-order"]'
+  - paso: 7
+    acciones:
+      - abrir: 'aside [data-testid="pos-submit-order"]'
+      - esperar: '[data-testid="pos-modal-payment"]'
+    resaltar: '[data-testid="pos-numpad"]'
+    recortar: 'role=dialog'
+  - paso: 8
+    acciones:
+      - abrir: '[data-testid="pos-numpad-key-exact"]'
+    resaltar: 'button:has-text("Confirmar cobro")'
+    recortar: 'role=dialog'

@@ -94,3 +94,18 @@
   font-size: 0.68rem;
   color: var(--md-default-fg-color--light);
 }
+
+/* ── Capturas de pantalla de cada paso ─────────────────────────── */
+.md-typeset img[src*="assets/capturas/"] {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0.6rem 0 1.4rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--ayuda-radius);
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08);
+}
+.md-typeset p > strong:first-child {
+  /* "Paso N." al inicio de cada paso */
+  color: var(--md-accent-fg-color);
+}

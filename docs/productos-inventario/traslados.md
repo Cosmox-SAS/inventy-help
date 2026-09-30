@@ -1,6 +1,6 @@
 ---
 title: ¿Cómo hago un traslado entre sedes?
-description: Pasos para trasladar mercancía de una sede a otra.
+description: "Pasos para trasladar mercancía de una sede a otra: solicitar, aprobar y recibir."
 estado: pendiente-validacion
 tipo: rapida
 modulo: productos-inventario
@@ -9,7 +9,7 @@ permisos:
   - Crear traslados de inventario
   - Aprobar traslados de inventario
   - Confirmar recepción de traslados
-revisado: 2026-09-29
+revisado: 2026-09-30
 search:
   boost: 2
 tags:
@@ -21,32 +21,39 @@ tags:
 
 <p class="tambien-se-busca">También se busca como: traslado de inventario, mover mercancía, transferencia entre sedes, pasar inventario a otra tienda, recibir traslado.</p>
 
-<span class="ruta">Inventario › Traslados</span>
+**Antes de empezar:** lo solicita una persona, lo **aprueba otra** de la sede de origen y lo **recibe** la sede de destino.
 
 ## Pasos
 
-**Solicitar**
+**Paso 1.** Ingresa a <span class="ruta">Inventario › Traslados</span> y haz clic en **Nuevo traslado**.
 
-1. <span class="ruta">Inventario › Traslados</span> › **Nuevo traslado**.
-2. Elige **Sede de origen** y **Sede de destino**.
-3. **Agregar producto** › busca el producto › escribe la cantidad. Repite por cada producto.
-4. **Solicitar traslado** › confirma.
+![Paso 1: lista de traslados y botón Nuevo traslado](../assets/capturas/productos-inventario/traslados/paso-1.png)
 
-**Aprobar** (otro usuario, de la sede de origen)
+**Paso 2.** Elige la **Sede de origen** y la **Sede de destino**.
 
-5. Abre el traslado (estado **Solicitado**).
-6. Ajusta la cantidad aprobada si envías menos (0 = no se envía).
-7. **Aprobar** › confirma.
+![Paso 2: sedes de origen y destino](../assets/capturas/productos-inventario/traslados/paso-2.png)
 
-**Recibir** (sede de destino, o quien lo solicitó)
+**Paso 3.** Haz clic en **Agregar producto**, busca el producto y escribe la cantidad. Repite por cada producto.
 
-8. Abre el traslado (estado **Aprobado**).
-9. **Recibir** › **Confirmar recepcion**.
+![Paso 3: productos a trasladar](../assets/capturas/productos-inventario/traslados/paso-3.png)
 
-✅ Listo: la mercancía sale del origen y entra al destino.
+**Paso 4.** Haz clic en **Solicitar traslado** y confirma.
 
-!!! captura "CAPTURA PENDIENTE"
-    Detalle de un traslado Solicitado con el botón **Aprobar** resaltado.
+![Paso 4: botón Solicitar traslado](../assets/capturas/productos-inventario/traslados/paso-4.png)
+
+**Paso 5.** *(Otro usuario, de la sede de origen)* En <span class="ruta">Inventario › Traslados</span>, filtra por **Solicitado** y abre el traslado.
+
+![Paso 5: traslados solicitados](../assets/capturas/productos-inventario/traslados/paso-5.png)
+
+**Paso 6.** Revisa las cantidades (si envías menos, cámbiala; 0 = no se envía) y haz clic en **Aprobar**.
+
+![Paso 6: detalle del traslado y botón Aprobar](../assets/capturas/productos-inventario/traslados/paso-6.png)
+
+**Paso 7.** *(Sede de destino, cuando llega la mercancía)* Abre el traslado **Aprobado**, haz clic en **Recibir** y luego en **Confirmar recepcion**.
+
+![Paso 7: botón Recibir](../assets/capturas/productos-inventario/traslados/paso-7.png)
+
+✅ **Listo:** la mercancía sale del origen y entra al destino. El traslado queda **Recibido**.
 
 ## Si algo falla
 
@@ -57,7 +64,7 @@ tags:
 | *Stock insuficiente en la sede de origen…* | Aprueba menos cantidad o deja ese producto en 0. |
 | *La sede de origen y destino no pueden ser la misma* | Cambia una de las dos sedes. |
 | Me equivoqué y ya lo solicité | Que la sede de origen lo **Rechace** › **Clonar** › corrige › solicita de nuevo. |
-| El stock del producto aparece reservado | Hay un traslado **Aprobado** sin recibir. Que el destino lo reciba. |
+| El stock aparece reservado | Hay un traslado **Aprobado** sin recibir. Que el destino lo reciba. |
 
 ## Relacionados
 

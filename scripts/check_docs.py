@@ -58,6 +58,15 @@ DATOS_SENSIBLES = re.compile(r"contraseña|clave|PIN|c[oó]digo de verificaci[o�
 FRONT_MATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 H2 = re.compile(r"^## +(.+?)\s*(\{.*\})?\s*$", re.M)
 FENCE = re.compile(r"^```.*?^```", re.S | re.M)
+PASO = re.compile(r"^\*\*Paso (\d+)\.\*\*", re.M)
+IMAGEN = re.compile(r"!\[[^\]]*\]\(([^)\s]+assets/capturas/[^)\s]+\.png)\)")
+PENDIENTES_CAPTURAS = DOCS / "assets" / "capturas" / "pendientes.txt"
+
+
+def capturas_pendientes() -> set[str]:
+    if not PENDIENTES_CAPTURAS.exists():
+        return set()
+    return {l.strip() for l in PENDIENTES_CAPTURAS.read_text(encoding="utf-8").splitlines() if l.strip()}
 
 
 def leer(path: Path) -> tuple[dict, str]:
@@ -124,6 +133,25 @@ def validar(path: Path) -> list[str]:
                 if "INFORMACIÓN PARA SOPORTE" in linea and DATOS_SENSIBLES.search(linea.split(":**", 1)[-1]):
                     errores.append(f"'{titulo}': la información para soporte pide datos sensibles")
 
+    if tipo == "rapida":
+        seccion = re.split(r"^## ", sin_codigo, flags=re.M)
+        pasos_txt = next((b for b in seccion if b.startswith("Pasos")), "")
+        bloques = PASO.split(pasos_txt)[1:]
+        numeros = bloques[0::2]
+        if not numeros:
+            errores.append("la sección Pasos no tiene pasos con el formato **Paso N.**")
+        for numero, texto in zip(numeros, bloques[1::2]):
+            if not IMAGEN.search(texto):
+                errores.append(f"el Paso {numero} no tiene captura de pantalla")
+        esperados = [str(n) for n in range(1, len(numeros) + 1)]
+        if numeros and numeros != esperados:
+            errores.append(f"los pasos no son consecutivos: {', '.join(numeros)}")
+
+    if estado == "publicado":
+        usadas = {(path.parent / src).resolve().relative_to(DOCS.resolve()).as_posix() for src in IMAGEN.findall(sin_codigo)}
+        if usadas & capturas_pendientes():
+            errores.append("estado 'publicado' con capturas provisionales (Captura pendiente)")
+
     if estado in ("publicado", "validado") and PENDIENTES.search(sin_codigo):
         if estado == "publicado" or "VALIDACIÓN" in PENDIENTES.search(sin_codigo).group(0).upper():
             errores.append(f"estado '{estado}' con contenido pendiente (captura o validación)")
@@ -142,7 +170,9 @@ def tablero(articulos: list[Path]) -> str:
         meta, cuerpo = leer(path)
         estado = meta.get("estado", "—")
         conteo[estado] = conteo.get(estado, 0) + 1
-        capturas = len(re.findall(r"CAPTURA PENDIENTE", cuerpo))
+        pendientes_img = capturas_pendientes()
+        imagenes = [(path.parent / s).resolve().relative_to(DOCS.resolve()).as_posix() for s in IMAGEN.findall(cuerpo)]
+        capturas = len(re.findall(r"CAPTURA PENDIENTE", cuerpo)) + sum(1 for i in imagenes if i in pendientes_img)
         validaciones = len(re.findall(r"PENDIENTE DE VALIDACIÓN FUNCIONAL", cuerpo))
         filas.append(
             f"| {meta.get('modulo', '—')} | [{meta.get('title', path.stem)}](../docs/{path.relative_to(DOCS).as_posix()}) "

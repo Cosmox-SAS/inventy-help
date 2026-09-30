@@ -1,0 +1,14 @@
+{
+  "name": "inventy-help",
+  "private": true,
+  "description": "Herramientas del Centro de Ayuda Inventy (capturas de pantalla automáticas).",
+  "type": "module",
+  "scripts": {
+    "capturas": "node scripts/capturas/capturar.mjs",
+    "capturas:placeholders": "node scripts/capturas/placeholders.mjs"
+  },
+  "devDependencies": {
+    "playwright": "~1.62.1",
+    "yaml": "^2.5.0"
+  }
+}

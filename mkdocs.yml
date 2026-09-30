@@ -7,6 +7,9 @@ copyright: Inventy ERP · Centro de Ayuda
 
 docs_dir: docs
 strict: true
+exclude_docs: |
+  assets/capturas/pendientes.txt
+
 validation:
   omitted_files: warn
   absolute_links: warn
@@ -56,6 +59,11 @@ plugins:
   - search:
       lang: es
   - tags
+  - glightbox:
+      touchNavigation: true
+      zoomable: true
+      skip_classes:
+        - sin-zoom
 
 markdown_extensions:
   - admonition
