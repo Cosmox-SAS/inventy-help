@@ -1,18 +1,36 @@
 guia: finanzas/registrar-egreso.md
+# Abono de $100.000 desde la caja abierta a la factura de compras/registrar-factura-compra.
+orden: 62
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/expenses
       - esperar: 'text=Nuevo egreso'
-    resaltar: 'a:has-text("Nuevo egreso"), button:has-text("Nuevo egreso")'
+    resaltar: 'main a:has-text("Nuevo egreso"), main button:has-text("Nuevo egreso") >> nth=0'
   - paso: 2
     acciones:
       - ir: /{tenant}/expenses/create
       - esperar: 'text=Información del egreso'
-    resaltar: 'text=Tipo de movimiento * >> xpath=..'
+      - elegir: { 'button:has-text("Seleccionar tipo...")': 'Pago a proveedor' }
+      - elegir: { 'button:has-text("Buscar proveedor...")': 'DISTRIBUIDORA' }
+    resaltar: 'text=Tipo de movimiento * >> xpath=ancestor::div[contains(@class,"grid")][1]'
   - paso: 3
-    resaltar: 'text=Información del egreso >> xpath=ancestor::section[1]'
+    acciones:
+      - abrir: 'section:has(:is(h2,h3):has-text("Información del egreso")) >> button:has-text("Caja")'
+      - pausa: 1000
+      - llenar: { '#total_cop': '100000', '#voucher_code': 'CE-001' }
+      - pausa: 800
+    resaltar: 'section:has(:is(h2,h3):has-text("Información del egreso"))'
   - paso: 4
-    resaltar: 'text=Distribución del egreso >> xpath=ancestor::section[1]'
+    acciones:
+      - llenar: { 'section:has(:is(h2,h3):has-text("Distribución del egreso")) >> tbody tr >> nth=0 >> input >> nth=0': '100000' }
+      - pausa: 800
+    resaltar: 'section:has(:is(h2,h3):has-text("Distribución del egreso"))'
   - paso: 5
-    resaltar: 'button:has-text("Finalizar egreso")'
+    guarda_datos: true
+    resaltar: 'button:has-text("Finalizar")'
+    despues:
+      - clic: 'button:has-text("Finalizar")'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Finalizar")'
+      - pausa: 3000

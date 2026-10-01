@@ -18,7 +18,9 @@ const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const ENV = path.join(RAIZ, '.env.capturas');
 const SESION = path.join(RAIZ, '.auth-capturas.json');
 
-const url = (fs.existsSync(ENV) ? fs.readFileSync(ENV, 'utf8') : '').match(/^INVENTY_DEMO_URL=(.+)$/m)?.[1]?.trim().replace(/\/+$/, '');
+const envTexto = fs.existsSync(ENV) ? fs.readFileSync(ENV, 'utf8') : '';
+const url = envTexto.match(/^INVENTY_DEMO_URL=(.+)$/m)?.[1]?.trim().replace(/\/+$/, '');
+const tenantEsperado = envTexto.match(/^INVENTY_DEMO_TENANT=(.+)$/m)?.[1]?.trim();
 if (!url) {
     console.error('✗ Falta INVENTY_DEMO_URL en .env.capturas');
     process.exit(1);
@@ -30,7 +32,11 @@ const page = await contexto.newPage();
 await page.goto(`${url}/login`);
 
 console.log('➜ Inicia sesión en la ventana de Chrome que se abrió (tienes 15 minutos).');
-await page.waitForURL((u) => !/\/(login|two-factor-challenge)/.test(u.pathname), { timeout: 15 * 60_000 });
+if (tenantEsperado) console.log(`  Usa un usuario de la empresa "${tenantEsperado}" (no el superadministrador).`);
+await page.waitForURL(
+    (u) => !/\/(login|two-factor-challenge)/.test(u.pathname) && (!tenantEsperado || u.pathname.split('/').filter(Boolean)[0] === tenantEsperado),
+    { timeout: 15 * 60_000 },
+);
 await page.waitForLoadState('networkidle').catch(() => {});
 
 const empresa = new URL(page.url()).pathname.split('/').filter(Boolean)[0] ?? '';

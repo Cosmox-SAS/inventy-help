@@ -7,7 +7,7 @@ modulo: finanzas
 menu: "Tesorería › Egresos"
 permisos:
   - Gestionar egresos
-revisado: 2026-09-30
+revisado: 2026-10-01
 tags:
   - Tesorería
   - Proveedores
@@ -30,19 +30,19 @@ tags:
 
 ![Paso 2: tipo de movimiento y proveedor](../assets/capturas/finanzas/registrar-egreso/paso-2.png)
 
-**Paso 3.** Completa **Centro de costo**, **Fecha del pago**, **Fuente del pago** (caja o banco) y **Egreso Total**.
+**Paso 3.** Revisa **Centro de costo** y **Fecha del pago**. En **Fuente del pago** elige **Banco**, **Caja** (sale de tu caja abierta) o **Anticipo**. Escribe el **Egreso Total** y, si quieres, el **Comprobante**.
 
 ![Paso 3: información del egreso](../assets/capturas/finanzas/registrar-egreso/paso-3.png)
 
-**Paso 4.** En **Distribución del egreso**, asigna el valor a las facturas que pagas hasta que **Por distribuir** quede en cero.
+**Paso 4.** En **Distribución del egreso**, escribe el **Valor abono** de cada factura (o haz clic en el **Saldo pendiente** para pagarla completa) hasta que abajo diga **Distribución completa**.
 
 ![Paso 4: distribución del egreso](../assets/capturas/finanzas/registrar-egreso/paso-4.png)
 
-**Paso 5.** Haz clic en **Finalizar egreso** y confirma.
+**Paso 5.** Haz clic en **Finalizar** y confirma con **Finalizar**.
 
-![Paso 5: botón Finalizar egreso](../assets/capturas/finanzas/registrar-egreso/paso-5.png)
+![Paso 5: botón Finalizar](../assets/capturas/finanzas/registrar-egreso/paso-5.png)
 
-✅ **Listo:** baja lo que le debes al proveedor y el dinero sale de la caja o banco.
+✅ **Listo:** el egreso queda **Finalizado** con número **PGE-**, baja el saldo de la factura del proveedor y el dinero sale de la caja o banco. Si aún no quieres confirmarlo, usa **Guardar borrador**.
 
 ## Si algo falla
 
