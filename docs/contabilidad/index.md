@@ -11,7 +11,7 @@ revisado: 2026-09-29
 
 <p class="tambien-se-busca">También se busca como: PUC, plan de cuentas, asientos, comprobantes, balance, estado de resultados, libro auxiliar, contador.</p>
 
-Inventy genera la contabilidad **automáticamente** a partir de tus operaciones: al validar una venta, una compra, un ingreso o un egreso se crea su asiento contable. En casi todos los documentos puedes usar **Ver asientos** para ver cómo quedó registrado.
+Inventy genera la contabilidad **automáticamente** ([cómo funciona](como-funciona.md)) a partir de tus operaciones: al validar una venta, una compra, un ingreso o un egreso se crea su asiento contable. En casi todos los documentos puedes usar **Ver asientos** para ver cómo quedó registrado.
 
 ## ¿Qué hay en el menú Contabilidad?
 
@@ -32,6 +32,6 @@ Inventy genera la contabilidad **automáticamente** a partir de tus operaciones:
 | Configuración contable inicial | Por redactar |
 | Plan de cuentas y cuentas auxiliares | [Guía](cuentas-auxiliares.md) |
 | Asientos contables: consultar y registrar un asiento manual | Por redactar |
-| Relación entre ventas, compras y contabilidad | Por redactar |
+| Cómo funciona la contabilidad (relación con ventas, compras y pagos) | [Guía](como-funciona.md) |
 | Informes: balance de prueba, libro auxiliar, estado de resultados y balance general | Por redactar |
 | Errores frecuentes de contabilización | Por redactar |

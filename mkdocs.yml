@@ -149,6 +149,7 @@ nav:
   - Más módulos:
       - Contabilidad:
           - contabilidad/index.md
+          - ¿Cómo funciona la contabilidad en Inventy?: contabilidad/como-funciona.md
           - ¿Cómo se implementan las cuentas auxiliares?: contabilidad/cuentas-auxiliares.md
       - Distribución: distribucion/index.md
       - Nómina y recursos humanos: recursos-humanos/index.md

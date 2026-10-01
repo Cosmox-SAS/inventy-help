@@ -4,6 +4,16 @@ assets/capturas/compras/registrar-factura-compra/paso-3.png
 assets/capturas/compras/registrar-factura-compra/paso-4.png
 assets/capturas/compras/registrar-factura-compra/paso-5.png
 assets/capturas/compras/registrar-factura-compra/paso-6.png
+assets/capturas/contabilidad/como-funciona/paso-asientos-contables.png
+assets/capturas/contabilidad/como-funciona/paso-balance-prueba.png
+assets/capturas/contabilidad/como-funciona/paso-caja-cuenta.png
+assets/capturas/contabilidad/como-funciona/paso-catalogo-impuestos.png
+assets/capturas/contabilidad/como-funciona/paso-catalogo-puc.png
+assets/capturas/contabilidad/como-funciona/paso-configuracion-contable.png
+assets/capturas/contabilidad/como-funciona/paso-estado-resultados.png
+assets/capturas/contabilidad/como-funciona/paso-medio-de-pago.png
+assets/capturas/contabilidad/como-funciona/paso-plan-de-cuentas.png
+assets/capturas/contabilidad/como-funciona/paso-ver-asientos.png
 assets/capturas/contabilidad/cuentas-auxiliares/paso-1.png
 assets/capturas/contabilidad/cuentas-auxiliares/paso-2.png
 assets/capturas/contabilidad/cuentas-auxiliares/paso-3.png

@@ -1,0 +1,66 @@
+guia: contabilidad/como-funciona.md
+# Guía conceptual: cada "paso" es una captura con nombre (paso-<id>.png).
+# Ningún paso depende del anterior.
+pasos:
+  - paso: plan-de-cuentas
+    acciones:
+      - ir: /{tenant}/accounting/accounts?level=auxiliary
+      - esperar: 'text=Gestiona el plan único de cuentas (PUC) del negocio.'
+    resaltar: 'table'
+    detener_si_falla: false
+  - paso: catalogo-puc
+    acciones:
+      - ir: /{tenant}/accounting/puc-master
+      - esperar: 'text=Catálogo PUC'
+    resaltar: 'table'
+    detener_si_falla: false
+  - paso: catalogo-impuestos
+    acciones:
+      - ir: /{tenant}/tax-catalogs/create
+      - esperar: 'text=Impuestos de Ventas'
+    resaltar: 'text=Impuestos de Ventas >> xpath=ancestor::section[1]'
+    detener_si_falla: false
+  - paso: caja-cuenta
+    acciones:
+      - ir: /{tenant}/cash/registers
+      - abrir: 'button:has-text("Nueva caja"), a:has-text("Nueva caja")'
+      - esperar: 'text=Cuenta contable'
+    resaltar: 'role=dialog >> text=Cuenta contable >> xpath=..'
+    recortar: 'role=dialog'
+    detener_si_falla: false
+  - paso: medio-de-pago
+    acciones:
+      - ir: /{tenant}/payment-methods
+      - abrir: 'button:has-text("Nuevo"), a:has-text("Nuevo")'
+      - esperar: 'text=Cuentas bancarias por sede'
+    resaltar: 'role=dialog >> text=Cuentas bancarias por sede >> xpath=..'
+    recortar: 'role=dialog'
+    detener_si_falla: false
+  - paso: configuracion-contable
+    acciones:
+      - ir: /{tenant}/accounting/settings
+      - esperar: 'text=Configuración Contable'
+    resaltar: 'main'
+    detener_si_falla: false
+  - paso: ver-asientos
+    manual: detalle o formulario de una factura de venta con la ventana Ver asientos abierta
+  - paso: asientos-contables
+    acciones:
+      - ir: /{tenant}/accounting/entries
+      - esperar: 'table'
+    resaltar: 'table'
+    detener_si_falla: false
+  - paso: estado-resultados
+    acciones:
+      - ir: /{tenant}/accounting/reports/income-statement
+      - esperar: 'main'
+      - pausa: 1500
+    resaltar: 'main'
+    detener_si_falla: false
+  - paso: balance-prueba
+    acciones:
+      - ir: /{tenant}/accounting/reports/trial-balance
+      - esperar: 'main'
+      - pausa: 1500
+    resaltar: 'main'
+    detener_si_falla: false
