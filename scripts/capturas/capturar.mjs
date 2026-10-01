@@ -192,6 +192,19 @@ async function ejecutarPaso(page, paso, ctx) {
                 await objetivo.click();
                 break;
             }
+            case 'elegir':
+                // Selector con buscador de Inventy: clic en el campo → escribir en
+                // "Buscar..." → clic en la opción que contiene el texto.
+                for (const [sel, texto] of Object.entries(valor)) {
+                    await localizar(page, sel).click();
+                    const buscador = page.locator('input[placeholder="Buscar..."]:visible, input[placeholder="Buscar…"]:visible').last();
+                    if (await buscador.count()) await buscador.pressSequentially(expandir(texto), { delay: 40 });
+                    const opcion = page.locator(`role=option >> text=${expandir(texto)}`).first();
+                    await opcion.waitFor({ timeout: ESPERA_MS });
+                    await opcion.click();
+                    await page.waitForTimeout(300);
+                }
+                break;
             case 'llenar_credenciales':
                 // Correo de ejemplo: nunca mostrar el correo real del usuario demo en las capturas.
                 await localizar(page, 'input[name="email"]').fill('usuario@empresa.com');
@@ -226,7 +239,9 @@ async function ejecutarPaso(page, paso, ctx) {
 async function main() {
     const args = process.argv.slice(2);
     const visible = args.includes('--ver');
-    const filtro = args.find((a) => !a.startsWith('--'));
+    const indicePasos = args.indexOf('--pasos');
+    const [pasoDesde, pasoHasta] = indicePasos >= 0 ? args[indicePasos + 1].split('-').map(Number) : [null, null];
+    const filtro = args.find((a, i) => !a.startsWith('--') && i !== indicePasos + 1);
     const env = cargarEnv();
     const puedeGuardar = process.env.CAPTURAS_PERMITIR_GUARDAR === '1';
     const guias = cargarGuias(filtro);
@@ -265,6 +280,8 @@ async function main() {
         }
 
         for (const paso of guia.pasos) {
+            // --pasos 4-7: repetir solo una parte de la guía (ej. cuando un paso ya creó datos).
+            if (pasoDesde && (Number(paso.paso) < pasoDesde || Number(paso.paso) > (pasoHasta || pasoDesde))) continue;
             const destino = path.join(dirGuia, `paso-${paso.paso}.png`);
             const relativo = path.relative(path.join(RAIZ, 'docs'), destino);
             if (paso.manual) {

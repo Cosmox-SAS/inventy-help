@@ -1,34 +1,50 @@
 guia: contabilidad/cuentas-auxiliares.md
+# Va antes que productos y ventas: asigna las cuentas a los catálogos de impuestos,
+# cajas, etc. Sin esto, vender con Contabilidad activa da "asiento no balanceado".
+orden: 8
 pasos:
   - paso: 1
     acciones:
-      - menu: Plan de Cuentas
-      - esperar: 'text=Gestiona el plan único de cuentas (PUC) del negocio.'
+      - ir: /{tenant}/accounting/accounts?level=auxiliary
+      - esperar: 'button:has-text("Cargar auxiliares por defecto")'
     resaltar: 'main'
   - paso: 2
     resaltar: 'button:has-text("Cargar auxiliares por defecto")'
   - paso: 3
+    guarda_datos: true
     acciones:
       - abrir: 'button:has-text("Cargar auxiliares por defecto")'
-      - esperar: 'VENTANA'
-      - pausa: 1500
-    resaltar: 'VENTANA'
+      - esperar: 'VENTANA >> text=Cuentas a crear'
+      - pausa: 800
+    resaltar: 'VENTANA >> button:has-text("Confirmar")'
     recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Confirmar")'
+      - esperar: 'button:has-text("Sí, aplicar")'
+      - clic: 'button:has-text("Sí, aplicar")'
+      - esperar: 'text=Auxiliares por defecto cargados exitosamente'
+      - pausa: 1500
   - paso: 4
     acciones:
-      - tecla: Escape
+      - ir: /{tenant}/accounting/accounts?level=auxiliary
+      - esperar: 'button:has-text("Nueva Cuenta Auxiliar")'
     resaltar: 'button:has-text("Nueva Cuenta Auxiliar")'
   - paso: 5
     acciones:
       - abrir: 'button:has-text("Nueva Cuenta Auxiliar")'
-      - esperar: 'text=Cuenta padre *'
-    resaltar: 'text=Cuenta padre * >> xpath=..'
+      - esperar: 'VENTANA >> text=Cuenta padre'
+      - elegir: { 'VENTANA >> text=Buscar por código o nombre...': '110510' }
+    resaltar: 'VENTANA >> text=Cuenta padre * >> xpath=ancestor::div[2]'
     recortar: 'VENTANA'
   - paso: 6
     acciones:
-      - llenar: { 'input[placeholder="Ej: CAJA MENOR SEDE NORTE"]': 'CAJA MENOR SEDE NORTE' }
-    resaltar: 'input[placeholder="Ej: CAJA MENOR SEDE NORTE"]'
+      - llenar: { 'VENTANA >> input[placeholder="Ej: CAJA MENOR SEDE NORTE"]': 'CAJA MENOR SEDE NORTE' }
+    resaltar: 'VENTANA >> input[placeholder="Ej: CAJA MENOR SEDE NORTE"]'
     recortar: 'VENTANA'
   - paso: 7
+    guarda_datos: true
     resaltar: 'VENTANA >> button:has-text("Crear cuenta")'
     recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Crear cuenta")'
+      - esperar: 'text=Cuenta contable creada exitosamente'

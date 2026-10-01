@@ -34,7 +34,7 @@ tags:
 
 ![Paso 2: botón Cargar auxiliares por defecto](../assets/capturas/contabilidad/cuentas-auxiliares/paso-2.png)
 
-**Paso 3.** Revisa la vista previa (**Cuentas a crear**, **Asignaciones a completar**) y haz clic en **Sí, aplicar**. Esto se hace una sola vez.
+**Paso 3.** Revisa la vista previa (**Cuentas a crear**, **Asignaciones a completar**), haz clic en **Confirmar** y luego en **Sí, aplicar**. Esto se hace una sola vez.
 
 ![Paso 3: vista previa del catálogo por defecto](../assets/capturas/contabilidad/cuentas-auxiliares/paso-3.png)
 

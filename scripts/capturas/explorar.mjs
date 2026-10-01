@@ -48,11 +48,11 @@ await page.screenshot({ path: foto, fullPage: true });
 
 const datos = await page.evaluate(() => {
     const visible = (el) => !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
-    const ambito = document.querySelector('[role="dialog"]') ?? document.body;
+    const modales = [...document.querySelectorAll('[role="dialog"][aria-modal="true"]')]; const ambito = modales[modales.length - 1] ?? document.body;
     const texto = (el) => (el.innerText || el.value || '').trim().replace(/\s+/g, ' ').slice(0, 60);
     return {
         url: location.pathname + location.search,
-        dialogo: !!document.querySelector('[role="dialog"]'),
+        dialogo: !!document.querySelector('[role="dialog"][aria-modal="true"]'),
         titulos: [...ambito.querySelectorAll('h1,h2,h3,legend')].filter(visible).map(texto).filter(Boolean),
         botones: [...ambito.querySelectorAll('button,a[href],[role="button"],[role="tab"]')].filter(visible).map((el) => `${el.tagName.toLowerCase()}${el.getAttribute('type') === 'submit' ? '[submit]' : ''}${el.dataset.testid ? `[data-testid=${el.dataset.testid}]` : ''}${el.getAttribute('aria-label') ? `[aria-label="${el.getAttribute('aria-label')}"]` : ''}: ${texto(el)}`).filter((t) => !t.endsWith(': ') || t.includes('aria-label')),
         campos: [...ambito.querySelectorAll('input,select,textarea,[role="combobox"]')].filter(visible).map((el) => {
