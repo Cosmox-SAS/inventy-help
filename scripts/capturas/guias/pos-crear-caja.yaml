@@ -1,0 +1,30 @@
+guia: pos/crear-caja.md
+orden: 30
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/cash/registers
+      - esperar: 'text=Administra las cajas registradoras de tu empresa.'
+    resaltar: 'button:has-text("Nueva caja")'
+  - paso: 2
+    acciones:
+      - abrir: 'button:has-text("Nueva caja")'
+      - esperar: 'VENTANA >> text=Centro de costo'
+      - llenar: { 'VENTANA >> input[placeholder="Ej. Caja Principal"]': 'Caja Mostrador' }
+    resaltar: 'VENTANA >> input[placeholder="Ej. Caja Principal"]'
+    recortar: 'VENTANA'
+  - paso: 3
+    resaltar: 'VENTANA >> text=Centro de costo * >> xpath=..'
+    recortar: 'VENTANA'
+  - paso: 4
+    resaltar: 'VENTANA >> text=Cliente por defecto >> xpath=ancestor::div[2]'
+    recortar: 'VENTANA'
+  - paso: 5
+    resaltar: 'VENTANA >> button:has-text("Crear caja")'
+    recortar: 'VENTANA'
+  - paso: 6
+    guarda_datos: true
+    acciones:
+      - clic: 'VENTANA >> button:has-text("Crear caja")'
+      - esperar: 'tbody >> text=Caja Mostrador'
+    resaltar: 'tbody tr:has-text("Caja Mostrador")'

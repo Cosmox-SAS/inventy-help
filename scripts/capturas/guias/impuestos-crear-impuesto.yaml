@@ -14,8 +14,8 @@ pasos:
     acciones:
       - abrir: 'button:has-text("Nuevo Impuesto"), a:has-text("Nuevo Impuesto")'
       - esperar: 'text=Agrega un nuevo impuesto o retención.'
-    resaltar: 'role=dialog'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA'
+    recortar: 'VENTANA'
   - paso: 4
-    resaltar: 'role=dialog >> button:has-text("Crear Impuesto")'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA >> button:has-text("Crear Impuesto")'
+    recortar: 'VENTANA'

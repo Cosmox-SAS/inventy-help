@@ -10,10 +10,10 @@ pasos:
   - paso: 3
     acciones:
       - abrir: 'button:has-text("Cargar auxiliares por defecto")'
-      - esperar: 'role=dialog'
+      - esperar: 'VENTANA'
       - pausa: 1500
-    resaltar: 'role=dialog'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA'
+    recortar: 'VENTANA'
   - paso: 4
     acciones:
       - tecla: Escape
@@ -23,12 +23,12 @@ pasos:
       - abrir: 'button:has-text("Nueva Cuenta Auxiliar")'
       - esperar: 'text=Cuenta padre *'
     resaltar: 'text=Cuenta padre * >> xpath=..'
-    recortar: 'role=dialog'
+    recortar: 'VENTANA'
   - paso: 6
     acciones:
       - llenar: { 'input[placeholder="Ej: CAJA MENOR SEDE NORTE"]': 'CAJA MENOR SEDE NORTE' }
     resaltar: 'input[placeholder="Ej: CAJA MENOR SEDE NORTE"]'
-    recortar: 'role=dialog'
+    recortar: 'VENTANA'
   - paso: 7
-    resaltar: 'role=dialog >> button:has-text("Crear cuenta")'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA >> button:has-text("Crear cuenta")'
+    recortar: 'VENTANA'

@@ -25,16 +25,16 @@ pasos:
       - ir: /{tenant}/cash/registers
       - abrir: 'button:has-text("Nueva caja"), a:has-text("Nueva caja")'
       - esperar: 'text=Cuenta contable'
-    resaltar: 'role=dialog >> text=Cuenta contable >> xpath=..'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA >> text=Cuenta contable >> xpath=..'
+    recortar: 'VENTANA'
     detener_si_falla: false
   - paso: medio-de-pago
     acciones:
       - ir: /{tenant}/payment-methods
       - abrir: 'button:has-text("Nuevo"), a:has-text("Nuevo")'
       - esperar: 'text=Cuentas bancarias por sede'
-    resaltar: 'role=dialog >> text=Cuentas bancarias por sede >> xpath=..'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA >> text=Cuentas bancarias por sede >> xpath=..'
+    recortar: 'VENTANA'
     detener_si_falla: false
   - paso: configuracion-contable
     acciones:

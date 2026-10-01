@@ -127,6 +127,7 @@ nav:
       - ¿Cómo registro una devolución de venta?: ventas/devolucion-venta.md
   - Punto de venta:
       - pos/index.md
+      - ¿Cómo creo una caja?: pos/crear-caja.md
       - ¿Cómo abro la caja?: pos/abrir-caja.md
       - ¿Cómo vendo en el POS?: pos/vender-en-pos.md
       - ¿Cómo cierro la caja?: pos/cierre-de-caja.md

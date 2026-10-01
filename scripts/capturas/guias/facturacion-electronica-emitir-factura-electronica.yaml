@@ -14,8 +14,8 @@ pasos:
     acciones:
       - abrir: 'button:has-text("Emitir electrónica")'
       - esperar: 'text=¿Emitir factura electrónica?'
-    resaltar: 'role=dialog'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA'
+    recortar: 'VENTANA'
   - paso: 4
     acciones:
       - ir: /{tenant}/electronic-documents

@@ -28,9 +28,9 @@ pasos:
       - abrir: 'aside [data-testid="pos-submit-order"]'
       - esperar: '[data-testid="pos-modal-payment"]'
     resaltar: '[data-testid="pos-numpad"]'
-    recortar: 'role=dialog'
+    recortar: 'VENTANA'
   - paso: 8
     acciones:
       - abrir: '[data-testid="pos-numpad-key-exact"]'
     resaltar: 'button:has-text("Confirmar cobro")'
-    recortar: 'role=dialog'
+    recortar: 'VENTANA'

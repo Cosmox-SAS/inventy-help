@@ -13,9 +13,9 @@ pasos:
   - paso: 3
     acciones:
       - abrir: 'text=Ver error'
-      - esperar: 'role=dialog'
-    resaltar: 'role=dialog'
-    recortar: 'role=dialog'
+      - esperar: 'VENTANA'
+    resaltar: 'VENTANA'
+    recortar: 'VENTANA'
   - paso: 4
     acciones:
       - tecla: Escape

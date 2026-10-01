@@ -22,6 +22,7 @@ flowchart LR
 
 | Momento | Guía |
 |---|---|
+| Una sola vez | [¿Cómo creo una caja?](crear-caja.md) |
 | Al empezar el turno | [¿Cómo abro la caja?](abrir-caja.md) |
 | Durante el turno | [¿Cómo vendo en el POS?](vender-en-pos.md) |
 | Al terminar el turno | [¿Cómo cierro la caja?](cierre-de-caja.md) |

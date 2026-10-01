@@ -10,22 +10,22 @@ pasos:
     acciones:
       - abrir: '[data-testid="pos-topbar"] [aria-label="Cerrar caja"]'
       - esperar: 'text=Resumen del arqueo'
-    resaltar: 'role=dialog >> text=Resumen del arqueo >> xpath=..'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA >> text=Resumen del arqueo >> xpath=..'
+    recortar: 'VENTANA'
   - paso: 3
     acciones:
       - llenar: { '#close-cash-counted': '350000' }
     resaltar: '#close-cash-counted'
-    recortar: 'role=dialog'
+    recortar: 'VENTANA'
   - paso: 4
-    resaltar: 'role=dialog >> text=Destino del excedente >> xpath=../..'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA >> text=Destino del excedente >> xpath=../..'
+    recortar: 'VENTANA'
   - paso: 5
     resaltar: 'button[type="submit"][form="close-cash-session-form"]'
-    recortar: 'role=dialog'
+    recortar: 'VENTANA'
   - paso: 6
     acciones:
       - abrir: 'button[type="submit"][form="close-cash-session-form"]'
       - esperar: 'text=Confirmar cierre de caja'
-    resaltar: 'role=dialog >> button:has-text("Confirmar cierre")'
-    recortar: 'role=dialog >> nth=-1'
+    resaltar: 'VENTANA >> button:has-text("Confirmar cierre")'
+    recortar: 'VENTANA'

@@ -71,12 +71,26 @@ function cargarGuias(filtro) {
         .filter((f) => f.endsWith('.yaml'))
         .map((f) => ({ archivo: f, ...YAML.parse(fs.readFileSync(path.join(DIR_GUIAS, f), 'utf8')) }))
         .filter((g) => !filtro || g.guia.includes(filtro))
-        .sort((a, b) => a.guia.localeCompare(b.guia));
+        // `orden` reproduce cómo se construye una empresa desde cero (la demo está vacía).
+        .sort((a, b) => (a.orden ?? 999) - (b.orden ?? 999) || a.guia.localeCompare(b.guia));
 }
 
 // ── Acciones ───────────────────────────────────────────────────────────────
+// Atajos de selector usados en los recorridos (guias/*.yaml):
+//   VENTANA → el recuadro de la ventana emergente abierta (no el menú lateral,
+//             que también está marcado como diálogo).
+const ATAJOS = { VENTANA: '[role="dialog"][aria-modal="true"] > .rounded-modal >> nth=-1' };
+// Sufijo único por corrida para datos que no pueden repetirse (códigos, nombres).
+const SUFIJO = new Date().toISOString().slice(5, 16).replace(/[-T:]/g, '');
+
+function expandir(texto) {
+    let resultado = String(texto).replaceAll('{sufijo}', SUFIJO);
+    for (const [atajo, valor] of Object.entries(ATAJOS)) resultado = resultado.replaceAll(atajo, valor);
+    return resultado;
+}
+
 function localizar(page, selector) {
-    return page.locator(selector).first();
+    return page.locator(expandir(selector)).first();
 }
 
 async function sesion(page, env) {
@@ -184,10 +198,10 @@ async function ejecutarPaso(page, paso, ctx) {
                 await localizar(page, 'input[name="password"]').fill('••••••••');
                 break;
             case 'llenar':
-                for (const [sel, texto] of Object.entries(valor)) await localizar(page, sel).fill(String(texto));
+                for (const [sel, texto] of Object.entries(valor)) await localizar(page, sel).fill(expandir(texto));
                 break;
             case 'escribir':
-                for (const [sel, texto] of Object.entries(valor)) await localizar(page, sel).pressSequentially(String(texto), { delay: 30 });
+                for (const [sel, texto] of Object.entries(valor)) await localizar(page, sel).pressSequentially(expandir(texto), { delay: 30 });
                 break;
             case 'tecla':
                 await page.keyboard.press(valor);
@@ -270,6 +284,10 @@ async function main() {
                     animations: 'disabled',
                 });
                 await quitarResaltado(page);
+                // `despues`: acciones que se ejecutan DESPUÉS de la foto (ej. fotografiar
+                // el botón "Abrir caja" y luego hacer clic para que la guía siguiente
+                // encuentre la caja abierta).
+                if (paso.despues) await ejecutarPaso(page, { ...paso, acciones: paso.despues, resaltar: null }, ctx);
                 pendientes.delete(relativo);
                 resultados.push({ guia: guia.guia, paso: paso.paso, ok: true });
                 console.log(`  ✓ Paso ${paso.paso}`);

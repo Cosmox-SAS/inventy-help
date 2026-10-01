@@ -18,7 +18,7 @@ tags:
 
 <p class="tambien-se-busca">También se busca como: apertura de caja, iniciar turno, abrir turno, base de caja, sencillo, abrir sesión de caja.</p>
 
-**Antes de empezar:** debe existir al menos una caja en <span class="ruta">Tesorería › Caja › Cajas</span>. Cuenta el efectivo con el que empiezas.
+**Antes de empezar:** debe existir al menos una caja ([¿Cómo creo una caja?](crear-caja.md)). Cuenta el efectivo con el que empiezas.
 
 ## Pasos
 

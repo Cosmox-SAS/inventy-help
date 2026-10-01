@@ -5,8 +5,8 @@ pasos:
       - menu: Repartidores
       - abrir: 'button:has-text("Nuevo Repartidor"), a:has-text("Nuevo Repartidor")'
       - pausa: 600
-    resaltar: 'role=dialog'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA'
+    recortar: 'VENTANA'
   - paso: 2
     acciones:
       - tecla: Escape
@@ -18,7 +18,7 @@ pasos:
       - abrir: '[data-testid="pos-order-type-selector"] >> text=Domicilio'
       - esperar: '[data-testid="pos-modal-delivery"]'
     resaltar: '[data-testid="pos-modal-delivery"]'
-    recortar: 'role=dialog'
+    recortar: 'VENTANA'
   - paso: 4
     acciones:
       - tecla: Escape

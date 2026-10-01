@@ -13,13 +13,13 @@ pasos:
       - esperar: 'text=Crear Nuevo Rol'
       - llenar: { 'input[placeholder="Ej: Supervisor, Operador..."]': 'Cajero' }
     resaltar: 'input[placeholder="Ej: Supervisor, Operador..."]'
-    recortar: 'role=dialog'
+    recortar: 'VENTANA'
   - paso: 4
     acciones:
       - llenar: { 'input[placeholder="Buscar permisos..."]': 'caja' }
       - pausa: 500
-    resaltar: 'role=dialog >> input[placeholder="Buscar permisos..."] >> xpath=ancestor::div[2]'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA >> input[placeholder="Buscar permisos..."] >> xpath=ancestor::div[2]'
+    recortar: 'VENTANA'
   - paso: 5
-    resaltar: 'role=dialog >> button:has-text("Crear Rol")'
-    recortar: 'role=dialog'
+    resaltar: 'VENTANA >> button:has-text("Crear Rol")'
+    recortar: 'VENTANA'

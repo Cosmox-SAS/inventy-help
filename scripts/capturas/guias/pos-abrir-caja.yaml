@@ -1,21 +1,29 @@
 guia: pos/abrir-caja.md
-# Requiere que el usuario demo NO tenga una caja abierta.
+# Usa la "Caja Mostrador" creada por pos/crear-caja (orden 30) y la deja ABIERTA
+# para que pos/vender-en-pos (orden 32) pueda vender.
+orden: 31
 pasos:
   - paso: 1
     acciones:
-      - menu: POS
-      - esperar: '[data-testid="pos-root"]'
-    resaltar: 'role=dialog'
+      - ir: /{tenant}/pos
+      - esperar: 'VENTANA >> text=Abrir caja'
+    resaltar: 'VENTANA'
   - paso: 2
     acciones:
-      - esperar: 'role=dialog >> text=Abrir caja'
-    resaltar: 'role=dialog >> role=combobox'
-    recortar: 'role=dialog'
+      - abrir: 'VENTANA >> text=Selecciona una caja'
+      - esperar: 'role=option >> text=Caja Mostrador'
+    resaltar: 'role=option >> text=Caja Mostrador'
+    despues:
+      - abrir: 'role=option >> text=Caja Mostrador'
   - paso: 3
     acciones:
       - llenar: { '#pos-open-cash-opening-amount': '200000' }
     resaltar: '#pos-open-cash-opening-amount'
-    recortar: 'role=dialog'
+    recortar: 'VENTANA'
   - paso: 4
-    resaltar: 'button[type="submit"][form="pos-open-cash-session-form"]'
-    recortar: 'role=dialog'
+    guarda_datos: true
+    resaltar: 'VENTANA >> button:has-text("Abrir caja")'
+    recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Abrir caja")'
+      - esperar: 'text=Caja abierta exitosamente'
