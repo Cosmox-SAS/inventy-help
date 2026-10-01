@@ -52,6 +52,7 @@ tags:
 | Problema | Solución |
 |---|---|
 | *El número de factura ya existe para este proveedor.* | Ya se registró: búscala en la lista. |
+| *No hay cuentas configuradas. Configura las cuentas en Contabilidad → Configuración.* (en Cuenta a Pagar) | Agrega la cuenta de proveedores en [Contabilidad › Configuración](../contabilidad/configuracion-contable.md). |
 | *No encontramos este proveedor* | Usa **Crear proveedor** o elige uno existente. |
 | *No se pudo leer el documento.* | Usa el XML o ZIP original, o registra a mano. |
 | *El precio debe ser mayor a 0.* | Todos los ítems deben tener precio. |

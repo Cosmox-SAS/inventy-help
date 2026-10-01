@@ -1,0 +1,23 @@
+guia: contabilidad/configuracion-contable.md
+orden: 9
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/accounting/settings
+      - esperar: 'text=Configuración Contable'
+    resaltar: 'main'
+  - paso: 2
+    guarda_datos: true
+    acciones:
+      - abrir: 'div.rounded-xl:has(h3:has-text("Cuentas a Pagar")) >> button:has-text("Agregar cuenta")'
+      - elegir: { 'div.rounded-xl:has(h3:has-text("Cuentas a Pagar")) >> text=Buscar cuenta auxiliar... >> nth=-1': '2205' }
+      - esperar: 'text=Configuración actualizada'
+    resaltar: 'div.rounded-xl:has(h3:has-text("Cuentas a Pagar"))'
+  - paso: 3
+    resaltar: 'div.rounded-xl:has(h3:has-text("Anticipos de Clientes"))'
+  - paso: 4
+    resaltar: 'div.rounded-xl:has(h3:has-text("Notas Crédito de Clientes"))'
+  - paso: 5
+    resaltar: 'div.rounded-xl:has(h3:has-text("Anticipo a Proveedores"))'
+  - paso: 6
+    resaltar: 'div.rounded-xl:has(h3:has-text("Ajuste al Peso"))'

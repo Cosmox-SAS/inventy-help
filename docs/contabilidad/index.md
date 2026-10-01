@@ -29,7 +29,7 @@ Inventy genera la contabilidad **automáticamente** ([cómo funciona](como-funci
 
 | Guía | Estado |
 |---|---|
-| Configuración contable inicial | Por redactar |
+| Configuración contable inicial | [Guía](configuracion-contable.md) |
 | Plan de cuentas y cuentas auxiliares | [Guía](cuentas-auxiliares.md) |
 | Asientos contables: consultar y registrar un asiento manual | Por redactar |
 | Cómo funciona la contabilidad (relación con ventas, compras y pagos) | [Guía](como-funciona.md) |
