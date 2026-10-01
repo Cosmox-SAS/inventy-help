@@ -64,6 +64,19 @@ tags:
 ??? question "¿Puedo vender si no tengo existencias?"
     Solo si el administrador activó **Permitir stock negativo** en <span class="ruta">Configuración › Módulos › Inventario</span>.
 
+## Utilidad y reportes
+
+??? question "¿Por qué la utilidad me sale en cero?"
+    En **Inicio**, *Utilidad del mes* = ventas sin impuestos − costo de ventas − gastos, contando solo documentos **Validados** o **Pagados** con **fecha de emisión** en el mes. Sale en cero cuando:
+
+    - No hay facturas de venta validadas o pagadas en el mes (solo borradores o anuladas), por ejemplo al inicio del mes.
+    - Las facturas tienen fecha de emisión de otro mes.
+    - Las ventas, el costo y los gastos se compensan exactamente (raro).
+
+    En **Ventas › Reportes › Rentabilidad por ítem**, la utilidad de un producto es 0 cuando se devolvió completo en el período o cuando se vendió al mismo valor de su costo.
+
+    Ojo: si los productos **no tienen costo** (costo inicial en 0 o *No maneja inventario*), la utilidad **no** sale en cero: sale igual a la venta, es decir, inflada. Revisa el costo de tus productos.
+
 ## Facturación electrónica
 
 ??? question "¿Cómo sé si la DIAN aceptó mi factura?"
