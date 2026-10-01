@@ -1,4 +1,6 @@
 guia: primeros-pasos/roles-y-permisos.md
+# Crea el rol "Cajero" con los permisos básicos de caja y POS.
+orden: 5
 pasos:
   - paso: 1
     acciones:
@@ -18,8 +20,21 @@ pasos:
     acciones:
       - llenar: { 'input[placeholder="Buscar permisos..."]': 'caja' }
       - pausa: 500
+      - abrir: 'VENTANA >> label:has-text("Ver cajas")'
+      - llenar: { 'input[placeholder="Buscar permisos..."]': 'pos' }
+      - pausa: 500
+      - abrir: 'VENTANA >> label:has-text("Acceder al POS")'
+      - abrir: 'VENTANA >> label:has-text("Ver pedidos del POS")'
+      - abrir: 'VENTANA >> label:has-text("Gestionar pedidos del POS")'
+      - abrir: 'VENTANA >> label:has-text("Facturar pedidos del POS")'
+      - abrir: 'VENTANA >> label:has-text("Consignar desde POS")'
+      - pausa: 500
     resaltar: 'VENTANA >> input[placeholder="Buscar permisos..."] >> xpath=ancestor::div[2]'
     recortar: 'VENTANA'
   - paso: 5
+    guarda_datos: true
     resaltar: 'VENTANA >> button:has-text("Crear Rol")'
     recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Crear Rol")'
+      - pausa: 2500
