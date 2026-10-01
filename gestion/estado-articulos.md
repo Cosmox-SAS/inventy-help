@@ -43,7 +43,7 @@
 | primeros-pasos | [¿Cómo agrego usuarios a mi empresa?](../docs/primeros-pasos/crear-usuarios.md) | rapida | Pendiente de validación | 5 | 0 | 2026-09-30 |
 | primeros-pasos | [¿Cómo configuro los datos de mi empresa?](../docs/primeros-pasos/configurar-empresa.md) | rapida | Pendiente de validación | 6 | 0 | 2026-09-30 |
 | primeros-pasos | [¿Cómo creo un rol y le doy permisos?](../docs/primeros-pasos/roles-y-permisos.md) | rapida | Pendiente de validación | 5 | 0 | 2026-09-30 |
-| primeros-pasos | [¿Cómo ingreso a Inventy?](../docs/primeros-pasos/ingresar.md) | rapida | Pendiente de validación | 3 | 0 | 2026-09-30 |
+| primeros-pasos | [¿Cómo ingreso a Inventy?](../docs/primeros-pasos/ingresar.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | primeros-pasos | [¿Cómo recupero mi contraseña?](../docs/primeros-pasos/recuperar-contrasena.md) | rapida | Pendiente de validación | 4 | 0 | 2026-09-30 |
 | productos-inventario | [Productos e inventario](../docs/productos-inventario/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | productos-inventario | [Soluciones rápidas: productos e inventario](../docs/soluciones-rapidas/productos-inventario.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |

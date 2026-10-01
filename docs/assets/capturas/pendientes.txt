@@ -100,9 +100,6 @@ assets/capturas/primeros-pasos/crear-usuarios/paso-2.png
 assets/capturas/primeros-pasos/crear-usuarios/paso-3.png
 assets/capturas/primeros-pasos/crear-usuarios/paso-4.png
 assets/capturas/primeros-pasos/crear-usuarios/paso-5.png
-assets/capturas/primeros-pasos/ingresar/paso-1.png
-assets/capturas/primeros-pasos/ingresar/paso-2.png
-assets/capturas/primeros-pasos/ingresar/paso-3.png
 assets/capturas/primeros-pasos/recuperar-contrasena/paso-1.png
 assets/capturas/primeros-pasos/recuperar-contrasena/paso-2.png
 assets/capturas/primeros-pasos/recuperar-contrasena/paso-3.png

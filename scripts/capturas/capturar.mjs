@@ -128,24 +128,32 @@ async function resaltar(page, selector) {
     const objetivo = localizar(page, selector);
     await objetivo.waitFor({ timeout: ESPERA_MS });
     await objetivo.scrollIntoViewIfNeeded();
-    await objetivo.evaluate((el) => {
-        el.dataset.capturaResaltado = '1';
-        el.style.setProperty('outline', '3px solid #f59e0b', 'important');
-        el.style.setProperty('outline-offset', '3px', 'important');
-        el.style.setProperty('box-shadow', '0 0 0 9999px rgba(15, 23, 42, 0.12)', 'important');
-        el.style.setProperty('border-radius', getComputedStyle(el).borderRadius || '6px');
-        el.style.setProperty('position', getComputedStyle(el).position === 'static' ? 'relative' : getComputedStyle(el).position);
-        el.style.setProperty('z-index', '2147483000', 'important');
-    });
+    // Dibuja un marco ENCIMA de la página en vez de modificar el elemento: cambiar
+    // z-index/posición del elemento tapaba íconos y alteraba su apariencia.
+    const caja = await objetivo.boundingBox();
+    if (!caja) throw new Error(`El elemento a resaltar no es visible: ${selector}`);
+    await page.evaluate(({ x, y, width, height }) => {
+        const margen = 6;
+        const marco = document.createElement('div');
+        marco.id = 'captura-resaltado';
+        Object.assign(marco.style, {
+            position: 'fixed',
+            left: `${x - margen}px`,
+            top: `${y - margen}px`,
+            width: `${width + margen * 2}px`,
+            height: `${height + margen * 2}px`,
+            border: '3px solid #f59e0b',
+            borderRadius: '10px',
+            boxShadow: '0 0 0 9999px rgba(15, 23, 42, 0.14)',
+            pointerEvents: 'none',
+            zIndex: '2147483647',
+        });
+        document.body.appendChild(marco);
+    }, caja);
 }
 
 async function quitarResaltado(page) {
-    await page.evaluate(() => {
-        for (const el of document.querySelectorAll('[data-captura-resaltado]')) {
-            for (const p of ['outline', 'outline-offset', 'box-shadow', 'z-index']) el.style.removeProperty(p);
-            delete el.dataset.capturaResaltado;
-        }
-    });
+    await page.evaluate(() => document.getElementById('captura-resaltado')?.remove());
 }
 
 async function ejecutarPaso(page, paso, ctx) {
@@ -170,7 +178,8 @@ async function ejecutarPaso(page, paso, ctx) {
                 break;
             }
             case 'llenar_credenciales':
-                await localizar(page, 'input[name="email"]').fill(ctx.env.INVENTY_DEMO_EMAIL);
+                // Correo de ejemplo: nunca mostrar el correo real del usuario demo en las capturas.
+                await localizar(page, 'input[name="email"]').fill('usuario@empresa.com');
                 await localizar(page, 'input[name="password"]').fill('••••••••');
                 break;
             case 'llenar':
@@ -192,6 +201,8 @@ async function ejecutarPaso(page, paso, ctx) {
                 throw new Error(`Acción desconocida: ${tipo}`);
         }
     }
+    // Quita el foco del campo recién escrito: el estado "enfocado" cambia colores y oculta íconos.
+    await page.evaluate(() => document.activeElement instanceof HTMLElement && document.activeElement.blur());
     await page.waitForTimeout(400); // animaciones de modales y toasts
     if (paso.resaltar) await resaltar(page, paso.resaltar);
 }
