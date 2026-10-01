@@ -11,7 +11,7 @@ pasos:
       - ir: /{tenant}/products/create
       - esperar: 'text=Crear producto'
       - llenar: { '#name': 'Café molido 500 g', '#description': 'Café tostado y molido, bolsa de 500 g' }
-    resaltar: 'text=Identificación >> xpath=ancestor::div[contains(@class,"rounded")][1]'
+    resaltar: 'section:has(h2:has-text("Identificación"))'
   - paso: 3
     acciones:
       - elegir: { 'text=Buscar unidad...': 'Unidad' }
@@ -20,11 +20,11 @@ pasos:
     acciones:
       - llenar: { '#sale_price': '18500', '#cost': '11000' }
       - elegir: { 'text=Buscar catálogo...': 'IVA 19%' }
-    resaltar: 'text=Precio e impuestos >> xpath=ancestor::div[contains(@class,"rounded")][1]'
+    resaltar: 'section:has(h2:has-text("Precio e impuestos"))'
   - paso: 5
     acciones:
       - pausa: 300
-    resaltar: 'text=Comportamiento del producto >> xpath=ancestor::div[contains(@class,"rounded")][1]'
+    resaltar: 'section:has(h2:has-text("Comportamiento del producto"))'
     detener_si_falla: false
   - paso: 6
     guarda_datos: true

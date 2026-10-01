@@ -48,12 +48,6 @@ assets/capturas/productos-inventario/consultar-existencias/paso-2.png
 assets/capturas/productos-inventario/consultar-existencias/paso-3.png
 assets/capturas/productos-inventario/consultar-existencias/paso-4.png
 assets/capturas/productos-inventario/consultar-existencias/paso-5.png
-assets/capturas/productos-inventario/crear-producto/paso-1.png
-assets/capturas/productos-inventario/crear-producto/paso-2.png
-assets/capturas/productos-inventario/crear-producto/paso-3.png
-assets/capturas/productos-inventario/crear-producto/paso-4.png
-assets/capturas/productos-inventario/crear-producto/paso-5.png
-assets/capturas/productos-inventario/crear-producto/paso-6.png
 assets/capturas/productos-inventario/presentaciones/paso-1.png
 assets/capturas/productos-inventario/presentaciones/paso-2.png
 assets/capturas/productos-inventario/presentaciones/paso-3.png
