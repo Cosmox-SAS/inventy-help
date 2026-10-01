@@ -32,21 +32,21 @@ tags:
 
 ![Paso 2: cliente, centro de costo y fecha](../assets/capturas/ventas/crear-factura-venta/paso-2.png)
 
-**Paso 3.** Elige **Forma de pago** (**Contado** o **Crédito**) y el **Medio de Pago**. En crédito, revisa la **Fecha de vencimiento**.
+**Paso 3.** En **Ítems de la Factura**, elige el producto en **Buscar producto...** y escribe la cantidad. El precio, el impuesto y el descuento se llenan solos. Usa **Agregar nueva línea** para más productos.
 
-![Paso 3: forma y medio de pago](../assets/capturas/ventas/crear-factura-venta/paso-3.png)
+![Paso 3: ítems de la factura](../assets/capturas/ventas/crear-factura-venta/paso-3.png)
 
-**Paso 4.** En **Ítems de la Factura**, haz clic en **Agregar ítem** y registra cada producto con cantidad y precio.
+**Paso 4.** Elige **Forma de pago**: **Contado** (con su **Medio de Pago**) o **Crédito** (verás el **Cupo disponible** y la **Fecha de vencimiento**). Hazlo **después** de agregar los productos.
 
-![Paso 4: ítems de la factura](../assets/capturas/ventas/crear-factura-venta/paso-4.png)
+![Paso 4: forma y medio de pago](../assets/capturas/ventas/crear-factura-venta/paso-4.png)
 
 **Paso 5.** Revisa el **Total a pagar** y haz clic en **Validar factura**. Confirma en **¿Validar factura?**
 
 ![Paso 5: botón Validar factura](../assets/capturas/ventas/crear-factura-venta/paso-5.png)
 
-**Paso 6.** Si no se envió sola a la DIAN, en el detalle haz clic en **Emitir electrónica**.
+**Paso 6.** En el detalle, **Más acciones** tiene **PDF**, **Ver asientos**, **Imprimir tirilla**, **Clonar** y **Convertir en recurrente**. Si tu empresa factura electrónicamente y no se envió sola, ahí también verás **Emitir electrónica** ([guía](../facturacion-electronica/emitir-factura-electronica.md)).
 
-![Paso 6: botón Emitir electrónica](../assets/capturas/ventas/crear-factura-venta/paso-6.png)
+![Paso 6: menú Más acciones de la factura](../assets/capturas/ventas/crear-factura-venta/paso-6.png)
 
 ✅ **Listo:** la factura queda **Validada** (o **Pagada**) y afecta inventario, cartera y contabilidad. Ya no se puede editar.
 
@@ -58,8 +58,9 @@ tags:
 | Problema | Solución |
 |---|---|
 | *La fecha de emisión no puede ser una fecha futura.* | Usa hoy o una fecha anterior. |
+| *El monto a crédito debe ser igual al total de la factura.* | Elegiste **Crédito** antes de agregar o cambiar productos. Haz clic en **Contado** y otra vez en **Crédito** para recalcular. |
 | *Este cliente no tiene cupo de crédito disponible.* | Sube su cupo o factura de contado. |
-| *El asiento contable no está balanceado* | Falta una cuenta contable: revisa con tu contador. |
+| *El asiento contable no está balanceado* | Usa **Ver asientos**: la línea sin cuenta dice qué falta. Si dice *Configura la cuenta por cobrar en el tipo de cliente*, asígnale al cliente un [tipo de cliente](tipos-de-cliente.md) con cuenta por cobrar. |
 | *El centro de costo es obligatorio.* | Crea uno en <span class="ruta">Configuración › Centros de Costo</span>. |
 | Me equivoqué en una factura validada | Haz una [devolución](devolucion-venta.md). Anular solo es posible si no movió inventario. |
 

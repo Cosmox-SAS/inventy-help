@@ -1,4 +1,5 @@
 guia: facturacion-electronica/documento-rechazado.md
+orden: 46
 pasos:
   - paso: 1
     acciones:
@@ -6,19 +7,8 @@ pasos:
       - esperar: 'text=Documentos electrónicos'
     resaltar: 'input[placeholder="Buscar por número, CUFE..."]'
   - paso: 2
-    acciones:
-      - abrir: 'tbody tr:has-text("Rechazado") button >> nth=-1'
-      - pausa: 400
-    resaltar: 'text=Ver error'
+    manual: menú de acciones de un documento Rechazado por DIAN con la opción Ver error (requiere empresa habilitada)
   - paso: 3
-    acciones:
-      - abrir: 'text=Ver error'
-      - esperar: 'VENTANA'
-    resaltar: 'VENTANA'
-    recortar: 'VENTANA'
+    manual: ventana Ver error con el mensaje de la DIAN
   - paso: 4
-    acciones:
-      - tecla: Escape
-      - abrir: 'tbody tr:has-text("Rechazado") button >> nth=-1'
-      - pausa: 400
-    resaltar: 'text=Reenviar documento electrónico'
+    manual: menú de acciones con Reenviar documento electrónico

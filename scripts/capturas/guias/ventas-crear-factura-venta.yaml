@@ -1,24 +1,42 @@
 guia: ventas/crear-factura-venta.md
+# Factura a crédito para el cliente de ventas/crear-cliente (orden 20).
+orden: 40
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/sale-invoices
       - esperar: 'text=Facturas de Venta'
-    resaltar: 'a:has-text("Nueva Factura"), button:has-text("Nueva Factura")'
+    resaltar: 'main a:has-text("Nueva Factura"), main button:has-text("Nueva Factura") >> nth=0'
   - paso: 2
     acciones:
       - ir: /{tenant}/sale-invoices/create
-      - esperar: 'text=Nueva Factura de Venta'
-    resaltar: 'text=Cliente * >> xpath=..'
+      - esperar: 'text=Información General'
+      - elegir: { 'button:has-text("Buscar cliente...")': 'LAURA' }
+    resaltar: 'section:has(:is(h2,h3):has-text("Información General"))'
   - paso: 3
-    resaltar: 'text=Forma de pago * >> xpath=..'
+    acciones:
+      - elegir: { 'section:has(:is(h2,h3):has-text("Ítems de la Factura")) >> button:has-text("Buscar producto...")': 'CAFÉ' }
+      - llenar: { 'input#sale-line-quantity-_tmp_1': '2' }
+      - pausa: 800
+    resaltar: 'section:has(:is(h2,h3):has-text("Ítems de la Factura"))'
   - paso: 4
-    resaltar: 'text=Ítems de la Factura >> xpath=ancestor::section[1]'
+    acciones:
+      - abrir: 'button:has-text("Crédito")'
+      - pausa: 800
+    resaltar: 'text=Forma de pago * >> xpath=ancestor::div[2]'
   - paso: 5
-    resaltar: 'button:has-text("Validar factura")'
+    guarda_datos: true
+    resaltar: '[data-testid="sale-invoice-form-submit"]'
+    despues:
+      - clic: '[data-testid="sale-invoice-form-submit"]'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Validar")'
+      - esperar: 'text=Detalle de la factura de venta.'
   - paso: 6
     acciones:
       - ir: /{tenant}/sale-invoices
-      - abrir: 'tbody tr:has-text("Validada") a >> nth=0'
-      - esperar: 'text=Detalle de la factura de venta.'
-    resaltar: 'button:has-text("Emitir electrónica")'
+      - abrir: 'tbody tr:has-text("LAURA") >> nth=0'
+      - esperar: 'button:has-text("Más acciones")'
+      - abrir: 'button:has-text("Más acciones")'
+      - pausa: 500
+    resaltar: 'text=Convertir en recurrente >> xpath=ancestor::*[.//*[contains(text(),"PDF")]][1]'

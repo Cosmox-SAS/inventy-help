@@ -22,6 +22,7 @@ pasos:
   - paso: 5
     acciones:
       - llenar: { '#credit_limit_display': '2000000', '#payment_terms': '30' }
+      - elegir: { 'button:has-text("Buscar tipo de cliente...")': 'General' }
     resaltar: 'section:has(:is(h2,h3):has-text("Datos del rol de cliente"))'
   - paso: 6
     guarda_datos: true

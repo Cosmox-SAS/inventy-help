@@ -1,0 +1,34 @@
+guia: ventas/tipos-de-cliente.md
+orden: 19
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/customer-types
+      - esperar: 'button:has-text("Nuevo tipo de cliente")'
+    resaltar: 'button:has-text("Nuevo tipo de cliente")'
+  - paso: 2
+    acciones:
+      - abrir: 'button:has-text("Nuevo tipo de cliente")'
+      - esperar: 'VENTANA >> #customer_type_name'
+      - llenar: { '#customer_type_name': 'Mayorista' }
+    resaltar: '#customer_type_name'
+    recortar: 'VENTANA'
+  - paso: 3
+    acciones:
+      - elegir: { 'VENTANA >> text=Buscar cuenta contable...': '130505' }
+    resaltar: 'VENTANA >> text=Cuenta por cobrar (opcional) >> xpath=..'
+    recortar: 'VENTANA'
+  - paso: 4
+    acciones:
+      - llenar: { '#discount_percent': '5' }
+    resaltar: '#discount_percent'
+    recortar: 'VENTANA'
+  - paso: 5
+    guarda_datos: true
+    resaltar: 'VENTANA >> button:has-text("Crear tipo de cliente")'
+    recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Crear tipo de cliente")'
+      - esperar: 'tbody >> text=Mayorista'
+  - paso: 6
+    resaltar: 'tbody tr:has-text("Mayorista")'

@@ -122,6 +122,7 @@ nav:
       - ¿Cómo registro una factura de compra?: compras/registrar-factura-compra.md
   - Ventas:
       - ventas/index.md
+      - ¿Cómo creo un tipo de cliente?: ventas/tipos-de-cliente.md
       - ¿Cómo creo un cliente?: ventas/crear-cliente.md
       - ¿Cómo hago una factura de venta?: ventas/crear-factura-venta.md
       - ¿Cómo registro una devolución de venta?: ventas/devolucion-venta.md

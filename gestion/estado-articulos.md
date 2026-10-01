@@ -2,7 +2,7 @@
 
 > Generado con `python scripts/check_docs.py --estado > gestion/estado-articulos.md`. No editar a mano.
 
-**Pendiente de validación:** 61
+**Pendiente de validación:** 62
 
 | Módulo | Artículo | Tipo | Estado | Capturas pendientes | Validaciones pendientes | Revisado |
 |---|---|---|---|---|---|---|
@@ -17,7 +17,7 @@
 | facturacion-electronica | [Facturación electrónica](../docs/facturacion-electronica/index.md) | indice | Pendiente de validación | 0 | 2 | 2026-09-29 |
 | facturacion-electronica | [Soluciones rápidas: facturación electrónica](../docs/soluciones-rapidas/facturacion-electronica.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | facturacion-electronica | [¿Cómo emito un documento soporte electrónico?](../docs/facturacion-electronica/documento-soporte.md) | rapida | Pendiente de validación | 2 | 0 | 2026-09-30 |
-| facturacion-electronica | [¿Cómo emito una factura electrónica?](../docs/facturacion-electronica/emitir-factura-electronica.md) | rapida | Pendiente de validación | 4 | 0 | 2026-09-30 |
+| facturacion-electronica | [¿Cómo emito una factura electrónica?](../docs/facturacion-electronica/emitir-factura-electronica.md) | rapida | Pendiente de validación | 2 | 0 | 2026-09-30 |
 | facturacion-electronica | [¿Cómo registro una resolución de la DIAN?](../docs/facturacion-electronica/resoluciones.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | facturacion-electronica | [¿Qué hago si un documento electrónico es rechazado?](../docs/facturacion-electronica/documento-rechazado.md) | rapida | Pendiente de validación | 3 | 0 | 2026-09-30 |
 | facturacion-electronica | [¿Qué significa cada estado de un documento electrónico?](../docs/facturacion-electronica/estados-documento.md) | concepto | Pendiente de validación | 1 | 0 | 2026-09-29 |
@@ -64,7 +64,8 @@
 | soporte | [Soluciones rápidas](../docs/soluciones-rapidas/index.md) | indice | Pendiente de validación | 0 | 1 | 2026-09-29 |
 | ventas | [Soluciones rápidas: ventas](../docs/soluciones-rapidas/ventas.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | ventas | [Ventas](../docs/ventas/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
-| ventas | [¿Cómo creo un cliente?](../docs/ventas/crear-cliente.md) | rapida | Pendiente de validación | 5 | 0 | 2026-09-30 |
-| ventas | [¿Cómo hago una factura de venta?](../docs/ventas/crear-factura-venta.md) | rapida | Pendiente de validación | 1 | 0 | 2026-09-30 |
+| ventas | [¿Cómo creo un cliente?](../docs/ventas/crear-cliente.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
+| ventas | [¿Cómo creo un tipo de cliente?](../docs/ventas/tipos-de-cliente.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
+| ventas | [¿Cómo hago una factura de venta?](../docs/ventas/crear-factura-venta.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | ventas | [¿Cómo registro una devolución de venta?](../docs/ventas/devolucion-venta.md) | rapida | Pendiente de validación | 2 | 0 | 2026-09-30 |
 

@@ -1,23 +1,17 @@
 guia: facturacion-electronica/emitir-factura-electronica.md
+orden: 45
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/sale-invoices
       - esperar: 'text=Facturas de Venta'
-    resaltar: 'tbody tr:has-text("Validada") >> nth=0'
+    resaltar: 'tbody tr:has-text("LAURA") >> nth=0'
   - paso: 2
-    acciones:
-      - abrir: 'tbody tr:has-text("Validada") a >> nth=0'
-      - esperar: 'text=Detalle de la factura de venta.'
-    resaltar: 'button:has-text("Emitir electrónica")'
+    manual: detalle de una factura validada en una empresa HABILITADA para facturación electrónica, con Emitir electrónica (la demo no está habilitada)
   - paso: 3
-    acciones:
-      - abrir: 'button:has-text("Emitir electrónica")'
-      - esperar: 'text=¿Emitir factura electrónica?'
-    resaltar: 'VENTANA'
-    recortar: 'VENTANA'
+    manual: ventana ¿Emitir factura electrónica? (requiere empresa habilitada)
   - paso: 4
     acciones:
       - ir: /{tenant}/electronic-documents
       - esperar: 'text=Documentos electrónicos'
-    resaltar: 'table'
+    resaltar: 'input[placeholder="Buscar por número, CUFE..."]'
