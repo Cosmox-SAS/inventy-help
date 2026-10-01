@@ -1,16 +1,33 @@
 ---
 title: "Soluciones rápidas: ventas"
-description: Sin cupo de crédito, fecha futura, no puedo anular, asiento no balanceado.
+description: Pide cuenta por cobrar, sin cupo de crédito, fecha futura, no puedo anular, asiento no balanceado.
 estado: pendiente-validacion
 tipo: solucion
 modulo: ventas
-revisado: 2026-09-29
+revisado: 2026-10-01
 tags:
   - Ventas
   - Soluciones rápidas
 ---
 
 # Soluciones rápidas: ventas
+
+## "Al validar la factura a crédito me pide configurar la cuenta contable"
+
+**PROBLEMA:** al validar una factura **a crédito** aparece *“Configura una cuenta de cuentas por cobrar en el tipo de cliente para facturar a crédito con contabilidad activa.”*
+
+**CAUSA:** la empresa usa Contabilidad y el cliente **no tiene tipo de cliente**, o su tipo de cliente **no tiene Cuenta por cobrar**.
+
+**SOLUCIÓN:**
+
+1. Abre el cliente en <span class="ruta">Ventas › Clientes</span> › **Editar** y mira **Tipo de cliente** (en **Datos del rol de cliente**).
+2. Si está vacío, elige uno (ej. *General*) y haz clic en **Actualizar cliente**.
+3. Si ya tiene tipo, ve a <span class="ruta">Ventas › Ajustes › Tipos de clientes</span>, edita ese tipo y elige la **Cuenta por cobrar** (ej. *130505001 — Clientes nacionales*). Guarda.
+4. Vuelve a la factura, ábrela con **Editar** y valídala desde ahí: al guardarla, toma la cuenta nueva. Si la validas sin editarla, puede seguir saliendo el mismo mensaje.
+
+**ESCALAR A SOPORTE:** si el tipo de cliente ya tiene cuenta, editaste la factura y el mensaje sigue.
+
+**INFORMACIÓN PARA SOPORTE:** número de la factura, nombre del cliente, tipo de cliente, captura del mensaje.
 
 ## "No me deja vender a crédito"
 

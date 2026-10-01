@@ -60,6 +60,7 @@ tags:
 | *La fecha de emisión no puede ser una fecha futura.* | Usa hoy o una fecha anterior. |
 | *El monto a crédito debe ser igual al total de la factura.* | Elegiste **Crédito** antes de agregar o cambiar productos. Haz clic en **Contado** y otra vez en **Crédito** para recalcular. |
 | *Este cliente no tiene cupo de crédito disponible.* | Sube su cupo o factura de contado. |
+| A crédito: *Configura una cuenta de cuentas por cobrar en el tipo de cliente…* | El cliente no tiene tipo de cliente o el tipo no tiene **Cuenta por cobrar**. Ver [solución](../soluciones-rapidas/ventas.md#al-validar-la-factura-a-credito-me-pide-configurar-la-cuenta-contable). |
 | *El asiento contable no está balanceado* | Usa **Ver asientos**: la línea sin cuenta dice qué falta. Si dice *Configura la cuenta por cobrar en el tipo de cliente*, asígnale al cliente un [tipo de cliente](tipos-de-cliente.md) con cuenta por cobrar. |
 | *El centro de costo es obligatorio.* | Crea uno en <span class="ruta">Configuración › Centros de Costo</span>. |
 | Me equivoqué en una factura validada | Haz una [devolución](devolucion-venta.md). Anular solo es posible si no movió inventario. |
