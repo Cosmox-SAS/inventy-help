@@ -1,22 +1,54 @@
 guia: impuestos/catalogo-impuestos.md
+# Crea el catálogo "IVA 5%" con las mismas cuentas del catálogo IVA 19% de la demo.
+orden: 72
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/tax-catalogs
       - esperar: 'text=Catálogos de Impuestos'
-    resaltar: 'a:has-text("Nuevo Catálogo"), button:has-text("Nuevo Catálogo")'
+    resaltar: 'main a:has-text("Nuevo Catálogo"), main button:has-text("Nuevo Catálogo") >> nth=0'
   - paso: 2
     acciones:
       - ir: /{tenant}/tax-catalogs/create
       - esperar: 'text=Nuevo Catálogo de Impuestos'
-      - llenar: { 'input[placeholder="Ej: Régimen Común 2026"]': 'Gravado 19 %' }
-    resaltar: 'input[placeholder="Ej: Régimen Común 2026"]'
+      - llenar: { '#name': 'IVA 5%' }
+    resaltar: 'section:has(:is(h2,h3):has-text("Datos del catálogo"))'
   - paso: 3
-    resaltar: 'text=Impuestos de Ventas >> xpath=ancestor::section[1]'
+    acciones:
+      - elegir: { 'section:has(:is(h2,h3):has-text("Impuestos de Ventas")) >> button:has-text("Buscar cuenta auxiliar...") >> nth=0': '413595' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Impuestos de Ventas")) >> button:has-text("Buscar cuenta auxiliar...") >> nth=0': '613595' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Impuestos de Ventas")) >> button:has-text("Buscar cuenta auxiliar...") >> nth=0': '143501' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Impuestos de Ventas")) >> button:has-text("Buscar impuesto...")': 'IVA 5%' }
+      - abrir: 'section:has(:is(h2,h3):has-text("Impuestos de Ventas")) >> text=Cuenta del impuesto >> xpath=ancestor::div[2] >> button[aria-label="Crear cuenta auxiliar"] >> nth=0'
+      - esperar: 'VENTANA >> text=Nueva Cuenta Auxiliar'
+      - elegir: { 'VENTANA >> button:has-text("Buscar por código o nombre...")': '240801' }
+      - llenar: { 'VENTANA >> input[placeholder^="Ej: CAJA MENOR"]': 'IVA generado 5%' }
+      - abrir: 'VENTANA >> button:text-is("Impuesto")'
+      - clic: 'VENTANA >> button:has-text("Crear cuenta")'
+      - pausa: 2500
+      - pausa: 600
+    guarda_datos: true
+    resaltar: 'section:has(:is(h2,h3):has-text("Impuestos de Ventas"))'
   - paso: 4
-    resaltar: 'text=Impuestos de Compras >> xpath=ancestor::section[1]'
+    acciones:
+      - elegir: { 'section:has(:is(h2,h3):has-text("Impuestos de Compras")) >> button:has-text("Buscar cuenta auxiliar...") >> nth=0': '143501' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Impuestos de Compras")) >> button:has-text("Buscar impuesto...")': 'IVA 5%' }
+      - abrir: 'section:has(:is(h2,h3):has-text("Impuestos de Compras")) >> text=Cuenta del impuesto >> xpath=ancestor::div[2] >> button[aria-label="Crear cuenta auxiliar"] >> nth=0'
+      - esperar: 'VENTANA >> text=Nueva Cuenta Auxiliar'
+      - elegir: { 'VENTANA >> button:has-text("Buscar por código o nombre...")': '240802' }
+      - llenar: { 'VENTANA >> input[placeholder^="Ej: CAJA MENOR"]': 'IVA descontable 5%' }
+      - abrir: 'VENTANA >> button:text-is("Impuesto")'
+      - clic: 'VENTANA >> button:has-text("Crear cuenta")'
+      - pausa: 2500
+      - pausa: 600
+    guarda_datos: true
+    resaltar: 'section:has(:is(h2,h3):has-text("Impuestos de Compras"))'
   - paso: 5
+    guarda_datos: true
     resaltar: 'button:has-text("Crear Catálogo")'
+    despues:
+      - clic: 'button:has-text("Crear Catálogo")'
+      - esperar: 'tbody tr:has-text("IVA 5%")'
   - paso: 6
     acciones:
       - ir: /{tenant}/products/create

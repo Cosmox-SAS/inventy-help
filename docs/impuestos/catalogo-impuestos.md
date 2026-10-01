@@ -8,7 +8,7 @@ menu: "Fiscal › Catálogo de Impuestos"
 permisos:
   - Ver catálogo de impuestos
   - Crear catálogo de impuestos
-revisado: 2026-09-30
+revisado: 2026-10-01
 search:
   boost: 2
 tags:
@@ -30,15 +30,15 @@ tags:
 
 ![Paso 1: botón Nuevo Catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-1.png)
 
-**Paso 2.** Escribe el **Nombre del Catálogo** (ej. *Gravado 19 %*).
+**Paso 2.** Escribe el **Nombre del Catálogo** (ej. *IVA 5%*).
 
 ![Paso 2: nombre del catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-2.png)
 
-**Paso 3.** En **Impuestos de Ventas**, usa **Agregar Impuesto** para cada impuesto que cobras al vender, con su cuenta.
+**Paso 3.** En **Impuestos de Ventas**, elige la **Cuenta Base**, la **Cuenta Costo de Inventario** y la **Cuenta Valor de Inventario**. En **Agregar Impuesto** elige el impuesto (ej. *IVA 5%*) y su **Cuenta del impuesto**. Si la cuenta no existe, créala con el botón **+** de al lado.
 
 ![Paso 3: impuestos de ventas](../assets/capturas/impuestos/catalogo-impuestos/paso-3.png)
 
-**Paso 4.** En **Impuestos de Compras**, agrega cada impuesto que pagas al comprar, con su cuenta.
+**Paso 4.** En **Impuestos de Compras**, elige la **Cuenta Base**, agrega el mismo impuesto y su **Cuenta del impuesto** (la de IVA descontable).
 
 ![Paso 4: impuestos de compras](../assets/capturas/impuestos/catalogo-impuestos/paso-4.png)
 
@@ -59,6 +59,8 @@ tags:
 | Aparece **Configuración contable incompleta** / **Cuentas por configurar** | Falta una cuenta contable en el catálogo: complétala con tu contador. |
 | *El asiento contable no está balanceado* al facturar | El catálogo del producto tiene cuentas vacías. |
 | El producto no cobra IVA | Revisa que el catálogo tenga el IVA en **Impuestos de Ventas**. |
+| *La cuenta ya está asignada al impuesto IVA 19% … con un porcentaje diferente…* | Cada tarifa de IVA necesita su propia cuenta. Crea una nueva con el botón **+** (ej. *IVA generado 5%* bajo la cuenta padre *240801*). |
+| Quiero uno igual a otro catálogo | En la lista usa **Clonar** y cambia solo el nombre y los impuestos. |
 | ¿Cuántos catálogos creo? | Uno por cada combinación de impuestos (gravado 19 %, 5 %, excluido…). |
 
 ## Relacionados

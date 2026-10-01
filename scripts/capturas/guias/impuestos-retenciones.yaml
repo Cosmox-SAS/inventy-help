@@ -1,19 +1,40 @@
 guia: impuestos/retenciones.md
+# Asigna RETEFUENTE 2.5% y RETEIVA 15% (impuestos/crear-impuesto, orden 70) al
+# proveedor de compras/crear-proveedor. El paso 4 muestra una factura sin guardarla.
+orden: 74
+# Paso 2 asume que el proveedor aún no tiene retenciones (en una segunda corrida,
+# los selectores "Seleccionar impuesto..." ya no existen: usa --pasos 3-4).
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/suppliers
-      - abrir: 'tbody tr a >> nth=0'
-      - pausa: 800
-      - abrir: 'a:has-text("Editar"), button:has-text("Editar")'
-      - esperar: 'text=Retenciones'
-    resaltar: 'main'
+      - abrir: 'tbody tr:has-text("DISTRIBUIDORA") >> nth=0'
+      - esperar: 'main a:has-text("Editar")'
+    resaltar: 'main a:has-text("Editar")'
   - paso: 2
-    resaltar: 'text=Retenciones >> xpath=ancestor::section[1]'
+    acciones:
+      - abrir: 'main a:has-text("Editar")'
+      - esperar: 'button:has-text("Actualizar proveedor")'
+      - elegir: { 'section:has(:is(h2,h3):has-text("Retenciones")) >> button:has-text("Seleccionar impuesto...") >> nth=0': 'RETEFUENTE 2.5%' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Retenciones")) >> button:has-text("Seleccionar cuenta...") >> nth=0': '236540001' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Retenciones")) >> button:has-text("Seleccionar impuesto...") >> nth=0': 'RETEIVA 15%' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Retenciones")) >> button:has-text("Seleccionar cuenta...") >> nth=0': '236705001' }
+      - pausa: 600
+    guarda_datos: true
+    resaltar: 'section:has(:is(h2,h3):has-text("Retenciones"))'
+    despues:
+      - clic: 'button:has-text("Actualizar proveedor")'
+      - pausa: 3000
   - paso: 3
     acciones:
-      - ir: /{tenant}/customers/create
-      - esperar: 'text=Calcular retención en la fuente por'
+      - ir: /{tenant}/purchase-invoices/create
+      - esperar: 'text=Completa la factura con el documento del proveedor'
+      - elegir: { 'button:has-text("Buscar proveedor...")': 'DISTRIBUIDORA' }
+      - pausa: 800
     resaltar: 'text=Calcular retención en la fuente por >> xpath=..'
   - paso: 4
-    manual: resumen de una factura con retenciones aplicadas (Total a pagar con la retención restada)
+    acciones:
+      - elegir: { 'section:has(:is(h2,h3):has-text("Ítems de la Factura")) >> button:has-text("Buscar producto...")': 'CAFÉ' }
+      - llenar: { 'input#purchase-line-quantity-_tmp_1': '24' }
+      - pausa: 1500
+    resaltar: 'div.max-w-sm:has-text("RETEFUENTE 2.5%")'

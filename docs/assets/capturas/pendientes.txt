@@ -8,10 +8,6 @@ assets/capturas/facturacion-electronica/documento-rechazado/paso-4.png
 assets/capturas/facturacion-electronica/documento-soporte/paso-4.png
 assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-2.png
 assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-3.png
-assets/capturas/impuestos/retenciones/paso-1.png
-assets/capturas/impuestos/retenciones/paso-2.png
-assets/capturas/impuestos/retenciones/paso-3.png
-assets/capturas/impuestos/retenciones/paso-4.png
 assets/capturas/pos/cierre-de-caja/paso-1.png
 assets/capturas/pos/cierre-de-caja/paso-2.png
 assets/capturas/pos/cierre-de-caja/paso-3.png

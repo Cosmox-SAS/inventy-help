@@ -1,21 +1,33 @@
 guia: impuestos/crear-impuesto.md
+# Crea la retención RETEIVA 15% (se usa luego en impuestos/retenciones).
+orden: 70
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/tax-catalogs
       - esperar: 'text=Catálogos de Impuestos'
-    resaltar: 'a:has-text("Impuestos y retenciones"), button:has-text("Impuestos y retenciones")'
+    resaltar: 'main a:has-text("Impuestos y retenciones"), main button:has-text("Impuestos y retenciones") >> nth=0'
   - paso: 2
     acciones:
       - ir: /{tenant}/taxes
       - esperar: 'text=Nuevo Impuesto'
-    resaltar: 'button:has-text("Nuevo Impuesto"), a:has-text("Nuevo Impuesto")'
+    resaltar: 'main button:has-text("Nuevo Impuesto"), main a:has-text("Nuevo Impuesto") >> nth=0'
   - paso: 3
     acciones:
-      - abrir: 'button:has-text("Nuevo Impuesto"), a:has-text("Nuevo Impuesto")'
+      - abrir: 'main button:has-text("Nuevo Impuesto"), main a:has-text("Nuevo Impuesto") >> nth=0'
       - esperar: 'text=Agrega un nuevo impuesto o retención.'
+      - llenar: { 'VENTANA >> input[name=name]': 'RETEIVA 15%', 'VENTANA >> input[name=description]': 'Retención de IVA 15%' }
+      - elegir: { 'VENTANA >> button:has-text("Seleccionar...") >> nth=0': 'Retención' }
+      - elegir: { 'VENTANA >> button:has-text("Seleccionar...") >> nth=0': 'Porcentaje' }
+      - llenar: { 'VENTANA >> input[name=value]': '15' }
+      - elegir: { 'VENTANA >> button:has-text("Seleccionar tipo DIAN...")': 'Retención de IVA' }
+      - pausa: 600
     resaltar: 'VENTANA'
     recortar: 'VENTANA'
   - paso: 4
+    guarda_datos: true
     resaltar: 'VENTANA >> button:has-text("Crear Impuesto")'
     recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Crear Impuesto")'
+      - pausa: 2500

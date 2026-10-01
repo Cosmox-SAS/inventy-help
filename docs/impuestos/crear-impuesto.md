@@ -8,7 +8,7 @@ menu: "Fiscal › Catálogo de Impuestos › Impuestos y retenciones"
 permisos:
   - Ver impuestos
   - Crear impuestos
-revisado: 2026-09-30
+revisado: 2026-10-01
 tags:
   - Impuestos
   - Retenciones
@@ -30,7 +30,7 @@ tags:
 
 ![Paso 2: botón Nuevo Impuesto](../assets/capturas/impuestos/crear-impuesto/paso-2.png)
 
-**Paso 3.** Completa **Tipo** (Impuesto o Retención), **Nombre**, **Tipo de Valor**, **Valor**, **Tipo DIAN** y, si aplica, **Base Mínima (COP)**.
+**Paso 3.** Escribe el **Nombre** (ej. *RETEIVA 15%*). Elige **Tipo** (**Impuesto** o **Retención**) y **Tipo de Valor** (ej. **Porcentaje**), escribe el **Valor** y elige el **Tipo DIAN** (ej. *Retención de IVA*). Si aplica, escribe la **Base Mínima (COP)**.
 
 ![Paso 3: formulario Nuevo Impuesto](../assets/capturas/impuestos/crear-impuesto/paso-3.png)
 

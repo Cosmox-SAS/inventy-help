@@ -38,7 +38,7 @@ const VIEWPORTS = {
     celular: { width: 390, height: 844 },
 };
 const BOTON_QUE_GUARDA =
-    /^(guardar|confirmar|crear|validar|aprobar|recibir|finalizar|emitir|registrar|enviar|eliminar|anular|realizar|solicitar|rechazar|reabrir|cerrar caja|abrir caja|unirme|invitar|importar|pagar|cobrar)/i;
+    /^(guardar|confirmar|crear|validar|aprobar|recibir|finalizar|emitir|registrar|enviar|eliminar|anular|realizar|solicitar|rechazar|reabrir|cerrar caja|abrir caja|unirme|invitar|importar|pagar|cobrar|actualizar|aplicar|activar|desactivar|asignar|clonar|duplicar|consignar|procesar|restablecer|restaurar|aceptar|s[ií],)/i;
 const ESPERA_MS = 10_000;
 
 // ── Configuración ──────────────────────────────────────────────────────────
@@ -132,7 +132,8 @@ async function clic(page, selector, paso, puedeGuardar) {
     const objetivo = localizar(page, selector);
     await objetivo.waitFor({ timeout: ESPERA_MS });
     const texto = ((await objetivo.innerText().catch(() => '')) || selector).trim();
-    if (BOTON_QUE_GUARDA.test(texto) && !(paso.guarda_datos && puedeGuardar)) {
+    const esEnvio = (await objetivo.getAttribute('type').catch(() => null)) === 'submit';
+    if ((BOTON_QUE_GUARDA.test(texto) || esEnvio) && !(paso.guarda_datos && puedeGuardar)) {
         throw new Error(`Bloqueado: "${texto}" guardaría datos. Marca el paso con guarda_datos: true y usa CAPTURAS_PERMITIR_GUARDAR=1.`);
     }
     await objetivo.click();
@@ -189,6 +190,10 @@ async function ejecutarPaso(page, paso, ctx) {
                 // Clic en un botón que SOLO abre una ventana o menú (no guarda nada).
                 const objetivo = localizar(page, valor);
                 await objetivo.waitFor({ timeout: ESPERA_MS });
+                // Un botón de envío de formulario siempre guarda: no se acepta como "abrir".
+                if ((await objetivo.getAttribute('type').catch(() => null)) === 'submit' && !(paso.guarda_datos && ctx.puedeGuardar)) {
+                    throw new Error(`Bloqueado: "${valor}" es un botón que envía el formulario. Usa clic con guarda_datos: true.`);
+                }
                 await objetivo.click();
                 break;
             }
