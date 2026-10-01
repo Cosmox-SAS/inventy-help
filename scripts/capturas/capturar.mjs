@@ -31,6 +31,7 @@ const DIR_CAPTURAS = path.join(RAIZ, 'docs/assets/capturas');
 const PENDIENTES = path.join(DIR_CAPTURAS, 'pendientes.txt');
 const REPORTE = path.join(RAIZ, 'gestion/capturas-reporte.md');
 const SESION = path.join(RAIZ, '.auth-capturas.json');
+const DIR_FALLAS = path.join(RAIZ, '.logs/capturas-fallas');
 
 const VIEWPORTS = {
     escritorio: { width: 1440, height: 900 },
@@ -274,7 +275,11 @@ async function main() {
                 console.log(`  ✓ Paso ${paso.paso}`);
             } catch (error) {
                 const detalle = error.message.split('\n')[0];
-                resultados.push({ guia: guia.guia, paso: paso.paso, ok: false, detalle });
+                // Foto de diagnóstico de lo que el robot veía (no se publica).
+                fs.mkdirSync(DIR_FALLAS, { recursive: true });
+                const diagnostico = path.join(DIR_FALLAS, `${guia.guia.replace(/[/.]/g, '_')}-paso-${paso.paso}.png`);
+                await page.screenshot({ path: diagnostico }).catch(() => {});
+                resultados.push({ guia: guia.guia, paso: paso.paso, ok: false, detalle: `${detalle} (ver ${path.relative(RAIZ, diagnostico)} · ${page.url()})` });
                 console.log(`  ✗ Paso ${paso.paso}: ${detalle}`);
                 if (paso.detener_si_falla !== false) break; // los pasos siguientes dependen de este
             }

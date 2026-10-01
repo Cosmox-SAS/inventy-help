@@ -15,6 +15,7 @@ revisado: 2026-09-29
 - [¿Cuánto inventario tengo?](consultar-existencias.md)
 - [¿Cómo hago un ajuste de inventario?](ajuste-inventario.md)
 - [¿Cómo hago un traslado entre sedes?](traslados.md)
+- [¿Cómo manejo las presentaciones de compra y de venta?](presentaciones.md)
 - [Soluciones rápidas: productos e inventario](../soluciones-rapidas/productos-inventario.md)
 
 ## ¿Qué hay en el menú Inventario?

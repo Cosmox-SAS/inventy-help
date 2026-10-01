@@ -185,7 +185,7 @@ Clave corta del supervisor para aprobar operaciones especiales (ej. venta a cré
 Lista de cuentas contables de la empresa. · <span class="ruta">Contabilidad › Plan de Cuentas</span>
 
 ### Presentación { #presentacion }
-Empaque de un producto con su propio código y precio (caja × 12, blíster). Se activa en Módulos › Inventario.
+Empaque de un producto con su propio código y precio (caja × 12, blíster). Sirve igual para comprar y vender. Se activa en Módulos › Inventario. · [Guía](productos-inventario/presentaciones.md)
 
 ### Preventa { #preventa }
 Pedido que toma un vendedor en ruta (app móvil) y la oficina luego factura. · <span class="ruta">Distribución › Preventas</span>

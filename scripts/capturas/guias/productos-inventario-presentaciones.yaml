@@ -1,0 +1,40 @@
+guia: productos-inventario/presentaciones.md
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/products
+      - abrir: 'tbody tr a >> nth=0'
+      - pausa: 800
+      - abrir: 'a:has-text("Editar"), button:has-text("Editar")'
+      - pausa: 800
+    resaltar: 'main'
+  - paso: 2
+    resaltar: 'text=Comportamiento del producto >> xpath=ancestor::section[1]'
+    detener_si_falla: false
+  - paso: 3
+    acciones:
+      - abrir: 'button:has-text("Presentaciones")'
+      - pausa: 600
+    resaltar: 'button:has-text("Agregar presentación")'
+  - paso: 4
+    acciones:
+      - abrir: 'button:has-text("Agregar presentación")'
+      - pausa: 600
+    resaltar: 'text=Factor * >> xpath=ancestor::div[3]'
+    detener_si_falla: false
+  - paso: 5
+    manual: línea de una factura de compra con la presentación elegida (Caja x 12)
+  - paso: 6
+    manual: POS con una presentación agregada al carrito
+  - paso: 7
+    acciones:
+      - abrir: 'button:has-text("Referencias de Proveedores")'
+      - pausa: 600
+    resaltar: 'text=Referencias de Proveedores >> xpath=ancestor::section[1]'
+    detener_si_falla: false
+  - paso: 8
+    acciones:
+      - abrir: 'button:has-text("Precios")'
+      - pausa: 600
+    resaltar: 'button:has-text("Añadir precio")'
+    detener_si_falla: false
