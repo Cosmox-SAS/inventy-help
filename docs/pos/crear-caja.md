@@ -62,3 +62,4 @@ tags:
 
 - [¿Cómo abro la caja?](abrir-caja.md)
 - [¿Cómo vendo en el POS?](vender-en-pos.md)
+- [¿Cómo manejo las listas de precios?](../ventas/listas-de-precios.md)

@@ -39,6 +39,12 @@ tags:
 ??? question "¿Cómo le doy descuento a un producto en el POS?"
     Usa **Editar descuento** en la línea del carrito. Si no aparece, el administrador debe activar **Descuento manual por producto en el POS** en <span class="ruta">Configuración › Módulos › Ventas</span>.
 
+??? question "¿Cómo le doy un precio especial a un cliente?"
+    Con una **lista de precios**: actívala en <span class="ruta">Configuración › Módulos › Ventas</span>, créala, ponle precio a los productos (pestaña **Precios** del producto) y asígnala en la ficha del cliente. Ver [¿Cómo manejo las listas de precios?](ventas/listas-de-precios.md).
+
+??? question "¿Qué precio cobra Inventy si el cliente tiene lista de precios?"
+    El de la **lista del cliente** para ese producto y tu sede; si no tiene, en el POS el de la **lista de la caja**; si tampoco, el **precio base**. El descuento del tipo de cliente se aplica encima.
+
 ## Caja
 
 ??? question "¿Cómo cierro la caja?"

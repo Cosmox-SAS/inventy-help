@@ -32,7 +32,7 @@ tags:
 | **Permitir ventas de contado sin sesión de caja** | Vender en efectivo sin abrir caja. | — |
 | **Permitir obsequios** | Marcar productos como obsequio en la venta. | — |
 | **Habilitar promociones** | Muestra el menú Promociones. | — |
-| **Habilitar listas de precios** | Muestra el menú Listas de precios. | — |
+| **Habilitar listas de precios** | Precios especiales por cliente o caja. Ver [listas de precios](../ventas/listas-de-precios.md). | — |
 | **Crédito ilimitado para clientes** | Todos los clientes compran a crédito sin cupo. | — |
 | **Requerir autorización para cupo de crédito adicional** | Pide PIN de supervisor si la venta supera el cupo. | — |
 | **Precios de venta sin impuestos incluidos** | El precio del producto se toma sin impuestos. | — |

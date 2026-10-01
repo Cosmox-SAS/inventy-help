@@ -1,6 +1,6 @@
 ---
 title: "¿Cómo manejo las listas de precios?"
-description: "Dónde se activan las listas de precios, cómo crearlas, darles precio por producto o presentación y asignarlas a un cliente."
+description: "Dónde se activan las listas de precios, cómo crearlas, darles precio por producto o presentación, asignarlas a un cliente o caja y qué precio cobra Inventy."
 estado: pendiente-validacion
 tipo: rapida
 modulo: ventas
@@ -21,7 +21,7 @@ tags:
 
 <p class="tambien-se-busca">También se busca como: lista de precios, precio mayorista, precio especial, precio por cliente, precio diferente, tarifa, precio por sede, precio por caja.</p>
 
-**Qué es:** un grupo de precios especiales (ej. *Mayorista*) que se asigna a clientes. Inventy cobra el precio de la **lista del cliente**; si no tiene, el de la **lista de la sede o la caja**; si tampoco, el **precio base** del producto.
+**Qué es:** un grupo de precios especiales (ej. *Mayorista*) que se asigna a un **cliente** o a una **caja**. Cada precio de la lista es para un producto (o una presentación) **en una sede**.
 
 ## Pasos
 
@@ -37,7 +37,7 @@ tags:
 
 ![Paso 3: ventana Nueva lista de precios](../assets/capturas/ventas/listas-de-precios/paso-3.png)
 
-**Paso 4.** Dale precio a cada producto: en <span class="ruta">Inventario › Productos</span> abre el producto, haz clic en **Editar producto** y abre la pestaña **Precios**. Por cada precio haz clic en **Añadir precio**, elige la **Lista**, la **Presentación** (*Ítem base* es la unidad; o una caja, ej. *CAJA X 12*), la **Sede** y escribe el **Precio (con impuestos)**. Haz clic en **Guardar precios**.
+**Paso 4.** Dale precio a cada producto: en <span class="ruta">Inventario › Productos</span> abre el producto, haz clic en **Editar producto** y abre la pestaña **Precios**. Por cada precio haz clic en **Añadir precio**, elige la **Lista**, la **Presentación** (*Ítem base* es la unidad; o una caja, ej. *CAJA X 12*), la **Sede** y escribe el **Precio (con impuestos)**. Haz clic en **Guardar precios**. Si vendes en varias sedes, agrega una fila por sede.
 
 ![Paso 4: pestaña Precios del producto](../assets/capturas/ventas/listas-de-precios/paso-4.png)
 
@@ -49,10 +49,26 @@ tags:
 
 ![Paso 6: precio de la lista en el POS](../assets/capturas/ventas/listas-de-precios/paso-6.png)
 
+**Paso 7.** (Opcional) Para que una caja venda con una lista a quien no tenga la suya: en <span class="ruta">Tesorería › Caja › Cajas</span> › **Acciones › Editar**, elige la **Lista de precios** y haz clic en **Guardar cambios**. Si marcas **Permitir cambiar la lista de precios desde la venta POS**, el cajero puede cambiarla al vender.
+
+![Paso 7: lista de precios en la caja](../assets/capturas/ventas/listas-de-precios/paso-7.png)
+
 ✅ **Listo:** cada vez que le vendas a ese cliente, Inventy usa los precios de su lista.
 
-!!! tip "Lista por sede o por caja"
-    Para que todo un punto de venta use una lista, asígnala en la caja: <span class="ruta">Tesorería › Caja › Cajas</span> › **Acciones › Editar** › **Lista de precios**. La lista del cliente siempre gana.
+## ¿Qué precio cobra Inventy?
+
+Para cada producto de la venta, en este orden (usa el primero que encuentre):
+
+| Orden | POS | Factura de venta |
+|---|---|---|
+| 1 | Precio de la **lista del cliente** para ese producto y tu sede | Igual |
+| 2 | Precio de la **lista de la caja** abierta | — (no aplica) |
+| 3 | **Precio base** del producto (o de la presentación) | Precio base |
+
+- La caja tiene su **propio precio** en la lista. Si no le pones precio a *CAJA X 12*, la caja sale a su precio base aunque la unidad tenga precio en la lista.
+- Si el cliente tiene un **tipo de cliente con descuento**, el descuento se aplica **encima** del precio de la lista.
+- Una lista **desactivada** se ignora: se cobra el precio base (el cliente la conserva asignada).
+- Si apagas **Habilitar listas de precios**, todo vuelve al precio base.
 
 ## Si algo falla
 
@@ -63,7 +79,9 @@ tags:
 | *La sede es requerida.* | Elige la **Sede** en cada fila del precio. |
 | *La lista de precios es requerida.* | Elige la **Lista** en la fila o bórrala con el ícono de la papelera. |
 | *Ya existe un precio para esta lista/presentación/sede.* | Ese precio ya está creado: cámbialo en su fila en vez de agregar otro. |
-| El cliente sigue saliendo con el precio normal | Revisa que el cliente tenga la lista en su ficha y que el producto tenga precio en esa lista **para tu sede**. |
+| El cliente sigue saliendo con el precio normal | Revisa que el cliente tenga la lista en su ficha, que la lista esté **Activa** y que el producto (o esa presentación) tenga precio en esa lista **para tu sede**. |
+| En la factura no toma la lista de la caja | Es normal: la lista de la caja solo aplica en el POS. Asigna la lista al cliente. |
+| ¿Lista de precios o tipo de cliente? | **Lista**: precios fijos por producto. **Tipo de cliente**: un % de descuento para todo. Se pueden usar juntos. |
 | Son muchos productos | Usa <span class="ruta">Inventario › Importar precios</span>. |
 
 ## Relacionados

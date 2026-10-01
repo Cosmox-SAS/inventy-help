@@ -79,3 +79,14 @@ pasos:
       - abrir: '[data-testid="pos-catalog"] >> text=CAFÉ MOLIDO 500 G >> nth=0'
       - pausa: 1000
     resaltar: '[data-testid="pos-cart"]'
+  - paso: 7
+    # Solo muestra el campo: no guarda la caja.
+    acciones:
+      - ir: /{tenant}/cash/registers
+      - abrir: 'tbody tr:has-text("Caja Mostrador") >> nth=0 >> button[aria-label="Acciones"]'
+      - abrir: '[role=menu] >> text=Editar'
+      - esperar: 'VENTANA'
+      - elegir: { 'VENTANA >> button:has-text("Buscar lista de precios...")': 'Mayorista' }
+      - pausa: 600
+    resaltar: 'VENTANA >> label:has-text("Lista de precios") >> xpath=..'
+    recortar: 'VENTANA'

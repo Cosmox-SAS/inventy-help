@@ -138,7 +138,7 @@ Producto que se vende como una línea pero descuenta varios componentes (ej. com
 Registrar juntas varias facturas de gastos pagadas con un mismo dinero (ej. caja menor). · <span class="ruta">Compras › Legalización de gastos</span>
 
 ### Lista de precios { #lista-de-precios }
-Precios especiales para ciertos clientes o sedes. Orden: lista del cliente → lista de la sede → precio base. Se activa en <span class="ruta">Configuración › Módulos › Ventas</span>.
+Precios especiales por producto y sede que se asignan a un cliente o a una caja. Orden: lista del cliente → lista de la caja (solo POS) → precio base. Se activa en <span class="ruta">Configuración › Módulos › Ventas</span>. Ver [¿Cómo manejo las listas de precios?](ventas/listas-de-precios.md).
 
 ### Lote { #lote }
 Grupo de unidades con la misma fecha de vencimiento. Se activa en Módulos › Inventario y en el producto (**Controlar por lote y vencimiento**).

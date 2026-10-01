@@ -64,3 +64,4 @@ tags:
 
 - [¿Cómo hago una factura de venta?](crear-factura-venta.md)
 - [¿Cómo se aplican las retenciones?](../impuestos/retenciones.md)
+- [¿Cómo manejo las listas de precios?](listas-de-precios.md)
