@@ -28,7 +28,7 @@ tags:
 
 ![Paso 2: datos del ajuste](../assets/capturas/productos-inventario/ajuste-inventario/paso-2.png)
 
-**Paso 3.** Haz clic en **Agregar linea**, elige el **Tipo de ajuste** (entrada o salida), el producto y la cantidad. Repite por cada producto.
+**Paso 3.** En **Lineas del ajuste**, elige el producto, el **Tipo de ajuste** (ej. **Entrada manual**), la **Cantidad** y el **Costo**. Para más productos, haz clic en **Agregar linea**.
 
 ![Paso 3: líneas del ajuste](../assets/capturas/productos-inventario/ajuste-inventario/paso-3.png)
 

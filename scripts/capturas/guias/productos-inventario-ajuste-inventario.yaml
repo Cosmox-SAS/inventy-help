@@ -1,19 +1,28 @@
 guia: productos-inventario/ajuste-inventario.md
+# Da existencias al producto de crear-producto (orden 15) para poder vender en el POS.
+orden: 16
 pasos:
   - paso: 1
     acciones:
-      - menu: Ajuste de inventario
+      - ir: /{tenant}/inventory/adjustments
       - esperar: 'text=Nuevo ajuste'
-    resaltar: 'a:has-text("Nuevo ajuste"), button:has-text("Nuevo ajuste")'
+    resaltar: 'main a:has-text("Nuevo ajuste"), main button:has-text("Nuevo ajuste") >> nth=0'
   - paso: 2
     acciones:
-      - abrir: 'a:has-text("Nuevo ajuste"), button:has-text("Nuevo ajuste")'
+      - ir: /{tenant}/inventory/adjustments/create
       - esperar: 'text=Datos del ajuste'
-    resaltar: 'text=Datos del ajuste >> xpath=ancestor::section[1]'
+      - llenar: { '#notes': 'Inventario inicial' }
+    resaltar: 'section:has(h2:has-text("Datos del ajuste"))'
   - paso: 3
     acciones:
-      - abrir: 'button:has-text("Agregar linea")'
-      - pausa: 500
-    resaltar: 'text=Lineas del ajuste >> xpath=ancestor::section[1]'
+      - elegir: { 'section:has(h2:has-text("Lineas del ajuste")) >> button:has-text("Buscar producto")': 'CAFÉ MOLIDO' }
+      - llenar: { 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> input >> nth=0': '50', 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> input >> nth=1': '11000' }
+    resaltar: 'section:has(h2:has-text("Lineas del ajuste"))'
   - paso: 4
+    guarda_datos: true
     resaltar: 'button:has-text("Confirmar ajuste")'
+    despues:
+      - clic: 'button:has-text("Confirmar ajuste")'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Confirmar")'
+      - pausa: 2500
