@@ -1,18 +1,39 @@
 guia: facturacion-electronica/documento-soporte.md
+# Crea un proveedor persona natural "No obligado a facturar" y le registra una
+# compra. La demo no tiene facturación electrónica: la emisión (paso 4) es manual.
+orden: 63
 pasos:
   - paso: 1
     acciones:
-      - ir: /{tenant}/suppliers
-      - abrir: 'tbody tr a >> nth=0'
-      - pausa: 800
-    resaltar: 'text=No obligado a facturar'
-    detener_si_falla: false
+      - ir: /{tenant}/suppliers/create
+      - esperar: '#identification_number'
+      - llenar: { '#identification_number': '1020{sufijo}', '#first_name': 'Pedro', '#last_name': 'Ramírez', '#mobile': '3125550101' }
+      - abrir: '#not_obligated_to_invoice'
+      - pausa: 600
+    resaltar: 'text=No obligado a facturar >> xpath=ancestor::div[2]'
+    guarda_datos: true
+    despues:
+      - clic: 'button:has-text("Crear proveedor")'
+      - pausa: 3000
   - paso: 2
     acciones:
       - ir: /{tenant}/purchase-invoices/create
-      - esperar: 'text=Nueva Factura de Compra'
-    resaltar: 'text=Requiere documento soporte electrónico >> xpath=ancestor::div[2]'
+      - esperar: 'text=Completa la factura con el documento del proveedor'
+      - elegir: { 'button:has-text("Buscar proveedor...")': 'PEDRO' }
+      - llenar: { '#supplier_invoice_number': 'CC-{sufijo}' }
+      - pausa: 1000
+    resaltar: 'text=Requiere documento soporte electrónico >> xpath=ancestor::div[1]'
   - paso: 3
-    resaltar: 'button:has-text("Registrar Factura")'
+    acciones:
+      - elegir: { 'section:has(:is(h2,h3):has-text("Ítems de la Factura")) >> button:has-text("Buscar producto...")': 'CAFÉ' }
+      - llenar: { 'input#purchase-line-quantity-_tmp_1': '5' }
+      - pausa: 1000
+    guarda_datos: true
+    resaltar: '[data-testid="purchase-invoice-form-submit"]'
+    despues:
+      - clic: '[data-testid="purchase-invoice-form-submit"]'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Validar factura")'
+      - pausa: 3500
   - paso: 4
-    manual: detalle de una factura de compra validada de un proveedor no obligado a facturar, con el botón Emitir documento soporte
+    manual: detalle de una factura de compra validada de un proveedor no obligado a facturar, con el botón Emitir documento soporte (requiere facturación electrónica habilitada)

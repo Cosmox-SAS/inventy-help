@@ -7,7 +7,7 @@ modulo: facturacion-electronica
 menu: "Compras › Facturas"
 permisos:
   - Crear facturas de compra
-revisado: 2026-09-30
+revisado: 2026-10-01
 search:
   boost: 3
 tags:
@@ -24,15 +24,15 @@ tags:
 
 ## Pasos
 
-**Paso 1.** En <span class="ruta">Compras › Proveedores</span>, edita el proveedor y activa **No obligado a facturar** (solo una vez).
+**Paso 1.** En <span class="ruta">Compras › Proveedores</span>, crea (o edita) el proveedor y marca **No obligado a facturar**. Guarda con **Crear proveedor** (o **Guardar**). Solo se hace una vez.
 
 ![Paso 1: casilla No obligado a facturar](../assets/capturas/facturacion-electronica/documento-soporte/paso-1.png)
 
-**Paso 2.** Registra su factura en <span class="ruta">Compras › Facturas</span> › **Nueva Factura**. La casilla **Requiere documento soporte electrónico** se marca sola.
+**Paso 2.** Ve a <span class="ruta">Compras › Facturas</span> › **Nueva Factura** y elige el proveedor. La casilla **Requiere documento soporte electrónico** se marca sola. En **N° Factura Proveedor** escribe el número de su cuenta de cobro.
 
 ![Paso 2: casilla Requiere documento soporte electrónico](../assets/capturas/facturacion-electronica/documento-soporte/paso-2.png)
 
-**Paso 3.** Haz clic en **Registrar Factura** y confirma.
+**Paso 3.** Agrega los productos o servicios, haz clic en **Registrar Factura** y confirma con **Validar factura**.
 
 ![Paso 3: botón Registrar Factura](../assets/capturas/facturacion-electronica/documento-soporte/paso-3.png)
 
@@ -46,7 +46,7 @@ tags:
 
 | Problema | Solución |
 |---|---|
-| No aparece **Emitir documento soporte** | La factura debe estar validada, marcada como *Requiere documento soporte*, sin documento previo y sin devoluciones. |
+| No aparece **Emitir documento soporte** | Tu empresa debe tener la facturación electrónica habilitada. Además, la factura debe estar validada, marcada como *Requiere documento soporte*, sin documento previo y sin devoluciones. |
 | *La factura no requiere documento soporte electrónico: el proveedor está obligado a facturar.* | Marca al proveedor como **No obligado a facturar** si corresponde. |
 | *La factura ya tiene un documento soporte electrónico activo.* | Ya se emitió: búscalo en **Fiscal › Documentos**. |
 | *No hay una resolución activa disponible para este tipo de documento.* | [Registra la resolución](resoluciones.md) de documento soporte. |

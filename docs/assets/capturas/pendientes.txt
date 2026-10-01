@@ -5,7 +5,6 @@ assets/capturas/contabilidad/como-funciona/paso-ver-asientos.png
 assets/capturas/facturacion-electronica/documento-rechazado/paso-2.png
 assets/capturas/facturacion-electronica/documento-rechazado/paso-3.png
 assets/capturas/facturacion-electronica/documento-rechazado/paso-4.png
-assets/capturas/facturacion-electronica/documento-soporte/paso-1.png
 assets/capturas/facturacion-electronica/documento-soporte/paso-4.png
 assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-2.png
 assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-3.png
