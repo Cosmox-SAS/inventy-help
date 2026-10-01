@@ -7,3 +7,4 @@ __pycache__/
 .sin-actualizacion-automatica
 node_modules
 .env.capturas
+.auth-capturas.json

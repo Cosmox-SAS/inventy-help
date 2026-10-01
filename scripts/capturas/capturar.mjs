@@ -30,6 +30,7 @@ const DIR_GUIAS = path.join(RAIZ, 'scripts/capturas/guias');
 const DIR_CAPTURAS = path.join(RAIZ, 'docs/assets/capturas');
 const PENDIENTES = path.join(DIR_CAPTURAS, 'pendientes.txt');
 const REPORTE = path.join(RAIZ, 'gestion/capturas-reporte.md');
+const SESION = path.join(RAIZ, '.auth-capturas.json');
 
 const VIEWPORTS = {
     escritorio: { width: 1440, height: 900 },
@@ -51,9 +52,11 @@ function cargarEnv() {
         const m = linea.match(/^\s*([A-Z_]+)\s*=\s*(.*)\s*$/);
         if (m) env[m[1]] = m[2].replace(/^['"]|['"]$/g, '');
     }
-    for (const clave of ['INVENTY_DEMO_URL', 'INVENTY_DEMO_EMAIL', 'INVENTY_DEMO_PASSWORD']) {
+    // Con una sesión guardada (npm run capturas:login) no hacen falta correo ni contraseña.
+    const requeridas = fs.existsSync(SESION) ? ['INVENTY_DEMO_URL'] : ['INVENTY_DEMO_URL', 'INVENTY_DEMO_EMAIL', 'INVENTY_DEMO_PASSWORD'];
+    for (const clave of requeridas) {
         if (!env[clave]) {
-            console.error(`✗ Falta ${clave} en .env.capturas`);
+            console.error(`✗ Falta ${clave} en .env.capturas (o inicia sesión a mano con: npm run capturas:login)`);
             process.exit(1);
         }
     }
@@ -76,6 +79,16 @@ function localizar(page, selector) {
 }
 
 async function sesion(page, env) {
+    if (fs.existsSync(SESION)) {
+        // Sesión guardada con `npm run capturas:login`: solo hay que entrar a la empresa.
+        await page.goto(`${env.INVENTY_DEMO_URL}/`, { waitUntil: 'networkidle' });
+        if (/\/login/.test(new URL(page.url()).pathname)) {
+            throw new Error('La sesión guardada venció. Vuelve a correr: npm run capturas:login');
+        }
+        const tenant = env.INVENTY_DEMO_TENANT || new URL(page.url()).pathname.split('/').filter(Boolean)[0];
+        if (!tenant || tenant === 'admin') throw new Error('Define INVENTY_DEMO_TENANT en .env.capturas.');
+        return tenant;
+    }
     await page.goto(`${env.INVENTY_DEMO_URL}/login`, { waitUntil: 'networkidle' });
     await page.fill('input[name="email"]', env.INVENTY_DEMO_EMAIL);
     await page.fill('input[name="password"]', env.INVENTY_DEMO_PASSWORD);
@@ -202,6 +215,7 @@ async function main() {
 
     for (const guia of guias) {
         const contexto = await navegador.newContext({
+            storageState: !guia.sin_sesion && fs.existsSync(SESION) ? SESION : undefined,
             viewport: VIEWPORTS[guia.vista ?? 'escritorio'],
             deviceScaleFactor: 2,
             locale: 'es-CO',

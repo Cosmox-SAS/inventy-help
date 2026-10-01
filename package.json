@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "capturas": "node scripts/capturas/capturar.mjs",
-    "capturas:placeholders": "node scripts/capturas/placeholders.mjs"
+    "capturas:placeholders": "node scripts/capturas/placeholders.mjs",
+    "capturas:login": "node scripts/capturas/login.mjs"
   },
   "devDependencies": {
     "playwright": "~1.62.1",
