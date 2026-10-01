@@ -1,16 +1,38 @@
 guia: ventas/devolucion-venta.md
+# Devolución parcial (1 unidad) de la factura de Laura (ventas/crear-factura-venta).
+orden: 55
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/sale-returns
       - esperar: 'main'
-    resaltar: 'main a[href$="/sale-returns/create"], main button:has-text("Nueva")'
+    resaltar: 'main a[href$="/sale-returns/create"], main button:has-text("Nueva") >> nth=0'
   - paso: 2
     acciones:
       - ir: /{tenant}/sale-returns/create
       - esperar: 'text=Nueva Devolución de Venta'
-    resaltar: 'text=Información General >> xpath=ancestor::section[1]'
+      - elegir: { 'button:has-text("Buscar cliente...")': 'LAURA' }
+      - elegir: { 'button:has-text("Seleccionar sucursal...")': 'Principal' }
+      - elegir: { 'text=Factura de Venta * >> xpath=.. >> button': 'VTA-2026-0002' }
+      - elegir: { 'button:has-text("Seleccionar motivo...")': 'Defectuoso' }
+      - pausa: 1200
+    resaltar: 'section:has(:is(h2,h3):has-text("Información General"))'
   - paso: 3
-    resaltar: 'text=Ítems a Devolver >> xpath=ancestor::section[1]'
+    acciones:
+      - abrir: 'button:has-text("Devolución Parcial")'
+      - llenar: { 'section:has(:is(h2,h3):has-text("Ítems a Devolver")) >> tbody tr >> nth=0 >> input': '1' }
+      - pausa: 800
+    resaltar: 'section:has(:is(h2,h3):has-text("Ítems a Devolver"))'
   - paso: 4
-    resaltar: 'text=Total a devolver >> xpath=..'
+    acciones:
+      - abrir: 'section:has(:is(h2,h3):has-text("Reintegro")) >> button:has-text("Nota crédito")'
+      - pausa: 800
+    resaltar: 'section:has(:is(h2,h3):has-text("Reintegro"))'
+  - paso: 5
+    guarda_datos: true
+    resaltar: '[data-testid="sale-return-form-submit"]'
+    despues:
+      - clic: '[data-testid="sale-return-form-submit"]'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Confirmar")'
+      - pausa: 3000

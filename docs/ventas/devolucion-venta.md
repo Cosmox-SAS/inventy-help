@@ -31,15 +31,19 @@ tags:
 
 ![Paso 2: información general de la devolución](../assets/capturas/ventas/devolucion-venta/paso-2.png)
 
-**Paso 3.** En **Ítems a Devolver**, elige **Devolución Total** o **Devolución Parcial** e indica las cantidades.
+**Paso 3.** En **Ítems a Devolver**, elige **Devolución Parcial** o **Devolución Total**. En parcial, escribe la **Cant. a devolver** de cada producto.
 
 ![Paso 3: ítems a devolver](../assets/capturas/ventas/devolucion-venta/paso-3.png)
 
-**Paso 4.** Revisa el **Total a devolver** y confirma la devolución.
+**Paso 4.** En **Reintegro**, elige cómo le devuelves el dinero al cliente: **Efectivo** (sale de tu caja) o **Nota crédito** (queda como saldo a favor para su próxima compra). Revisa **Reduce cartera**, **Efectivo** y **Nota crédito**.
 
-![Paso 4: total y confirmación](../assets/capturas/ventas/devolucion-venta/paso-4.png)
+![Paso 4: forma de reintegro](../assets/capturas/ventas/devolucion-venta/paso-4.png)
 
-✅ **Listo:** la devolución queda **Confirmada**, el inventario vuelve y la factura muestra *Devolución total* o *parcial*. Si emites automático, se envía la **nota crédito** a la DIAN.
+**Paso 5.** Revisa el **Total a devolver**, haz clic en **Confirmar devolución** y confirma.
+
+![Paso 5: botón Confirmar devolución](../assets/capturas/ventas/devolucion-venta/paso-5.png)
+
+✅ **Listo:** la devolución queda **Confirmada**, el inventario vuelve y la factura muestra *Devolución total* o *parcial*. Si elegiste **Nota crédito**, el cliente queda con saldo a favor (<span class="ruta">Ventas › Notas crédito</span>). Si emites automático, se envía la nota crédito electrónica a la DIAN.
 
 ## Si algo falla
 
