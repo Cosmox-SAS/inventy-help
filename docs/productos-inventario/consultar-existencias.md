@@ -23,15 +23,15 @@ tags:
 
 ![Paso 1: pantalla Stock](../assets/capturas/productos-inventario/consultar-existencias/paso-1.png)
 
-**Paso 2.** Mira el **Total empresa**: el valor del inventario de todas las sedes.
+**Paso 2.** Mira arriba el valor del inventario: el total de la sede elegida y el **Total empresa** (todas las sedes).
 
 ![Paso 2: Total empresa](../assets/capturas/productos-inventario/consultar-existencias/paso-2.png)
 
-**Paso 3.** Busca el producto en **Buscar por código o sede...** o filtra por categoría.
+**Paso 3.** Busca el producto en **Buscar por código o sede...**, o filtra por sede y categoría. Usa **Actualizar** para recargar.
 
 ![Paso 3: buscador de stock](../assets/capturas/productos-inventario/consultar-existencias/paso-3.png)
 
-**Paso 4.** Revisa la fila: existencias, **Costo sin IVA**, **Costo con IVA** y **Valor Inventario**. Usa **Ver detalle** para más información.
+**Paso 4.** Revisa la fila: **Cantidad**, **Reservado** (apartado para pedidos o traslados), **Disponible** (lo que puedes vender), **Costo sin IVA**, **Costo con IVA**, **Rentabilidad** y **Valor Inventario**. En **Acciones** verás más detalle.
 
 ![Paso 4: tabla de existencias](../assets/capturas/productos-inventario/consultar-existencias/paso-4.png)
 
