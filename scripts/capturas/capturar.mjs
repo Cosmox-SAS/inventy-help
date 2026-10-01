@@ -38,7 +38,7 @@ const VIEWPORTS = {
     celular: { width: 390, height: 844 },
 };
 const BOTON_QUE_GUARDA =
-    /^(guardar|confirmar|crear|validar|aprobar|recibir|finalizar|emitir|registrar|enviar|eliminar|anular|realizar|solicitar|rechazar|reabrir|cerrar caja|abrir caja|unirme|invitar|importar|pagar|cobrar|actualizar|aplicar|activar|desactivar|asignar|clonar|duplicar|consignar|procesar|restablecer|restaurar|aceptar|s[ií],)/i;
+    /^(guardar|confirmar|crear|validar|aprobar|recibir|finalizar|emitir|registrar|enviar|eliminar|anular|realizar|solicitar|rechazar|reabrir|cerrar caja|abrir caja|unirme|invitar|importar|pagar|cobrar|actualizar|aplicar|activar|desactivar|asignar|clonar|duplicar|consignar|procesar|restablecer|restaurar|aceptar|s[ií],|habilitar|deshabilitar)/i;
 const ESPERA_MS = 10_000;
 
 // ── Configuración ──────────────────────────────────────────────────────────

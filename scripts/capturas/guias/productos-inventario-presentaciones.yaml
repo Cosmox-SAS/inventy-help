@@ -1,40 +1,79 @@
 guia: productos-inventario/presentaciones.md
+# Activa la opción Presentaciones (Módulos › Inventario) y crea "Caja x 12" para el café.
+orden: 18
 pasos:
   - paso: 1
     acciones:
-      - ir: /{tenant}/products
-      - abrir: 'tbody tr a >> nth=0'
-      - pausa: 800
-      - abrir: 'a:has-text("Editar"), button:has-text("Editar")'
-      - pausa: 800
-    resaltar: 'main'
+      - ir: /{tenant}/module-settings?module=inventory
+      - esperar: '[data-testid="settings-toggle-presentaciones_enabled"]'
+    guarda_datos: true
+    resaltar: '[data-testid="settings-toggle-presentaciones_enabled"] >> xpath=ancestor::div[2]'
+    despues:
+      - clic: '[data-testid="settings-toggle-presentaciones_enabled"]'
+      - pausa: 2500
   - paso: 2
-    resaltar: 'text=Comportamiento del producto >> xpath=ancestor::section[1]'
-    detener_si_falla: false
+    acciones:
+      - ir: /{tenant}/products
+      - abrir: 'tbody tr:has-text("CAFÉ MOLIDO") >> nth=0'
+      - esperar: 'main a:has-text("Editar producto")'
+      - abrir: 'main a:has-text("Editar producto")'
+      - esperar: 'button:has-text("Actualizar Producto")'
+      - clic: 'button:has-text("Activar presentaciones")'
+      - pausa: 600
+    guarda_datos: true
+    resaltar: 'button:has-text("Desactivar presentaciones") >> xpath=ancestor::div[3]'
+    despues:
+      - clic: 'button:has-text("Actualizar Producto")'
+      - pausa: 3000
   - paso: 3
     acciones:
-      - abrir: 'button:has-text("Presentaciones")'
-      - pausa: 600
+      - ir: /{tenant}/products
+      - abrir: 'tbody tr:has-text("CAFÉ MOLIDO") >> nth=0'
+      - esperar: 'main a:has-text("Editar producto")'
+      - abrir: 'main a:has-text("Editar producto")'
+      - esperar: 'main button:text-is("Presentaciones")'
+      - abrir: 'main button:text-is("Presentaciones")'
+      - esperar: 'button:has-text("Agregar presentación")'
     resaltar: 'button:has-text("Agregar presentación")'
   - paso: 4
     acciones:
       - abrir: 'button:has-text("Agregar presentación")'
+      - llenar: { 'input[placeholder="Ej. PACA X 24"]': 'CAJA X 12' }
+      - elegir: { 'button:has-text("Buscar unidad...")': 'Caja' }
+      - llenar: { 'div:has(> label:has-text("Factor")) input': '12', 'div:has(> label:has-text("Precio de venta")) input': '210000' }
       - pausa: 600
-    resaltar: 'text=Factor * >> xpath=ancestor::div[3]'
-    detener_si_falla: false
+    guarda_datos: true
+    resaltar: 'div:has(> label:has-text("Factor")) >> xpath=../..'
+    despues:
+      - clic: 'main button:text-is("Guardar")'
+      - pausa: 2500
   - paso: 5
-    manual: línea de una factura de compra con la presentación elegida (Caja x 12)
+    acciones:
+      - ir: /{tenant}/purchase-invoices/create
+      - esperar: 'text=Completa la factura con el documento del proveedor'
+      - elegir: { 'button:has-text("Buscar proveedor...")': 'DISTRIBUIDORA' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Ítems de la Factura")) >> button:has-text("Buscar producto...")': 'CAFÉ' }
+      - elegir: { 'button[aria-haspopup="listbox"]:has-text("Unidad") >> nth=0': 'CAJA X 12' }
+      - llenar: { 'input#purchase-line-quantity-_tmp_1': '2' }
+      - llenar: { 'input#purchase-line-quantity-_tmp_1 >> xpath=following::input[1]': '132000' }
+      - pausa: 1200
+    resaltar: 'section:has(:is(h2,h3):has-text("Ítems de la Factura")) >> tbody tr >> nth=0'
   - paso: 6
-    manual: POS con una presentación agregada al carrito
+    acciones:
+      - ir: /{tenant}/pos
+      - esperar: '[data-testid="pos-catalog"]'
+      - escribir: { 'input[placeholder^="Buscar producto"]': 'café' }
+      - pausa: 1200
+      - abrir: '[data-testid="pos-catalog"] >> text=CAJA X 12'
+      - pausa: 800
+    resaltar: '[data-testid="pos-catalog"] >> text=CAJA X 12 >> xpath=ancestor::*[self::button or self::div][3]'
   - paso: 7
     acciones:
-      - abrir: 'button:has-text("Referencias de Proveedores")'
-      - pausa: 600
-    resaltar: 'text=Referencias de Proveedores >> xpath=ancestor::section[1]'
-    detener_si_falla: false
-  - paso: 8
-    acciones:
-      - abrir: 'button:has-text("Precios")'
-      - pausa: 600
-    resaltar: 'button:has-text("Añadir precio")'
-    detener_si_falla: false
+      - ir: /{tenant}/products
+      - abrir: 'tbody tr:has-text("CAFÉ MOLIDO") >> nth=0'
+      - esperar: 'main a:has-text("Editar producto")'
+      - abrir: 'main a:has-text("Editar producto")'
+      - esperar: 'main button:text-is("Referencias de Proveedores")'
+      - abrir: 'main button:text-is("Referencias de Proveedores")'
+      - pausa: 800
+    resaltar: 'main button:has-text("Agregar Referencia"), main button:has-text("Agregar referencia") >> nth=0'

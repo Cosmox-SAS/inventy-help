@@ -125,6 +125,7 @@ nav:
       - ventas/index.md
       - ¿Cómo creo un tipo de cliente?: ventas/tipos-de-cliente.md
       - ¿Cómo creo un cliente?: ventas/crear-cliente.md
+      - ¿Cómo manejo las listas de precios?: ventas/listas-de-precios.md
       - ¿Cómo hago una factura de venta?: ventas/crear-factura-venta.md
       - ¿Cómo registro una devolución de venta?: ventas/devolucion-venta.md
   - Punto de venta:
