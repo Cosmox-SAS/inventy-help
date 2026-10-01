@@ -8,7 +8,7 @@ menu: "Ventas › Facturas"
 permisos:
   - Ver facturas de venta
   - Crear facturas de venta
-revisado: 2026-09-30
+revisado: 2026-10-01
 search:
   boost: 2
 tags:
@@ -21,6 +21,9 @@ tags:
 <p class="tambien-se-busca">También se busca como: facturar, crear factura, nueva factura, factura a crédito, cuenta de cobro, vender a crédito, factura de contado.</p>
 
 **Antes de empezar:** el cliente y los productos deben existir.
+
+!!! warning "Si vas a vender a crédito"
+    Si tu empresa usa Contabilidad, el cliente debe tener un **Tipo de cliente** con **Cuenta por cobrar** (en su ficha: **Editar › Datos del rol de cliente › Tipo de cliente**). Si no, al validar sale *“Configura una cuenta de cuentas por cobrar en el tipo de cliente para facturar a crédito con contabilidad activa.”* Ver [cómo solucionarlo](../soluciones-rapidas/ventas.md#al-validar-la-factura-a-credito-me-pide-configurar-la-cuenta-contable).
 
 ## Pasos
 

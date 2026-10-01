@@ -52,7 +52,7 @@ tags:
 
 | Problema | Solución |
 |---|---|
-| Al facturar a crédito: *Configura la cuenta por cobrar en el tipo de cliente* | El cliente no tiene tipo, o su tipo no tiene **Cuenta por cobrar**. Asígnale uno con cuenta. |
+| Al facturar a crédito: *Configura una cuenta de cuentas por cobrar en el tipo de cliente…* | El cliente no tiene tipo, o su tipo no tiene **Cuenta por cobrar**. Asígnale uno con cuenta y luego abre la factura con **Editar** y valídala desde ahí. |
 | No aparece la cuenta para elegir | Carga primero las [cuentas auxiliares por defecto](../contabilidad/cuentas-auxiliares.md). |
 | El descuento no se aplica en el POS a un producto | Si el cliente tiene descuento por tipo, no se puede poner además un descuento manual en esa línea. |
 

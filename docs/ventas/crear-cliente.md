@@ -57,7 +57,7 @@ tags:
 | *El número de identificación contiene caracteres no válidos.* | Escribe sin puntos, comas ni espacios. |
 | *No pudimos leer el RUT…* | Escribe los datos a mano. |
 | *Este cliente no tiene cupo de crédito disponible.* | Sube el **Límite de crédito** o vende de contado. |
-| Al facturar a crédito: *Configura la cuenta por cobrar en el tipo de cliente* | Asígnale un [tipo de cliente](tipos-de-cliente.md) con **Cuenta por cobrar**. |
+| Al facturar a crédito: *Configura una cuenta de cuentas por cobrar en el tipo de cliente…* | Asígnale un [tipo de cliente](tipos-de-cliente.md) con **Cuenta por cobrar**. Luego abre la factura con **Editar** y valídala desde ahí. |
 | El cliente no debe recibir factura electrónica | Marca **No genera documentos electrónicos**. |
 | Al cliente no se le cobra IVA | Marca **No calcula impuestos en ventas**: el precio se toma como base. |
 

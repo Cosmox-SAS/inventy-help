@@ -22,6 +22,9 @@ tags:
 ??? question "¿Por dónde empiezo a configurar mi empresa?"
     Sigue la lista de [Recomendaciones para comenzar](primeros-pasos/recomendaciones.md).
 
+??? question "¿Dónde está «Ajustes» en Ventas? (o cualquier ruta del manual)"
+    Las rutas como <span class="ruta">Ventas › Ajustes › Tipos de clientes</span> se leen: ícono **Ventas** de la barra izquierda → título de sección **AJUSTES** en su menú → opción **Tipos de clientes**. En Ventas, *Ajustes* tiene **Vendedores**, **Tipos de clientes**, **Medios de Pago** y **Listas de precios**. Atajo: <kbd>Ctrl</kbd> + <kbd>K</kbd> y escribe el nombre. Ver [Conociendo la pantalla principal](primeros-pasos/pantalla-principal.md#como-leer-las-rutas-del-manual).
+
 ??? question "¿Puedo usar Inventy desde el celular?"
     Sí. Inventy funciona en el navegador del celular o la tableta. Los vendedores y repartidores de **Distribución** usan además la app móvil. [PENDIENTE DE VALIDACIÓN FUNCIONAL: pantallas optimizadas para celular.]
 
@@ -29,6 +32,9 @@ tags:
 
 ??? question "¿Cómo hago una factura?"
     Para ventas rápidas, usa el [POS](pos/vender-en-pos.md). Para ventas de oficina o a crédito, usa [Ventas › Facturas](ventas/crear-factura-venta.md).
+
+??? question "Al validar una venta a crédito me pide configurar una cuenta contable"
+    Al cliente le falta el **Tipo de cliente**, o su tipo no tiene **Cuenta por cobrar**. Arréglalo en el cliente (**Editar › Datos del rol de cliente › Tipo de cliente**) o en <span class="ruta">Ventas › Ajustes › Tipos de clientes</span> (elige la **Cuenta por cobrar**). Luego abre la factura con **Editar** y valídala desde ahí para que tome la cuenta. Ver [la solución paso a paso](soluciones-rapidas/ventas.md#al-validar-la-factura-a-credito-me-pide-configurar-la-cuenta-contable).
 
 ??? question "¿Puedo editar una factura después de validarla?"
     No. Una factura validada no se edita: se corrige con una [devolución](ventas/devolucion-venta.md). Por eso, antes de validar, Inventy te pide confirmar.

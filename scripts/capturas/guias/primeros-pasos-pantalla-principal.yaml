@@ -1,0 +1,15 @@
+guia: primeros-pasos/pantalla-principal.md
+# Solo fotos (no guarda nada): menú de Ventas con la sección AJUSTES y el buscador Ctrl+K.
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/sale-invoices
+      - esperar: 'text=Tipos de clientes'
+    resaltar: 'button:has-text("Ajustes") >> xpath=..'
+  - paso: 2
+    acciones:
+      - tecla: Control+k
+      - esperar: 'input[placeholder="Buscar en el menú…"]'
+      - escribir: { 'input[placeholder="Buscar en el menú…"]': 'tipos de clientes' }
+      - pausa: 800
+    resaltar: 'input[placeholder="Buscar en el menú…"] >> xpath=ancestor::*[@role="dialog"][1]'

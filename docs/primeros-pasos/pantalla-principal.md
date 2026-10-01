@@ -1,12 +1,12 @@
 ---
 title: Conociendo la pantalla principal
-description: Cómo está organizada la pantalla de Inventy, el menú lateral y la búsqueda rápida.
+description: Cómo está organizada la pantalla de Inventy, cómo leer rutas como Ventas › Ajustes y la búsqueda rápida.
 estado: pendiente-validacion
 tipo: concepto
 modulo: primeros-pasos
 menu: Inicio
 permisos: []
-revisado: 2026-09-29
+revisado: 2026-10-01
 tags:
   - Primeros pasos
   - Navegación
@@ -14,7 +14,7 @@ tags:
 
 # Conociendo la pantalla principal
 
-<p class="tambien-se-busca">También se busca como: dashboard, tablero, inicio, menú, navegar, dónde está, buscar una opción.</p>
+<p class="tambien-se-busca">También se busca como: dashboard, tablero, inicio, menú, navegar, dónde está, buscar una opción, dónde está ajustes, no encuentro el menú, secciones del menú.</p>
 
 ## El menú lateral
 
@@ -23,7 +23,7 @@ A la izquierda está el **menú lateral**. Cada ícono abre un grupo de opciones
 | Menú | Qué encuentras |
 |---|---|
 | **Inicio** | Resumen de tu negocio. |
-| **Ventas** | POS, Facturas, Facturas recurrentes, Devoluciones, Clientes, Vendedores, Medios de Pago y reportes de ventas. |
+| **Ventas** | POS, Facturas, Facturas recurrentes, Devoluciones, Notas crédito, Clientes; en **Ajustes**: Vendedores, Tipos de clientes, Medios de Pago y Listas de precios; y los reportes de ventas. |
 | **Restaurante** | Pedidos, Tablero de pedidos, Estaciones de preparación, Mesas, Domicilios y Propinas. |
 | **Tienda web** | Catálogo web, Pedidos web y su configuración. |
 | **Compras** | Órdenes de Compra, Facturas, Legalización de gastos, Devoluciones y Proveedores. |
@@ -39,12 +39,26 @@ A la izquierda está el **menú lateral**. Cada ícono abre un grupo de opciones
 !!! info "¿No ves alguno de estos menús?"
     Es normal. Solo aparecen los módulos que tiene tu plan, que el administrador activó y para los que tu rol tiene permiso. Ver [¿Por qué no veo un menú?](../soluciones-rapidas/usuarios.md#no-veo-un-menu-o-una-opcion).
 
-!!! captura "CAPTURA PENDIENTE"
-    Pantalla de Inicio con el menú lateral abierto, señalando el menú **Ventas** y su submenú.
+## ¿Cómo leer las rutas del manual?
+
+En el manual verás rutas como <span class="ruta">Ventas › Ajustes › Tipos de clientes</span>. Se leen así:
+
+1. **Ventas**: el ícono de la barra de la izquierda (el de **$**). Haz clic y se abre su menú.
+2. **Ajustes**: el **título de una sección** dentro de ese menú (en mayúsculas: *OPERACIÓN*, *AJUSTES*, *REPORTES*). No es un botón: es un grupo.
+3. **Tipos de clientes**: la opción debajo de ese título. Haz clic en ella.
+
+![Menú de Ventas con la sección AJUSTES](../assets/capturas/primeros-pasos/pantalla-principal/paso-1.png)
+
+!!! tip "¿No ves la sección?"
+    - Si el título tiene la flechita hacia abajo, está **cerrado**: haz clic en él para desplegarlo.
+    - Si no ves el menú, haz clic en el botón de **mostrar menú** (arriba, junto al logo).
+    - Si aun así no aparece, tu rol no tiene permiso para esa opción o el módulo no está activo.
 
 ## Búsqueda rápida en el menú
 
-¿No sabes dónde está una opción? Presiona <kbd>Ctrl</kbd> + <kbd>K</kbd> (en Mac, <kbd>⌘</kbd> + <kbd>K</kbd>). Se abre el campo **Buscar en el menú…**: escribe parte del nombre (por ejemplo, *cierre* o *kardex*) y presiona <kbd>Enter</kbd>.
+¿No sabes dónde está una opción? Presiona <kbd>Ctrl</kbd> + <kbd>K</kbd> (en Mac, <kbd>⌘</kbd> + <kbd>K</kbd>). Se abre el campo **Buscar en el menú…**: escribe parte del nombre (por ejemplo, *tipos de clientes*, *cierre* o *kardex*) y presiona <kbd>Enter</kbd>.
+
+![Buscador del menú con Ctrl + K](../assets/capturas/primeros-pasos/pantalla-principal/paso-2.png)
 
 ## El panel de Inicio
 
