@@ -1,20 +1,37 @@
 guia: compras/registrar-factura-compra.md
+# Compra directa al proveedor de compras/crear-proveedor (orden 58).
+# Requiere la cuenta a pagar de contabilidad/configuracion-contable (orden 9).
+orden: 60
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/purchase-invoices
       - esperar: 'text=Facturas de Compra'
-    resaltar: 'a:has-text("Nueva Factura"), button:has-text("Nueva Factura")'
+    resaltar: 'main a:has-text("Nueva Factura"), main button:has-text("Nueva Factura") >> nth=0'
   - paso: 2
     acciones:
-      - abrir: 'a:has-text("Nueva Factura"), button:has-text("Nueva Factura")'
-      - esperar: 'text=Nueva Factura de Compra'
+      - ir: /{tenant}/purchase-invoices/create
+      - esperar: 'text=Completa la factura con el documento del proveedor'
     resaltar: 'text=Completa la factura con el documento del proveedor >> xpath=ancestor::div[2]'
   - paso: 3
-    resaltar: 'text=Compra Directa >> xpath=ancestor::div[2]'
+    resaltar: 'button:has-text("Compra Directa") >> xpath=..'
   - paso: 4
-    resaltar: 'text=Información General >> xpath=ancestor::section[1]'
+    acciones:
+      - elegir: { 'button:has-text("Buscar proveedor...")': 'DISTRIBUIDORA' }
+      - llenar: { '#supplier_invoice_number': 'FE-{sufijo}' }
+      - pausa: 800
+    resaltar: 'section:has(:is(h2,h3):has-text("Información General"))'
   - paso: 5
-    resaltar: 'text=Ítems de la Factura >> xpath=ancestor::section[1]'
+    acciones:
+      - elegir: { 'section:has(:is(h2,h3):has-text("Ítems de la Factura")) >> button:has-text("Buscar producto...")': 'CAFÉ' }
+      - llenar: { 'input#purchase-line-quantity-_tmp_1': '24' }
+      - pausa: 1000
+    resaltar: 'section:has(:is(h2,h3):has-text("Ítems de la Factura"))'
   - paso: 6
-    resaltar: 'button:has-text("Registrar Factura")'
+    guarda_datos: true
+    resaltar: '[data-testid="purchase-invoice-form-submit"]'
+    despues:
+      - clic: '[data-testid="purchase-invoice-form-submit"]'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Validar factura")'
+      - pausa: 3500

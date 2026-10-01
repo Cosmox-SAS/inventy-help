@@ -37,11 +37,11 @@ tags:
 
 ![Paso 4: información general](../assets/capturas/compras/registrar-factura-compra/paso-4.png)
 
-**Paso 5.** En **Ítems de la Factura**, haz clic en **Agregar ítem** y registra cada producto con cantidad y precio.
+**Paso 5.** En **Ítems de la Factura**, elige el producto en **Buscar producto...** y escribe la **Cant.**. El **Precio** se llena con el costo del producto (cámbialo si la factura dice otro) y el IVA sale de su catálogo. Usa **Agregar nueva línea** para más productos.
 
 ![Paso 5: ítems de la factura](../assets/capturas/compras/registrar-factura-compra/paso-5.png)
 
-**Paso 6.** Revisa el **Total a pagar** y haz clic en **Registrar Factura**. Confirma en **¿Validar factura?**
+**Paso 6.** Revisa el **Total a pagar** (abajo) y haz clic en **Registrar Factura**. En **¿Validar factura?** haz clic en **Validar factura**: se genera una **recepción automática de mercancía**.
 
 ![Paso 6: botón Registrar Factura](../assets/capturas/compras/registrar-factura-compra/paso-6.png)
 
