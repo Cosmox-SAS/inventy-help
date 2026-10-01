@@ -43,7 +43,7 @@ tags:
     Con una **lista de precios**: actívala en <span class="ruta">Configuración › Módulos › Ventas</span>, créala, ponle precio a los productos (pestaña **Precios** del producto) y asígnala en la ficha del cliente. Ver [¿Cómo manejo las listas de precios?](ventas/listas-de-precios.md).
 
 ??? question "¿Qué precio cobra Inventy si el cliente tiene lista de precios?"
-    El de la **lista del cliente** para ese producto y tu sede; si no tiene, en el POS el de la **lista de la caja**; si tampoco, el **precio base**. El descuento del tipo de cliente se aplica encima.
+    El de la **lista del cliente** para ese producto y tu sede; si no tiene, en el POS el de la **lista de la caja**; si tampoco, el **precio base**. Si el cajero eligió una lista en la venta, manda esa. El descuento del tipo de cliente se aplica encima.
 
 ## Caja
 
@@ -68,7 +68,7 @@ tags:
     Con un traslado: se **solicita**, lo **aprueba** la sede de origen y lo **recibe** la sede de destino. Ver [¿Cómo hago un traslado entre sedes?](productos-inventario/traslados.md).
 
 ??? question "¿Puedo vender si no tengo existencias?"
-    Solo si el administrador activó **Permitir stock negativo** en <span class="ruta">Configuración › Módulos › Inventario</span>.
+    Solo si el administrador activó **Permitir stock negativo** en <span class="ruta">Configuración › Módulos › Inventario</span>. Con esa opción activa, el POS también deja agregar productos, presentaciones y variantes sin existencias.
 
 ## Utilidad y reportes
 

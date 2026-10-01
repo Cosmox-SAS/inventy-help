@@ -9,7 +9,7 @@ permisos:
   - Crear traslados de inventario
   - Aprobar traslados de inventario
   - Confirmar recepción de traslados
-revisado: 2026-09-30
+revisado: 2026-10-01
 search:
   boost: 2
 tags:
@@ -59,7 +59,7 @@ tags:
 
 | Problema | Solución |
 |---|---|
-| No aparece **Aprobar** | Debe aprobarlo **otro usuario** (no quien lo solicitó), asignado a la **sede de origen** y con el permiso **Aprobar traslados de inventario**. |
+| No aparece **Aprobar** | Debe aprobarlo **otro usuario** (no quien lo solicitó), asignado a la **sede de origen** y con el permiso **Aprobar traslados de inventario**. Excepción: con el permiso **Aprobar traslados propios** (además del anterior), el usuario puede aprobar cualquier traslado, incluso los suyos y de otra sede. |
 | No aparece **Recibir** | Debe hacerlo un usuario de la **sede de destino** con el permiso **Confirmar recepción de traslados**, o quien lo solicitó. |
 | *Stock insuficiente en la sede de origen…* | Aprueba menos cantidad o deja ese producto en 0. |
 | *La sede de origen y destino no pueden ser la misma* | Cambia una de las dos sedes. |

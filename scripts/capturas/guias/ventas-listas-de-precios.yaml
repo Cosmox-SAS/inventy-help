@@ -80,13 +80,28 @@ pasos:
       - pausa: 1000
     resaltar: '[data-testid="pos-cart"]'
   - paso: 7
-    # Solo muestra el campo: no guarda la caja.
+    # Marca "Permitir cambiar la lista…" en la caja ABIERTA. La lista elegida es solo
+    # para la foto: se quita antes de guardar para no cambiar los precios del POS.
     acciones:
       - ir: /{tenant}/cash/registers
-      - abrir: 'tbody tr:has-text("Caja Mostrador") >> nth=0 >> button[aria-label="Acciones"]'
+      - abrir: 'tbody tr:has-text("Caja Mostrador"):has-text("Abierta") >> button[aria-label="Acciones"]'
       - abrir: '[role=menu] >> text=Editar'
       - esperar: 'VENTANA'
       - elegir: { 'VENTANA >> button:has-text("Buscar lista de precios...")': 'Mayorista' }
+      - abrir: 'VENTANA >> label:has-text("Permitir cambiar la lista de precios")'
       - pausa: 600
+    guarda_datos: true
     resaltar: 'VENTANA >> label:has-text("Lista de precios") >> xpath=..'
     recortar: 'VENTANA'
+    despues:
+      - abrir: 'VENTANA >> label:has-text("Lista de precios") >> xpath=.. >> [aria-label="Limpiar selección"]'
+      - pausa: 500
+      - clic: 'VENTANA >> button:has-text("Guardar cambios")'
+      - pausa: 2500
+  - paso: 8
+    acciones:
+      - ir: /{tenant}/pos
+      - esperar: '[data-testid="pos-catalog"]'
+      - abrir: 'button:has-text("Automática")'
+      - pausa: 1000
+    resaltar: 'text=Lista de precios >> xpath=..'

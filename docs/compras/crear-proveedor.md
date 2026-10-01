@@ -8,7 +8,7 @@ menu: "Compras › Proveedores"
 permisos:
   - Ver proveedores
   - Crear proveedores
-revisado: 2026-09-30
+revisado: 2026-10-01
 tags:
   - Compras
   - Proveedores
@@ -52,6 +52,7 @@ tags:
 
 | Problema | Solución |
 |---|---|
+| Es extranjero con NIT | Elige el tipo **NIT-E**: acepta letras, números y guion (hasta 20 caracteres). |
 | *Este número de documento ya está registrado para este tipo de identificación.* | El proveedor ya existe: búscalo en la lista. |
 | Sus compras deben generar documento soporte | Marca **No obligado a facturar** ([guía](../facturacion-electronica/documento-soporte.md)). |
 | La factura de compra no calcula el vencimiento | Revisa el **Plazo de pago (días)** del proveedor. |

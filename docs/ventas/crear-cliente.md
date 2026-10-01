@@ -8,7 +8,7 @@ menu: "Ventas › Clientes"
 permisos:
   - Ver clientes
   - Crear clientes
-revisado: 2026-09-30
+revisado: 2026-10-01
 tags:
   - Ventas
   - Clientes
@@ -52,6 +52,7 @@ tags:
 
 | Problema | Solución |
 |---|---|
+| Es extranjero con NIT | Elige el tipo **NIT-E**: acepta letras, números y guion (hasta 20 caracteres). |
 | *Este número de documento ya está registrado para este tipo de identificación.* | El cliente ya existe: búscalo por documento. |
 | *El número de identificación contiene caracteres no válidos.* | Escribe sin puntos, comas ni espacios. |
 | *No pudimos leer el RUT…* | Escribe los datos a mano. |
