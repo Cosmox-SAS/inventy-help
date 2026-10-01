@@ -22,7 +22,7 @@ tags:
 
 ## Pasos
 
-**Paso 1.** Ingresa a <span class="ruta">Ventas › Ajustes › Tipos de clientes</span> y haz clic en **Nuevo tipo de cliente**.
+**Paso 1.** En la barra de la izquierda haz clic en **Ventas** (ícono **$**). En el menú que se abre, baja hasta la sección **AJUSTES** y haz clic en **Tipos de clientes**. Luego haz clic en **Nuevo tipo de cliente**.
 
 ![Paso 1: botón Nuevo tipo de cliente](../assets/capturas/ventas/tipos-de-cliente/paso-1.png)
 

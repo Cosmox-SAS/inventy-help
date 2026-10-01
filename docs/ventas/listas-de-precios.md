@@ -29,7 +29,7 @@ tags:
 
 ![Paso 1: opción listas de precios en Módulos › Ventas](../assets/capturas/ventas/listas-de-precios/paso-1.png)
 
-**Paso 2.** Ingresa a <span class="ruta">Ventas › Ajustes › Listas de precios</span> y haz clic en **Nueva lista**.
+**Paso 2.** En la barra de la izquierda haz clic en **Ventas** (ícono **$**), baja hasta la sección **AJUSTES** y haz clic en **Listas de precios**. Luego haz clic en **Nueva lista**.
 
 ![Paso 2: botón Nueva lista](../assets/capturas/ventas/listas-de-precios/paso-2.png)
 
