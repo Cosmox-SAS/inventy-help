@@ -1,36 +1,45 @@
 guia: pos/vender-en-pos.md
-# Requiere caja abierta y al menos un producto con existencias.
-# Variable de la demo: producto que se busca.
+# Requiere la caja abierta (pos/abrir-caja, orden 31) y el café con existencias
+# (productos-inventario/ajuste-inventario, orden 16). Registra UNA venta real.
+orden: 32
 pasos:
   - paso: 1
     acciones:
-      - menu: POS
+      - ir: /{tenant}/pos
       - esperar: '[data-testid="pos-catalog"]'
     resaltar: '[data-testid="pos-catalog"]'
   - paso: 2
     acciones:
-      - escribir: { '[data-testid="pos-search"] input, input[placeholder="Buscar producto…"]': 'a' }
-      - pausa: 800
-    resaltar: 'input[placeholder="Buscar producto…"]'
+      - escribir: { 'input[placeholder^="Buscar producto"]': 'café' }
+      - pausa: 1200
+    resaltar: 'input[placeholder^="Buscar producto"]'
   - paso: 3
     acciones:
-      - abrir: '[data-testid="pos-catalog"] button >> nth=0'
-      - pausa: 500
+      - abrir: '[data-testid="pos-catalog"] >> text=CAFÉ MOLIDO 500 G'
+      - pausa: 800
     resaltar: '[data-testid="pos-cart"]'
   - paso: 4
-    resaltar: '[data-testid="pos-cart"] li >> nth=0'
+    acciones:
+      - abrir: '[data-testid="pos-cart"] >> text=CAFÉ MOLIDO 500 G'
+      - pausa: 600
+    resaltar: '[data-testid="pos-cart"] >> text=CAFÉ MOLIDO 500 G >> xpath=ancestor::*[self::li or self::div][2]'
+    despues:
+      - tecla: Escape
   - paso: 5
-    resaltar: '[data-testid="pos-cart"] >> text=/Consumidor Final|Seleccionar cliente/'
+    resaltar: 'text=Consumidor Final >> xpath=ancestor::*[self::button or self::div][2]'
   - paso: 6
     resaltar: 'aside [data-testid="pos-submit-order"]'
   - paso: 7
     acciones:
       - abrir: 'aside [data-testid="pos-submit-order"]'
       - esperar: '[data-testid="pos-modal-payment"]'
+      - abrir: '[data-testid="pos-numpad-key-exact"]'
     resaltar: '[data-testid="pos-numpad"]'
     recortar: 'VENTANA'
   - paso: 8
-    acciones:
-      - abrir: '[data-testid="pos-numpad-key-exact"]'
-    resaltar: 'button:has-text("Confirmar cobro")'
+    guarda_datos: true
+    resaltar: 'VENTANA >> button:has-text("Confirmar cobro")'
     recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Confirmar cobro")'
+      - esperar: 'text=Venta registrada con éxito'

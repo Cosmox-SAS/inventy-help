@@ -25,6 +25,18 @@ tags:
 
 **INFORMACIÓN PARA SOPORTE:** nombre de la caja, sede, usuario, captura.
 
+## "Al cobrar dice que la caja no tiene cuenta contable"
+
+**PROBLEMA:** al confirmar el cobro aparece *“La caja de la sesión abierta no tiene una cuenta contable configurada. Configure la cuenta en la caja registradora.”*
+
+**CAUSA:** la empresa usa Contabilidad y la caja se creó sin **Cuenta contable**.
+
+**SOLUCIÓN:** en <span class="ruta">Tesorería › Caja › Cajas</span>, abre **Acciones › Editar** de la caja, elige la **Cuenta contable** (ej. *Caja general*) y haz clic en **Guardar cambios**. No hace falta cerrar la caja. Vuelve a cobrar.
+
+**ESCALAR A SOPORTE:** si no aparece ninguna cuenta para elegir (carga antes las [cuentas auxiliares por defecto](../contabilidad/cuentas-auxiliares.md)).
+
+**INFORMACIÓN PARA SOPORTE:** nombre de la caja, sede, captura del mensaje.
+
 ## "No hay cajas para abrir"
 
 **PROBLEMA:** aparece *“No hay cajas disponibles para abrir en este momento.”*

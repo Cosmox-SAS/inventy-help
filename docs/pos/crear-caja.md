@@ -35,7 +35,7 @@ tags:
 
 ![Paso 3: campo Centro de costo](../assets/capturas/pos/crear-caja/paso-3.png)
 
-**Paso 4.** (Opcional) Elige el **Cliente por defecto** (si lo dejas vacío, se usa Consumidor Final), la **Cuenta contable** del efectivo y el **Monto máximo en caja**.
+**Paso 4.** Elige la **Cuenta contable** del efectivo (ej. *Caja general*). **Es obligatoria si tu empresa usa Contabilidad**: sin ella, el POS no deja cobrar. Si quieres, elige también el **Cliente por defecto** (vacío = Consumidor Final) y el **Monto máximo en caja**.
 
 ![Paso 4: campos opcionales de la caja](../assets/capturas/pos/crear-caja/paso-4.png)
 
@@ -56,7 +56,7 @@ tags:
 | *No tienes permiso para crear una caja.* | Pide el permiso **Crear caja** al administrador. |
 | No hay centros de costo | Créalo en <span class="ruta">Configuración › Centros de Costo</span>. |
 | El POS me pide consignar a cada rato | El **Monto máximo en caja** es muy bajo. Súbelo o déjalo en 0 (sin límite). |
-| *El asiento contable no está balanceado* al vender en efectivo | Falta la **Cuenta contable** de la caja (si usas contabilidad). |
+| *La caja de la sesión abierta no tiene una cuenta contable configurada…* | Edita la caja (**Acciones › Editar**) y elige su **Cuenta contable**. Se puede hacer con la caja abierta. |
 
 ## Relacionados
 

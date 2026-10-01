@@ -17,7 +17,9 @@ pasos:
     resaltar: 'VENTANA >> text=Centro de costo * >> xpath=..'
     recortar: 'VENTANA'
   - paso: 4
-    resaltar: 'VENTANA >> text=Cliente por defecto >> xpath=ancestor::div[2]'
+    acciones:
+      - elegir: { 'VENTANA >> text=Buscar cuenta auxiliar...': 'Caja general' }
+    resaltar: 'VENTANA >> text=Cuenta contable >> xpath=ancestor::div[2]'
     recortar: 'VENTANA'
   - paso: 5
     resaltar: 'VENTANA >> button:has-text("Crear caja")'

@@ -62,6 +62,7 @@ tags:
 | Problema | Solución |
 |---|---|
 | *Debes abrir una caja antes de registrar una venta.* | [Abre la caja](abrir-caja.md). |
+| *La caja de la sesión abierta no tiene una cuenta contable configurada…* | En <span class="ruta">Tesorería › Caja › Cajas</span>, **Acciones › Editar** la caja y elige su **Cuenta contable**. |
 | *Ya llegaste al monto máximo de la caja…* | Usa **Registrar consignación** en el POS. |
 | *Necesitas asignar un cliente antes de facturar.* | Usa **Asignar cliente** (ventas a crédito requieren cliente). |
 | *Selecciona un vendedor antes de facturar.* | Tu empresa exige vendedor: selecciónalo al cobrar. |

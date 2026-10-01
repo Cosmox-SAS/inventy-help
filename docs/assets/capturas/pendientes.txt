@@ -26,12 +26,6 @@ assets/capturas/pos/cierre-de-caja/paso-3.png
 assets/capturas/pos/cierre-de-caja/paso-4.png
 assets/capturas/pos/cierre-de-caja/paso-5.png
 assets/capturas/pos/cierre-de-caja/paso-6.png
-assets/capturas/pos/vender-en-pos/paso-3.png
-assets/capturas/pos/vender-en-pos/paso-4.png
-assets/capturas/pos/vender-en-pos/paso-5.png
-assets/capturas/pos/vender-en-pos/paso-6.png
-assets/capturas/pos/vender-en-pos/paso-7.png
-assets/capturas/pos/vender-en-pos/paso-8.png
 assets/capturas/primeros-pasos/activar-modulos/paso-4.png
 assets/capturas/primeros-pasos/configurar-empresa/paso-1.png
 assets/capturas/primeros-pasos/configurar-empresa/paso-2.png
