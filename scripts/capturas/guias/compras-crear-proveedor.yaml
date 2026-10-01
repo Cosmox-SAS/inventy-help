@@ -1,0 +1,32 @@
+guia: compras/crear-proveedor.md
+orden: 58
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/suppliers
+      - esperar: 'main'
+    resaltar: 'main a:has-text("Nuevo proveedor"), main button:has-text("Nuevo proveedor") >> nth=0'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/suppliers/create
+      - esperar: '#identification_number'
+      - abrir: 'main button:has-text("Empresa") >> nth=0'
+      - pausa: 500
+      - llenar: { '#identification_number': '900{sufijo}', '#company_name': 'Distribuidora Café del Valle S.A.S' }
+    resaltar: 'section:has(:is(h2,h3):has-text("Identificación"))'
+  - paso: 3
+    acciones:
+      - llenar: { '#email': 'compras@cafedelvalle.com', '#mobile': '3109876543', '#loc-address': 'Carrera 5 # 10 - 20' }
+    resaltar: 'section:has(:is(h2,h3):has-text("Información de contacto"))'
+  - paso: 4
+    acciones:
+      - llenar: { '#payment_terms': '30', '#bank_name': 'Bancolombia', '#bank_account': '12345678901' }
+    resaltar: 'section:has(:is(h2,h3):has-text("Datos del proveedor"))'
+  - paso: 5
+    resaltar: 'section:has(:is(h2,h3):has-text("Retenciones"))'
+  - paso: 6
+    guarda_datos: true
+    resaltar: 'button:has-text("Crear proveedor")'
+    despues:
+      - clic: 'button:has-text("Crear proveedor")'
+      - pausa: 3000

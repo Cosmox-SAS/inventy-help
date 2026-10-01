@@ -119,6 +119,7 @@ nav:
       - ¿Cómo manejo las presentaciones de compra y de venta?: productos-inventario/presentaciones.md
   - Compras:
       - compras/index.md
+      - ¿Cómo creo un proveedor?: compras/crear-proveedor.md
       - ¿Cómo registro una factura de compra?: compras/registrar-factura-compra.md
   - Ventas:
       - ventas/index.md
