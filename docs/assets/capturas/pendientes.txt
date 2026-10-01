@@ -13,7 +13,6 @@ assets/capturas/finanzas/anticipos/paso-3.png
 assets/capturas/finanzas/anticipos/paso-4.png
 assets/capturas/finanzas/anticipos/paso-5.png
 assets/capturas/finanzas/registrar-egreso/paso-5.png
-assets/capturas/finanzas/registrar-ingreso/paso-5.png
 assets/capturas/impuestos/retenciones/paso-1.png
 assets/capturas/impuestos/retenciones/paso-2.png
 assets/capturas/impuestos/retenciones/paso-3.png

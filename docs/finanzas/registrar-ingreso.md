@@ -29,11 +29,11 @@ tags:
 
 ![Paso 2: tipo de movimiento y cliente](../assets/capturas/finanzas/registrar-ingreso/paso-2.png)
 
-**Paso 3.** Completa **Centro de costo**, **Fecha del pago**, **Destino** (caja o banco), **Medio de pago** e **Ingreso Total**.
+**Paso 3.** Completa **Centro de costo**, **Fecha del pago**, **Destino** (**Banco**, **Caja**, **Anticipo** o **Nota crédito**; con *Caja* se usa tu caja abierta), **Medio de pago** e **Ingreso Total**.
 
 ![Paso 3: información del ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-3.png)
 
-**Paso 4.** En **Distribución del ingreso**, asigna el valor a las facturas que paga hasta que diga **Distribución completa**.
+**Paso 4.** En **Distribución del ingreso**, haz clic en el **Saldo pendiente** de cada factura que paga: se llena su **Valor abono**. Sigue hasta que **Por distribuir** diga **Distribución completa**.
 
 ![Paso 4: distribución del ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-4.png)
 

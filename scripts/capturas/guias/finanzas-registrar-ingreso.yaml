@@ -1,18 +1,36 @@
 guia: finanzas/registrar-ingreso.md
+# Recauda la factura a crédito de ventas/crear-factura-venta (orden 40) en la caja abierta.
+orden: 50
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/income
       - esperar: 'text=Nuevo ingreso'
-    resaltar: 'a:has-text("Nuevo ingreso"), button:has-text("Nuevo ingreso")'
+    resaltar: 'main a:has-text("Nuevo ingreso"), main button:has-text("Nuevo ingreso") >> nth=0'
   - paso: 2
     acciones:
       - ir: /{tenant}/income/create
       - esperar: 'text=Información del ingreso'
-    resaltar: 'text=Tipo de movimiento * >> xpath=..'
+      - elegir: { 'text=Tipo de movimiento * >> xpath=.. >> button': 'Recaudo de cartera' }
+      - elegir: { 'button:has-text("Buscar cliente...")': 'LAURA' }
+    resaltar: 'text=Tipo de movimiento * >> xpath=ancestor::div[contains(@class,"grid")][1]'
   - paso: 3
-    resaltar: 'text=Información del ingreso >> xpath=ancestor::section[1]'
+    acciones:
+      - abrir: 'section:has(:is(h2,h3):has-text("Información del ingreso")) >> button:has-text("Caja")'
+      - pausa: 1000
+      - llenar: { '#total_cop': '37000' }
+      - pausa: 800
+    resaltar: 'section:has(:is(h2,h3):has-text("Información del ingreso"))'
   - paso: 4
-    resaltar: 'text=Distribución del ingreso >> xpath=ancestor::section[1]'
+    acciones:
+      - abrir: 'section:has(:is(h2,h3):has-text("Distribución del ingreso")) >> tbody tr >> nth=0 >> text=$ 37.000'
+      - pausa: 800
+    resaltar: 'section:has(:is(h2,h3):has-text("Distribución del ingreso"))'
   - paso: 5
-    resaltar: 'button:has-text("Finalizar ingreso")'
+    guarda_datos: true
+    resaltar: 'button:has-text("Finalizar")'
+    despues:
+      - clic: 'button:has-text("Finalizar")'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Finalizar")'
+      - pausa: 3000
