@@ -1,23 +1,34 @@
 guia: productos-inventario/crear-producto.md
+orden: 15
 pasos:
   - paso: 1
     acciones:
-      - menu: Productos
+      - ir: /{tenant}/products
       - esperar: 'text=Nuevo Producto'
-    resaltar: 'a:has-text("Nuevo Producto"), button:has-text("Nuevo Producto")'
+    resaltar: 'main >> a:has-text("Nuevo Producto"), main button:has-text("Nuevo Producto") >> nth=0'
   - paso: 2
     acciones:
-      - abrir: 'a:has-text("Nuevo Producto"), button:has-text("Nuevo Producto")'
+      - ir: /{tenant}/products/create
       - esperar: 'text=Crear producto'
-      - llenar: { '#name': 'Café molido 500 g', '#barcode': '7701234567890' }
-    resaltar: '#name'
+      - llenar: { '#name': 'Café molido 500 g', '#description': 'Café tostado y molido, bolsa de 500 g' }
+    resaltar: 'text=Identificación >> xpath=ancestor::div[contains(@class,"rounded")][1]'
   - paso: 3
+    acciones:
+      - elegir: { 'text=Buscar unidad...': 'Unidad' }
     resaltar: 'text=Unidad de medida * >> xpath=..'
   - paso: 4
     acciones:
       - llenar: { '#sale_price': '18500', '#cost': '11000' }
-    resaltar: 'text=Precio e impuestos >> xpath=ancestor::section[1]'
+      - elegir: { 'text=Buscar catálogo...': 'IVA 19%' }
+    resaltar: 'text=Precio e impuestos >> xpath=ancestor::div[contains(@class,"rounded")][1]'
   - paso: 5
-    resaltar: 'text=Comportamiento del producto >> xpath=ancestor::section[1]'
+    acciones:
+      - pausa: 300
+    resaltar: 'text=Comportamiento del producto >> xpath=ancestor::div[contains(@class,"rounded")][1]'
+    detener_si_falla: false
   - paso: 6
+    guarda_datos: true
     resaltar: 'button:has-text("Crear Producto")'
+    despues:
+      - clic: 'button:has-text("Crear Producto")'
+      - pausa: 2500

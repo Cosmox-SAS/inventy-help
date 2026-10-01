@@ -241,7 +241,12 @@ async function main() {
     const visible = args.includes('--ver');
     const indicePasos = args.indexOf('--pasos');
     const [pasoDesde, pasoHasta] = indicePasos >= 0 ? args[indicePasos + 1].split('-').map(Number) : [null, null];
-    const filtro = args.find((a, i) => !a.startsWith('--') && i !== indicePasos + 1);
+    const filtro = args.find((a, i) => !a.startsWith('--') && (indicePasos < 0 || i !== indicePasos + 1));
+    if (process.env.CAPTURAS_PERMITIR_GUARDAR === '1' && !filtro) {
+        // Guardar datos solo guía por guía: evita crear datos de más por accidente.
+        console.error('✗ Con CAPTURAS_PERMITIR_GUARDAR=1 debes indicar una guía (ej. npm run capturas -- pos/crear-caja).');
+        process.exit(1);
+    }
     const env = cargarEnv();
     const puedeGuardar = process.env.CAPTURAS_PERMITIR_GUARDAR === '1';
     const guias = cargarGuias(filtro);
