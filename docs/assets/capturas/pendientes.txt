@@ -59,11 +59,6 @@ assets/capturas/restaurante/domicilios/paso-6.png
 assets/capturas/restaurante/domicilios/paso-7.png
 assets/capturas/restaurante/varias-cuentas-mesa/paso-4.png
 assets/capturas/restaurante/varias-cuentas-mesa/paso-5.png
-assets/capturas/ventas/crear-cliente/paso-2.png
-assets/capturas/ventas/crear-cliente/paso-3.png
-assets/capturas/ventas/crear-cliente/paso-4.png
-assets/capturas/ventas/crear-cliente/paso-5.png
-assets/capturas/ventas/crear-cliente/paso-6.png
 assets/capturas/ventas/crear-factura-venta/paso-6.png
 assets/capturas/ventas/devolucion-venta/paso-3.png
 assets/capturas/ventas/devolucion-venta/paso-4.png

@@ -1,5 +1,5 @@
 # Reporte de capturas
 
-> Generado por `npm run capturas` el 1/10/2026, 12:30:54 p. m.. Ambiente: https://erp.cosmox.tech
+> Generado por `npm run capturas` el 1/10/2026, 12:31:49 p. m.. Ambiente: https://erp.cosmox.tech
 
-**8** capturas tomadas · **0** fallas · **69** imágenes siguen pendientes.
+**6** capturas tomadas · **0** fallas · **64** imágenes siguen pendientes.

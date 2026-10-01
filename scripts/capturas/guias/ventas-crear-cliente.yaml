@@ -1,20 +1,31 @@
 guia: ventas/crear-cliente.md
+orden: 20
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/customers
       - esperar: 'text=Nuevo cliente'
-    resaltar: 'a:has-text("Nuevo cliente"), button:has-text("Nuevo cliente")'
+    resaltar: 'main a:has-text("Nuevo cliente"), main button:has-text("Nuevo cliente") >> nth=0'
   - paso: 2
     acciones:
       - ir: /{tenant}/customers/create
-      - esperar: 'text=Registra un nuevo cliente en el sistema.'
-    resaltar: 'text=Adjunta el RUT del cliente en PDF. >> xpath=ancestor::div[2]'
+      - esperar: '#identification_number'
+    resaltar: 'label[for="rut"] >> xpath=ancestor::div[2]'
   - paso: 3
-    resaltar: 'text=Tipo de documento * >> xpath=ancestor::section[1]'
+    acciones:
+      - llenar: { '#identification_number': '10{sufijo}', '#first_name': 'Laura', '#last_name': 'Gómez' }
+    resaltar: 'section:has(:is(h2,h3):has-text("Identificación"))'
   - paso: 4
-    resaltar: 'text=Información de contacto >> xpath=ancestor::section[1]'
+    acciones:
+      - llenar: { '#email': 'laura.gomez@ejemplo.com', '#mobile': '3001234567', '#loc-address': 'Calle 12 # 34 - 56' }
+    resaltar: 'section:has(:is(h2,h3):has-text("Información de contacto"))'
   - paso: 5
-    resaltar: 'text=Datos del rol de cliente >> xpath=ancestor::section[1]'
+    acciones:
+      - llenar: { '#credit_limit_display': '2000000', '#payment_terms': '30' }
+    resaltar: 'section:has(:is(h2,h3):has-text("Datos del rol de cliente"))'
   - paso: 6
+    guarda_datos: true
     resaltar: 'button:has-text("Guardar cliente")'
+    despues:
+      - clic: 'button:has-text("Guardar cliente")'
+      - pausa: 3000

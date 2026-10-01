@@ -22,7 +22,7 @@ tags:
 
 ## Pasos
 
-**Paso 1.** Ingresa a <span class="ruta">Ventas › Clientes</span> y haz clic en **Nuevo cliente**.
+**Paso 1.** Ingresa a <span class="ruta">Ventas › Clientes</span> y haz clic en **Nuevo Cliente**.
 
 ![Paso 1: botón Nuevo cliente](../assets/capturas/ventas/crear-cliente/paso-1.png)
 
@@ -30,15 +30,15 @@ tags:
 
 ![Paso 2: carga del RUT](../assets/capturas/ventas/crear-cliente/paso-2.png)
 
-**Paso 3.** Completa **Tipo de documento**, **Número de documento** y el nombre o **Razón social**.
+**Paso 3.** En **Identificación**, completa el tipo y **Número de identificación**, y el **Nombre** y **Primer apellido** (o la razón social si es empresa).
 
 ![Paso 3: identificación del cliente](../assets/capturas/ventas/crear-cliente/paso-3.png)
 
-**Paso 4.** En **Información de contacto**, escribe el correo (para facturas electrónicas), teléfonos, **Sede** y dirección.
+**Paso 4.** En **Información de contacto** escribe el **Correo electrónico** (para facturas electrónicas) y los teléfonos; en **Ubicación**, la **Dirección** y el barrio.
 
 ![Paso 4: información de contacto](../assets/capturas/ventas/crear-cliente/paso-4.png)
 
-**Paso 5.** En **Datos del rol de cliente**, define **Límite de crédito** (0 = sin crédito), **Plazo de pago (días)**, vendedor, tipo de cliente y retención.
+**Paso 5.** En **Datos del rol de cliente**, define **Límite de crédito** (0 = sin crédito) y **Plazo de pago (días)**. Si aplica, marca **No calcula impuestos en ventas** y configura sus **Retenciones**.
 
 ![Paso 5: condiciones comerciales](../assets/capturas/ventas/crear-cliente/paso-5.png)
 
@@ -57,6 +57,7 @@ tags:
 | *No pudimos leer el RUT…* | Escribe los datos a mano. |
 | *Este cliente no tiene cupo de crédito disponible.* | Sube el **Límite de crédito** o vende de contado. |
 | El cliente no debe recibir factura electrónica | Marca **No genera documentos electrónicos**. |
+| Al cliente no se le cobra IVA | Marca **No calcula impuestos en ventas**: el precio se toma como base. |
 
 ## Relacionados
 
