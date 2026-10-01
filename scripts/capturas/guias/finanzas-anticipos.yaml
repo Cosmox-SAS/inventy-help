@@ -1,18 +1,74 @@
 guia: finanzas/anticipos.md
+# Anticipo de LAURA GÓMEZ ($50.000 a la caja abierta) y uso en POS y factura.
+orden: 65
 pasos:
   - paso: 1
     acciones:
       - ir: /{tenant}/income
       - esperar: 'text=Nuevo ingreso'
-    resaltar: 'a:has-text("Nuevo ingreso"), button:has-text("Nuevo ingreso")'
+    resaltar: 'main a:has-text("Nuevo ingreso"), main button:has-text("Nuevo ingreso") >> nth=0'
   - paso: 2
     acciones:
       - ir: /{tenant}/income/create
       - esperar: 'text=Información del ingreso'
-    resaltar: 'text=Información del ingreso >> xpath=ancestor::section[1]'
+      - elegir: { 'text=Tipo de movimiento * >> xpath=.. >> button': 'Anticipo de cliente' }
+      - elegir: { 'button:has-text("Buscar cliente...")': 'LAURA' }
+      - abrir: 'section:has(:is(h2,h3):has-text("Información del ingreso")) >> button:has-text("Caja")'
+      - pausa: 1000
+      - llenar: { '#total_cop': '50000' }
+      - pausa: 800
+    resaltar: 'section:has(:is(h2,h3):has-text("Información del ingreso"))'
   - paso: 3
-    resaltar: 'button:has-text("Finalizar ingreso")'
+    guarda_datos: true
+    resaltar: 'button:has-text("Finalizar")'
+    despues:
+      - clic: 'button:has-text("Finalizar")'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Finalizar")'
+      - pausa: 3000
   - paso: 4
-    manual: ventana Cobrar venta del POS con el medio Anticipo de cliente (cliente con saldo a favor)
+    acciones:
+      - ir: /{tenant}/pos
+      - esperar: '[data-testid="pos-catalog"]'
+      - escribir: { 'input[placeholder^="Buscar producto"]': 'café' }
+      - pausa: 1200
+      - abrir: '[data-testid="pos-catalog"] >> text=CAFÉ MOLIDO 500 G'
+      - pausa: 800
+      - abrir: 'text=Consumidor Final'
+      - esperar: 'VENTANA'
+      - abrir: 'VENTANA >> button:has-text("LAURA GÓMEZ") >> nth=0'
+      - pausa: 1000
+      - abrir: 'aside [data-testid="pos-submit-order"]'
+      - esperar: '[data-testid="pos-modal-payment"]'
+      - abrir: 'VENTANA >> button:has-text("Anticipo de clie")'
+      - pausa: 1200
+    resaltar: 'VENTANA >> button:has-text("Anticipo de clie")'
+    recortar: 'VENTANA'
   - paso: 5
-    manual: factura de venta con Medio de Pago Anticipo de cliente mostrando el Saldo a favor
+    acciones:
+      - abrir: 'VENTANA >> button:has-text("Agregar Anticipo de cliente")'
+      - esperar: 'text=Distribuir anticipo'
+      - abrir: 'VENTANA >> [title="Usar este saldo"] >> nth=0'
+      - pausa: 800
+    resaltar: 'VENTANA >> button:has-text("Confirmar distribución")'
+    recortar: 'VENTANA'
+  - paso: 6
+    guarda_datos: true
+    acciones:
+      - abrir: 'VENTANA >> button:has-text("Confirmar distribución")'
+      - pausa: 1200
+    resaltar: 'VENTANA >> button:has-text("Confirmar cobro")'
+    recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Confirmar cobro")'
+      - esperar: 'text=Venta registrada con éxito'
+  - paso: 7
+    acciones:
+      - ir: /{tenant}/sale-invoices/create
+      - esperar: 'text=Información General'
+      - elegir: { 'button:has-text("Buscar cliente...")': 'LAURA' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Ítems de la Factura")) >> button:has-text("Buscar producto...")': 'CAFÉ' }
+      - pausa: 800
+      - elegir: { 'text=Medio de Pago >> xpath=ancestor::div[1] >> button': 'Anticipo' }
+      - pausa: 1000
+    resaltar: 'text=Forma de pago * >> xpath=ancestor::div[2]'
