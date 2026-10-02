@@ -1,0 +1,29 @@
+guia: ventas/rol-de-cliente.md
+# Solo fotos: NO asigna roles. Usa a DISTRIBUIDORA (hoy solo proveedor) y a LAURA.
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/contacts
+      - abrir: 'tbody tr:has-text("DISTRIBUIDORA") >> nth=0'
+      - esperar: 'main button:text-is("Rol Cliente")'
+    resaltar: 'main button:text-is("Rol Cliente") >> xpath=..'
+  - paso: 2
+    acciones:
+      - abrir: 'main button:text-is("Rol Cliente")'
+      - esperar: 'main button:has-text("Asignar como Cliente")'
+    resaltar: 'main button:has-text("Asignar como Cliente")'
+  - paso: 3
+    acciones:
+      - abrir: 'main button:has-text("Asignar como Cliente")'
+      - esperar: '#credit_limit'
+      - llenar: { '#credit_limit': '1000000', '#payment_terms': '30' }
+      - pausa: 500
+    resaltar: '#credit_limit >> xpath=ancestor::form[1]'
+  - paso: 4
+    acciones:
+      - ir: /{tenant}/customers
+      - abrir: 'tbody tr:has-text("LAURA") >> nth=0'
+      - esperar: 'main a:has-text("Editar")'
+      - abrir: 'main a:has-text("Editar")'
+      - esperar: 'button:has-text("Actualizar cliente")'
+    resaltar: 'label:text-is("Tipo de cliente") >> xpath=..'

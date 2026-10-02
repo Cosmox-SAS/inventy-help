@@ -57,7 +57,7 @@ Lo que te deben los clientes (cuentas por cobrar) y lo que debes a proveedores (
 Paquete de impuestos que se asigna a un producto: qué se cobra al venderlo y qué se paga al comprarlo. · <span class="ruta">Fiscal › Catálogo de Impuestos</span> · [Guía](impuestos/catalogo-impuestos.md)
 
 ### Centro de costo { #centro-de-costo }
-Etiqueta para saber a qué área o negocio pertenece cada venta, compra o gasto (ej. *Tienda centro*, *Mayorista*). Lo piden facturas, ingresos, egresos y cajas. · <span class="ruta">Configuración › Centros de Costo</span>
+Etiqueta para saber a qué área o negocio pertenece cada venta, compra o gasto (ej. *Tienda centro*, *Mayorista*). Lo piden facturas, ingresos, egresos y cajas. · <span class="ruta">Configuración › Centros de Costo</span> Ver [¿Qué es un centro de costo y cómo lo uso?](primeros-pasos/centros-de-costo.md).
 
 ### Clonar { #clonar }
 Crear un documento nuevo en borrador copiando otro (facturas, traslados, productos). Ahorra digitar de nuevo.

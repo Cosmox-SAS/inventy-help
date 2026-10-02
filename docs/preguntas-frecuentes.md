@@ -123,7 +123,10 @@ tags:
     Cruzar lo que un tercero te debe como **cliente** contra lo que le debes como **proveedor**, sin mover dinero. Se hace en <span class="ruta">Tesorería › Compensación de cuentas</span>. Ver [¿Cómo hago una compensación de cuentas?](finanzas/compensacion-cuentas.md).
 
 ??? question "¿Cómo hago que un proveedor también sea cliente (o al revés)?"
-    En <span class="ruta">Configuración › Contactos</span> abre el tercero y usa la pestaña **Rol Cliente** › **Asignar como Cliente** (o **Rol Proveedor**). Para venderle a crédito, ponle además el **Tipo de cliente** en <span class="ruta">Ventas › Clientes › Editar</span>.
+    En <span class="ruta">Configuración › Contactos</span> abre el tercero y usa la pestaña **Rol Cliente** › **Asignar como Cliente** (o **Rol Proveedor**). Para venderle a crédito, ponle además el **Tipo de cliente** en <span class="ruta">Ventas › Clientes › Editar</span>. Ver [¿Para qué sirve el rol de cliente y cuál elijo?](ventas/rol-de-cliente.md).
+
+??? question "¿Qué es un centro de costo?"
+    Una etiqueta para separar en qué área del negocio entra o sale cada peso (ej. *Mostrador*, *Domicilios*). Cada sede trae uno llamado **Principal**; si no necesitas separar áreas, no tienes que tocar nada. Ver [¿Qué es un centro de costo y cómo lo uso?](primeros-pasos/centros-de-costo.md).
 
 ??? question "¿Qué es un anticipo?"
     Dinero pagado antes de la factura. Queda como saldo a favor y luego se aplica. Ver [guía](finanzas/anticipos.md).

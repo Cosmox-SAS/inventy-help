@@ -19,6 +19,7 @@ Usa el menú **Ventas** para facturar a tus clientes desde la oficina (con más 
 
 - [¿Cómo creo un tipo de cliente?](tipos-de-cliente.md)
 - [¿Cómo creo un cliente?](crear-cliente.md)
+- [¿Para qué sirve el rol de cliente y cuál elijo?](rol-de-cliente.md)
 - [¿Cómo manejo las listas de precios?](listas-de-precios.md)
 - [¿Cómo hago una factura de venta?](crear-factura-venta.md)
 - [¿Cómo registro una devolución de venta?](devolucion-venta.md)

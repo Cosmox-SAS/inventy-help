@@ -1,0 +1,40 @@
+guia: primeros-pasos/centros-de-costo.md
+# Solo fotos: NO crea el centro de costo. Con dos centros en una sede, todos los
+# formularios dejarían de traer "Principal — Principal" ya elegido.
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/cost-centers
+      - esperar: 'text=Centros de costo'
+    resaltar: 'main table'
+  - paso: 2
+    resaltar: 'main button:has-text("Nuevo Centro de Costo")'
+  - paso: 3
+    acciones:
+      - abrir: 'main button:has-text("Nuevo Centro de Costo")'
+      - esperar: 'VENTANA'
+      - llenar: { '#cost_center_name': 'Domicilios' }
+      - pausa: 500
+    resaltar: 'VENTANA'
+    recortar: 'VENTANA'
+  - paso: 4
+    acciones:
+      - ir: /{tenant}/sale-invoices/create
+      - esperar: 'text=Información General'
+    resaltar: 'label:has-text("Centro de costo") >> xpath=..'
+  - paso: 5
+    acciones:
+      - ir: /{tenant}/accounting/reports/income-statement
+      - esperar: 'main button:has-text("Filtros")'
+      - abrir: 'main button:has-text("Filtros")'
+      - esperar: 'VENTANA'
+      - elegir: { 'VENTANA >> button:has-text("Todos los centros de costo")': 'Principal' }
+      - pausa: 600
+    resaltar: 'VENTANA'
+    recortar: 'VENTANA'
+  - paso: 6
+    acciones:
+      # "Aplicar" solo filtra el reporte en pantalla.
+      - abrir: 'VENTANA >> button:text-is("Aplicar")'
+      - pausa: 2000
+    resaltar: 'main'
