@@ -2,6 +2,20 @@
 
 > Generado por `scripts/sync_erp.py` después de cada `git pull` en inventy-erp. Lo más reciente, arriba.
 
+## 2026-10-01 19:06 · inventy-erp `d6fb7d41..a90cbe5b`
+
+Último commit: fix(pos): permitir vender sin stock cuando "Vender con stock en negativo" está activo (#1542)
+
+**16** archivos de interfaz cambiaron · **1** textos quitados · **0** guías afectadas.
+
+<details><summary>Archivos con cambios de texto</summary>
+
+- `resources/js/components/pos/price-list-selector.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/components/pos/variant-selection.ts` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/cashregister/registers/cash-register-form-modal.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+
+</details>
+
 ## 2026-10-01 12:13 · inventy-erp `8c995488..d6fb7d41`
 
 Último commit: feat(sales): notas crédito a favor del cliente en devoluciones y notas manuales 91-22 (#1534)
