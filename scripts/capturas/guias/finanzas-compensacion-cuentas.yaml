@@ -1,0 +1,88 @@
+guia: finanzas/compensacion-cuentas.md
+# Pedro Ramírez (proveedor de facturacion-electronica/documento-soporte, orden 63,
+# con FAC-2026-0002 pendiente) pasa a ser cliente, le vende 2 cafés a crédito
+# ($37.000) y se compensan contra su factura de compra.
+orden: 67
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/contacts
+      - abrir: 'tbody tr:has-text("PEDRO RAMÍREZ") >> nth=0'
+      - esperar: 'main button:text-is("Rol Cliente")'
+      - abrir: 'main button:text-is("Rol Cliente")'
+      - abrir: 'main button:has-text("Asignar como Cliente")'
+      - esperar: '#credit_limit'
+      - llenar: { '#credit_limit': '500000', '#payment_terms': '30' }
+      - pausa: 600
+    guarda_datos: true
+    resaltar: '#credit_limit >> xpath=ancestor::form[1]'
+    despues:
+      - clic: 'main button[type="submit"]:has-text("Asignar")'
+      - pausa: 3000
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/customers
+      - abrir: 'tbody tr:has-text("PEDRO RAMÍREZ") >> nth=0'
+      - esperar: 'main a:has-text("Editar")'
+      - abrir: 'main a:has-text("Editar")'
+      - esperar: 'button:has-text("Actualizar cliente")'
+      - elegir: { 'section:has(:is(h2,h3):has-text("Datos del rol de cliente")) >> button:has-text("Buscar tipo") >> nth=0': 'General' }
+      - pausa: 600
+    guarda_datos: true
+    resaltar: 'section:has(:is(h2,h3):has-text("Datos del rol de cliente"))'
+    despues:
+      - clic: 'button:has-text("Actualizar cliente")'
+      - pausa: 3000
+      # Venta a crédito a Pedro (requisito de la compensación).
+      - ir: /{tenant}/sale-invoices/create
+      - esperar: 'text=Información General'
+      - elegir: { 'button:has-text("Buscar cliente...")': 'PEDRO' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Ítems de la Factura")) >> button:has-text("Buscar producto...")': 'CAFÉ' }
+      - llenar: { 'input#sale-line-quantity-_tmp_1': '2' }
+      - pausa: 800
+      - abrir: 'button:has-text("Crédito")'
+      - pausa: 800
+      - clic: '[data-testid="sale-invoice-form-submit"]'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Validar")'
+      - esperar: 'text=Detalle de la factura de venta.'
+  - paso: 3
+    acciones:
+      - ir: /{tenant}/account-compensations
+      - esperar: 'main'
+    resaltar: 'main a:has-text("Nueva compensación"), main button:has-text("Nueva compensación") >> nth=0'
+  - paso: 4
+    acciones:
+      - ir: /{tenant}/account-compensations/create
+      - esperar: 'text=Datos generales'
+      - elegir: { 'button:has-text("Buscar tercero...")': 'PEDRO' }
+      - esperar: 'tr:has-text("FAC-2026-0002")'
+    resaltar: 'text=Datos generales >> xpath=ancestor::section[1]'
+  - paso: 5
+    acciones:
+      - abrir: 'tr:has-text("VTA-") >> nth=0 >> [title="Clic para rellenar con el saldo pendiente"]'
+      - pausa: 800
+    resaltar: 'text=Facturas de venta >> xpath=ancestor::section[1]'
+  - paso: 6
+    acciones:
+      - llenar: { 'tr:has-text("FAC-2026-0002") >> input': '37000' }
+      - pausa: 800
+    resaltar: 'text=Facturas de compra >> xpath=ancestor::section[1]'
+  - paso: 7
+    guarda_datos: true
+    resaltar: 'text=DIFERENCIA >> xpath=ancestor::*[.//button[contains(.,"Registrar compensación")]][1]'
+    despues:
+      - clic: 'button:has-text("Registrar compensación")'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Confirmar y registrar")'
+      - esperar: 'text=Detalle de la compensación de cuentas.'
+  - paso: 8
+    acciones:
+      - ir: /{tenant}/account-compensations
+      - abrir: 'tbody tr:has-text("PEDRO") >> nth=0'
+      - esperar: 'text=Detalle de la compensación de cuentas.'
+      - abrir: 'main button:has-text("Ver asientos")'
+      - esperar: 'VENTANA'
+      - pausa: 1200
+    resaltar: 'VENTANA'
+    recortar: 'VENTANA'

@@ -16,6 +16,7 @@ Todo lo relacionado con el dinero está en el menú **Tesorería**.
 - [¿Cómo registro un pago de un cliente?](registrar-ingreso.md) (Ingresos)
 - [¿Cómo registro un pago a un proveedor?](registrar-egreso.md) (Egresos)
 - [¿Qué es un anticipo y cómo se maneja?](anticipos.md)
+- [¿Cómo hago una compensación de cuentas?](compensacion-cuentas.md)
 - [¿Cómo abro la caja?](../pos/abrir-caja.md) y [¿Cómo cierro la caja?](../pos/cierre-de-caja.md)
 
 ## ¿Qué hay en Tesorería?
@@ -25,7 +26,7 @@ Todo lo relacionado con el dinero está en el menú **Tesorería**.
 | Operación | **Ingresos** | Pagos que recibes de clientes (recaudo de cartera o anticipos). |
 | | **Egresos** | Pagos que haces a proveedores (pagos o anticipos). |
 | | **Traslados** | Mover dinero entre cajas y cuentas bancarias. |
-| | **Compensación de cuentas** | Cruzar lo que te debe un tercero con lo que le debes. |
+| | **Compensación de cuentas** | Cruzar lo que te debe un tercero con lo que le debes. Ver [guía](compensacion-cuentas.md). |
 | | **Consignaciones** | Dinero de caja consignado al banco. |
 | Caja | **Cajas**, **Sesiones**, **Movimientos de caja**, **Reporte de caja** | Crear cajas y consultar aperturas, cierres y movimientos. |
 | Bancos | **Cuentas bancarias**, **Movimientos bancarios** | Tus cuentas y sus movimientos. |
@@ -33,4 +34,4 @@ Todo lo relacionado con el dinero está en el menú **Tesorería**.
 
 ## Próximamente
 
-Traslados · Compensación de cuentas · Consignaciones · Cuentas bancarias · Saldos de clientes y proveedores · Carga de saldos iniciales · Reporte de caja.
+Traslados · Consignaciones · Cuentas bancarias · Saldos de clientes y proveedores · Carga de saldos iniciales · Reporte de caja.

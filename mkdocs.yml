@@ -151,6 +151,7 @@ nav:
       - ¿Qué es un anticipo y cómo se maneja?: finanzas/anticipos.md
       - ¿Cómo registro un pago de un cliente?: finanzas/registrar-ingreso.md
       - ¿Cómo registro un pago a un proveedor?: finanzas/registrar-egreso.md
+      - ¿Cómo hago una compensación de cuentas?: finanzas/compensacion-cuentas.md
   - Más módulos:
       - Contabilidad:
           - contabilidad/index.md

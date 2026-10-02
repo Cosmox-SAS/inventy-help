@@ -63,7 +63,7 @@ Etiqueta para saber a qué área o negocio pertenece cada venta, compra o gasto 
 Crear un documento nuevo en borrador copiando otro (facturas, traslados, productos). Ahorra digitar de nuevo.
 
 ### Compensación de cuentas { #compensacion-de-cuentas }
-Cruzar lo que te debe un tercero con lo que le debes, sin mover dinero. · <span class="ruta">Tesorería › Compensación de cuentas</span>
+Cruzar lo que te debe un tercero con lo que le debes, sin mover dinero. · <span class="ruta">Tesorería › Compensación de cuentas</span> · Ver [¿Cómo hago una compensación de cuentas?](finanzas/compensacion-cuentas.md)
 
 ### Consignación { #consignacion }
 Llevar efectivo de la caja al banco. Se hace al cerrar caja o desde el POS (**Registrar consignación**). · <span class="ruta">Tesorería › Consignaciones</span>

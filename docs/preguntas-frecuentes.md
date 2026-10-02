@@ -119,6 +119,12 @@ tags:
 ??? question "¿Cómo se aplican las retenciones?"
     Se configuran en la ficha del cliente o proveedor (Retefuente, Reteiva, Reteica) y Inventy las calcula solo en cada factura. Ver [guía](impuestos/retenciones.md).
 
+??? question "¿Qué es una compensación de cuentas?"
+    Cruzar lo que un tercero te debe como **cliente** contra lo que le debes como **proveedor**, sin mover dinero. Se hace en <span class="ruta">Tesorería › Compensación de cuentas</span>. Ver [¿Cómo hago una compensación de cuentas?](finanzas/compensacion-cuentas.md).
+
+??? question "¿Cómo hago que un proveedor también sea cliente (o al revés)?"
+    En <span class="ruta">Configuración › Contactos</span> abre el tercero y usa la pestaña **Rol Cliente** › **Asignar como Cliente** (o **Rol Proveedor**). Para venderle a crédito, ponle además el **Tipo de cliente** en <span class="ruta">Ventas › Clientes › Editar</span>.
+
 ??? question "¿Qué es un anticipo?"
     Dinero pagado antes de la factura. Queda como saldo a favor y luego se aplica. Ver [guía](finanzas/anticipos.md).
 
