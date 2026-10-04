@@ -1,8 +1,7 @@
 site_name: Centro de Ayuda Inventy
 site_description: Guías paso a paso para usar Inventy ERP en tu empresa.
 site_author: Inventy
-# Ajustar al dominio definitivo antes de publicar (necesario para enlaces directos y mapa del sitio).
-# site_url: https://ayuda.inventy.co/
+site_url: https://inventy-help.pages.dev/
 copyright: Inventy ERP · Centro de Ayuda
 
 docs_dir: docs

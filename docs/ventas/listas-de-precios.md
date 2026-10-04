@@ -27,27 +27,27 @@ tags:
 
 **Paso 1.** Activa la opción (una sola vez): ingresa a <span class="ruta">Configuración › Módulos</span>, elige **Ventas** y enciende **Habilitar listas de precios**. Se guarda solo.
 
-![Paso 1: opción listas de precios en Módulos › Ventas](../assets/capturas/ventas/listas-de-precios/paso-1.png)
+![Paso 1: opción listas de precios en Módulos › Ventas](../assets/capturas/ventas/listas-de-precios/paso-1.webp)
 
 **Paso 2.** En la barra de la izquierda haz clic en **Ventas** (ícono **$**), baja hasta la sección **AJUSTES** y haz clic en **Listas de precios**. Luego haz clic en **Nueva lista**.
 
-![Paso 2: botón Nueva lista](../assets/capturas/ventas/listas-de-precios/paso-2.png)
+![Paso 2: botón Nueva lista](../assets/capturas/ventas/listas-de-precios/paso-2.webp)
 
 **Paso 3.** Escribe el **Nombre** (ej. *Mayorista*), deja **Activa** marcada y haz clic en **Crear**.
 
-![Paso 3: ventana Nueva lista de precios](../assets/capturas/ventas/listas-de-precios/paso-3.png)
+![Paso 3: ventana Nueva lista de precios](../assets/capturas/ventas/listas-de-precios/paso-3.webp)
 
 **Paso 4.** Dale precio a cada producto: en <span class="ruta">Inventario › Productos</span> abre el producto, haz clic en **Editar producto** y abre la pestaña **Precios**. Por cada precio haz clic en **Añadir precio**, elige la **Lista**, la **Presentación** (*Ítem base* es la unidad; o una caja, ej. *CAJA X 12*), la **Sede** y escribe el **Precio (con impuestos)**. Haz clic en **Guardar precios**. Si vendes en varias sedes, agrega una fila por sede.
 
-![Paso 4: pestaña Precios del producto](../assets/capturas/ventas/listas-de-precios/paso-4.png)
+![Paso 4: pestaña Precios del producto](../assets/capturas/ventas/listas-de-precios/paso-4.webp)
 
 **Paso 5.** Asigna la lista al cliente: en <span class="ruta">Ventas › Clientes</span> abre el cliente, haz clic en **Editar**, elige la **Lista de precios** en **Datos del rol de cliente** y haz clic en **Actualizar cliente**.
 
-![Paso 5: lista de precios en la ficha del cliente](../assets/capturas/ventas/listas-de-precios/paso-5.png)
+![Paso 5: lista de precios en la ficha del cliente](../assets/capturas/ventas/listas-de-precios/paso-5.webp)
 
 **Paso 6.** Vende normal. Al elegir ese cliente en el POS o en la factura, los productos salen con el precio de su lista (ej. café a *$16.000* en vez de *$18.500*).
 
-![Paso 6: precio de la lista en el POS](../assets/capturas/ventas/listas-de-precios/paso-6.png)
+![Paso 6: precio de la lista en el POS](../assets/capturas/ventas/listas-de-precios/paso-6.webp)
 
 **Paso 7.** (Opcional) Configura la caja: en <span class="ruta">Tesorería › Caja › Cajas</span> › **Acciones › Editar**:
 
@@ -56,11 +56,11 @@ tags:
 
 Haz clic en **Guardar cambios**.
 
-![Paso 7: lista de precios en la caja](../assets/capturas/ventas/listas-de-precios/paso-7.png)
+![Paso 7: lista de precios en la caja](../assets/capturas/ventas/listas-de-precios/paso-7.webp)
 
 **Paso 8.** (Opcional) Si la caja lo permite, en el POS aparece **Lista de precios** debajo del cliente. Por defecto dice **Automática (cliente / caja)**; ábrela y elige otra lista (ej. *Mayorista*) solo para esa venta.
 
-![Paso 8: selector Lista de precios en el POS](../assets/capturas/ventas/listas-de-precios/paso-8.png)
+![Paso 8: selector Lista de precios en el POS](../assets/capturas/ventas/listas-de-precios/paso-8.webp)
 
 ✅ **Listo:** cada vez que le vendas a ese cliente, Inventy usa los precios de su lista.
 

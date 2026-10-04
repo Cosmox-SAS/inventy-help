@@ -36,9 +36,9 @@ flowchart TD
 - Los movimientos se registran **siempre en cuentas auxiliares** (subcuenta + 3 dígitos, ej. `110505001`). Los demás niveles solo suman.
 - **Cargar auxiliares por defecto** crea de una vez las auxiliares básicas y las deja asignadas. Ver [cuentas auxiliares](cuentas-auxiliares.md).
 
-![Plan de Cuentas con cuentas de nivel Auxiliar](../assets/capturas/contabilidad/como-funciona/paso-plan-de-cuentas.png)
+![Plan de Cuentas con cuentas de nivel Auxiliar](../assets/capturas/contabilidad/como-funciona/paso-plan-de-cuentas.webp)
 
-![Catálogo PUC para activar cuentas](../assets/capturas/contabilidad/como-funciona/paso-catalogo-puc.png)
+![Catálogo PUC para activar cuentas](../assets/capturas/contabilidad/como-funciona/paso-catalogo-puc.webp)
 
 ## 2. De dónde saca Inventy las cuentas
 
@@ -59,13 +59,13 @@ Ninguna cuenta está fija: cada asiento usa las cuentas que la empresa configur�
 !!! tip "Cuenta propia por producto"
     Un producto puede tener su propia cuenta de ingreso o de compra. Si la tiene, **manda sobre** la del catálogo de impuestos.
 
-![Catálogo de impuestos con sus cuentas contables](../assets/capturas/contabilidad/como-funciona/paso-catalogo-impuestos.png)
+![Catálogo de impuestos con sus cuentas contables](../assets/capturas/contabilidad/como-funciona/paso-catalogo-impuestos.webp)
 
-![Caja con su cuenta contable](../assets/capturas/contabilidad/como-funciona/paso-caja-cuenta.png)
+![Caja con su cuenta contable](../assets/capturas/contabilidad/como-funciona/paso-caja-cuenta.webp)
 
-![Medio de pago con cuentas bancarias por sede](../assets/capturas/contabilidad/como-funciona/paso-medio-de-pago.png)
+![Medio de pago con cuentas bancarias por sede](../assets/capturas/contabilidad/como-funciona/paso-medio-de-pago.webp)
 
-![Configuración contable: cuentas a pagar, anticipos y ajuste al peso](../assets/capturas/contabilidad/como-funciona/paso-configuracion-contable.png)
+![Configuración contable: cuentas a pagar, anticipos y ajuste al peso](../assets/capturas/contabilidad/como-funciona/paso-configuracion-contable.webp)
 
 ## 3. Cómo nace un asiento: ejemplo de una venta
 
@@ -91,7 +91,7 @@ Variaciones:
 
 Cada línea guarda además el **tercero** (nombre y documento), el **centro de costo** y la **base** del impuesto. Por eso existen el libro auxiliar por tercero y el reporte de impuestos.
 
-![Ver asientos de una factura antes de validarla](../assets/capturas/contabilidad/como-funciona/paso-ver-asientos.png)
+![Ver asientos de una factura antes de validarla](../assets/capturas/contabilidad/como-funciona/paso-ver-asientos.webp)
 
 ## 4. Reglas importantes
 
@@ -110,7 +110,7 @@ Venta y devolución de venta · compra y devolución de compra · ingresos (reca
 
 Además: **asientos manuales**, **saldos iniciales** e **importación de asientos** desde Excel en <span class="ruta">Contabilidad › Asientos Contables</span>.
 
-![Lista de Asientos Contables](../assets/capturas/contabilidad/como-funciona/paso-asientos-contables.png)
+![Lista de Asientos Contables](../assets/capturas/contabilidad/como-funciona/paso-asientos-contables.webp)
 
 ## 6. Los informes
 
@@ -127,9 +127,9 @@ Todos se calculan a partir de las líneas de los asientos:
 
 El **Estado de Resultados** agrupa por el inicio del código de cuenta: **41** ingresos operacionales · **42** ingresos no operacionales · **51** gastos de administración · **52** gastos de ventas · **53** gastos no operacionales · **54** impuesto de renta · **6** y **7** costo de ventas.
 
-![Estado de Resultados](../assets/capturas/contabilidad/como-funciona/paso-estado-resultados.png)
+![Estado de Resultados](../assets/capturas/contabilidad/como-funciona/paso-estado-resultados.webp)
 
-![Balance de Prueba](../assets/capturas/contabilidad/como-funciona/paso-balance-prueba.png)
+![Balance de Prueba](../assets/capturas/contabilidad/como-funciona/paso-balance-prueba.webp)
 
 !!! info "¿Por qué la utilidad del Inicio no coincide con el Estado de Resultados?"
     El **Inicio** calcula la utilidad directo desde las facturas (ventas − costo − gastos de servicios). El **Estado de Resultados** la calcula desde los **asientos contables**, que incluyen todo lo contabilizado (nómina, GMF, ajustes, asientos manuales…). Ver [¿Por qué la utilidad me sale en cero?](../preguntas-frecuentes.md#utilidad-y-reportes).

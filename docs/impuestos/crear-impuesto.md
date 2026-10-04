@@ -24,19 +24,19 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Fiscal › Catálogo de Impuestos</span> y haz clic en **Impuestos y retenciones**.
 
-![Paso 1: botón Impuestos y retenciones](../assets/capturas/impuestos/crear-impuesto/paso-1.png)
+![Paso 1: botón Impuestos y retenciones](../assets/capturas/impuestos/crear-impuesto/paso-1.webp)
 
 **Paso 2.** Haz clic en **Nuevo Impuesto**.
 
-![Paso 2: botón Nuevo Impuesto](../assets/capturas/impuestos/crear-impuesto/paso-2.png)
+![Paso 2: botón Nuevo Impuesto](../assets/capturas/impuestos/crear-impuesto/paso-2.webp)
 
 **Paso 3.** Escribe el **Nombre** (ej. *RETEIVA 15%*). Elige **Tipo** (**Impuesto** o **Retención**) y **Tipo de Valor** (ej. **Porcentaje**), escribe el **Valor** y elige el **Tipo DIAN** (ej. *Retención de IVA*). Si aplica, escribe la **Base Mínima (COP)**.
 
-![Paso 3: formulario Nuevo Impuesto](../assets/capturas/impuestos/crear-impuesto/paso-3.png)
+![Paso 3: formulario Nuevo Impuesto](../assets/capturas/impuestos/crear-impuesto/paso-3.webp)
 
 **Paso 4.** Haz clic en **Crear Impuesto**.
 
-![Paso 4: botón Crear Impuesto](../assets/capturas/impuestos/crear-impuesto/paso-4.png)
+![Paso 4: botón Crear Impuesto](../assets/capturas/impuestos/crear-impuesto/paso-4.webp)
 
 ✅ **Listo:** el impuesto ya se puede agregar a un [catálogo](catalogo-impuestos.md).
 

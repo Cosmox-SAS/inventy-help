@@ -34,27 +34,27 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Configuración › Centros de Costo</span>. Verás los que existen y la sede de cada uno.
 
-![Paso 1: lista de centros de costo](../assets/capturas/primeros-pasos/centros-de-costo/paso-1.png)
+![Paso 1: lista de centros de costo](../assets/capturas/primeros-pasos/centros-de-costo/paso-1.webp)
 
 **Paso 2.** Para crear uno, haz clic en **Nuevo Centro de Costo**.
 
-![Paso 2: botón Nuevo Centro de Costo](../assets/capturas/primeros-pasos/centros-de-costo/paso-2.png)
+![Paso 2: botón Nuevo Centro de Costo](../assets/capturas/primeros-pasos/centros-de-costo/paso-2.webp)
 
 **Paso 3.** Elige la **Sede**, escribe el **Nombre** (ej. *Domicilios*) y haz clic en **Crear centro de costo**.
 
-![Paso 3: ventana Nuevo centro de costo](../assets/capturas/primeros-pasos/centros-de-costo/paso-3.png)
+![Paso 3: ventana Nuevo centro de costo](../assets/capturas/primeros-pasos/centros-de-costo/paso-3.webp)
 
 **Paso 4.** Al hacer un documento, elige el **Centro de costo** en su encabezado (ej. en la factura de venta, al lado del cliente). En las cajas se elige al crearlas o editarlas (<span class="ruta">Tesorería › Caja › Cajas</span> › **Editar**).
 
-![Paso 4: campo Centro de costo en la factura de venta](../assets/capturas/primeros-pasos/centros-de-costo/paso-4.png)
+![Paso 4: campo Centro de costo en la factura de venta](../assets/capturas/primeros-pasos/centros-de-costo/paso-4.webp)
 
 **Paso 5.** Para ver la utilidad de un centro de costo: en <span class="ruta">Contabilidad › Estado de Resultados</span> haz clic en **Filtros**, elige el **Centro de costo** y haz clic en **Aplicar**.
 
-![Paso 5: filtro Centro de costo](../assets/capturas/primeros-pasos/centros-de-costo/paso-5.png)
+![Paso 5: filtro Centro de costo](../assets/capturas/primeros-pasos/centros-de-costo/paso-5.webp)
 
 **Paso 6.** El reporte muestra solo los ingresos, costos y gastos de ese centro de costo. El mismo filtro está en **Libro Auxiliar**, **Reporte de Asientos** y **Reporte de Impuestos**.
 
-![Paso 6: estado de resultados filtrado](../assets/capturas/primeros-pasos/centros-de-costo/paso-6.png)
+![Paso 6: estado de resultados filtrado](../assets/capturas/primeros-pasos/centros-de-costo/paso-6.webp)
 
 ✅ **Listo:** cada documento queda en su centro de costo y puedes comparar la utilidad de cada área.
 

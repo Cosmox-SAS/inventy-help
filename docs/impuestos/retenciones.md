@@ -28,19 +28,19 @@ tags:
 
 **Paso 1.** Abre el proveedor (<span class="ruta">Compras › Proveedores</span>) o el cliente (<span class="ruta">Ventas › Clientes</span>) y haz clic en **Editar**.
 
-![Paso 1: botón Editar del tercero](../assets/capturas/impuestos/retenciones/paso-1.png)
+![Paso 1: botón Editar del tercero](../assets/capturas/impuestos/retenciones/paso-1.webp)
 
 **Paso 2.** En **Retenciones**, elige el impuesto de **Retefuente**, **Reteiva** y/o **Reteica**, cada uno con su **Cuenta contable** (ej. *236540001 Retención en la fuente por compras*). Haz clic en **Actualizar proveedor** (o **Actualizar cliente**).
 
-![Paso 2: sección Retenciones](../assets/capturas/impuestos/retenciones/paso-2.png)
+![Paso 2: sección Retenciones](../assets/capturas/impuestos/retenciones/paso-2.webp)
 
 **Paso 3.** Al hacer una factura de ese tercero, las retenciones aparecen debajo de su nombre. En **Calcular retención en la fuente por**, deja **Total de factura** (usa la Retefuente del tercero) o elige **Línea** (usa la del catálogo de cada producto).
 
-![Paso 3: retenciones del tercero en la factura](../assets/capturas/impuestos/retenciones/paso-3.png)
+![Paso 3: retenciones del tercero en la factura](../assets/capturas/impuestos/retenciones/paso-3.webp)
 
 **Paso 4.** Agrega los productos. El resumen muestra cada retención restada y el **Total** ya neto.
 
-![Paso 4: retenciones en el resumen de la factura](../assets/capturas/impuestos/retenciones/paso-4.png)
+![Paso 4: retenciones en el resumen de la factura](../assets/capturas/impuestos/retenciones/paso-4.webp)
 
 ✅ **Listo:** Inventy calcula las retenciones solo en cada factura de ese tercero.
 

@@ -24,27 +24,27 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Inventario › Productos</span> y haz clic en **Nuevo Producto**.
 
-![Paso 1: botón Nuevo Producto](../assets/capturas/productos-inventario/crear-producto/paso-1.png)
+![Paso 1: botón Nuevo Producto](../assets/capturas/productos-inventario/crear-producto/paso-1.webp)
 
 **Paso 2.** Escribe el **Código de barras** (o escanéalo), el **Nombre** y, si quieres, la **Descripción** y la **Categoría**.
 
-![Paso 2: datos básicos del producto](../assets/capturas/productos-inventario/crear-producto/paso-2.png)
+![Paso 2: datos básicos del producto](../assets/capturas/productos-inventario/crear-producto/paso-2.webp)
 
 **Paso 3.** Elige la **Unidad de medida**.
 
-![Paso 3: campo Unidad de medida](../assets/capturas/productos-inventario/crear-producto/paso-3.png)
+![Paso 3: campo Unidad de medida](../assets/capturas/productos-inventario/crear-producto/paso-3.webp)
 
 **Paso 4.** En **Precio e impuestos**, escribe el **Precio de venta** y el **Costo inicial**, y elige el **Catálogo de impuestos**.
 
-![Paso 4: sección Precio e impuestos](../assets/capturas/productos-inventario/crear-producto/paso-4.png)
+![Paso 4: sección Precio e impuestos](../assets/capturas/productos-inventario/crear-producto/paso-4.webp)
 
 **Paso 5.** (Opcional) Sube la foto en **Ilustración del producto** y activa lo que aplique en **Comportamiento del producto** (kit, obsequio, seriales, lotes, no maneja inventario).
 
-![Paso 5: foto y comportamiento del producto](../assets/capturas/productos-inventario/crear-producto/paso-5.png)
+![Paso 5: foto y comportamiento del producto](../assets/capturas/productos-inventario/crear-producto/paso-5.webp)
 
 **Paso 6.** Haz clic en **Crear Producto**.
 
-![Paso 6: botón Crear Producto](../assets/capturas/productos-inventario/crear-producto/paso-6.png)
+![Paso 6: botón Crear Producto](../assets/capturas/productos-inventario/crear-producto/paso-6.webp)
 
 ✅ **Listo:** el producto aparece en la lista. Para darle existencias, registra una [compra](../compras/registrar-factura-compra.md) o un [ajuste de entrada](ajuste-inventario.md).
 

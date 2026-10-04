@@ -24,23 +24,23 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Fiscal › Resoluciones</span> y crea una **Nueva resolución**.
 
-![Paso 1: lista de resoluciones](../assets/capturas/facturacion-electronica/resoluciones/paso-1.png)
+![Paso 1: lista de resoluciones](../assets/capturas/facturacion-electronica/resoluciones/paso-1.webp)
 
 **Paso 2.** En **Datos de la resolución**, elige el **Tipo de documento** y escribe **Prefijo** y **Número de resolución**.
 
-![Paso 2: datos de la resolución](../assets/capturas/facturacion-electronica/resoluciones/paso-2.png)
+![Paso 2: datos de la resolución](../assets/capturas/facturacion-electronica/resoluciones/paso-2.webp)
 
 **Paso 3.** En **Rango de numeración**, escribe **Rango desde**, **Rango hasta**, **Fecha de inicio** y **Fecha de vencimiento**.
 
-![Paso 3: rango de numeración](../assets/capturas/facturacion-electronica/resoluciones/paso-3.png)
+![Paso 3: rango de numeración](../assets/capturas/facturacion-electronica/resoluciones/paso-3.webp)
 
 **Paso 4.** En **Alcance y estado**, elige las sedes, el **Estado** y escribe la **Clave técnica**.
 
-![Paso 4: alcance y estado](../assets/capturas/facturacion-electronica/resoluciones/paso-4.png)
+![Paso 4: alcance y estado](../assets/capturas/facturacion-electronica/resoluciones/paso-4.webp)
 
 **Paso 5.** Revisa todo y haz clic en **Crear resolución**.
 
-![Paso 5: botón Crear resolución](../assets/capturas/facturacion-electronica/resoluciones/paso-5.png)
+![Paso 5: botón Crear resolución](../assets/capturas/facturacion-electronica/resoluciones/paso-5.webp)
 
 ✅ **Listo:** la resolución queda **Activa** y ya puedes emitir.
 

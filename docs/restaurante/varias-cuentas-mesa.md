@@ -23,23 +23,23 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Configuración › Módulos</span> y selecciona **Restaurante**.
 
-![Paso 1: módulo Restaurante en Configuración](../assets/capturas/restaurante/varias-cuentas-mesa/paso-1.png)
+![Paso 1: módulo Restaurante en Configuración](../assets/capturas/restaurante/varias-cuentas-mesa/paso-1.webp)
 
 **Paso 2.** Activa **Habilitar pedidos a la mesa**.
 
-![Paso 2: opción Habilitar pedidos a la mesa](../assets/capturas/restaurante/varias-cuentas-mesa/paso-2.png)
+![Paso 2: opción Habilitar pedidos a la mesa](../assets/capturas/restaurante/varias-cuentas-mesa/paso-2.webp)
 
 **Paso 3.** Debajo aparece **Permitir varias cuentas por mesa**: actívala.
 
-![Paso 3: opción Permitir varias cuentas por mesa](../assets/capturas/restaurante/varias-cuentas-mesa/paso-3.png)
+![Paso 3: opción Permitir varias cuentas por mesa](../assets/capturas/restaurante/varias-cuentas-mesa/paso-3.webp)
 
 **Paso 4.** En el POS, elige **A la mesa**, **Seleccionar mesa**, agrega lo del primer cliente y haz clic en **Realizar pedido**.
 
-![Paso 4: pedido a la mesa en el POS](../assets/capturas/restaurante/varias-cuentas-mesa/paso-4.png)
+![Paso 4: pedido a la mesa en el POS](../assets/capturas/restaurante/varias-cuentas-mesa/paso-4.webp)
 
 **Paso 5.** Haz clic en **Nuevo pedido** (**+**), elige **A la mesa** y **la misma mesa**, agrega lo del segundo cliente y **Realizar pedido**. Repite por cada cliente.
 
-![Paso 5: botón Nuevo pedido](../assets/capturas/restaurante/varias-cuentas-mesa/paso-5.png)
+![Paso 5: botón Nuevo pedido](../assets/capturas/restaurante/varias-cuentas-mesa/paso-5.webp)
 
 ✅ **Listo:** la mesa queda con varias cuentas y cada cliente paga la suya. Usa **Renombrar pedido** para identificarlas (ej. *Mesa 4 — María*).
 

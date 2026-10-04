@@ -28,27 +28,27 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Fiscal › Catálogo de Impuestos</span> y haz clic en **Nuevo Catálogo**.
 
-![Paso 1: botón Nuevo Catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-1.png)
+![Paso 1: botón Nuevo Catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-1.webp)
 
 **Paso 2.** Escribe el **Nombre del Catálogo** (ej. *IVA 5%*).
 
-![Paso 2: nombre del catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-2.png)
+![Paso 2: nombre del catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-2.webp)
 
 **Paso 3.** En **Impuestos de Ventas**, elige la **Cuenta Base**, la **Cuenta Costo de Inventario** y la **Cuenta Valor de Inventario**. En **Agregar Impuesto** elige el impuesto (ej. *IVA 5%*) y su **Cuenta del impuesto**. Si la cuenta no existe, créala con el botón **+** de al lado.
 
-![Paso 3: impuestos de ventas](../assets/capturas/impuestos/catalogo-impuestos/paso-3.png)
+![Paso 3: impuestos de ventas](../assets/capturas/impuestos/catalogo-impuestos/paso-3.webp)
 
 **Paso 4.** En **Impuestos de Compras**, elige la **Cuenta Base**, agrega el mismo impuesto y su **Cuenta del impuesto** (la de IVA descontable).
 
-![Paso 4: impuestos de compras](../assets/capturas/impuestos/catalogo-impuestos/paso-4.png)
+![Paso 4: impuestos de compras](../assets/capturas/impuestos/catalogo-impuestos/paso-4.webp)
 
 **Paso 5.** Haz clic en **Crear Catálogo**.
 
-![Paso 5: botón Crear Catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-5.png)
+![Paso 5: botón Crear Catálogo](../assets/capturas/impuestos/catalogo-impuestos/paso-5.webp)
 
 **Paso 6.** Asígnalo a cada producto: <span class="ruta">Inventario › Productos</span> › producto › **Catálogo de impuestos**.
 
-![Paso 6: campo Catálogo de impuestos en el producto](../assets/capturas/impuestos/catalogo-impuestos/paso-6.png)
+![Paso 6: campo Catálogo de impuestos en el producto](../assets/capturas/impuestos/catalogo-impuestos/paso-6.webp)
 
 ✅ **Listo:** al vender o comprar ese producto, Inventy calcula sus impuestos solo.
 

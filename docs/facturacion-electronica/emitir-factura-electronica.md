@@ -26,19 +26,19 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Ventas › Facturas</span> y abre la factura **Validada**.
 
-![Paso 1: lista de facturas](../assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-1.png)
+![Paso 1: lista de facturas](../assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-1.webp)
 
 **Paso 2.** Haz clic en **Emitir electrónica**.
 
-![Paso 2: botón Emitir electrónica](../assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-2.png)
+![Paso 2: botón Emitir electrónica](../assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-2.webp)
 
 **Paso 3.** En **¿Emitir factura electrónica?**, elige el **Tipo de documento electrónico** y confirma.
 
-![Paso 3: ventana Emitir factura electrónica](../assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-3.png)
+![Paso 3: ventana Emitir factura electrónica](../assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-3.webp)
 
 **Paso 4.** Revisa el estado en <span class="ruta">Fiscal › Documentos</span>.
 
-![Paso 4: lista de documentos electrónicos](../assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-4.png)
+![Paso 4: lista de documentos electrónicos](../assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-4.webp)
 
 ✅ **Listo:** el documento queda **Aceptado** y el cliente lo recibe en su correo.
 

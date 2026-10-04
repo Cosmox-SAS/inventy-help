@@ -1,13 +1,19 @@
-name: Validar Centro de Ayuda
+name: Validate Help Center
 
-# Solo valida. La publicación se configura aparte, cuando se autorice el hosting.
 on:
   pull_request:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  validar:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,11 +23,8 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: Instalar dependencias
-        run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
 
-      - name: Validaciones documentales (metadatos, plantilla, estados, lenguaje)
-        run: python scripts/check_docs.py
-
-      - name: Construir el sitio (falla con enlaces rotos)
-        run: mkdocs build --strict
+      - name: Validate and build documentation
+        run: python scripts/build_docs.py --optimize-screenshots

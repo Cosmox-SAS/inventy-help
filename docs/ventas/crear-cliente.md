@@ -24,27 +24,27 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Ventas › Clientes</span> y haz clic en **Nuevo Cliente**.
 
-![Paso 1: botón Nuevo cliente](../assets/capturas/ventas/crear-cliente/paso-1.png)
+![Paso 1: botón Nuevo cliente](../assets/capturas/ventas/crear-cliente/paso-1.webp)
 
 **Paso 2.** (Recomendado) Adjunta el **RUT en PDF**: Inventy completa los datos solo. Revísalos.
 
-![Paso 2: carga del RUT](../assets/capturas/ventas/crear-cliente/paso-2.png)
+![Paso 2: carga del RUT](../assets/capturas/ventas/crear-cliente/paso-2.webp)
 
 **Paso 3.** En **Identificación**, completa el tipo y **Número de identificación**, y el **Nombre** y **Primer apellido** (o la razón social si es empresa).
 
-![Paso 3: identificación del cliente](../assets/capturas/ventas/crear-cliente/paso-3.png)
+![Paso 3: identificación del cliente](../assets/capturas/ventas/crear-cliente/paso-3.webp)
 
 **Paso 4.** En **Información de contacto** escribe el **Correo electrónico** (para facturas electrónicas) y los teléfonos; en **Ubicación**, la **Dirección** y el barrio.
 
-![Paso 4: información de contacto](../assets/capturas/ventas/crear-cliente/paso-4.png)
+![Paso 4: información de contacto](../assets/capturas/ventas/crear-cliente/paso-4.webp)
 
 **Paso 5.** En **Datos del rol de cliente**, define **Límite de crédito** (0 = sin crédito), **Plazo de pago (días)** y el **Tipo de cliente** (obligatorio para vender a crédito si usas Contabilidad: de ahí sale la cuenta por cobrar). Si aplica, marca **No calcula impuestos en ventas** y configura sus **Retenciones**.
 
-![Paso 5: condiciones comerciales](../assets/capturas/ventas/crear-cliente/paso-5.png)
+![Paso 5: condiciones comerciales](../assets/capturas/ventas/crear-cliente/paso-5.webp)
 
 **Paso 6.** Haz clic en **Guardar cliente**.
 
-![Paso 6: botón Guardar cliente](../assets/capturas/ventas/crear-cliente/paso-6.png)
+![Paso 6: botón Guardar cliente](../assets/capturas/ventas/crear-cliente/paso-6.webp)
 
 ✅ **Listo:** el cliente ya se puede elegir en el POS y en las facturas.
 

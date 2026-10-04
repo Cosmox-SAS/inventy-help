@@ -27,31 +27,31 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Inventario › Traslados</span> y haz clic en **Nuevo traslado**.
 
-![Paso 1: lista de traslados y botón Nuevo traslado](../assets/capturas/productos-inventario/traslados/paso-1.png)
+![Paso 1: lista de traslados y botón Nuevo traslado](../assets/capturas/productos-inventario/traslados/paso-1.webp)
 
 **Paso 2.** Elige la **Sede de origen** y la **Sede de destino**.
 
-![Paso 2: sedes de origen y destino](../assets/capturas/productos-inventario/traslados/paso-2.png)
+![Paso 2: sedes de origen y destino](../assets/capturas/productos-inventario/traslados/paso-2.webp)
 
 **Paso 3.** Haz clic en **Agregar producto**, busca el producto y escribe la cantidad. Repite por cada producto.
 
-![Paso 3: productos a trasladar](../assets/capturas/productos-inventario/traslados/paso-3.png)
+![Paso 3: productos a trasladar](../assets/capturas/productos-inventario/traslados/paso-3.webp)
 
 **Paso 4.** Haz clic en **Solicitar traslado** y confirma.
 
-![Paso 4: botón Solicitar traslado](../assets/capturas/productos-inventario/traslados/paso-4.png)
+![Paso 4: botón Solicitar traslado](../assets/capturas/productos-inventario/traslados/paso-4.webp)
 
 **Paso 5.** *(Otro usuario, de la sede de origen)* En <span class="ruta">Inventario › Traslados</span>, filtra por **Solicitado** y abre el traslado.
 
-![Paso 5: traslados solicitados](../assets/capturas/productos-inventario/traslados/paso-5.png)
+![Paso 5: traslados solicitados](../assets/capturas/productos-inventario/traslados/paso-5.webp)
 
 **Paso 6.** Revisa las cantidades (si envías menos, cámbiala; 0 = no se envía) y haz clic en **Aprobar**.
 
-![Paso 6: detalle del traslado y botón Aprobar](../assets/capturas/productos-inventario/traslados/paso-6.png)
+![Paso 6: detalle del traslado y botón Aprobar](../assets/capturas/productos-inventario/traslados/paso-6.webp)
 
 **Paso 7.** *(Sede de destino, cuando llega la mercancía)* Abre el traslado **Aprobado**, haz clic en **Recibir** y luego en **Confirmar recepcion**.
 
-![Paso 7: botón Recibir](../assets/capturas/productos-inventario/traslados/paso-7.png)
+![Paso 7: botón Recibir](../assets/capturas/productos-inventario/traslados/paso-7.webp)
 
 ✅ **Listo:** la mercancía sale del origen y entra al destino. El traslado queda **Recibido**.
 

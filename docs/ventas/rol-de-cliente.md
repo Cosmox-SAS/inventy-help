@@ -37,11 +37,11 @@ Al crear un cliente en <span class="ruta">Ventas › Clientes</span> o un provee
 
 **Paso 1.** Ingresa a <span class="ruta">Configuración › Contactos</span> y abre el contacto. Arriba ves sus pestañas: **Rol Cliente**, **Rol Proveedor** y **Rol Empleado**.
 
-![Paso 1: pestañas de roles del contacto](../assets/capturas/ventas/rol-de-cliente/paso-1.png)
+![Paso 1: pestañas de roles del contacto](../assets/capturas/ventas/rol-de-cliente/paso-1.webp)
 
 **Paso 2.** Abre **Rol Cliente**. Si aún no lo tiene, haz clic en **Asignar como Cliente**.
 
-![Paso 2: botón Asignar como Cliente](../assets/capturas/ventas/rol-de-cliente/paso-2.png)
+![Paso 2: botón Asignar como Cliente](../assets/capturas/ventas/rol-de-cliente/paso-2.webp)
 
 **Paso 3.** Completa los datos y haz clic en **Asignar**:
 
@@ -52,11 +52,11 @@ Al crear un cliente en <span class="ruta">Ventas › Clientes</span> o un provee
 - **No calcula impuestos en ventas**: para clientes exentos (el precio se toma sin impuestos).
 - **Vendedor responsable** y **Lista de precios**: opcionales.
 
-![Paso 3: formulario Asignar rol de cliente](../assets/capturas/ventas/rol-de-cliente/paso-3.png)
+![Paso 3: formulario Asignar rol de cliente](../assets/capturas/ventas/rol-de-cliente/paso-3.webp)
 
 **Paso 4.** Ponle el **Tipo de cliente** (este formulario no lo pide): en <span class="ruta">Ventas › Clientes</span> abre el cliente, haz clic en **Editar**, elige el **Tipo de cliente** y haz clic en **Actualizar cliente**.
 
-![Paso 4: campo Tipo de cliente](../assets/capturas/ventas/rol-de-cliente/paso-4.png)
+![Paso 4: campo Tipo de cliente](../assets/capturas/ventas/rol-de-cliente/paso-4.webp)
 
 ✅ **Listo:** ya puedes venderle. Si también es proveedor, puedes [compensar sus cuentas](../finanzas/compensacion-cuentas.md).
 

@@ -29,27 +29,27 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Ventas › Facturas</span> y haz clic en **Nueva Factura**.
 
-![Paso 1: botón Nueva Factura](../assets/capturas/ventas/crear-factura-venta/paso-1.png)
+![Paso 1: botón Nueva Factura](../assets/capturas/ventas/crear-factura-venta/paso-1.webp)
 
 **Paso 2.** En **Información General**, elige **Cliente**, **Centro de costo** y **Fecha de emisión**.
 
-![Paso 2: cliente, centro de costo y fecha](../assets/capturas/ventas/crear-factura-venta/paso-2.png)
+![Paso 2: cliente, centro de costo y fecha](../assets/capturas/ventas/crear-factura-venta/paso-2.webp)
 
 **Paso 3.** En **Ítems de la Factura**, elige el producto en **Buscar producto...** y escribe la cantidad. El precio, el impuesto y el descuento se llenan solos. Usa **Agregar nueva línea** para más productos.
 
-![Paso 3: ítems de la factura](../assets/capturas/ventas/crear-factura-venta/paso-3.png)
+![Paso 3: ítems de la factura](../assets/capturas/ventas/crear-factura-venta/paso-3.webp)
 
 **Paso 4.** Elige **Forma de pago**: **Contado** (con su **Medio de Pago**) o **Crédito** (verás el **Cupo disponible** y la **Fecha de vencimiento**). Hazlo **después** de agregar los productos.
 
-![Paso 4: forma y medio de pago](../assets/capturas/ventas/crear-factura-venta/paso-4.png)
+![Paso 4: forma y medio de pago](../assets/capturas/ventas/crear-factura-venta/paso-4.webp)
 
 **Paso 5.** Revisa el **Total a pagar** y haz clic en **Validar factura**. Confirma en **¿Validar factura?**
 
-![Paso 5: botón Validar factura](../assets/capturas/ventas/crear-factura-venta/paso-5.png)
+![Paso 5: botón Validar factura](../assets/capturas/ventas/crear-factura-venta/paso-5.webp)
 
 **Paso 6.** En el detalle, **Más acciones** tiene **PDF**, **Ver asientos**, **Imprimir tirilla**, **Clonar** y **Convertir en recurrente**. Si tu empresa factura electrónicamente y no se envió sola, ahí también verás **Emitir electrónica** ([guía](../facturacion-electronica/emitir-factura-electronica.md)).
 
-![Paso 6: menú Más acciones de la factura](../assets/capturas/ventas/crear-factura-venta/paso-6.png)
+![Paso 6: menú Más acciones de la factura](../assets/capturas/ventas/crear-factura-venta/paso-6.webp)
 
 ✅ **Listo:** la factura queda **Validada** (o **Pagada**) y afecta inventario, cartera y contabilidad. Ya no se puede editar.
 

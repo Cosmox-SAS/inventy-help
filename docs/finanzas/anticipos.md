@@ -27,31 +27,31 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Tesorería › Ingresos</span> y haz clic en **Nuevo ingreso**.
 
-![Paso 1: botón Nuevo ingreso](../assets/capturas/finanzas/anticipos/paso-1.png)
+![Paso 1: botón Nuevo ingreso](../assets/capturas/finanzas/anticipos/paso-1.webp)
 
 **Paso 2.** En **Tipo de movimiento** elige **Anticipo de cliente**. Elige el **Cliente**, el **Destino** (**Banco** o **Caja**), el **Medio de pago** y escribe el **Ingreso Total**.
 
-![Paso 2: formulario de anticipo](../assets/capturas/finanzas/anticipos/paso-2.png)
+![Paso 2: formulario de anticipo](../assets/capturas/finanzas/anticipos/paso-2.webp)
 
 **Paso 3.** Haz clic en **Finalizar** y confirma con **Finalizar**. El cliente queda con **saldo a favor** (número **ING-**).
 
-![Paso 3: botón Finalizar](../assets/capturas/finanzas/anticipos/paso-3.png)
+![Paso 3: botón Finalizar](../assets/capturas/finanzas/anticipos/paso-3.webp)
 
 **Paso 4.** Para usarlo en el POS: agrega los productos, elige el cliente y haz clic en **Realizar venta**. En **Cobrar venta** elige **Anticipo de cliente** (solo aparece si el cliente tiene saldo). Verás el **Saldo anticipo**.
 
-![Paso 4: medio Anticipo de cliente en el POS](../assets/capturas/finanzas/anticipos/paso-4.png)
+![Paso 4: medio Anticipo de cliente en el POS](../assets/capturas/finanzas/anticipos/paso-4.webp)
 
 **Paso 5.** Haz clic en **Agregar Anticipo de cliente**. En **Distribuir anticipo**, haz clic en el **Saldo disponible** (o escribe el valor en **Aplicar**) y haz clic en **Confirmar distribución**.
 
-![Paso 5: ventana Distribuir anticipo](../assets/capturas/finanzas/anticipos/paso-5.png)
+![Paso 5: ventana Distribuir anticipo](../assets/capturas/finanzas/anticipos/paso-5.webp)
 
 **Paso 6.** Si falta, cobra el resto con otro medio. Haz clic en **Confirmar cobro**.
 
-![Paso 6: botón Confirmar cobro](../assets/capturas/finanzas/anticipos/paso-6.png)
+![Paso 6: botón Confirmar cobro](../assets/capturas/finanzas/anticipos/paso-6.webp)
 
 **Paso 7.** Para usarlo en una factura de venta: elige el **Cliente**, **Forma de pago: Contado** y en **Medio de Pago** elige **Anticipo de cliente**. Verás el **Saldo a favor**; aquí el anticipo debe cubrir el total.
 
-![Paso 7: anticipo en la factura de venta](../assets/capturas/finanzas/anticipos/paso-7.png)
+![Paso 7: anticipo en la factura de venta](../assets/capturas/finanzas/anticipos/paso-7.webp)
 
 ✅ **Listo:** el saldo a favor del cliente baja en lo que usaste y la venta queda pagada.
 

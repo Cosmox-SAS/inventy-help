@@ -59,14 +59,20 @@ FRONT_MATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 H2 = re.compile(r"^## +(.+?)\s*(\{.*\})?\s*$", re.M)
 FENCE = re.compile(r"^```.*?^```", re.S | re.M)
 PASO = re.compile(r"^\*\*Paso (\d+)\.\*\*", re.M)
-IMAGEN = re.compile(r"!\[[^\]]*\]\(([^)\s]+assets/capturas/[^)\s]+\.png)\)")
+IMAGEN = re.compile(r"!\[[^\]]*\]\(([^)\s]+assets/capturas/[^)\s]+\.(?:png|webp))\)")
 PENDIENTES_CAPTURAS = DOCS / "assets" / "capturas" / "pendientes.txt"
 
 
 def capturas_pendientes() -> set[str]:
     if not PENDIENTES_CAPTURAS.exists():
         return set()
-    return {l.strip() for l in PENDIENTES_CAPTURAS.read_text(encoding="utf-8").splitlines() if l.strip()}
+    listed = {l.strip() for l in PENDIENTES_CAPTURAS.read_text(encoding="utf-8").splitlines() if l.strip()}
+    # The pending manifest predates WebP migration; both suffixes identify the same screenshot.
+    variants = set(listed)
+    for name in listed:
+        if name.endswith((".png", ".webp")):
+            variants.update({str(Path(name).with_suffix(ext)) for ext in (".png", ".webp")})
+    return variants
 
 
 def leer(path: Path) -> tuple[dict, str]:
