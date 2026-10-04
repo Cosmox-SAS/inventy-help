@@ -2,6 +2,8 @@
 
 Documentación funcional para **usuarios finales** de Inventy ERP: empresarios, administradores, contadores, vendedores, cajeros y auxiliares.
 
+Portal público: [ayuda.inventy.com.co](https://ayuda.inventy.com.co/).
+
 > Este repositorio **no** contiene documentación técnica. La documentación para desarrolladores y agentes vive en `inventy-erp/documentation/`.
 
 ## Ver el sitio en local
@@ -74,11 +76,14 @@ npm run capturas:placeholders                # imágenes "Captura pendiente" par
 - Resultado en `gestion/capturas-reporte.md` (pasos que fallaron y pasos de captura manual).
 - `.env.capturas` no se sube a Git. Usa solo un usuario de una **empresa de demostración**.
 
-Para reducir el tamaño de las capturas PNG ya agregadas a Git, ejecuta
-`python3 scripts/optimize_screenshots.py`. El script usa WebP sin pérdida solo si
-el archivo es más pequeño y conserva exactamente los píxeles decodificados;
-actualiza sus enlaces en los artículos y mantiene los PNG que no cumplen.
-Revisa los cambios y ejecuta las validaciones antes de confirmar la migración.
+Para migrar capturas PNG del repositorio a WebP sin pérdida, agrega primero a
+Git los PNG nuevos y ejecuta `python3 scripts/optimize_screenshots.py`. El
+script solo examina PNG presentes en el índice y convierte aquellos cuyo WebP
+es más pequeño y conserva los píxeles decodificados; mantiene los originales
+cuando una conversión podría perder metadatos o animación. Revisa las imágenes,
+los enlaces actualizados y las eliminaciones, vuelve a preparar los cambios y
+ejecuta las validaciones antes de confirmar la migración. **No** uses esta
+migración manual como paso habitual de validación.
 
 ## Actualización automática con cada pull de inventy-erp
 
@@ -117,10 +122,20 @@ Cuando `inventy-erp` publique un release que cambie pantallas, menús o mensajes
 
 ## Publicación
 
-Al conectar este repositorio con Cloudflare Pages, configura vistas previas para cada Pull Request y `main` como rama de producción. Usa Python 3.12 (archivo `.python-version`), la carpeta de salida `site` y este comando de compilación en Pages:
+El sitio de producción está disponible en [ayuda.inventy.com.co](https://ayuda.inventy.com.co/). El proyecto `inventy-help` de Cloudflare Pages, conectado a `Cosmox-SAS/inventy-help`, publica automáticamente los cambios de `main`; [inventy-help.pages.dev](https://inventy-help.pages.dev/) sigue disponible como dirección alternativa, sin redirección configurada. Pages tiene habilitadas las vistas previas para las ramas que no son de producción. Comprueba la URL de una vista previa en el despliegue del PR antes de compartirla: la configuración está verificada, pero todavía no se ha comprobado un despliegue de vista previa real.
+
+GitHub Actions ejecuta `.github/workflows/docs-check.yml` en los pull requests y los cambios de `main`. Pages utiliza Python 3.12 (archivo `.python-version`), publica la carpeta `site` y ejecuta este comando de compilación:
 
 ```bash
 python -m pip install -r requirements.txt && python scripts/build_docs.py --optimize-screenshots
 ```
 
-El mismo script valida artículos, ejecuta las pruebas y compila MkDocs en modo estricto; cualquier error detiene el despliegue. En CI, la opción de optimización convierte las capturas PNG compatibles solo dentro de la copia temporal de compilación: no crea commits ni modifica la rama remota. En local, ejecuta `python scripts/build_docs.py` sin esa opción para validar sin cambiar archivos. Para incorporar las conversiones al repositorio, usa el comando manual de la sección de capturas y revisa el resultado antes de hacer commit.
+El script valida artículos, ejecuta las pruebas y compila MkDocs en modo estricto; un error detiene esa compilación. `--optimize-screenshots` solo funciona en el entorno de GitHub Actions o Cloudflare Pages y convierte capturas dentro de su copia de compilación: no crea commits ni modifica la rama remota. En local, ejecuta `.venv/bin/python scripts/build_docs.py` **sin** esa opción para validar sin convertir archivos fuente. La migración permanente se hace por separado, con el comando manual de la sección de capturas.
+
+### Comprobar un despliegue o resolver un fallo
+
+1. En el PR, consulta **Checks** o la pestaña **Actions** del repositorio para ver el resultado y los registros de `Validate Help Center`. Una ejecución correcta allí no confirma por sí sola que Pages haya publicado el sitio.
+2. En Cloudflare, abre **Workers & Pages → inventy-help → Deployments**. Revisa el estado y el registro del despliegue correspondiente a la rama y al commit; para producción, abre también [ayuda.inventy.com.co](https://ayuda.inventy.com.co/) y comprueba la página afectada.
+3. Si falla una comprobación, corrige la causa en la rama y repite la validación local. Después de publicar el cambio autorizado, comprueba la nueva ejecución de Actions y el nuevo despliegue de Pages. Si Pages falla aunque Actions pase, revisa primero el registro de compilación de Pages y su configuración de Python, comando y carpeta de salida.
+
+No se presupone una regla de protección de ramas: la revisión y la decisión de unir el PR corresponden a las personas responsables. Para revertir un cambio publicado, prepara y valida una reversión del commit mediante un nuevo PR; no cambies producción, el dominio ni la configuración de Cloudflare sin autorización explícita. Hasta que la reversión se publique, la dirección `pages.dev` puede servir para comparar el despliegue, pero no es un mecanismo de rollback independiente.
