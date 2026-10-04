@@ -1,5 +1,47 @@
 {% extends "base.html" %}
 
+{% macro seo_title() -%}
+  {%- if page.is_homepage -%}
+    {{ (page.meta.title if page.meta and page.meta.title else config.site_name) | e }}
+  {%- elif page.meta and page.meta.title -%}
+    {{ page.meta.title | e }} - {{ config.site_name | e }}
+  {%- elif page.title -%}
+    {{ page.title | striptags | e }} - {{ config.site_name | e }}
+  {%- else -%}
+    {{ config.site_name | e }}
+  {%- endif -%}
+{%- endmacro %}
+
+{% block site_meta %}
+  {{ super() }}
+  {% set description = page.meta.description if page.meta and page.meta.description else config.site_description %}
+  {% set image_url = config.site_url ~ 'assets/brand/social-preview.png' %}
+  {% set image_alt = 'Inventy · Centro de Ayuda. Guías claras para tu negocio.' %}
+  <meta property="og:type" content="{{ 'article' if page.canonical_url and not page.is_homepage else 'website' }}">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="{{ config.site_name | e }}">
+  <meta property="og:title" content="{{ seo_title() }}">
+  <meta property="og:description" content="{{ description | e }}">
+  {% if page.canonical_url %}
+    <meta property="og:url" content="{{ page.canonical_url | e }}">
+  {% endif %}
+  <meta property="og:image" content="{{ image_url | e }}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ image_alt | e }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ seo_title() }}">
+  <meta name="twitter:description" content="{{ description | e }}">
+  {% if page.canonical_url %}
+    <meta name="twitter:url" content="{{ page.canonical_url | e }}">
+  {% endif %}
+  <meta name="twitter:image" content="{{ image_url | e }}">
+  <meta name="twitter:image:alt" content="{{ image_alt | e }}">
+{% endblock %}
+
+{% block htmltitle %}<title>{{ seo_title() }}</title>{% endblock %}
+
 {% block content %}
   {% set estado = page.meta.estado if page and page.meta else None %}
   {% if estado and estado != "publicado" %}
