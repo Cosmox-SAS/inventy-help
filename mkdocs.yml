@@ -20,24 +20,22 @@ theme:
   language: es
   custom_dir: overrides
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
+    - scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Cambiar a modo oscuro
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: indigo
+    - scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Cambiar a modo claro
   font:
     text: Inter
-  icon:
-    logo: material/lifebuoy
+  logo: assets/brand/inventy-logo.svg
+  favicon: assets/brand/favicon.svg
   features:
     - navigation.tabs
     - navigation.sections
