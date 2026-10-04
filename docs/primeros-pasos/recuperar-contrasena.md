@@ -21,19 +21,19 @@ tags:
 
 **Paso 1.** En **Inicia sesión**, haz clic en **¿Olvidaste tu contraseña?**
 
-![Paso 1: enlace ¿Olvidaste tu contraseña?](../assets/capturas/primeros-pasos/recuperar-contrasena/paso-1.png)
+![Paso 1: enlace ¿Olvidaste tu contraseña?](../assets/capturas/primeros-pasos/recuperar-contrasena/paso-1.webp)
 
 **Paso 2.** Escribe tu **Correo electrónico** y haz clic en **Enviar enlace de recuperación**.
 
-![Paso 2: formulario de recuperación](../assets/capturas/primeros-pasos/recuperar-contrasena/paso-2.png)
+![Paso 2: formulario de recuperación](../assets/capturas/primeros-pasos/recuperar-contrasena/paso-2.webp)
 
 **Paso 3.** Abre el correo de Inventy (revisa también Spam) y haz clic en el enlace.
 
-![Paso 3: correo con el enlace](../assets/capturas/primeros-pasos/recuperar-contrasena/paso-3.png)
+![Paso 3: correo con el enlace](../assets/capturas/primeros-pasos/recuperar-contrasena/paso-3.webp)
 
 **Paso 4.** Escribe la nueva **Contraseña**, repítela en **Confirmar contraseña** y haz clic en **Restablecer contraseña**.
 
-![Paso 4: formulario Restablecer contraseña](../assets/capturas/primeros-pasos/recuperar-contrasena/paso-4.png)
+![Paso 4: formulario Restablecer contraseña](../assets/capturas/primeros-pasos/recuperar-contrasena/paso-4.webp)
 
 ✅ **Listo:** aparece *“¡Su contraseña ha sido restablecida!”* y ya puedes [ingresar](ingresar.md).
 

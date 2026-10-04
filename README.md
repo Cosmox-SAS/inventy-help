@@ -42,12 +42,11 @@ scripts/actualizar_guias.sh, claude_actualizar.sh, prompt_actualizacion.md  Actu
 5. Valida:
 
     ```bash
-    .venv/bin/python scripts/check_docs.py
-    .venv/bin/mkdocs build --strict
+    .venv/bin/python scripts/build_docs.py
     ```
 
 6. Actualiza el tablero: `.venv/bin/python scripts/check_docs.py --estado > gestion/estado-articulos.md`.
-7. Abre un Pull Request. El workflow **Validar Centro de Ayuda** corre las mismas validaciones.
+7. Abre un Pull Request. GitHub Actions ejecuta las mismas validaciones.
 
 ## Estados de revisión
 
@@ -74,6 +73,12 @@ npm run capturas:placeholders                # imágenes "Captura pendiente" par
 - **Nunca guarda datos en la demo:** bloquea clics en *Guardar, Confirmar, Crear, Validar, Aprobar…* salvo que el paso tenga `guarda_datos: true` y se corra con `CAPTURAS_PERMITIR_GUARDAR=1`. Toma la foto justo antes de confirmar.
 - Resultado en `gestion/capturas-reporte.md` (pasos que fallaron y pasos de captura manual).
 - `.env.capturas` no se sube a Git. Usa solo un usuario de una **empresa de demostración**.
+
+Para reducir el tamaño de las capturas PNG ya agregadas a Git, ejecuta
+`python3 scripts/optimize_screenshots.py`. El script usa WebP sin pérdida solo si
+el archivo es más pequeño y conserva exactamente los píxeles decodificados;
+actualiza sus enlaces en los artículos y mantiene los PNG que no cumplen.
+Revisa los cambios y ejecuta las validaciones antes de confirmar la migración.
 
 ## Actualización automática con cada pull de inventy-erp
 
@@ -112,4 +117,10 @@ Cuando `inventy-erp` publique un release que cambie pantallas, menús o mensajes
 
 ## Publicación
 
-Pendiente de definir el hosting (por ejemplo, GitHub Pages, Cloudflare Pages o un subdominio `ayuda.`). No hay despliegue automático configurado. Antes de publicar, definir `site_url` en `mkdocs.yml`.
+Al conectar este repositorio con Cloudflare Pages, configura vistas previas para cada Pull Request y `main` como rama de producción. Usa Python 3.12 (archivo `.python-version`), la carpeta de salida `site` y este comando de compilación en Pages:
+
+```bash
+python -m pip install -r requirements.txt && python scripts/build_docs.py --optimize-screenshots
+```
+
+El mismo script valida artículos, ejecuta las pruebas y compila MkDocs en modo estricto; cualquier error detiene el despliegue. En CI, la opción de optimización convierte las capturas PNG compatibles solo dentro de la copia temporal de compilación: no crea commits ni modifica la rama remota. En local, ejecuta `python scripts/build_docs.py` sin esa opción para validar sin cambiar archivos. Para incorporar las conversiones al repositorio, usa el comando manual de la sección de capturas y revisa el resultado antes de hacer commit.

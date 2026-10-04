@@ -24,23 +24,23 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Tesorería › Egresos</span> y haz clic en **Nuevo egreso**.
 
-![Paso 1: botón Nuevo egreso](../assets/capturas/finanzas/registrar-egreso/paso-1.png)
+![Paso 1: botón Nuevo egreso](../assets/capturas/finanzas/registrar-egreso/paso-1.webp)
 
 **Paso 2.** Elige **Tipo de movimiento**: **Pago a proveedor**, y el **Proveedor**.
 
-![Paso 2: tipo de movimiento y proveedor](../assets/capturas/finanzas/registrar-egreso/paso-2.png)
+![Paso 2: tipo de movimiento y proveedor](../assets/capturas/finanzas/registrar-egreso/paso-2.webp)
 
 **Paso 3.** Revisa **Centro de costo** y **Fecha del pago**. En **Fuente del pago** elige **Banco**, **Caja** (sale de tu caja abierta) o **Anticipo**. Escribe el **Egreso Total** y, si quieres, el **Comprobante**.
 
-![Paso 3: información del egreso](../assets/capturas/finanzas/registrar-egreso/paso-3.png)
+![Paso 3: información del egreso](../assets/capturas/finanzas/registrar-egreso/paso-3.webp)
 
 **Paso 4.** En **Distribución del egreso**, escribe el **Valor abono** de cada factura (o haz clic en el **Saldo pendiente** para pagarla completa) hasta que abajo diga **Distribución completa**.
 
-![Paso 4: distribución del egreso](../assets/capturas/finanzas/registrar-egreso/paso-4.png)
+![Paso 4: distribución del egreso](../assets/capturas/finanzas/registrar-egreso/paso-4.webp)
 
 **Paso 5.** Haz clic en **Finalizar** y confirma con **Finalizar**.
 
-![Paso 5: botón Finalizar](../assets/capturas/finanzas/registrar-egreso/paso-5.png)
+![Paso 5: botón Finalizar](../assets/capturas/finanzas/registrar-egreso/paso-5.webp)
 
 ✅ **Listo:** el egreso queda **Finalizado** con número **PGE-**, baja el saldo de la factura del proveedor y el dinero sale de la caja o banco. Si aún no quieres confirmarlo, usa **Guardar borrador**.
 

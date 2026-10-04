@@ -23,23 +23,23 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Tesorería › Ingresos</span> y haz clic en **Nuevo ingreso**.
 
-![Paso 1: botón Nuevo ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-1.png)
+![Paso 1: botón Nuevo ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-1.webp)
 
 **Paso 2.** Elige **Tipo de movimiento**: **Recaudo de cartera**, y el **Cliente**.
 
-![Paso 2: tipo de movimiento y cliente](../assets/capturas/finanzas/registrar-ingreso/paso-2.png)
+![Paso 2: tipo de movimiento y cliente](../assets/capturas/finanzas/registrar-ingreso/paso-2.webp)
 
 **Paso 3.** Completa **Centro de costo**, **Fecha del pago**, **Destino** (**Banco**, **Caja**, **Anticipo** o **Nota crédito**; con *Caja* se usa tu caja abierta), **Medio de pago** e **Ingreso Total**.
 
-![Paso 3: información del ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-3.png)
+![Paso 3: información del ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-3.webp)
 
 **Paso 4.** En **Distribución del ingreso**, haz clic en el **Saldo pendiente** de cada factura que paga: se llena su **Valor abono**. Sigue hasta que **Por distribuir** diga **Distribución completa**.
 
-![Paso 4: distribución del ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-4.png)
+![Paso 4: distribución del ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-4.webp)
 
 **Paso 5.** Haz clic en **Finalizar ingreso** y confirma.
 
-![Paso 5: botón Finalizar ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-5.png)
+![Paso 5: botón Finalizar ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-5.webp)
 
 ✅ **Listo:** las facturas bajan su saldo (o quedan **Pagadas**) y el dinero entra a la caja o banco.
 

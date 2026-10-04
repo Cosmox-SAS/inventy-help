@@ -26,27 +26,27 @@ tags:
 
 **Paso 1.** En el POS, haz clic en **Cerrar caja** en la barra superior.
 
-![Paso 1: botón Cerrar caja en la barra del POS](../assets/capturas/pos/cierre-de-caja/paso-1.png)
+![Paso 1: botón Cerrar caja en la barra del POS](../assets/capturas/pos/cierre-de-caja/paso-1.webp)
 
 **Paso 2.** Revisa el **Resumen del arqueo** (hora de apertura y monto base).
 
-![Paso 2: resumen del arqueo](../assets/capturas/pos/cierre-de-caja/paso-2.png)
+![Paso 2: resumen del arqueo](../assets/capturas/pos/cierre-de-caja/paso-2.webp)
 
 **Paso 3.** En **Efectivo contado**, escribe el total que contaste.
 
-![Paso 3: campo Efectivo contado](../assets/capturas/pos/cierre-de-caja/paso-3.png)
+![Paso 3: campo Efectivo contado](../assets/capturas/pos/cierre-de-caja/paso-3.webp)
 
 **Paso 4.** Elige el **Destino del monto base** (**Dejar en caja** o **Egresar**) y el **Destino del excedente** (**Dejar en caja** o **Consignar** a una **Cuenta bancaria**).
 
-![Paso 4: destino del dinero](../assets/capturas/pos/cierre-de-caja/paso-4.png)
+![Paso 4: destino del dinero](../assets/capturas/pos/cierre-de-caja/paso-4.webp)
 
 **Paso 5.** Si quieres, escribe **Observaciones** y haz clic en **Cerrar caja**.
 
-![Paso 5: botón Cerrar caja del formulario](../assets/capturas/pos/cierre-de-caja/paso-5.png)
+![Paso 5: botón Cerrar caja del formulario](../assets/capturas/pos/cierre-de-caja/paso-5.webp)
 
 **Paso 6.** En **Confirmar cierre de caja**, lee el mensaje y haz clic en **Confirmar cierre**. Si dice que el monto es muy distinto al esperado, vuelve a escribir el monto y el **Motivo**.
 
-![Paso 6: ventana Confirmar cierre de caja](../assets/capturas/pos/cierre-de-caja/paso-6.png)
+![Paso 6: ventana Confirmar cierre de caja](../assets/capturas/pos/cierre-de-caja/paso-6.webp)
 
 ✅ **Listo:** la caja queda **Cerrada**. El comprobante se imprime desde <span class="ruta">Tesorería › Caja › Sesiones</span> › **Imprimir cierre**.
 

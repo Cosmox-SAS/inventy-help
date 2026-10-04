@@ -24,27 +24,27 @@ tags:
 
 **Paso 1.** En la barra de la izquierda haz clic en **Ventas** (ícono **$**). En el menú que se abre, baja hasta la sección **AJUSTES** y haz clic en **Tipos de clientes**. Luego haz clic en **Nuevo tipo de cliente**.
 
-![Paso 1: botón Nuevo tipo de cliente](../assets/capturas/ventas/tipos-de-cliente/paso-1.png)
+![Paso 1: botón Nuevo tipo de cliente](../assets/capturas/ventas/tipos-de-cliente/paso-1.webp)
 
 **Paso 2.** Escribe el **Nombre** (ej. *Mayorista*).
 
-![Paso 2: campo Nombre](../assets/capturas/ventas/tipos-de-cliente/paso-2.png)
+![Paso 2: campo Nombre](../assets/capturas/ventas/tipos-de-cliente/paso-2.webp)
 
 **Paso 3.** Elige la **Cuenta por cobrar** (ej. *130505001 — Clientes nacionales*). Es obligatoria para vender a crédito si usas Contabilidad.
 
-![Paso 3: campo Cuenta por cobrar](../assets/capturas/ventas/tipos-de-cliente/paso-3.png)
+![Paso 3: campo Cuenta por cobrar](../assets/capturas/ventas/tipos-de-cliente/paso-3.webp)
 
 **Paso 4.** (Opcional) Escribe el **Descuento general en ventas (%)** que tendrán estos clientes.
 
-![Paso 4: campo Descuento general en ventas](../assets/capturas/ventas/tipos-de-cliente/paso-4.png)
+![Paso 4: campo Descuento general en ventas](../assets/capturas/ventas/tipos-de-cliente/paso-4.webp)
 
 **Paso 5.** Haz clic en **Crear tipo de cliente**.
 
-![Paso 5: botón Crear tipo de cliente](../assets/capturas/ventas/tipos-de-cliente/paso-5.png)
+![Paso 5: botón Crear tipo de cliente](../assets/capturas/ventas/tipos-de-cliente/paso-5.webp)
 
 **Paso 6.** Asígnalo a cada cliente en su ficha: **Datos del rol de cliente › Tipo de cliente**.
 
-![Paso 6: tipo de cliente creado en la lista](../assets/capturas/ventas/tipos-de-cliente/paso-6.png)
+![Paso 6: tipo de cliente creado en la lista](../assets/capturas/ventas/tipos-de-cliente/paso-6.webp)
 
 ✅ **Listo:** las ventas a crédito de esos clientes registran la cartera en la cuenta elegida y aplican su descuento.
 

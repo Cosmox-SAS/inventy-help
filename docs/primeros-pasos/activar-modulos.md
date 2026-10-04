@@ -23,19 +23,19 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Configuración › Módulos</span>.
 
-![Paso 1: pantalla Configuración de módulos](../assets/capturas/primeros-pasos/activar-modulos/paso-1.png)
+![Paso 1: pantalla Configuración de módulos](../assets/capturas/primeros-pasos/activar-modulos/paso-1.webp)
 
 **Paso 2.** Selecciona el módulo en la lista de la izquierda.
 
-![Paso 2: lista de módulos](../assets/capturas/primeros-pasos/activar-modulos/paso-2.png)
+![Paso 2: lista de módulos](../assets/capturas/primeros-pasos/activar-modulos/paso-2.webp)
 
 **Paso 3.** Usa el interruptor **Habilitar módulo** / **Deshabilitar módulo**.
 
-![Paso 3: interruptor del módulo](../assets/capturas/primeros-pasos/activar-modulos/paso-3.png)
+![Paso 3: interruptor del módulo](../assets/capturas/primeros-pasos/activar-modulos/paso-3.webp)
 
 **Paso 4.** Activa las opciones que necesites del módulo.
 
-![Paso 4: opciones del módulo](../assets/capturas/primeros-pasos/activar-modulos/paso-4.png)
+![Paso 4: opciones del módulo](../assets/capturas/primeros-pasos/activar-modulos/paso-4.webp)
 
 ✅ **Listo:** los menús del módulo aparecen para los usuarios con permiso (pueden necesitar recargar la página).
 

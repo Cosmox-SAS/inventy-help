@@ -32,35 +32,35 @@ tags:
 
 **Paso 1.** (Si solo es proveedor) En <span class="ruta">Configuración › Contactos</span> abre el tercero, ve a la pestaña **Rol Cliente** y haz clic en **Asignar como Cliente**. Escribe el **Límite de crédito (COP)** y los **Días de plazo de pago**, y haz clic en **Asignar**.
 
-![Paso 1: Asignar rol de cliente al contacto](../assets/capturas/finanzas/compensacion-cuentas/paso-1.png)
+![Paso 1: Asignar rol de cliente al contacto](../assets/capturas/finanzas/compensacion-cuentas/paso-1.webp)
 
 **Paso 2.** Ponle el tipo de cliente: en <span class="ruta">Ventas › Clientes</span> ábrelo, haz clic en **Editar**, elige el **Tipo de cliente** (ej. *General*) en **Datos del rol de cliente** y haz clic en **Actualizar cliente**. Sin esto no se le puede vender a crédito. Luego hazle la [factura de venta a crédito](../ventas/crear-factura-venta.md).
 
-![Paso 2: Tipo de cliente en la ficha del cliente](../assets/capturas/finanzas/compensacion-cuentas/paso-2.png)
+![Paso 2: Tipo de cliente en la ficha del cliente](../assets/capturas/finanzas/compensacion-cuentas/paso-2.webp)
 
 **Paso 3.** Ingresa a <span class="ruta">Tesorería › Compensación de cuentas</span> y haz clic en **Nueva compensación**.
 
-![Paso 3: botón Nueva compensación](../assets/capturas/finanzas/compensacion-cuentas/paso-3.png)
+![Paso 3: botón Nueva compensación](../assets/capturas/finanzas/compensacion-cuentas/paso-3.webp)
 
 **Paso 4.** En **Tercero** busca la persona o empresa. Revisa el **Centro de costo** y, si quieres, escribe una **Observación**.
 
-![Paso 4: Datos generales con el tercero](../assets/capturas/finanzas/compensacion-cuentas/paso-4.png)
+![Paso 4: Datos generales con el tercero](../assets/capturas/finanzas/compensacion-cuentas/paso-4.webp)
 
 **Paso 5.** En **Cliente › Facturas de venta**, escribe el **Monto a compensar** de cada factura, o haz clic en su **Saldo** para usarlo completo. Si tiene **Notas crédito** con saldo, también puedes usarlas aquí.
 
-![Paso 5: lado Cliente con la factura de venta](../assets/capturas/finanzas/compensacion-cuentas/paso-5.png)
+![Paso 5: lado Cliente con la factura de venta](../assets/capturas/finanzas/compensacion-cuentas/paso-5.webp)
 
 **Paso 6.** En **Proveedor › Facturas de compra**, escribe el **Monto a compensar** de cada factura.
 
-![Paso 6: lado Proveedor con la factura de compra](../assets/capturas/finanzas/compensacion-cuentas/paso-6.png)
+![Paso 6: lado Proveedor con la factura de compra](../assets/capturas/finanzas/compensacion-cuentas/paso-6.webp)
 
 **Paso 7.** Abajo, **Neto cliente** y **Total proveedor** deben ser iguales: **Diferencia $ 0** y **Compensación cuadrada**. Haz clic en **Registrar compensación** y luego en **Confirmar y registrar**.
 
-![Paso 7: compensación cuadrada y botón Registrar compensación](../assets/capturas/finanzas/compensacion-cuentas/paso-7.png)
+![Paso 7: compensación cuadrada y botón Registrar compensación](../assets/capturas/finanzas/compensacion-cuentas/paso-7.webp)
 
 **Paso 8.** Queda **Finalizado** con número **CMP-**. Ahí ves cada factura con su **Saldo anterior**, **Monto aplicado** y **Saldo posterior**. Con **Ver asientos** ves el asiento contable y con **PDF** descargas el soporte.
 
-![Paso 8: asiento contable de la compensación](../assets/capturas/finanzas/compensacion-cuentas/paso-8.png)
+![Paso 8: asiento contable de la compensación](../assets/capturas/finanzas/compensacion-cuentas/paso-8.webp)
 
 ✅ **Listo:** los saldos de las facturas bajaron en lo compensado, igual que si se hubieran pagado. Si usas Contabilidad, el asiento es: **débito** a la cuenta por pagar del proveedor y **crédito** a la cuenta por cobrar del cliente (más un débito a notas crédito de clientes si usaste notas crédito).
 

@@ -25,35 +25,35 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Ventas › POS</span>.
 
-![Paso 1: pantalla del POS](../assets/capturas/pos/vender-en-pos/paso-1.png)
+![Paso 1: pantalla del POS](../assets/capturas/pos/vender-en-pos/paso-1.webp)
 
 **Paso 2.** Busca el producto en **Buscar producto…** (nombre o código) o escanea el código de barras.
 
-![Paso 2: buscador de productos](../assets/capturas/pos/vender-en-pos/paso-2.png)
+![Paso 2: buscador de productos](../assets/capturas/pos/vender-en-pos/paso-2.webp)
 
 **Paso 3.** Haz clic en el producto para agregarlo al carrito. Repite con cada producto.
 
-![Paso 3: producto agregado al carrito](../assets/capturas/pos/vender-en-pos/paso-3.png)
+![Paso 3: producto agregado al carrito](../assets/capturas/pos/vender-en-pos/paso-3.webp)
 
 **Paso 4.** Para cambiar la cantidad, haz clic en la cantidad de la línea del carrito.
 
-![Paso 4: cantidad de la línea](../assets/capturas/pos/vender-en-pos/paso-4.png)
+![Paso 4: cantidad de la línea](../assets/capturas/pos/vender-en-pos/paso-4.webp)
 
 **Paso 5.** Por defecto se vende a **Consumidor Final**. Para otro cliente, abre **Seleccionar cliente**, búscalo o usa **Crear cliente**.
 
-![Paso 5: selección de cliente](../assets/capturas/pos/vender-en-pos/paso-5.png)
+![Paso 5: selección de cliente](../assets/capturas/pos/vender-en-pos/paso-5.webp)
 
 **Paso 6.** Haz clic en **Realizar venta** (o <kbd>Ctrl</kbd> + <kbd>Enter</kbd>).
 
-![Paso 6: botón Realizar venta](../assets/capturas/pos/vender-en-pos/paso-6.png)
+![Paso 6: botón Realizar venta](../assets/capturas/pos/vender-en-pos/paso-6.webp)
 
 **Paso 7.** En **Cobrar venta**, elige el medio de pago y escribe el valor recibido. Si paga con varios medios, agrega cada uno. En tarjeta o transferencia, escribe la **Referencia**.
 
-![Paso 7: ventana Cobrar venta](../assets/capturas/pos/vender-en-pos/paso-7.png)
+![Paso 7: ventana Cobrar venta](../assets/capturas/pos/vender-en-pos/paso-7.webp)
 
 **Paso 8.** Deja marcada **Generar factura electrónica** si corresponde y haz clic en **Confirmar cobro**. El botón muestra el **Cambio** a devolver.
 
-![Paso 8: botón Confirmar cobro](../assets/capturas/pos/vender-en-pos/paso-8.png)
+![Paso 8: botón Confirmar cobro](../assets/capturas/pos/vender-en-pos/paso-8.webp)
 
 ✅ **Listo:** aparece *“Venta registrada con éxito.”*, se imprime la tirilla (o se abre el PDF) y el carrito queda vacío.
 

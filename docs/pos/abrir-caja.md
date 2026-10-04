@@ -24,19 +24,19 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Ventas › POS</span>. Si no tienes caja abierta, se abre sola la ventana **Abrir caja** (también está el botón **Abrir caja** en la barra superior).
 
-![Paso 1: POS con la ventana Abrir caja](../assets/capturas/pos/abrir-caja/paso-1.png)
+![Paso 1: POS con la ventana Abrir caja](../assets/capturas/pos/abrir-caja/paso-1.webp)
 
 **Paso 2.** En **Selecciona una caja**, elige tu caja.
 
-![Paso 2: selector de caja](../assets/capturas/pos/abrir-caja/paso-2.png)
+![Paso 2: selector de caja](../assets/capturas/pos/abrir-caja/paso-2.webp)
 
 **Paso 3.** En **Monto base**, escribe el efectivo con el que empiezas. Si no tienes base, deja **0**.
 
-![Paso 3: campo Monto base](../assets/capturas/pos/abrir-caja/paso-3.png)
+![Paso 3: campo Monto base](../assets/capturas/pos/abrir-caja/paso-3.webp)
 
 **Paso 4.** Haz clic en **Abrir caja**.
 
-![Paso 4: botón Abrir caja](../assets/capturas/pos/abrir-caja/paso-4.png)
+![Paso 4: botón Abrir caja](../assets/capturas/pos/abrir-caja/paso-4.webp)
 
 ✅ **Listo:** aparece *“Caja abierta exitosamente.”* y ya puedes [vender](vender-en-pos.md).
 

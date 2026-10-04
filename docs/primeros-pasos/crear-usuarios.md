@@ -23,23 +23,23 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Configuración › Usuarios</span> y haz clic en **Invitaciones**.
 
-![Paso 1: botón Invitaciones](../assets/capturas/primeros-pasos/crear-usuarios/paso-1.png)
+![Paso 1: botón Invitaciones](../assets/capturas/primeros-pasos/crear-usuarios/paso-1.webp)
 
 **Paso 2.** Haz clic en **Invitar usuario**.
 
-![Paso 2: botón Invitar usuario](../assets/capturas/primeros-pasos/crear-usuarios/paso-2.png)
+![Paso 2: botón Invitar usuario](../assets/capturas/primeros-pasos/crear-usuarios/paso-2.webp)
 
 **Paso 3.** Completa **Nombre**, **Correo electrónico**, **Rol** y **Sede**.
 
-![Paso 3: formulario Invitar usuario](../assets/capturas/primeros-pasos/crear-usuarios/paso-3.png)
+![Paso 3: formulario Invitar usuario](../assets/capturas/primeros-pasos/crear-usuarios/paso-3.webp)
 
 **Paso 4.** Haz clic en **Enviar invitación**.
 
-![Paso 4: botón Enviar invitación](../assets/capturas/primeros-pasos/crear-usuarios/paso-4.png)
+![Paso 4: botón Enviar invitación](../assets/capturas/primeros-pasos/crear-usuarios/paso-4.webp)
 
 **Paso 5.** La persona abre el correo, completa sus datos y su contraseña, y hace clic en **Unirme a la empresa**.
 
-![Paso 5: pantalla Aceptar invitación](../assets/capturas/primeros-pasos/crear-usuarios/paso-5.png)
+![Paso 5: pantalla Aceptar invitación](../assets/capturas/primeros-pasos/crear-usuarios/paso-5.webp)
 
 ✅ **Listo:** el usuario aparece en **Usuarios** con su sede y rol.
 

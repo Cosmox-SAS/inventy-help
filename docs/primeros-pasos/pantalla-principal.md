@@ -47,7 +47,7 @@ En el manual verás rutas como <span class="ruta">Ventas › Ajustes › Tipos d
 2. **Ajustes**: el **título de una sección** dentro de ese menú (en mayúsculas: *OPERACIÓN*, *AJUSTES*, *REPORTES*). No es un botón: es un grupo.
 3. **Tipos de clientes**: la opción debajo de ese título. Haz clic en ella.
 
-![Menú de Ventas con la sección AJUSTES](../assets/capturas/primeros-pasos/pantalla-principal/paso-1.png)
+![Menú de Ventas con la sección AJUSTES](../assets/capturas/primeros-pasos/pantalla-principal/paso-1.webp)
 
 !!! tip "¿No ves la sección?"
     - Si el título tiene la flechita hacia abajo, está **cerrado**: haz clic en él para desplegarlo.
@@ -58,7 +58,7 @@ En el manual verás rutas como <span class="ruta">Ventas › Ajustes › Tipos d
 
 ¿No sabes dónde está una opción? Presiona <kbd>Ctrl</kbd> + <kbd>K</kbd> (en Mac, <kbd>⌘</kbd> + <kbd>K</kbd>). Se abre el campo **Buscar en el menú…**: escribe parte del nombre (por ejemplo, *tipos de clientes*, *cierre* o *kardex*) y presiona <kbd>Enter</kbd>.
 
-![Buscador del menú con Ctrl + K](../assets/capturas/primeros-pasos/pantalla-principal/paso-2.png)
+![Buscador del menú con Ctrl + K](../assets/capturas/primeros-pasos/pantalla-principal/paso-2.webp)
 
 ## El panel de Inicio
 

@@ -23,19 +23,19 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Fiscal › Documentos</span> y busca el documento por número o CUFE.
 
-![Paso 1: lista de documentos](../assets/capturas/facturacion-electronica/documento-rechazado/paso-1.png)
+![Paso 1: lista de documentos](../assets/capturas/facturacion-electronica/documento-rechazado/paso-1.webp)
 
 **Paso 2.** Abre las acciones del documento y haz clic en **Ver error**.
 
-![Paso 2: acción Ver error](../assets/capturas/facturacion-electronica/documento-rechazado/paso-2.png)
+![Paso 2: acción Ver error](../assets/capturas/facturacion-electronica/documento-rechazado/paso-2.webp)
 
 **Paso 3.** Corrige la causa: datos del cliente (<span class="ruta">Ventas › Clientes</span>), resolución (<span class="ruta">Fiscal › Resoluciones</span>) o impuestos (<span class="ruta">Fiscal › Catálogo de Impuestos</span>).
 
-![Paso 3: ventana con el error](../assets/capturas/facturacion-electronica/documento-rechazado/paso-3.png)
+![Paso 3: ventana con el error](../assets/capturas/facturacion-electronica/documento-rechazado/paso-3.webp)
 
 **Paso 4.** Vuelve al documento y haz clic en **Reenviar documento electrónico**. Confirma.
 
-![Paso 4: acción Reenviar documento electrónico](../assets/capturas/facturacion-electronica/documento-rechazado/paso-4.png)
+![Paso 4: acción Reenviar documento electrónico](../assets/capturas/facturacion-electronica/documento-rechazado/paso-4.webp)
 
 ✅ **Listo:** aparece *“Documento … reenviado exitosamente. Estado: …”*. Si dice **Aceptado**, terminaste.
 

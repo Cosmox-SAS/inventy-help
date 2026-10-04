@@ -23,27 +23,27 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Compras › Facturas</span> y haz clic en **Nueva Factura**.
 
-![Paso 1: botón Nueva Factura](../assets/capturas/compras/registrar-factura-compra/paso-1.png)
+![Paso 1: botón Nueva Factura](../assets/capturas/compras/registrar-factura-compra/paso-1.webp)
 
 **Paso 2.** (Recomendado) Sube el **XML o ZIP** de la factura en **Completa la factura con el documento del proveedor**. Revisa los datos que leyó la IA.
 
-![Paso 2: lectura del documento del proveedor](../assets/capturas/compras/registrar-factura-compra/paso-2.png)
+![Paso 2: lectura del documento del proveedor](../assets/capturas/compras/registrar-factura-compra/paso-2.webp)
 
 **Paso 3.** Elige el modo: **Compra Directa** o **Con Orden de Compra**.
 
-![Paso 3: modo de registro](../assets/capturas/compras/registrar-factura-compra/paso-3.png)
+![Paso 3: modo de registro](../assets/capturas/compras/registrar-factura-compra/paso-3.webp)
 
 **Paso 4.** Completa **Proveedor**, **Centro de costo**, **N° Factura Proveedor**, **Fecha de emisión** y **Cuenta a Pagar (Neto)**.
 
-![Paso 4: información general](../assets/capturas/compras/registrar-factura-compra/paso-4.png)
+![Paso 4: información general](../assets/capturas/compras/registrar-factura-compra/paso-4.webp)
 
 **Paso 5.** En **Ítems de la Factura**, elige el producto en **Buscar producto...** y escribe la **Cant.**. El **Precio** se llena con el costo del producto (cámbialo si la factura dice otro) y el IVA sale de su catálogo. Usa **Agregar nueva línea** para más productos.
 
-![Paso 5: ítems de la factura](../assets/capturas/compras/registrar-factura-compra/paso-5.png)
+![Paso 5: ítems de la factura](../assets/capturas/compras/registrar-factura-compra/paso-5.webp)
 
 **Paso 6.** Revisa el **Total a pagar** (abajo) y haz clic en **Registrar Factura**. En **¿Validar factura?** haz clic en **Validar factura**: se genera una **recepción automática de mercancía**.
 
-![Paso 6: botón Registrar Factura](../assets/capturas/compras/registrar-factura-compra/paso-6.png)
+![Paso 6: botón Registrar Factura](../assets/capturas/compras/registrar-factura-compra/paso-6.webp)
 
 ✅ **Listo:** la factura queda validada, el inventario sube y queda la deuda con el proveedor.
 

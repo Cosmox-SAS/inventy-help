@@ -25,27 +25,27 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Tesorería › Caja › Cajas</span> y haz clic en **Nueva caja**.
 
-![Paso 1: botón Nueva caja](../assets/capturas/pos/crear-caja/paso-1.png)
+![Paso 1: botón Nueva caja](../assets/capturas/pos/crear-caja/paso-1.webp)
 
 **Paso 2.** Escribe el **Nombre** de la caja (ej. *Caja Mostrador*).
 
-![Paso 2: campo Nombre](../assets/capturas/pos/crear-caja/paso-2.png)
+![Paso 2: campo Nombre](../assets/capturas/pos/crear-caja/paso-2.webp)
 
 **Paso 3.** Elige el **Centro de costo**.
 
-![Paso 3: campo Centro de costo](../assets/capturas/pos/crear-caja/paso-3.png)
+![Paso 3: campo Centro de costo](../assets/capturas/pos/crear-caja/paso-3.webp)
 
 **Paso 4.** Elige la **Cuenta contable** del efectivo (ej. *Caja general*). **Es obligatoria si tu empresa usa Contabilidad**: sin ella, el POS no deja cobrar. Si quieres, elige también el **Cliente por defecto** (vacío = Consumidor Final) y el **Monto máximo en caja**.
 
-![Paso 4: campos opcionales de la caja](../assets/capturas/pos/crear-caja/paso-4.png)
+![Paso 4: campos opcionales de la caja](../assets/capturas/pos/crear-caja/paso-4.webp)
 
 **Paso 5.** Haz clic en **Crear caja**.
 
-![Paso 5: botón Crear caja](../assets/capturas/pos/crear-caja/paso-5.png)
+![Paso 5: botón Crear caja](../assets/capturas/pos/crear-caja/paso-5.webp)
 
 **Paso 6.** La caja aparece en la lista como **Cerrada**, lista para [abrirla en el POS](abrir-caja.md).
 
-![Paso 6: caja creada en la lista](../assets/capturas/pos/crear-caja/paso-6.png)
+![Paso 6: caja creada en la lista](../assets/capturas/pos/crear-caja/paso-6.webp)
 
 ✅ **Listo:** ya puedes [abrir la caja](abrir-caja.md) y empezar a vender.
 

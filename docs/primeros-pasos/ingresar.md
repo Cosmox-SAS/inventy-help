@@ -21,15 +21,15 @@ tags:
 
 **Paso 1.** Abre la dirección de Inventy en tu navegador. Verás **Inicia sesión**.
 
-![Paso 1: pantalla Inicia sesión](../assets/capturas/primeros-pasos/ingresar/paso-1.png)
+![Paso 1: pantalla Inicia sesión](../assets/capturas/primeros-pasos/ingresar/paso-1.webp)
 
 **Paso 2.** En **Correo electrónico** escribe tu correo y en **Contraseña** tu contraseña.
 
-![Paso 2: correo y contraseña](../assets/capturas/primeros-pasos/ingresar/paso-2.png)
+![Paso 2: correo y contraseña](../assets/capturas/primeros-pasos/ingresar/paso-2.webp)
 
 **Paso 3.** Haz clic en **Iniciar sesión**.
 
-![Paso 3: botón Iniciar sesión](../assets/capturas/primeros-pasos/ingresar/paso-3.png)
+![Paso 3: botón Iniciar sesión](../assets/capturas/primeros-pasos/ingresar/paso-3.webp)
 
 ✅ **Listo:** entras al **Inicio** de tu empresa.
 

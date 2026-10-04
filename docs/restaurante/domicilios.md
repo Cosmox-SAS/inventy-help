@@ -28,31 +28,31 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Restaurante › Repartidores</span> › **Nuevo Repartidor**, elige el **Proveedor (tercero)**, marca **Repartidor activo** y haz clic en **Crear repartidor**.
 
-![Paso 1: formulario Nuevo repartidor](../assets/capturas/restaurante/domicilios/paso-1.png)
+![Paso 1: formulario Nuevo repartidor](../assets/capturas/restaurante/domicilios/paso-1.webp)
 
 **Paso 2.** En <span class="ruta">Ventas › POS</span>, elige el tipo de pedido **Domicilio**.
 
-![Paso 2: tipo de pedido Domicilio](../assets/capturas/restaurante/domicilios/paso-2.png)
+![Paso 2: tipo de pedido Domicilio](../assets/capturas/restaurante/domicilios/paso-2.webp)
 
 **Paso 3.** En **Datos del domicilio**, busca o crea el cliente, la **Dirección de entrega**, el **Punto de referencia** y el costo del domicilio.
 
-![Paso 3: ventana Datos del domicilio](../assets/capturas/restaurante/domicilios/paso-3.png)
+![Paso 3: ventana Datos del domicilio](../assets/capturas/restaurante/domicilios/paso-3.webp)
 
 **Paso 4.** Agrega los productos y haz clic en **Realizar pedido**.
 
-![Paso 4: botón Realizar pedido](../assets/capturas/restaurante/domicilios/paso-4.png)
+![Paso 4: botón Realizar pedido](../assets/capturas/restaurante/domicilios/paso-4.webp)
 
 **Paso 5.** En <span class="ruta">Restaurante › Tablero de pedidos</span>, abre el pedido y haz clic en **Asignar repartidor**. Luego márcalo **En camino** y **Entregado**, y factúralo.
 
-![Paso 5: tablero de pedidos y Asignar repartidor](../assets/capturas/restaurante/domicilios/paso-5.png)
+![Paso 5: tablero de pedidos y Asignar repartidor](../assets/capturas/restaurante/domicilios/paso-5.webp)
 
 **Paso 6.** Para pagarle: <span class="ruta">Restaurante › Domicilios › Liquidación</span> › **Nueva liquidación**. Elige **Sede - centro de costo**, **Repartidor**, **Fecha inicio** y **Fecha fin**.
 
-![Paso 6: formulario Nueva liquidación](../assets/capturas/restaurante/domicilios/paso-6.png)
+![Paso 6: formulario Nueva liquidación](../assets/capturas/restaurante/domicilios/paso-6.webp)
 
 **Paso 7.** Revisa los **Domicilios pendientes por liquidar** y el **Total a liquidar**, elige la **Fuente del pago** y haz clic en **Confirmar liquidación**.
 
-![Paso 7: total y Confirmar liquidación](../assets/capturas/restaurante/domicilios/paso-7.png)
+![Paso 7: total y Confirmar liquidación](../assets/capturas/restaurante/domicilios/paso-7.webp)
 
 ✅ **Listo:** al domiciliario se le paga la suma de los costos de domicilio de sus pedidos. Puedes **Imprimir tirilla** para que firme.
 

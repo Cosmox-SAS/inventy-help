@@ -21,23 +21,23 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Configuración › Roles y Permisos</span>.
 
-![Paso 1: lista de roles](../assets/capturas/primeros-pasos/roles-y-permisos/paso-1.png)
+![Paso 1: lista de roles](../assets/capturas/primeros-pasos/roles-y-permisos/paso-1.webp)
 
 **Paso 2.** Haz clic en **Nuevo rol**.
 
-![Paso 2: botón Nuevo rol](../assets/capturas/primeros-pasos/roles-y-permisos/paso-2.png)
+![Paso 2: botón Nuevo rol](../assets/capturas/primeros-pasos/roles-y-permisos/paso-2.webp)
 
 **Paso 3.** Escribe el nombre del rol (ej. *Cajero*).
 
-![Paso 3: nombre del rol](../assets/capturas/primeros-pasos/roles-y-permisos/paso-3.png)
+![Paso 3: nombre del rol](../assets/capturas/primeros-pasos/roles-y-permisos/paso-3.webp)
 
 **Paso 4.** Escribe en **Buscar permisos...** (ej. *caja*, *pos*) y marca los permisos que necesita. Abajo ves cuántos llevas seleccionados.
 
-![Paso 4: lista de permisos](../assets/capturas/primeros-pasos/roles-y-permisos/paso-4.png)
+![Paso 4: lista de permisos](../assets/capturas/primeros-pasos/roles-y-permisos/paso-4.webp)
 
 **Paso 5.** Haz clic en **Crear Rol**. El rol aparece en la lista con su número de permisos.
 
-![Paso 5: botón Crear Rol](../assets/capturas/primeros-pasos/roles-y-permisos/paso-5.png)
+![Paso 5: botón Crear Rol](../assets/capturas/primeros-pasos/roles-y-permisos/paso-5.webp)
 
 ✅ **Listo:** asigna el rol a los usuarios en <span class="ruta">Configuración › Usuarios</span>. Para cambiar permisos después: acciones del rol › **Gestionar permisos**.
 

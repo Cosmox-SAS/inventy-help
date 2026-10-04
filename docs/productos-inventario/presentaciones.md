@@ -27,31 +27,31 @@ tags:
 
 **Paso 1.** Activa la opción (una sola vez para la empresa): ingresa a <span class="ruta">Configuración › Módulos</span>, elige **Inventario** y enciende **Presentaciones**. Se guarda solo.
 
-![Paso 1: opción Presentaciones en Módulos › Inventario](../assets/capturas/productos-inventario/presentaciones/paso-1.png)
+![Paso 1: opción Presentaciones en Módulos › Inventario](../assets/capturas/productos-inventario/presentaciones/paso-1.webp)
 
 **Paso 2.** Activa el producto: en <span class="ruta">Inventario › Productos</span> abre el producto, haz clic en **Editar producto** y, en **Comportamiento del producto**, haz clic en **Activar presentaciones**. Haz clic en **Actualizar Producto**.
 
-![Paso 2: Activar presentaciones en el producto](../assets/capturas/productos-inventario/presentaciones/paso-2.png)
+![Paso 2: Activar presentaciones en el producto](../assets/capturas/productos-inventario/presentaciones/paso-2.webp)
 
 **Paso 3.** Vuelve a **Editar producto**, abre la pestaña **Presentaciones** y haz clic en **Agregar presentación**.
 
-![Paso 3: pestaña Presentaciones](../assets/capturas/productos-inventario/presentaciones/paso-3.png)
+![Paso 3: pestaña Presentaciones](../assets/capturas/productos-inventario/presentaciones/paso-3.webp)
 
 **Paso 4.** Escribe el **Nombre** (ej. *CAJA X 12*), elige la **Unidad** (ej. *Caja*), el **Factor** (cuántas unidades trae, ej. *12*), el **Código de barras** del empaque si tiene y su **Precio de venta (con impuestos)**. Haz clic en **Guardar**.
 
-![Paso 4: formulario de la presentación](../assets/capturas/productos-inventario/presentaciones/paso-4.png)
+![Paso 4: formulario de la presentación](../assets/capturas/productos-inventario/presentaciones/paso-4.webp)
 
 **Paso 5.** **Para comprar:** en la factura de compra, en la línea del producto elige la **Presentación** (ej. *CAJA X 12*), escribe cuántas cajas compras y **el precio de una caja** (ej. 12 × $11.000 = *132.000*). Inventy no multiplica el precio solo.
 
-![Paso 5: presentación en la línea de la factura de compra](../assets/capturas/productos-inventario/presentaciones/paso-5.png)
+![Paso 5: presentación en la línea de la factura de compra](../assets/capturas/productos-inventario/presentaciones/paso-5.webp)
 
 **Paso 6.** **Para vender:** en el POS la caja aparece como otra tarjeta (ej. *CAFÉ MOLIDO 500 G · CAJA X 12*) con su precio y su stock en paquetes. Haz clic en ella o escanea su código. En la factura de venta se elige igual que en la compra.
 
-![Paso 6: presentación en el POS](../assets/capturas/productos-inventario/presentaciones/paso-6.png)
+![Paso 6: presentación en el POS](../assets/capturas/productos-inventario/presentaciones/paso-6.webp)
 
 **Paso 7.** **Proveedores:** en **Editar producto › Referencias de Proveedores**, haz clic en **Agregar Referencia**, elige el **Proveedor** y escribe su código (el código con que él llama a tu producto).
 
-![Paso 7: pestaña Referencias de Proveedores](../assets/capturas/productos-inventario/presentaciones/paso-7.png)
+![Paso 7: pestaña Referencias de Proveedores](../assets/capturas/productos-inventario/presentaciones/paso-7.webp)
 
 ✅ **Listo:** compras y vendes por caja; el inventario se mueve en unidades (1 caja = 12 unidades).
 

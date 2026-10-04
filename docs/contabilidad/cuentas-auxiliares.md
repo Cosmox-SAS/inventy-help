@@ -28,31 +28,31 @@ tags:
 
 **Paso 1.** Ingresa a <span class="ruta">Contabilidad › Plan de Cuentas</span>.
 
-![Paso 1: pantalla Plan de Cuentas](../assets/capturas/contabilidad/cuentas-auxiliares/paso-1.png)
+![Paso 1: pantalla Plan de Cuentas](../assets/capturas/contabilidad/cuentas-auxiliares/paso-1.webp)
 
 **Paso 2.** *(Solo la primera vez)* Haz clic en **Cargar auxiliares por defecto**.
 
-![Paso 2: botón Cargar auxiliares por defecto](../assets/capturas/contabilidad/cuentas-auxiliares/paso-2.png)
+![Paso 2: botón Cargar auxiliares por defecto](../assets/capturas/contabilidad/cuentas-auxiliares/paso-2.webp)
 
 **Paso 3.** Revisa la vista previa (**Cuentas a crear**, **Asignaciones a completar**), haz clic en **Confirmar** y luego en **Sí, aplicar**. Esto se hace una sola vez.
 
-![Paso 3: vista previa del catálogo por defecto](../assets/capturas/contabilidad/cuentas-auxiliares/paso-3.png)
+![Paso 3: vista previa del catálogo por defecto](../assets/capturas/contabilidad/cuentas-auxiliares/paso-3.webp)
 
 **Paso 4.** Para crear una cuenta propia, haz clic en **Nueva Cuenta Auxiliar**.
 
-![Paso 4: botón Nueva Cuenta Auxiliar](../assets/capturas/contabilidad/cuentas-auxiliares/paso-4.png)
+![Paso 4: botón Nueva Cuenta Auxiliar](../assets/capturas/contabilidad/cuentas-auxiliares/paso-4.webp)
 
 **Paso 5.** En **Cuenta padre**, busca la **Subcuenta** del PUC donde va la cuenta (ej. *110505 Caja general*).
 
-![Paso 5: campo Cuenta padre](../assets/capturas/contabilidad/cuentas-auxiliares/paso-5.png)
+![Paso 5: campo Cuenta padre](../assets/capturas/contabilidad/cuentas-auxiliares/paso-5.webp)
 
 **Paso 6.** Escribe el **Nombre de la cuenta** (ej. *CAJA MENOR SEDE NORTE*). El código se genera solo; si quieres, escribe un **Sufijo personalizado** de 3 dígitos. Revisa **Naturaleza** y **Tipo fiscal**.
 
-![Paso 6: nombre, sufijo, naturaleza y tipo fiscal](../assets/capturas/contabilidad/cuentas-auxiliares/paso-6.png)
+![Paso 6: nombre, sufijo, naturaleza y tipo fiscal](../assets/capturas/contabilidad/cuentas-auxiliares/paso-6.webp)
 
 **Paso 7.** Haz clic en **Crear cuenta**.
 
-![Paso 7: botón Crear cuenta](../assets/capturas/contabilidad/cuentas-auxiliares/paso-7.png)
+![Paso 7: botón Crear cuenta](../assets/capturas/contabilidad/cuentas-auxiliares/paso-7.webp)
 
 ✅ **Listo:** la cuenta aparece en el plan de cuentas con nivel **Auxiliar** y ya se puede elegir en todos los campos **Buscar cuenta auxiliar...** (cajas, bancos, catálogos de impuestos, medios de pago, nómina…).
 
