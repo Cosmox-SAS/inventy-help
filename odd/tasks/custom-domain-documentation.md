@@ -12,7 +12,7 @@ Synchronize README, AGENTS.md, canonical URL and deployment references with http
 - Delivery: ask-on-risk; forecast 180 authored lines, single PR.
 
 ## Tasks
-- [ ] T1: Update project guidance and README with active domain/CI-CD, preserve history accurately, verify canonical/sitemap, commit and open PR.
+- [x] T1: Update project guidance and README with active domain/CI-CD, preserve history accurately, verify canonical/sitemap, commit and open PR.
 
 ## Acceptance and checks
 - README describes configured production, PR previews, shared build, logs, retry and rollback without secrets or invented gates.
@@ -24,4 +24,13 @@ Synchronize README, AGENTS.md, canonical URL and deployment references with http
 - Hosted CI and preview URL verified when PR opened.
 
 ## Progress and next step
-Domain already loaded over HTTPS in Chrome before this work. README and AGENTS now identify the production domain and hosting workflow; earlier CI/CD and screenshot task records now distinguish historical pending states from the completed merge and deployment. The local `site_url` points to the production domain. Writer checks: `.venv/bin/python scripts/build_docs.py` passed (12 tests and strict MkDocs build), `git diff --check` passed, and generated homepage canonical and sitemap URLs use `https://ayuda.inventy.com.co/`. No meaningful runnable RED exists for this documentation/URL update. Parent still needs to read back, commit and assess the work unit, open the authorized PR, then verify hosted CI and the first real preview. No main merge is authorized.
+Domain already loaded over HTTPS in Chrome before this work. README and AGENTS now identify the production domain and hosting workflow; earlier CI/CD and screenshot task records now distinguish historical pending states from the completed merge and deployment. The local `site_url` points to the production domain. Writer checks: `.venv/bin/python scripts/build_docs.py` passed (12 tests and strict MkDocs build), `git diff --check` passed, and generated homepage canonical and sitemap URLs use `https://ayuda.inventy.com.co/`. No meaningful runnable RED exists for this documentation/URL update. Parent readback, commit, assessment, PR creation and hosted CI/preview checks are complete; see delivery evidence below. No main merge is authorized.
+
+## Delivery evidence
+- Implementation commit: 994af412d080e73833629389833e1cc48603081d (140 authored changed lines).
+- Independent verifier confirmed 69 documents, 12 tests, strict build, all canonical/sitemap URLs and diff checks.
+- Native assessment: medium, under_budget; no review due for this slice.
+- PR: https://github.com/Cosmox-SAS/inventy-help/pull/2 (open, not merged).
+- GitHub validation and Cloudflare Pages checks passed for 994af41.
+- First preview verified in Chrome: https://9354d706.inventy-help.pages.dev/; rendered homepage and canonical https://ayuda.inventy.com.co/.
+- Next step: user review and explicit merge authorization. Production receives the canonical change only after merge.
