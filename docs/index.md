@@ -5,9 +5,15 @@ hide:
   - toc
 ---
 
+<div class="portada-hero" markdown>
+
+<span class="portada-eyebrow">Centro de Ayuda Inventy</span>
+
 # ¿En qué te podemos ayudar?
 
 Escribe tu duda en el **buscador** de la parte superior (por ejemplo: *cerrar caja*, *factura electrónica rechazada*, *crear producto*) o elige un tema.
+
+</div>
 
 ## Lo más consultado
 
