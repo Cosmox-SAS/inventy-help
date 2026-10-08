@@ -53,7 +53,7 @@ tags:
 | **Lotes y vencimientos** | Lote y fecha de vencimiento. | — |
 | **Presentaciones** | Empaques (caja, paquete) con código y precio. | — |
 | **Kits de venta** | Productos que descuentan componentes. | — |
-| **Atributos y variantes** | Talla, color, etc. | — |
+| **Atributos y variantes** | Talla, color, etc. | [Guía](../productos-inventario/variantes.md) |
 | **Visibilidad por sede** | Restringir productos a ciertas sedes. | — |
 
 ## Productos

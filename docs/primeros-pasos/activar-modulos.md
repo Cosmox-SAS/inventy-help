@@ -29,7 +29,7 @@ tags:
 
 ![Paso 2: lista de módulos](../assets/capturas/primeros-pasos/activar-modulos/paso-2.webp)
 
-**Paso 3.** Usa el interruptor **Habilitar módulo** / **Deshabilitar módulo**.
+**Paso 3.** Usa el interruptor **Habilitar módulo** / **Deshabilitar módulo**. Solo **Contabilidad** e **Inventario** lo tienen; los demás módulos (por ejemplo, **Restaurante**) los activa el equipo de Inventy: escríbele a [soporte](../soporte.md).
 
 ![Paso 3: interruptor del módulo](../assets/capturas/primeros-pasos/activar-modulos/paso-3.webp)
 
@@ -44,6 +44,7 @@ tags:
 | Problema | Solución |
 |---|---|
 | *Este módulo está bloqueado por tu suscripción* | No está en tu plan. Usa **Mejorar plan** o revisa <span class="ruta">Configuración › Suscripción</span>. |
+| No aparece el interruptor **Habilitar módulo** | Ese módulo no lo puedes activar tú: solo Contabilidad e Inventario. Pide a [soporte](../soporte.md) que lo active. |
 | No me aparece una opción | Algunas aparecen solo tras activar otra. Ver [Todas las opciones de Módulos](opciones-modulos.md). |
 | Otro usuario no ve el módulo | Su rol necesita los permisos del módulo. Ver [roles y permisos](roles-y-permisos.md). |
 

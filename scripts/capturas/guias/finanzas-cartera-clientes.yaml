@@ -1,0 +1,20 @@
+guia: finanzas/cartera-clientes.md
+# Solo consulta. Usa la factura a crédito VTA-2026-0005 de LAURA GÓMEZ (2 cafés,
+# $37.000), creada en la demo el 2026-10-05 y dejada sin pagar para que la
+# cartera tenga datos.
+orden: 68
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/receivables/customer-balances
+      - esperar: 'main table'
+    resaltar: 'a[data-testid$="/receivables/customer-balances"]'
+  - paso: 2
+    resaltar: 'main table thead'
+  - paso: 3
+    acciones:
+      - abrir: 'main tbody tr:has-text("LAURA") >> nth=0 >> a'
+      - esperar: 'text=Facturas pendientes'
+    resaltar: '[data-testid="customer-balance-invoices"]'
+  - paso: 4
+    resaltar: '[data-testid="customer-balance-actions"]'

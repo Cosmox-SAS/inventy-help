@@ -1,0 +1,42 @@
+guia: ventas/medios-de-pago.md
+# No guarda nada: el formulario se fotografía lleno y el cobro del POS no se confirma.
+# Requiere la caja abierta, el café con existencias y LAURA GÓMEZ con cupo de crédito.
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/payment-methods
+      - esperar: 'text=Administra los medios de pago disponibles'
+    resaltar: 'main button:has-text("Nuevo medio de pago")'
+  - paso: 2
+    acciones:
+      - abrir: 'main button:has-text("Nuevo medio de pago")'
+      - esperar: 'text=Nuevo medio de pago >> nth=-1'
+      - llenar: { '#payment_method_name': 'Nequi' }
+      - elegir: { 'VENTANA >> text=Seleccionar tipo...': 'Transferencia' }
+    resaltar: 'VENTANA >> #payment_method_name >> xpath=ancestor::div[3]'
+    recortar: 'VENTANA'
+  - paso: 3
+    resaltar: 'VENTANA >> text=Cuentas bancarias por sede >> xpath=ancestor::div[2]'
+    recortar: 'VENTANA'
+  - paso: 4
+    resaltar: 'VENTANA >> button[type="submit"]'
+    recortar: 'VENTANA'
+    despues:
+      - tecla: Escape
+  - paso: 5
+    acciones:
+      - ir: /{tenant}/pos
+      - esperar: '[data-testid="pos-catalog"]'
+      - abrir: 'text=Consumidor Final'
+      - esperar: 'VENTANA'
+      - abrir: 'VENTANA >> button:has-text("LAURA GÓMEZ") >> nth=0'
+      - pausa: 1000
+      - escribir: { 'input[placeholder^="Buscar producto"]': 'café' }
+      - pausa: 1500
+      - abrir: '[data-testid="pos-catalog"] >> text=CAFÉ MOLIDO 500 G >> nth=0'
+      - pausa: 1000
+      - abrir: 'aside [data-testid="pos-submit-order"]'
+      - esperar: '[data-testid="pos-modal-payment"]'
+      - pausa: 800
+    resaltar: '[data-testid="pos-modal-payment"] >> text="Crédito" >> xpath=ancestor::*[self::button or @role="button" or @role="radio"][1]'
+    recortar: 'VENTANA'

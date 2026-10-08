@@ -1,0 +1,22 @@
+guia: recursos-humanos/nomina-electronica.md
+# Solo consulta. Usa el período pagado "Nómina 1ra Quincena Octubre 2026"
+# (recursos-humanos/liquidar-nomina, orden 82). NUNCA hace clic en Enviar/Emitir:
+# la demo no debe transmitir documentos a la DIAN.
+orden: 84
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/periods
+      - esperar: 'text=Períodos de Nómina'
+    resaltar: 'main tbody tr:has-text("1ra Quincena Octubre 2026")'
+  - paso: 2
+    acciones:
+      - abrir: 'main tbody tr:has-text("1ra Quincena Octubre 2026") >> button:has-text("Ver")'
+      - esperar: 'text=Nómina Electrónica (DIAN)'
+      - pausa: 500
+    resaltar: 'text=Nómina Electrónica (DIAN) >> xpath=ancestor::div[contains(@class,"rounded")][1]'
+  - paso: 3
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/electronic-payroll
+      - esperar: 'text=Nómina Electrónica'
+    resaltar: 'main'

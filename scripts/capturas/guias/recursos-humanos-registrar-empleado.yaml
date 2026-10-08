@@ -1,0 +1,63 @@
+guia: recursos-humanos/registrar-empleado.md
+# Llena el formulario de la empleada ficticia MARÍA JOSÉ RODRÍGUEZ PÉREZ
+# (CC 1020202020, salario mínimo 2026) sin guardarla. Ella y el cargo "Auxiliar de
+# bodega" ya se crearon en la demo el 2026-10-05 y son la base de las guías de
+# nómina. (ANDRÉS FELIPE MARTÍNEZ, CC 1010101010, quedó con $1.500.000: no usarlo.)
+orden: 80
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/hhrr/employees
+      - esperar: 'text=Empleados'
+    resaltar: 'main a:has-text("Nuevo empleado") >> nth=0'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/hhrr/employees/create
+      - esperar: 'text=Información General'
+      - elegir: { 'label:text-is("Tipo de Identificación *") >> xpath=.. >> button': 'CC — Cédula' }
+      - llenar: { 'label:text-is("Identificación *") >> xpath=.. >> input': '1020202020' }
+      - llenar: { 'input[name=first_name]': 'MARÍA', 'input[name=middle_name]': 'JOSÉ', 'input[name=last_name]': 'RODRÍGUEZ', 'input[name=second_last_name]': 'PÉREZ' }
+      - elegir: { 'label:text-is("Sexo") >> xpath=.. >> button': 'Femenino' }
+      - elegir: { 'label:text-is("Departamento *") >> xpath=.. >> button': 'Córdoba' }
+      - elegir: { 'label:text-is("Municipio *") >> xpath=.. >> button': 'Montería' }
+      - llenar: { '#loc-address': 'Calle 30 # 5 - 20', 'input[name=email]': 'maria.rodriguez@ejemplo.com', 'input[name=mobile]': '3007654321', 'input[name=birth_date]': '1998-07-22' }
+      - pausa: 600
+    resaltar: 'h3:text-is("Identificación") >> xpath=../..'
+  - paso: 3
+    acciones:
+      - abrir: 'button:has-text("Información Administrativa")'
+      - pausa: 800
+      - llenar: { 'input[name=start_date]': '2026-10-01' }
+      - elegir: { 'label:text-is("Modalidad de Contrato *") >> xpath=.. >> button': 'DEPENDIENTE' }
+      - elegir: { 'label:text-is("Tipo Trabajador MIN. SALUD *") >> xpath=.. >> button': '01 - Dependiente' }
+      - elegir: { 'label:text-is("Centro de Costo *") >> xpath=.. >> button': 'Principal' }
+      - elegir: { 'label:text-is("Cargo") >> xpath=.. >> button': 'Auxiliar de bodega' }
+      - llenar: { 'label:text-is("Sueldo *") >> xpath=.. >> input': '1750905' }
+      - abrir: 'label:has(input[name=_payment_form_radio]):has-text("Quincenal")'
+      - abrir: 'label:has-text("Pagar Auxilio de Transporte")'
+      - elegir: { 'label:text-is("Método de Pago *") >> xpath=.. >> button': 'Consignación Bancaria' }
+      - elegir: { 'label:text-is("Operador Pila *") >> xpath=.. >> button': 'SOI' }
+      - pausa: 600
+    resaltar: 'h3:text-is("Datos del Contrato") >> xpath=..'
+  - paso: 4
+    acciones:
+      - elegir: { 'label:text-is("Banco *") >> xpath=.. >> button': 'Bancolombia' }
+      - elegir: { 'label:text-is("Tipo de Cuenta *") >> xpath=.. >> button': 'Ahorros' }
+      - llenar: { 'input[name=bank_account_number]': '98765432101' }
+      - elegir: { 'label:text-is("E.P.S *") >> xpath=.. >> button': 'Coosalud' }
+      - elegir: { 'label:text-is("A.R.L *") >> xpath=.. >> button': 'Positiva ARL' }
+      - elegir: { 'label:text-is("Fondo de Pensiones *") >> xpath=.. >> button': 'Porvenir AFP' }
+      - elegir: { 'label:text-is("Fondo de Cesantías *") >> xpath=.. >> button': 'Porvenir Cesantías' }
+      - elegir: { 'label:text-is("Caja de Compensación *") >> xpath=.. >> button': 'Comfacor' }
+      - llenar: { 'input[name=eps_start_date]': '2026-10-01', 'input[name=arl_start_date]': '2026-10-01', 'input[name=pension_fund_start_date]': '2026-10-01', 'input[name=cesantias_fund_start_date]': '2026-10-01', 'input[name=compensation_fund_start_date]': '2026-10-01' }
+      - elegir: { 'label:text-is("Act. Decreto 2090 *") >> xpath=.. >> button': 'No' }
+      - elegir: { 'label:text-is("Clase Riesgo *") >> xpath=.. >> button': 'CLASE I' }
+      - elegir: { 'label:text-is("Exento Retención en la Fuente *") >> xpath=.. >> button': 'No' }
+      - pausa: 600
+    resaltar: 'h3:text-is("Información Adicional") >> xpath=.. >> nth=0'
+  - paso: 5
+    guarda_datos: true
+    resaltar: 'button:has-text("Guardar Empleado")'
+    despues:
+      - clic: 'button:has-text("Guardar Empleado")'
+      - pausa: 4000

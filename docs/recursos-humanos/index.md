@@ -4,7 +4,7 @@ description: Empleados, cargos, novedades, períodos de nómina, pagos y nómina
 estado: pendiente-validacion
 tipo: indice
 modulo: recursos-humanos
-revisado: 2026-09-29
+revisado: 2026-10-05
 ---
 
 # Nómina y recursos humanos
@@ -12,6 +12,15 @@ revisado: 2026-09-29
 <p class="tambien-se-busca">También se busca como: empleados, nómina, liquidar nómina, vacaciones, incapacidades, prestaciones, seguridad social, nómina electrónica.</p>
 
 El menú **Nómina** está disponible si tu plan incluye el módulo de recursos humanos.
+
+## Guías disponibles
+
+1. [¿Cómo registro un empleado?](registrar-empleado.md)
+2. [¿Cómo registro una novedad de nómina?](registrar-novedad.md)
+3. [¿Cómo registro una incapacidad?](registrar-incapacidad.md)
+4. [¿Cómo registro las vacaciones de un empleado?](registrar-vacaciones.md)
+5. [¿Cómo liquido y pago la nómina?](liquidar-nomina.md)
+6. [¿Cómo envío la nómina electrónica a la DIAN?](nomina-electronica.md)
 
 ## ¿Qué hay en el menú Nómina?
 
@@ -32,11 +41,7 @@ El menú **Nómina** está disponible si tu plan incluye el módulo de recursos 
 
 | Guía | Estado |
 |---|---|
-| Registrar un empleado (incluye campos de seguridad social obligatorios) | Por redactar |
 | Importar empleados | Por redactar |
-| Registrar novedades, incapacidades y vacaciones | Por redactar |
-| Liquidar y pagar un período de nómina | Por redactar |
-| Enviar la nómina electrónica | Por redactar |
 | Liquidar a un empleado que se retira | Por redactar |
 
 !!! note

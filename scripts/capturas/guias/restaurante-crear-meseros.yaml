@@ -1,0 +1,26 @@
+guia: restaurante/crear-meseros.md
+# Crea en la demo el contacto "MESERO DEMO" con Rol Proveedor (pasos 1 y 2):
+#   CAPTURAS_PERMITIR_GUARDAR=1 npm run capturas -- restaurante/crear-meseros --pasos 1-2
+# Pasos 3 a 5 (Colaborador y POS) requieren el módulo Restaurante activo en la empresa.
+pasos:
+  - paso: 1
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/contacts/create
+      - esperar: 'text=Registra una persona o empresa en el sistema'
+      - llenar: { '#identification_number': '10{sufijo}', '#first_name': 'Mesero', '#last_name': 'Demo', '#mobile': '3001234567' }
+    resaltar: 'text=Identificación >> xpath=ancestor::div[2]'
+    detener_si_falla: false
+    despues:
+      - clic: 'button:has-text("Crear Contacto")'
+      - esperar: 'text=Rol Proveedor'
+  - paso: 2
+    # Foto con un contacto que aún no es proveedor (no se pulsa "Asignar como Proveedor").
+    # MESERO DEMO ya recibió el rol en la demo (2026-10-07).
+    acciones:
+      - ir: /{tenant}/contacts
+      - abrir: 'tbody >> text=LAURA GÓMEZ'
+      - esperar: 'text=Rol Proveedor'
+      - abrir: 'text=Rol Proveedor'
+      - esperar: 'button:has-text("Asignar como Proveedor")'
+    resaltar: 'button:has-text("Asignar como Proveedor")'
