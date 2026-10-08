@@ -13,6 +13,7 @@ Todo lo relacionado con el dinero está en el menú **Tesorería**.
 
 ## Guías disponibles
 
+- [¿Cómo veo cuánto me deben mis clientes?](cartera-clientes.md) (Cartera)
 - [¿Cómo registro un pago de un cliente?](registrar-ingreso.md) (Ingresos)
 - [¿Cómo registro un pago a un proveedor?](registrar-egreso.md) (Egresos)
 - [¿Qué es un anticipo y cómo se maneja?](anticipos.md)
@@ -30,8 +31,8 @@ Todo lo relacionado con el dinero está en el menú **Tesorería**.
 | | **Consignaciones** | Dinero de caja consignado al banco. |
 | Caja | **Cajas**, **Sesiones**, **Movimientos de caja**, **Reporte de caja** | Crear cajas y consultar aperturas, cierres y movimientos. |
 | Bancos | **Cuentas bancarias**, **Movimientos bancarios** | Tus cuentas y sus movimientos. |
-| Cartera | **Saldos de clientes**, **Saldos de proveedores** | Cuánto te deben y cuánto debes. |
+| Cartera | **Saldos de clientes**, **Saldos de proveedores** | Cuánto te deben y cuánto debes. Ver [guía de clientes](cartera-clientes.md). |
 
 ## Próximamente
 
-Traslados · Consignaciones · Cuentas bancarias · Saldos de clientes y proveedores · Carga de saldos iniciales · Reporte de caja.
+Traslados · Consignaciones · Cuentas bancarias · Saldos de proveedores · Carga de saldos iniciales · Reporte de caja.

@@ -1,0 +1,83 @@
+guia: productos-inventario/registrar-imei.md
+# Celulares de ejemplo creados en la demo el 2026-10-05 (IMEIs ficticios):
+# - CELULAR SAMSUNG GALAXY A15: creado con "Rastrear seriales" (pasos 1-2).
+#   El ajuste de los pasos 3-5 NO se confirma.
+# - CELULAR XIAOMI REDMI 13: creado sin rastreo y con 2 unidades por un ajuste
+#   confirmado, para mostrar el asistente de los pasos 6-7 (NO se guarda).
+# Los pasos 1-2 crean el Samsung: correr una sola vez con CAPTURAS_PERMITIR_GUARDAR=1.
+orden: 17
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/products/create
+      - esperar: 'text=Crear producto'
+      - llenar: { '#name': 'CELULAR SAMSUNG GALAXY A15', '#description': 'Celular Samsung Galaxy A15 128 GB' }
+      - elegir: { 'text=Buscar unidad...': 'Unidad' }
+      - llenar: { '#sale_price': '799000', '#cost': '650000' }
+      - elegir: { 'text=Buscar catálogo...': 'IVA 19%' }
+    resaltar: 'section:has(h2:has-text("Identificación"))'
+  - paso: 2
+    guarda_datos: true
+    acciones:
+      - abrir: '[role=switch][aria-label="Activar rastreo por seriales"]'
+      - pausa: 500
+    resaltar: 'section:has(h2:has-text("Comportamiento del producto"))'
+    despues:
+      - clic: 'button:has-text("Crear Producto")'
+      - pausa: 3000
+  - paso: 3
+    acciones:
+      - ir: /{tenant}/inventory/adjustments/create
+      - esperar: 'text=Datos del ajuste'
+      - llenar: { '#notes': 'Ingreso de celulares' }
+      - elegir: { 'section:has(h2:has-text("Lineas del ajuste")) >> button:has-text("Buscar producto")': 'SAMSUNG GALAXY A15' }
+      - llenar: { 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> input >> nth=0': '2', 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> input >> nth=1': '650000' }
+      - pausa: 800
+    resaltar: 'section:has(h2:has-text("Lineas del ajuste"))'
+  - paso: 4
+    acciones:
+      - abrir: 'section:has(h2:has-text("Lineas del ajuste")) >> button:has-text("seriales")'
+      - esperar: '#identifier-type'
+      - llenar: { '#identifier-type': 'IMEI1', '#identifier-value': '350000000000011' }
+      - tecla: Enter
+      - pausa: 300
+      - llenar: { '#identifier-type': 'IMEI2', '#identifier-value': '350000000000029' }
+      - tecla: Enter
+      - pausa: 500
+    resaltar: 'VENTANA'
+  - paso: 5
+    acciones:
+      - abrir: 'VENTANA >> button:has-text("Guardar equipo y continuar")'
+      - pausa: 400
+      - llenar: { '#identifier-type': 'IMEI1', '#identifier-value': '350000000000037' }
+      - tecla: Enter
+      - pausa: 300
+      - llenar: { '#identifier-type': 'IMEI2', '#identifier-value': '350000000000045' }
+      - tecla: Enter
+      - pausa: 300
+      - abrir: 'VENTANA >> button:has-text("Guardar este equipo")'
+      - pausa: 600
+      - tecla: Escape
+      - pausa: 600
+    resaltar: 'button:has-text("Confirmar ajuste")'
+  - paso: 6
+    acciones:
+      - ir: /{tenant}/products
+      - escribir: { 'main input[placeholder*="Buscar"] >> nth=0': 'XIAOMI' }
+      - pausa: 1500
+      - abrir: 'main tbody tr:has-text("XIAOMI") >> nth=0'
+      - pausa: 1500
+      - abrir: 'main :is(a,button):has-text("Editar") >> nth=0'
+      - esperar: '[role=switch][aria-label="Activar rastreo por seriales"]'
+      - abrir: '[role=switch][aria-label="Activar rastreo por seriales"]'
+      - esperar: 'text=Registro de series por sede'
+      - pausa: 500
+    resaltar: 'text=Registro de series por sede >> xpath=ancestor::div[2]'
+  - paso: 7
+    acciones:
+      - abrir: 'button:text-is("Registrar") >> nth=0'
+      - esperar: '#identifier-type'
+      - llenar: { '#identifier-type': 'IMEI1', '#identifier-value': '350000000000052' }
+      - tecla: Enter
+      - pausa: 500
+    resaltar: 'VENTANA'

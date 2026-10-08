@@ -1,0 +1,21 @@
+guia: recursos-humanos/registrar-incapacidad.md
+# Solo consulta: llena una incapacidad de 3 días por enfermedad general para el
+# empleado de recursos-humanos/registrar-empleado (orden 80) y NO la guarda.
+orden: 83
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/incapacidades
+      - esperar: 'main'
+      - pausa: 800
+    resaltar: 'main :is(a,button):has-text("Nueva") >> nth=0'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/incapacidades/create
+      - esperar: '#start_date'
+      - elegir: { 'button:has-text("Buscar empleado...")': 'ANDRÉS' }
+      - llenar: { '#start_date': '2026-10-20', '#days': '3' }
+      - pausa: 1500
+    resaltar: 'form'
+  - paso: 3
+    resaltar: 'button:has-text("Guardar")'

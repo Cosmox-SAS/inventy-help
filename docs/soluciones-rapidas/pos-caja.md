@@ -114,7 +114,7 @@ tags:
 
 **CAUSA:** tu empresa no ha creado medios de pago.
 
-**SOLUCIÓN:** el administrador debe crearlos en <span class="ruta">Ventas › Ajustes › Medios de Pago</span>.
+**SOLUCIÓN:** el administrador debe crearlos en <span class="ruta">Ventas › Ajustes › Medios de Pago</span>. Ver [¿Cómo creo un medio de pago?](../ventas/medios-de-pago.md).
 
 **ESCALAR A SOPORTE:** si ya existen y no aparecen.
 

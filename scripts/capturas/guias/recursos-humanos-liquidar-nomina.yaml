@@ -1,0 +1,61 @@
+guia: recursos-humanos/liquidar-nomina.md
+# Período "Nómina 1ra Quincena Octubre 2026" del empleado de
+# recursos-humanos/registrar-empleado (orden 80). El período se creó en la demo
+# el 2026-10-05; aquí se pre-liquida, liquida y paga. No envía nada a la DIAN.
+# Los pasos 3 a 5 cambian el estado del período: ya se corrieron el 2026-10-05.
+# Para repetirlos hay que crear otro período (y ajustar el nombre en los pasos).
+orden: 82
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/periods
+      - esperar: 'text=Períodos de Nómina'
+    resaltar: 'main a:has-text("Nuevo Período") >> nth=0'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/periods/create
+      - esperar: '#name'
+      - elegir: { 'label:text-is("Parámetros del Año *") >> xpath=.. >> button': '2026 (activo)' }
+      - elegir: { 'label:text-is("Tipo *") >> xpath=.. >> button': 'Quincenal' }
+      - elegir: { 'label:text-is("Mes") >> xpath=.. >> button': 'Octubre' }
+      - abrir: 'button:has-text("1ra (1–15)")'
+      - llenar: { '#payment_date': '2026-10-15' }
+      - pausa: 800
+    resaltar: 'form'
+  - paso: 3
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/periods
+      - abrir: 'main tbody tr:has-text("1ra Quincena Octubre 2026") >> button:has-text("Ver")'
+      - esperar: 'button:has-text("Pre-liquidar Nómina")'
+      - abrir: 'button:has-text("Pre-liquidar Nómina")'
+      - esperar: 'text=Validación antes de Pre-liquidar'
+      - pausa: 500
+    resaltar: 'text=Validación antes de Pre-liquidar >> xpath=..'
+    despues:
+      - clic: 'button:has-text("Confirmar y Pre-liquidar")'
+      - esperar: 'button:has-text("Liquidar Nómina")'
+      - pausa: 1500
+  - paso: 4
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/periods
+      - abrir: 'main tbody tr:has-text("1ra Quincena Octubre 2026") >> button:has-text("Ver")'
+      - esperar: 'text=Detalle por Empleado'
+      - pausa: 500
+    resaltar: 'main table'
+    despues:
+      - clic: 'button:has-text("Liquidar Nómina")'
+      - pausa: 3000
+  - paso: 5
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/pay
+      - esperar: 'text=Pagar Nómina'
+      - abrir: 'button:has-text("Pagar todo")'
+      - esperar: 'text=Registrar Pago'
+      - pausa: 800
+    resaltar: 'text=Registrar Pago >> xpath=ancestor::div[contains(@class,"rounded")][1]'
+    despues:
+      - clic: 'button:has-text("Confirmar Pago")'
+      - pausa: 3000

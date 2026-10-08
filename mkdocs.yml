@@ -113,8 +113,10 @@ nav:
       - ¿Cómo creo un producto?: productos-inventario/crear-producto.md
       - ¿Cuánto inventario tengo?: productos-inventario/consultar-existencias.md
       - ¿Cómo hago un ajuste de inventario?: productos-inventario/ajuste-inventario.md
+      - ¿Cómo registro un celular con su IMEI?: productos-inventario/registrar-imei.md
       - ¿Cómo hago un traslado entre sedes?: productos-inventario/traslados.md
       - ¿Cómo manejo las presentaciones de compra y de venta?: productos-inventario/presentaciones.md
+      - ¿Cómo creo productos con variantes (talla, color, medida)?: productos-inventario/variantes.md
   - Compras:
       - compras/index.md
       - ¿Cómo creo un proveedor?: compras/crear-proveedor.md
@@ -125,6 +127,7 @@ nav:
       - ¿Cómo creo un cliente?: ventas/crear-cliente.md
       - ¿Para qué sirve el rol de cliente y cuál elijo?: ventas/rol-de-cliente.md
       - ¿Cómo manejo las listas de precios?: ventas/listas-de-precios.md
+      - ¿Cómo creo un medio de pago y por qué no me sale Crédito en el POS?: ventas/medios-de-pago.md
       - ¿Cómo hago una factura de venta?: ventas/crear-factura-venta.md
       - ¿Cómo registro una devolución de venta?: ventas/devolucion-venta.md
   - Punto de venta:
@@ -148,6 +151,7 @@ nav:
   - Finanzas:
       - finanzas/index.md
       - ¿Qué es un anticipo y cómo se maneja?: finanzas/anticipos.md
+      - ¿Cómo veo cuánto me deben mis clientes?: finanzas/cartera-clientes.md
       - ¿Cómo registro un pago de un cliente?: finanzas/registrar-ingreso.md
       - ¿Cómo registro un pago a un proveedor?: finanzas/registrar-egreso.md
       - ¿Cómo hago una compensación de cuentas?: finanzas/compensacion-cuentas.md
@@ -158,11 +162,19 @@ nav:
           - ¿Cómo se implementan las cuentas auxiliares?: contabilidad/cuentas-auxiliares.md
           - ¿Cómo hago la configuración contable inicial?: contabilidad/configuracion-contable.md
       - Distribución: distribucion/index.md
-      - Nómina y recursos humanos: recursos-humanos/index.md
+      - Nómina y recursos humanos:
+          - recursos-humanos/index.md
+          - ¿Cómo registro un empleado?: recursos-humanos/registrar-empleado.md
+          - ¿Cómo registro una novedad de nómina?: recursos-humanos/registrar-novedad.md
+          - ¿Cómo registro una incapacidad?: recursos-humanos/registrar-incapacidad.md
+          - ¿Cómo registro las vacaciones de un empleado?: recursos-humanos/registrar-vacaciones.md
+          - ¿Cómo liquido y pago la nómina?: recursos-humanos/liquidar-nomina.md
+          - ¿Cómo envío la nómina electrónica a la DIAN?: recursos-humanos/nomina-electronica.md
       - Restaurante:
           - restaurante/index.md
           - ¿Cómo manejo los domicilios y pago a los domiciliarios?: restaurante/domicilios.md
           - ¿Cómo activo varias cuentas en una misma mesa?: restaurante/varias-cuentas-mesa.md
+          - ¿Cómo creo los meseros?: restaurante/crear-meseros.md
       - Administración: administracion/index.md
   - Ayuda:
       - Glosario (¿qué es…?): glosario.md

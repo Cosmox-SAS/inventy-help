@@ -1,0 +1,26 @@
+guia: productos-inventario/_prep-imei.md
+# TEMPORAL: crea el Xiaomi sin rastreo y le da 2 unidades. Se borra después.
+orden: 999
+pasos:
+  - paso: 1
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/products/create
+      - esperar: 'text=Crear producto'
+      - llenar: { '#name': 'CELULAR XIAOMI REDMI 13', '#description': 'Celular Xiaomi Redmi 13 128 GB' }
+      - elegir: { 'text=Buscar unidad...': 'Unidad' }
+      - llenar: { '#sale_price': '699000', '#cost': '560000' }
+      - elegir: { 'text=Buscar catálogo...': 'IVA 19%' }
+      - clic: 'button:has-text("Crear Producto")'
+      - pausa: 3000
+      - ir: /{tenant}/inventory/adjustments/create
+      - esperar: 'text=Datos del ajuste'
+      - llenar: { '#notes': 'Ingreso de celulares Xiaomi' }
+      - elegir: { 'section:has(h2:has-text("Lineas del ajuste")) >> button:has-text("Buscar producto")': 'XIAOMI REDMI 13' }
+      - llenar: { 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> input >> nth=0': '2', 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> input >> nth=1': '560000' }
+      - pausa: 800
+      - clic: 'button:has-text("Confirmar ajuste")'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Confirmar")'
+      - pausa: 3000
+    resaltar: 'main'

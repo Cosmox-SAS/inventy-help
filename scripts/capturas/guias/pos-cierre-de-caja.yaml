@@ -29,3 +29,50 @@ pasos:
       - esperar: 'text=Confirmar cierre de caja'
     resaltar: 'VENTANA >> button:has-text("Confirmar cierre")'
     recortar: 'VENTANA'
+  # ── Consignar el excedente al cerrar (sección de la guía) ──
+  # Paso 7 crea en la demo la cuenta "Caja fuerte" (una sola vez):
+  #   CAPTURAS_PERMITIR_GUARDAR=1 npm run capturas -- pos/cierre-de-caja --pasos 7-11
+  # Los pasos 8 a 11 nunca confirman el cierre.
+  - paso: 7
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/bank-accounts
+      - abrir: 'main button:has-text("Nueva cuenta")'
+      - esperar: 'text=Nueva cuenta bancaria'
+      - elegir: { 'VENTANA >> text=Buscar banco...': 'Bancolombia' }
+      - llenar: { '#bank_account_number': 'CAJAFUERTE-01', '#bank_account_initial_balance': '0', '#bank_account_alias': 'Caja fuerte' }
+      - elegir: { 'VENTANA >> text=Buscar cuenta auxiliar...': '110505' }
+    resaltar: 'VENTANA >> #bank_account_alias'
+    recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Crear cuenta")'
+      - esperar: 'text=Confirmar cuenta bancaria'
+      - clic: 'VENTANA >> button:has-text("Confirmar y crear")'
+      - esperar: 'tbody >> text=Caja fuerte'
+  - paso: 8
+    acciones:
+      - menu: POS
+      - esperar: '[data-testid="pos-topbar"]'
+      - abrir: '[data-testid="pos-topbar"] [aria-label="Cerrar caja"]'
+      - esperar: 'text=Resumen del arqueo'
+      - llenar: { '#close-cash-counted': '450000' }
+      - esperar: 'VENTANA >> text=Excedente'
+    resaltar: 'VENTANA >> text=Excedente >> xpath=../..'
+    recortar: 'VENTANA'
+  - paso: 9
+    acciones:
+      - abrir: 'VENTANA >> text=Destino del excedente >> xpath=.. >> button:has-text("Consignar")'
+    resaltar: 'VENTANA >> text=Destino del excedente >> xpath=..'
+    recortar: 'VENTANA'
+  - paso: 10
+    acciones:
+      - abrir: 'VENTANA >> text=Seleccionar cuenta...'
+      - pausa: 500
+    resaltar: 'text=CAJAFUERTE-01'
+    recortar: 'VENTANA'
+  - paso: 11
+    acciones:
+      - abrir: 'text=CAJAFUERTE-01'
+      - pausa: 400
+    resaltar: 'button[type="submit"][form="close-cash-session-form"]'
+    recortar: 'VENTANA'

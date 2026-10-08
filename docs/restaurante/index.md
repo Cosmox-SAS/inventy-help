@@ -22,7 +22,7 @@ El módulo **Restaurante** adapta el POS a la operación de restaurantes, cafete
 | | **Estaciones de preparación** | Cocina, bar, etc. Cada producto se envía a su estación. |
 | | **Mesas** | Distribución visual de las mesas del local. |
 | Domicilios | **Repartidores**, **Liquidación** | Domiciliarios y liquidación de sus entregas. Ver [guía](domicilios.md). |
-| Propinas | **Colaboradores**, **Liquidación**, **Reporte** | Reparto de propinas al equipo. |
+| Propinas | **Colaboradores**, **Liquidación**, **Reporte** | Meseros y reparto de propinas al equipo. Ver [¿Cómo creo los meseros?](crear-meseros.md). |
 
 ## Opciones de configuración
 

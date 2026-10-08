@@ -32,7 +32,7 @@ Cancelar un documento validado dejando registro del motivo. No se puede deshacer
 Contar el efectivo de la caja al cerrarla y compararlo con lo esperado. · <span class="ruta">Ventas › POS › Cerrar caja</span> · [Guía](pos/cierre-de-caja.md)
 
 ### Atributos y variantes { #atributos-y-variantes }
-Atributos = características (talla, color). Variantes = cada combinación (camiseta roja talla M), que se maneja como producto propio. Se activa en <span class="ruta">Configuración › Módulos › Inventario</span>.
+Atributos = características (talla, color). Variantes = cada combinación (camiseta roja talla M), que se maneja como producto propio. Se activa en <span class="ruta">Configuración › Módulos › Inventario</span>. Ver [¿Cómo creo productos con variantes?](productos-inventario/variantes.md).
 
 ## B
 
@@ -51,7 +51,7 @@ Documento guardado pero no confirmado. **No afecta** inventario, cartera ni cont
 Cajón de dinero físico del punto de venta. Se crea una vez y se **abre** y **cierra** en cada turno. · <span class="ruta">Tesorería › Caja › Cajas</span> · [Abrir](pos/abrir-caja.md) · [Cerrar](pos/cierre-de-caja.md)
 
 ### Cartera { #cartera }
-Lo que te deben los clientes (cuentas por cobrar) y lo que debes a proveedores (cuentas por pagar). · <span class="ruta">Tesorería › Cartera</span>
+Lo que te deben los clientes (cuentas por cobrar) y lo que debes a proveedores (cuentas por pagar). · <span class="ruta">Tesorería › Cartera</span> · [Guía](finanzas/cartera-clientes.md)
 
 ### Catálogo de impuestos { #catalogo-de-impuestos }
 Paquete de impuestos que se asigna a un producto: qué se cobra al venderlo y qué se paga al comprarlo. · <span class="ruta">Fiscal › Catálogo de Impuestos</span> · [Guía](impuestos/catalogo-impuestos.md)
@@ -149,7 +149,7 @@ Pago al repartidor de la suma de los costos de domicilio de sus pedidos en un ra
 ## M
 
 ### Medio de pago { #medio-de-pago }
-Forma en que se paga: efectivo, transferencia, tarjeta, crédito o anticipo de cliente. · <span class="ruta">Ventas › Ajustes › Medios de Pago</span>
+Forma en que se paga: efectivo, transferencia, tarjeta, crédito o anticipo de cliente. · <span class="ruta">Ventas › Ajustes › Medios de Pago</span> Ver [¿Cómo creo un medio de pago?](ventas/medios-de-pago.md).
 
 ### Módulo { #modulo }
 Parte de Inventy que se activa según el plan (Restaurante, Contabilidad, Nómina…). · <span class="ruta">Configuración › Módulos</span> · [Guía](primeros-pasos/activar-modulos.md)
@@ -219,7 +219,7 @@ Parte del pago que se retiene para pagarla a la DIAN o al municipio. Retefuente 
 Cada local, tienda o bodega de la empresa. El inventario se controla por sede. · <span class="ruta">Configuración › Sedes</span>
 
 ### Serial { #serial }
-Identificador único de cada unidad (IMEI, número de serie). Se activa en Módulos › Inventario y en el producto.
+Identificador único de cada unidad (IMEI, número de serie). Se activa en Módulos › Inventario y en el producto. · [Guía](productos-inventario/registrar-imei.md)
 
 ### Sesión de caja { #sesion-de-caja }
 El turno de una caja: desde que se abre hasta que se cierra. · <span class="ruta">Tesorería › Caja › Sesiones</span>

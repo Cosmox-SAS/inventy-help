@@ -1,0 +1,22 @@
+guia: recursos-humanos/registrar-novedad.md
+# Solo consulta: llena una novedad de 4 horas extra diurnas para el empleado de
+# recursos-humanos/registrar-empleado (orden 80) y NO la guarda.
+orden: 81
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/novelties
+      - esperar: 'text=Novedades de Nómina'
+    resaltar: 'main header :is(a,button):has-text("Nueva Novedad"), main :is(a,button):has-text("Nueva Novedad") >> nth=0'
+  - paso: 2
+    acciones:
+      - abrir: 'main :is(a,button):has-text("Nueva Novedad") >> nth=0'
+      - esperar: 'text=Nueva Novedad'
+      - elegir: { 'button:has-text("Buscar empleado...")': 'ANDRÉS' }
+      - elegir: { 'button:has-text("Buscar novedad...")': 'Hora extra diurna' }
+      - llenar: { 'label:text-is("Fecha inicio *") >> xpath=.. >> input': '2026-10-20' }
+      - llenar: { 'label:text-is("Cantidad: Horas") >> xpath=.. >> input': '4' }
+      - pausa: 800
+    resaltar: 'text=Nueva Novedad >> xpath=ancestor::div[contains(@class,"rounded")][1]'
+  - paso: 3
+    resaltar: 'main button[type="submit"]:has-text("Guardar")'

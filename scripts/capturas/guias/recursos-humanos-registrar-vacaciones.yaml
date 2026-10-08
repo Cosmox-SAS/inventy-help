@@ -1,0 +1,21 @@
+guia: recursos-humanos/registrar-vacaciones.md
+# Solo consulta: llena una solicitud de 5 días hábiles de vacaciones para el
+# empleado de recursos-humanos/registrar-empleado (orden 80) y NO la guarda.
+orden: 85
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/vacaciones
+      - esperar: 'main'
+      - pausa: 800
+    resaltar: 'main :is(a,button):has-text("Nueva") >> nth=0'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/vacaciones/create
+      - esperar: '#start_date'
+      - elegir: { 'button:has-text("Buscar empleado...")': 'ANDRÉS' }
+      - llenar: { '#start_date': '2026-12-21', '#days_requested': '5', '#days_paid_in_cash': '0' }
+      - pausa: 1500
+    resaltar: 'form'
+  - paso: 3
+    resaltar: 'button[type="submit"]:has-text("Guardar")'
