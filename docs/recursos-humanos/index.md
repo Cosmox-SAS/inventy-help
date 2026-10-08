@@ -13,6 +13,12 @@ revisado: 2026-09-29
 
 El menú **Nómina** está disponible si tu plan incluye el módulo de recursos humanos.
 
+## Guías disponibles
+
+1. [¿Cómo registro un empleado?](registrar-empleado.md)
+2. [¿Cómo liquido y pago la nómina?](liquidar-nomina.md)
+3. [¿Cómo envío la nómina electrónica a la DIAN?](nomina-electronica.md)
+
 ## ¿Qué hay en el menú Nómina?
 
 | Grupo | Opción | Para qué sirve |
@@ -32,11 +38,8 @@ El menú **Nómina** está disponible si tu plan incluye el módulo de recursos 
 
 | Guía | Estado |
 |---|---|
-| Registrar un empleado (incluye campos de seguridad social obligatorios) | Por redactar |
 | Importar empleados | Por redactar |
 | Registrar novedades, incapacidades y vacaciones | Por redactar |
-| Liquidar y pagar un período de nómina | Por redactar |
-| Enviar la nómina electrónica | Por redactar |
 | Liquidar a un empleado que se retira | Por redactar |
 
 !!! note
