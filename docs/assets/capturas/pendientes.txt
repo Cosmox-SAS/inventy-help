@@ -1,6 +1,5 @@
 assets/capturas/contabilidad/como-funciona/paso-asientos-contables.png
 assets/capturas/contabilidad/como-funciona/paso-medio-de-pago.png
-assets/capturas/contabilidad/como-funciona/paso-plan-de-cuentas.png
 assets/capturas/contabilidad/como-funciona/paso-ver-asientos.png
 assets/capturas/facturacion-electronica/documento-rechazado/paso-2.png
 assets/capturas/facturacion-electronica/documento-rechazado/paso-3.png

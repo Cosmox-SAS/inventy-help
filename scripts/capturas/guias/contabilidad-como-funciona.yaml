@@ -5,8 +5,8 @@ pasos:
   - paso: plan-de-cuentas
     acciones:
       - ir: /{tenant}/accounting/accounts?level=auxiliary
-      - esperar: 'text=Gestiona el plan único de cuentas (PUC) del negocio.'
-    resaltar: 'table'
+      - esperar: 'table >> text=Auxiliar'
+    resaltar: 'main :text-is("Auxiliar") >> nth=0 >> xpath=ancestor::*[self::button or @role="combobox"][1]'
     detener_si_falla: false
   - paso: catalogo-puc
     acciones:
