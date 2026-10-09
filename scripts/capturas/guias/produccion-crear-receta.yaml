@@ -1,0 +1,38 @@
+guia: produccion/crear-receta.md
+# Usa los insumos de _prep-produccion (CAFÉ TOSTADO EN GRANO y BOLSA VALVULADA 500 G).
+# El paso 5 guarda la receta del CAFÉ MOLIDO 500 G (solo puede haber una por producto):
+#   CAPTURAS_PERMITIR_GUARDAR=1 npm run capturas -- produccion/crear-receta
+orden: 30
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Recetas
+      - esperar: 'text=Recetas de producción'
+    resaltar: 'main a:has-text("Nueva receta"), main button:has-text("Nueva receta") >> nth=0'
+  - paso: 2
+    acciones:
+      - abrir: 'main a:has-text("Nueva receta"), main button:has-text("Nueva receta") >> nth=0'
+      - esperar: 'text=Datos de la receta'
+      - elegir: { 'text=Buscar producto terminado...': 'CAFÉ MOLIDO 500 G' }
+      - llenar: { '#output_quantity': '20' }
+    resaltar: 'section:has(h2:has-text("Datos de la receta"))'
+  - paso: 3
+    acciones:
+      - abrir: 'button:has-text("Agregar insumo")'
+      - pausa: 300
+      - elegir: { 'section:has(h2:has-text("Insumos")) >> tbody tr >> nth=0 >> button[aria-haspopup="listbox"]': 'CAFÉ TOSTADO EN GRANO' }
+      - llenar: { 'section:has(h2:has-text("Insumos")) >> tbody tr >> nth=0 >> input[inputmode="decimal"]': '10,5' }
+      - elegir: { 'section:has(h2:has-text("Insumos")) >> tbody tr >> nth=1 >> button[aria-haspopup="listbox"]': 'BOLSA VALVULADA 500 G' }
+      - llenar: { 'section:has(h2:has-text("Insumos")) >> tbody tr >> nth=1 >> input[inputmode="decimal"]': '20' }
+      - pausa: 500
+    resaltar: 'section:has(h2:has-text("Insumos"))'
+  - paso: 4
+    acciones:
+      - pausa: 300
+    resaltar: 'section:has(h2:has-text("Insumos")) >> tbody tr >> nth=0 >> button[role="switch"] >> xpath=..'
+  - paso: 5
+    guarda_datos: true
+    resaltar: 'button:has-text("Guardar receta")'
+    despues:
+      - clic: 'button:has-text("Guardar receta")'
+      - pausa: 3000

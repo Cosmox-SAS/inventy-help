@@ -63,6 +63,8 @@ Escribe tu duda en el **buscador** de la parte superior (por ejemplo: *cerrar ca
 
 [**:material-calculator: Contabilidad**<span>Plan de cuentas, asientos e informes.</span>](contabilidad/index.md)
 
+[**:material-factory: Producción**<span>Recetas, producciones y costo del producto terminado.</span>](produccion/index.md)
+
 [**:material-truck: Distribución**<span>Preventas, despachos y rutas.</span>](distribucion/index.md)
 
 [**:material-card-account-details: Nómina**<span>Empleados, novedades y nómina electrónica.</span>](recursos-humanos/index.md)

@@ -161,6 +161,10 @@ nav:
           - ¿Cómo funciona la contabilidad en Inventy?: contabilidad/como-funciona.md
           - ¿Cómo se implementan las cuentas auxiliares?: contabilidad/cuentas-auxiliares.md
           - ¿Cómo hago la configuración contable inicial?: contabilidad/configuracion-contable.md
+      - Producción:
+          - produccion/index.md
+          - ¿Cómo creo una receta de producción?: produccion/crear-receta.md
+          - ¿Cómo registro una producción?: produccion/registrar-produccion.md
       - Distribución: distribucion/index.md
       - Nómina y recursos humanos:
           - recursos-humanos/index.md

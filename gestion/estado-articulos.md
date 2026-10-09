@@ -2,7 +2,7 @@
 
 > Generado con `python scripts/check_docs.py --estado > gestion/estado-articulos.md`. No editar a mano.
 
-**Pendiente de validación:** 76
+**Pendiente de validación:** 82
 
 | Módulo | Artículo | Tipo | Estado | Capturas pendientes | Validaciones pendientes | Revisado |
 |---|---|---|---|---|---|---|
@@ -51,9 +51,13 @@
 | primeros-pasos | [¿Cómo ingreso a Inventy?](../docs/primeros-pasos/ingresar.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | primeros-pasos | [¿Cómo recupero mi contraseña?](../docs/primeros-pasos/recuperar-contrasena.md) | rapida | Pendiente de validación | 2 | 0 | 2026-09-30 |
 | primeros-pasos | [¿Qué es un centro de costo y cómo lo uso?](../docs/primeros-pasos/centros-de-costo.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-02 |
+| produccion | [Producción](../docs/produccion/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-10-09 |
+| produccion | [¿Cómo creo una receta de producción?](../docs/produccion/crear-receta.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-09 |
+| produccion | [¿Cómo registro una producción?](../docs/produccion/registrar-produccion.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-09 |
 | productos-inventario | [Productos e inventario](../docs/productos-inventario/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | productos-inventario | [Soluciones rápidas: productos e inventario](../docs/soluciones-rapidas/productos-inventario.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | productos-inventario | [¿Cuánto inventario tengo?](../docs/productos-inventario/consultar-existencias.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
+| productos-inventario | [¿Cómo creo productos con variantes (talla, color, medida)?](../docs/productos-inventario/variantes.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-07 |
 | productos-inventario | [¿Cómo creo un producto?](../docs/productos-inventario/crear-producto.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | productos-inventario | [¿Cómo hago un ajuste de inventario?](../docs/productos-inventario/ajuste-inventario.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | productos-inventario | [¿Cómo hago un traslado entre sedes?](../docs/productos-inventario/traslados.md) | rapida | Pendiente de validación | 4 | 0 | 2026-10-01 |
@@ -68,6 +72,7 @@
 | recursos-humanos | [¿Cómo registro una novedad de nómina?](../docs/recursos-humanos/registrar-novedad.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-05 |
 | restaurante | [Restaurante](../docs/restaurante/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | restaurante | [¿Cómo activo varias cuentas en una misma mesa?](../docs/restaurante/varias-cuentas-mesa.md) | rapida | Pendiente de validación | 2 | 1 | 2026-09-30 |
+| restaurante | [¿Cómo creo los meseros?](../docs/restaurante/crear-meseros.md) | rapida | Pendiente de validación | 3 | 0 | 2026-10-07 |
 | restaurante | [¿Cómo manejo los domicilios y le pago a los domiciliarios?](../docs/restaurante/domicilios.md) | rapida | Pendiente de validación | 7 | 0 | 2026-09-30 |
 | soporte | [Contactar a soporte](../docs/soporte.md) | referencia | Pendiente de validación | 0 | 1 | 2026-09-29 |
 | soporte | [Glosario: ¿qué es…?](../docs/glosario.md) | referencia | Pendiente de validación | 0 | 0 | 2026-09-29 |
@@ -77,6 +82,7 @@
 | ventas | [Soluciones rápidas: ventas](../docs/soluciones-rapidas/ventas.md) | solucion | Pendiente de validación | 0 | 0 | 2026-10-01 |
 | ventas | [Ventas](../docs/ventas/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | ventas | [¿Cómo creo un cliente?](../docs/ventas/crear-cliente.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
+| ventas | [¿Cómo creo un medio de pago y por qué no me sale Crédito en el POS?](../docs/ventas/medios-de-pago.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-07 |
 | ventas | [¿Cómo creo un tipo de cliente?](../docs/ventas/tipos-de-cliente.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | ventas | [¿Cómo hago una factura de venta?](../docs/ventas/crear-factura-venta.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
 | ventas | [¿Cómo manejo las listas de precios?](../docs/ventas/listas-de-precios.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |

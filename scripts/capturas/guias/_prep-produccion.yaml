@@ -1,0 +1,60 @@
+guia: produccion/_prep-produccion.md
+# Prepara la demo para las guías de producción: crea los insumos del CAFÉ MOLIDO 500 G
+# (que ya existe) y les da existencias. Correr una sola vez:
+#   CAPTURAS_PERMITIR_GUARDAR=1 npm run capturas -- produccion/_prep-produccion
+orden: 999
+pasos:
+  - paso: 1
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/products/create
+      - esperar: 'text=Crear producto'
+      - llenar: { '#name': 'CAFÉ TOSTADO EN GRANO', '#description': 'Café tostado en grano, insumo para moler' }
+      - elegir: { 'text=Buscar unidad...': 'Kilogramo' }
+      - llenar: { '#cost': '38000' }
+      - elegir: { 'text=Buscar catálogo...': 'IVA 19%' }
+      - clic: 'button:has-text("Crear Producto")'
+      - pausa: 3000
+    resaltar: 'main'
+  - paso: 2
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/products/create
+      - esperar: 'text=Crear producto'
+      - llenar: { '#name': 'BOLSA VALVULADA 500 G', '#description': 'Bolsa con válvula para café de 500 g' }
+      - elegir: { 'text=Buscar unidad...': 'Unidad' }
+      - llenar: { '#cost': '600' }
+      - elegir: { 'text=Buscar catálogo...': 'IVA 19%' }
+      - clic: 'button:has-text("Crear Producto")'
+      - pausa: 3000
+    resaltar: 'main'
+  - paso: 3
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/inventory/adjustments/create
+      - esperar: 'text=Datos del ajuste'
+      - llenar: { '#notes': 'Inventario inicial de café en grano' }
+      - elegir: { 'section:has(h2:has-text("Lineas del ajuste")) >> button:has-text("Buscar producto")': 'CAFÉ TOSTADO EN GRANO' }
+      - elegir: { 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> text=Selecciona el tipo': 'Entrada manual' }
+      - llenar: { 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> input >> nth=0': '30', 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> input >> nth=1': '38000' }
+      - pausa: 800
+      - clic: 'button:has-text("Confirmar ajuste")'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Confirmar")'
+      - pausa: 3000
+    resaltar: 'main'
+  - paso: 4
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/inventory/adjustments/create
+      - esperar: 'text=Datos del ajuste'
+      - llenar: { '#notes': 'Inventario inicial de bolsas' }
+      - elegir: { 'section:has(h2:has-text("Lineas del ajuste")) >> button:has-text("Buscar producto")': 'BOLSA VALVULADA' }
+      - elegir: { 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> text=Selecciona el tipo': 'Entrada manual' }
+      - llenar: { 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> input >> nth=0': '100', 'section:has(h2:has-text("Lineas del ajuste")) >> tbody tr >> nth=0 >> input >> nth=1': '600' }
+      - pausa: 800
+      - clic: 'button:has-text("Confirmar ajuste")'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Confirmar")'
+      - pausa: 3000
+    resaltar: 'main'
