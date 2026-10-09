@@ -1,0 +1,57 @@
+guia: produccion/registrar-produccion.md
+# Usa la receta del CAFÉ MOLIDO 500 G (produccion/crear-receta, orden 30).
+# Los pasos 4 y 7 guardan y confirman una producción de 40 unidades:
+#   CAPTURAS_PERMITIR_GUARDAR=1 npm run capturas -- produccion/registrar-produccion
+orden: 31
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Producciones
+      - esperar: 'text=Convierte insumos en un producto terminado'
+    resaltar: 'main a:has-text("Nueva producción"), main button:has-text("Nueva producción") >> nth=0'
+  - paso: 2
+    acciones:
+      - abrir: 'main a:has-text("Nueva producción"), main button:has-text("Nueva producción") >> nth=0'
+      - esperar: 'text=Datos de la producción'
+      - elegir: { 'text=Buscar receta...': 'CAFÉ MOLIDO' }
+      - pausa: 1500
+    resaltar: 'section:has(h2:has-text("Datos de la producción"))'
+  - paso: 3
+    acciones:
+      - llenar: { '#planned_quantity': '40' }
+      - pausa: 1500
+    resaltar: 'section:has(h2:has-text("Insumos"))'
+  - paso: 4
+    guarda_datos: true
+    resaltar: 'button:has-text("Guardar borrador")'
+    despues:
+      - clic: 'button:has-text("Guardar borrador")'
+      - esperar: 'text=Convierte insumos en un producto terminado'
+      - pausa: 1500
+  - paso: 5
+    acciones:
+      - menu: Producciones
+      - esperar: 'tbody tr:has-text("Borrador")'
+      - abrir: 'tbody tr:has-text("Borrador") >> nth=0 >> text=PRO-'
+      - esperar: 'text=Información general'
+      - pausa: 1000
+    resaltar: 'main button:has-text("Confirmar") >> nth=0'
+  - paso: 6
+    acciones:
+      - abrir: 'main button:has-text("Confirmar") >> nth=0'
+      - esperar: 'VENTANA >> text=Cantidad producida'
+      - llenar: { '#produced_quantity': '40' }
+      - pausa: 500
+    resaltar: 'VENTANA >> #produced_quantity >> xpath=..'
+    recortar: 'VENTANA'
+  - paso: 7
+    guarda_datos: true
+    resaltar: 'VENTANA >> button:has-text("Confirmar")'
+    recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Confirmar")'
+      - pausa: 3000
+  - paso: 8
+    acciones:
+      - pausa: 500
+    resaltar: 'section:has(h2:has-text("Información general"))'
