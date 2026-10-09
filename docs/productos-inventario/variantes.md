@@ -78,6 +78,26 @@ tags:
 
 ✅ **Listo:** cada variante lleva su propio inventario y precio, y en el POS se venden desde una sola tarjeta. Si en el POS buscas por nombre (ej. *casco*), salen las variantes una por una.
 
+## Ejemplo 2: llanta por medida
+
+Un solo atributo y **un precio distinto por variante**: el caso típico de llantas, cadenas o pastillas por tamaño.
+
+**1.** En <span class="ruta">Inventario › Atributos</span> crea el atributo **Medida** con sus valores (*80/100-17*, *90/90-18*, *100/90-18*).
+
+![Ejemplo 2: atributo Medida con sus valores](../assets/capturas/productos-inventario/variantes/paso-13.webp)
+
+**2.** En **Crear con variantes**, nombra el padre (ej. *LLANTA MICHELIN PILOT STREET*) y en **Atributos** elige solo los valores de **Medida** (deja *Color* y *Talla* vacíos). En **Combinaciones** pon el precio y el costo de cada medida.
+
+![Ejemplo 2: tres combinaciones con precio distinto](../assets/capturas/productos-inventario/variantes/paso-14.webp)
+
+**3.** Al hacer clic en **Generar variantes** quedan las 3 medidas, cada una con su código y su precio.
+
+![Ejemplo 2: la llanta con sus 3 variantes](../assets/capturas/productos-inventario/variantes/paso-16.webp)
+
+**4.** En el POS la tarjeta muestra *3 variantes* y el **rango de precios** (ej. *$245.000 – $329.000*).
+
+![Ejemplo 2: tarjeta de la llanta en el POS con rango de precios](../assets/capturas/productos-inventario/variantes/paso-17.webp)
+
 ## Después de crearlo
 
 - **Agregar una talla o un color nuevo:** créalo en <span class="ruta">Inventario › Atributos</span>, abre el producto padre y usa **Agregar variantes**. Las variantes que ya existen no se tocan.
@@ -93,7 +113,7 @@ Usa variantes solo cuando es **el mismo producto en varias versiones** y quieres
 | Producto padre | Atributos | Variantes |
 |---|---|---|
 | Casco Shaft 526 | Talla × Color | *Casco Shaft 526 / Negro / M*… |
-| Llanta Michelin Pilot Street | Medida (80/100-17, 90/90-18…) | Una por medida |
+| Llanta Michelin Pilot Street | Medida (80/100-17, 90/90-18…) | Una por medida ([ver ejemplo](#ejemplo-2-llanta-por-medida)) |
 | Guantes, chaquetas, impermeables | Talla × Color | Una por combinación |
 | Retrovisor universal | Lado (Izq., Der.) × Color | 4 variantes |
 | Bombillo | Tipo (H4, H6, BA20D) | Una por tipo |
