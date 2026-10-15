@@ -1,10 +1,10 @@
 ---
 title: "Soluciones rápidas: POS y caja"
-description: No me deja vender, caja descuadrada, monto máximo de caja, no abre el PDF.
+description: No me deja vender, venta a crédito pide cuenta por cobrar, caja descuadrada, monto máximo de caja, no abre el PDF.
 estado: pendiente-validacion
 tipo: solucion
 modulo: pos
-revisado: 2026-09-29
+revisado: 2026-10-14
 tags:
   - POS
   - Caja
@@ -36,6 +36,18 @@ tags:
 **ESCALAR A SOPORTE:** si no aparece ninguna cuenta para elegir (carga antes las [cuentas auxiliares por defecto](../contabilidad/cuentas-auxiliares.md)).
 
 **INFORMACIÓN PARA SOPORTE:** nombre de la caja, sede, captura del mensaje.
+
+## "Al vender a crédito en el POS me pide configurar la cuenta por cobrar"
+
+**PROBLEMA:** al cobrar una venta **a crédito** en el POS aparece *“Configura una cuenta de cuentas por cobrar en el tipo de cliente para facturar a crédito con contabilidad activa.”*
+
+**CAUSA:** el cliente de la venta no tiene tipo de cliente, o su tipo no tiene **Cuenta por cobrar**.
+
+**SOLUCIÓN:** sigue los pasos 1 a 3 de [Al validar la factura a crédito me pide configurar la cuenta contable](ventas.md#al-validar-la-factura-a-credito-me-pide-configurar-la-cuenta-contable) y vuelve a cobrar la venta en el POS.
+
+**ESCALAR A SOPORTE:** si el cliente tiene tipo, el tipo tiene cuenta por cobrar y el mensaje sigue.
+
+**INFORMACIÓN PARA SOPORTE:** nombre del cliente, captura de su ficha con el **Tipo de cliente** y captura del mensaje.
 
 ## "No hay cajas para abrir"
 
