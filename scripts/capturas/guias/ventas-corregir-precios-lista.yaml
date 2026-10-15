@@ -1,0 +1,34 @@
+guia: ventas/corregir-precios-lista.md
+# Solo consulta: cambia en pantalla el precio Mayorista del café que crea
+# ventas/listas-de-precios (orden 21) y prepara una importación, sin guardar.
+orden: 22
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/products
+      - abrir: 'tbody tr:has-text("CAFÉ MOLIDO") >> nth=0'
+      - esperar: 'main a:has-text("Editar producto")'
+    resaltar: 'main a:has-text("Editar producto")'
+  - paso: 2
+    acciones:
+      - abrir: 'main a:has-text("Editar producto")'
+      - esperar: 'main button:text-is("Precios")'
+      - abrir: 'main button:text-is("Precios")'
+      - esperar: 'main tbody tr:has-text("Mayorista")'
+      - llenar: { 'main tbody tr:has-text("Mayorista") >> nth=0 >> input >> nth=-1': '16500' }
+      - pausa: 800
+    resaltar: 'main tbody tr:has-text("Mayorista") >> nth=0'
+  - paso: 3
+    resaltar: 'button:has-text("Guardar precios")'
+  - paso: 4
+    acciones:
+      - ir: /{tenant}/products/price-imports/create
+      - esperar: 'button:text-is("Lista de precios")'
+      - abrir: 'button:text-is("Lista de precios")'
+      - elegir: { 'button:has-text("Seleccionar lista...")': 'Mayorista' }
+      - pausa: 800
+    resaltar: 'text=Paso 1 — Elige dónde se aplican los precios >> xpath=ancestor::section[1]'
+  - paso: 5
+    resaltar: 'main a:has-text("Descargar plantilla")'
+  - paso: 6
+    resaltar: '[aria-label="Seleccionar archivo de precios en formato XLSX"]'

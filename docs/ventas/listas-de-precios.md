@@ -97,6 +97,7 @@ Para cada producto de la venta, en este orden (usa el primero que encuentre):
 
 ## Relacionados
 
+- [¿Cómo corrijo los precios de una lista de precios?](corregir-precios-lista.md)
 - [¿Cómo manejo las presentaciones de compra y de venta?](../productos-inventario/presentaciones.md)
 - [¿Cómo creo un cliente?](crear-cliente.md)
 - [¿Cómo creo un tipo de cliente?](tipos-de-cliente.md)
