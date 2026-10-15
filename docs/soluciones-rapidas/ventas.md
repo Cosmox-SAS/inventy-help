@@ -4,7 +4,7 @@ description: Pide cuenta por cobrar, sin cupo de crédito, fecha futura, no pued
 estado: pendiente-validacion
 tipo: solucion
 modulo: ventas
-revisado: 2026-10-01
+revisado: 2026-10-14
 tags:
   - Ventas
   - Soluciones rápidas
@@ -16,14 +16,25 @@ tags:
 
 **PROBLEMA:** al validar una factura **a crédito** aparece *“Configura una cuenta de cuentas por cobrar en el tipo de cliente para facturar a crédito con contabilidad activa.”*
 
-**CAUSA:** la empresa usa Contabilidad y el cliente **no tiene tipo de cliente**, o su tipo de cliente **no tiene Cuenta por cobrar**.
+**CAUSA:** la empresa usa Contabilidad y el cliente **no tiene tipo de cliente**, o su tipo de cliente **no tiene Cuenta por cobrar**. Que la cuenta 1305 esté activa en el plan de cuentas no es suficiente: Inventy toma la cuenta del **tipo de cliente** del cliente.
 
 **SOLUCIÓN:**
 
 1. Abre el cliente en <span class="ruta">Ventas › Clientes</span> › **Editar** y mira **Tipo de cliente** (en **Datos del rol de cliente**).
 2. Si está vacío, elige uno (ej. *General*) y haz clic en **Actualizar cliente**.
+
+    ![Campo Tipo de cliente en la ficha del cliente](../assets/capturas/soluciones-rapidas/ventas/paso-1.png)
+
 3. Si ya tiene tipo, ve a <span class="ruta">Ventas › Ajustes › Tipos de clientes</span> (barra izquierda **Ventas** → sección **AJUSTES**), edita ese tipo y elige la **Cuenta por cobrar** (ej. *130505001 — Clientes nacionales*). Guarda.
+
+    ![Tipos de clientes con su Cuenta por cobrar y número de clientes](../assets/capturas/soluciones-rapidas/ventas/paso-2.png)
+
 4. Vuelve a la factura, ábrela con **Editar** y valídala desde ahí: al guardarla, toma la cuenta nueva. Si la validas sin editarla, puede seguir saliendo el mismo mensaje.
+
+Si la venta es del POS, no hay factura que editar: después de los pasos 1 a 3, vuelve a cobrar la venta.
+
+!!! tip "Evita que vuelva a pasar"
+    Al crear un cliente, el **Tipo de cliente** no es obligatorio: si no lo eliges, queda vacío. Para saber si hay otros clientes sin tipo, suma la columna **Clientes** en <span class="ruta">Ventas › Ajustes › Tipos de clientes</span> y compárala con el total de clientes: si da menos, hay clientes sin tipo.
 
 **ESCALAR A SOPORTE:** si el tipo de cliente ya tiene cuenta, editaste la factura y el mensaje sigue.
 

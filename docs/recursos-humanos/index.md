@@ -17,10 +17,11 @@ El menú **Nómina** está disponible si tu plan incluye el módulo de recursos 
 
 1. [¿Cómo registro un empleado?](registrar-empleado.md)
 2. [¿Cómo registro una novedad de nómina?](registrar-novedad.md)
-3. [¿Cómo registro una incapacidad?](registrar-incapacidad.md)
-4. [¿Cómo registro las vacaciones de un empleado?](registrar-vacaciones.md)
-5. [¿Cómo liquido y pago la nómina?](liquidar-nomina.md)
-6. [¿Cómo envío la nómina electrónica a la DIAN?](nomina-electronica.md)
+3. [¿Cómo calculo y pago las comisiones de los vendedores?](comisiones-vendedores.md)
+4. [¿Cómo registro una incapacidad?](registrar-incapacidad.md)
+5. [¿Cómo registro las vacaciones de un empleado?](registrar-vacaciones.md)
+6. [¿Cómo liquido y pago la nómina?](liquidar-nomina.md)
+7. [¿Cómo envío la nómina electrónica a la DIAN?](nomina-electronica.md)
 
 ## ¿Qué hay en el menú Nómina?
 

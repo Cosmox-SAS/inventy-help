@@ -127,6 +127,7 @@ nav:
       - ¿Cómo creo un cliente?: ventas/crear-cliente.md
       - ¿Para qué sirve el rol de cliente y cuál elijo?: ventas/rol-de-cliente.md
       - ¿Cómo manejo las listas de precios?: ventas/listas-de-precios.md
+      - ¿Cómo corrijo los precios de una lista de precios?: ventas/corregir-precios-lista.md
       - ¿Cómo creo un medio de pago y por qué no me sale Crédito en el POS?: ventas/medios-de-pago.md
       - ¿Cómo hago una factura de venta?: ventas/crear-factura-venta.md
       - ¿Cómo registro una devolución de venta?: ventas/devolucion-venta.md
@@ -159,7 +160,7 @@ nav:
       - Contabilidad:
           - contabilidad/index.md
           - ¿Cómo funciona la contabilidad en Inventy?: contabilidad/como-funciona.md
-          - ¿Cómo se implementan las cuentas auxiliares?: contabilidad/cuentas-auxiliares.md
+          - ¿Cómo cargo y creo cuentas auxiliares?: contabilidad/cuentas-auxiliares.md
           - ¿Cómo hago la configuración contable inicial?: contabilidad/configuracion-contable.md
       - Producción:
           - produccion/index.md
@@ -170,6 +171,7 @@ nav:
           - recursos-humanos/index.md
           - ¿Cómo registro un empleado?: recursos-humanos/registrar-empleado.md
           - ¿Cómo registro una novedad de nómina?: recursos-humanos/registrar-novedad.md
+          - ¿Cómo calculo y pago las comisiones de los vendedores?: recursos-humanos/comisiones-vendedores.md
           - ¿Cómo registro una incapacidad?: recursos-humanos/registrar-incapacidad.md
           - ¿Cómo registro las vacaciones de un empleado?: recursos-humanos/registrar-vacaciones.md
           - ¿Cómo liquido y pago la nómina?: recursos-humanos/liquidar-nomina.md

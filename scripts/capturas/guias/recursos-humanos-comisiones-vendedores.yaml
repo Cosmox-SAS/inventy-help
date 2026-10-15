@@ -1,0 +1,37 @@
+guia: recursos-humanos/comisiones-vendedores.md
+# Solo consulta: abre el reporte de rentabilidad y llena una novedad de
+# comisión para el empleado de recursos-humanos/registrar-empleado (orden 80)
+# sin guardarla.
+orden: 86
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/sales/report/profitability
+      - esperar: 'text=Rentabilidad por ítem'
+    resaltar: 'text=Periodo >> xpath=..'
+  - paso: 2
+    acciones:
+      - abrir: 'main button:has-text("Filtros")'
+      - esperar: 'label:text-is("Vendedor")'
+    resaltar: 'label:text-is("Vendedor") >> xpath=..'
+  - paso: 3
+    acciones:
+      - abrir: 'button:text-is("Cancelar")'
+      - pausa: 500
+    resaltar: 'main :is(a,button):has-text("Exportar Excel")'
+  - paso: 4
+    acciones:
+      - ir: /{tenant}/hhrr/payroll/novelties
+      - esperar: 'text=Novedades de Nómina'
+    resaltar: 'main :is(a,button):has-text("Nueva Novedad") >> nth=0'
+  - paso: 5
+    acciones:
+      - abrir: 'main :is(a,button):has-text("Nueva Novedad") >> nth=0'
+      - esperar: 'text=Nueva Novedad'
+      - elegir: { 'button:has-text("Buscar empleado...")': 'ANDRÉS' }
+      - elegir: { 'button:has-text("Buscar novedad...")': 'Comisión' }
+      - llenar: { 'label:text-is("Valor") >> xpath=.. >> input': '350000' }
+      - pausa: 800
+    resaltar: 'text=Nueva Novedad >> xpath=ancestor::div[contains(@class,"rounded")][1]'
+  - paso: 6
+    resaltar: 'main button[type="submit"]:has-text("Guardar")'

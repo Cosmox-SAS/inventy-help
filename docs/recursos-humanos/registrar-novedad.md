@@ -43,6 +43,7 @@ tags:
 
 ## Relacionados
 
+- [¿Cómo calculo y pago las comisiones de los vendedores?](comisiones-vendedores.md)
 - [¿Cómo liquido y pago la nómina?](liquidar-nomina.md)
 - [¿Cómo registro una incapacidad?](registrar-incapacidad.md)
 - [¿Cómo registro las vacaciones de un empleado?](registrar-vacaciones.md)

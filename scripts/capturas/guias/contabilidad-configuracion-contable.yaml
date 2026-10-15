@@ -1,4 +1,6 @@
 guia: contabilidad/configuracion-contable.md
+# No guarda datos: la demo ya tiene una cuenta en Cuentas a Pagar y las demás
+# cuentas asignadas por "Cargar auxiliares por defecto".
 orden: 9
 pasos:
   - paso: 1
@@ -7,17 +9,14 @@ pasos:
       - esperar: 'text=Configuración Contable'
     resaltar: 'main'
   - paso: 2
-    guarda_datos: true
-    acciones:
-      - abrir: 'div.rounded-xl:has(h3:has-text("Cuentas a Pagar")) >> button:has-text("Agregar cuenta")'
-      - elegir: { 'div.rounded-xl:has(h3:has-text("Cuentas a Pagar")) >> text=Buscar cuenta auxiliar... >> nth=-1': '2205' }
-      - esperar: 'text=Configuración actualizada'
-    resaltar: 'div.rounded-xl:has(h3:has-text("Cuentas a Pagar"))'
+    resaltar: 'div.rounded-xl:has(h3:has-text("Cuentas a Pagar")) >> button:has-text("Agregar cuenta")'
   - paso: 3
-    resaltar: 'div.rounded-xl:has(h3:has-text("Anticipos de Clientes"))'
+    resaltar: 'div.rounded-xl:has(h3:has-text("Cuentas a Pagar"))'
   - paso: 4
-    resaltar: 'div.rounded-xl:has(h3:has-text("Notas Crédito de Clientes"))'
+    resaltar: 'div.rounded-xl:has(h3:has-text("Anticipos de Clientes"))'
   - paso: 5
-    resaltar: 'div.rounded-xl:has(h3:has-text("Anticipo a Proveedores"))'
+    resaltar: 'div.rounded-xl:has(h3:has-text("Notas Crédito de Clientes"))'
   - paso: 6
-    resaltar: 'div.rounded-xl:has(h3:has-text("Ajuste al Peso"))'
+    resaltar: 'div.rounded-xl:has(h3:has-text("Saldos a favor de aliados de recaudo"))'
+  - paso: 7
+    resaltar: 'div.rounded-xl:has(h3:has-text("Anticipo a Proveedores"))'

@@ -8,7 +8,7 @@ menu: "Ventas › Clientes"
 permisos:
   - Ver clientes
   - Crear clientes
-revisado: 2026-10-01
+revisado: 2026-10-14
 tags:
   - Ventas
   - Clientes
@@ -38,7 +38,7 @@ tags:
 
 ![Paso 4: información de contacto](../assets/capturas/ventas/crear-cliente/paso-4.webp)
 
-**Paso 5.** En **Datos del rol de cliente**, define **Límite de crédito** (0 = sin crédito), **Plazo de pago (días)** y el **Tipo de cliente** (obligatorio para vender a crédito si usas Contabilidad: de ahí sale la cuenta por cobrar). Si aplica, marca **No calcula impuestos en ventas** y configura sus **Retenciones**.
+**Paso 5.** En **Datos del rol de cliente**, define **Límite de crédito** (0 = sin crédito), **Plazo de pago (días)** y el **Tipo de cliente** (el formulario te deja guardar sin él, pero es obligatorio para vender a crédito si usas Contabilidad: de ahí sale la cuenta por cobrar). Si aplica, marca **No calcula impuestos en ventas** y configura sus **Retenciones**.
 
 ![Paso 5: condiciones comerciales](../assets/capturas/ventas/crear-cliente/paso-5.webp)
 

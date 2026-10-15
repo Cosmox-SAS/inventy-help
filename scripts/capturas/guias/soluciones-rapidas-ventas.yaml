@@ -1,0 +1,19 @@
+guia: soluciones-rapidas/ventas.md
+# Solo consulta: "Al validar la factura a crédito me pide configurar la cuenta
+# contable". Usa el cliente de ventas/rol-de-cliente sin guardarlo.
+orden: 95
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/customers
+      - esperar: 'tbody tr:has-text("PEDRO RAMÍREZ")'
+      - abrir: 'tbody tr:has-text("PEDRO RAMÍREZ") button[aria-label="Acciones"]'
+      - abrir: 'a[href$="/edit"]:has-text("Editar")'
+      - esperar: 'label:text-is("Tipo de cliente")'
+      - pausa: 800
+    resaltar: 'label:text-is("Tipo de cliente") >> xpath=..'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/customer-types
+      - esperar: 'tbody tr:has-text("General")'
+    resaltar: 'main table'
