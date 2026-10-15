@@ -8,7 +8,7 @@ menu: "Contabilidad"
 permisos:
   - Ver plan de cuentas
   - Ver asientos contables
-revisado: 2026-10-01
+revisado: 2026-10-14
 search:
   boost: 2
 tags:
@@ -53,7 +53,8 @@ Ninguna cuenta está fija: cada asiento usa las cuentas que la empresa configur�
 | Cuentas por cobrar (ventas a crédito) | El **tipo de cliente** |
 | Cuentas por pagar (compras) | Se elige en cada factura de compra, de la lista de <span class="ruta">Contabilidad › Configuración</span> |
 | Retefuente, ReteIVA y ReteICA del tercero | Ficha del **cliente** o **proveedor** (sección **Retenciones**) |
-| Anticipos, ajuste al peso | <span class="ruta">Contabilidad › Configuración</span> |
+| Anticipos, notas crédito y saldos a favor de aliados de recaudo | <span class="ruta">Contabilidad › Configuración</span> |
+| Ajuste al peso y descuentos por pronto pago en recaudos y pagos | <span class="ruta">Tesorería › Cartera › Conceptos de ajuste de pagos</span> |
 | Domicilios, propinas, GMF (4x1000) | <span class="ruta">Configuración › Módulos</span> (Restaurante, Bancos) |
 
 !!! tip "Cuenta propia por producto"
@@ -65,7 +66,7 @@ Ninguna cuenta está fija: cada asiento usa las cuentas que la empresa configur�
 
 ![Medio de pago con cuentas bancarias por sede](../assets/capturas/contabilidad/como-funciona/paso-medio-de-pago.webp)
 
-![Configuración contable: cuentas a pagar, anticipos y ajuste al peso](../assets/capturas/contabilidad/como-funciona/paso-configuracion-contable.webp)
+![Configuración contable: cuentas a pagar, anticipos y notas crédito](../assets/capturas/contabilidad/como-funciona/paso-configuracion-contable.webp)
 
 ## 3. Cómo nace un asiento: ejemplo de una venta
 
@@ -87,7 +88,7 @@ Variaciones:
 - **Venta a crédito:** el débito va a **Cuentas por cobrar** (la cuenta del tipo de cliente).
 - **Pago mixto:** una línea de débito por cada medio de pago.
 - **Retención por línea:** una línea de débito adicional.
-- **Un peso de diferencia por redondeo:** va a la cuenta de **Ajuste al peso**.
+- **Diferencia de redondeo de hasta un peso:** Inventy la suma a la línea de ingresos más grande para que el asiento cuadre. Una diferencia mayor no se corrige sola: aparece *“El asiento contable no está balanceado”*.
 
 Cada línea guarda además el **tercero** (nombre y documento), el **centro de costo** y la **base** del impuesto. Por eso existen el libro auxiliar por tercero y el reporte de impuestos.
 
@@ -99,14 +100,16 @@ Cada línea guarda además el **tercero** (nombre y documento), el **centro de c
 |---|---|
 | **Si el asiento no cuadra, el documento no se valida** | Aparece *“El asiento contable no está balanceado”*. Casi siempre falta una cuenta en la configuración. |
 | **Ver asientos** | Antes de validar, muestra el asiento y avisa qué cuenta falta (facturas, compras, ingresos, egresos…). |
-| **Un documento = un asiento** | Nunca se duplica. |
+| **Un documento = un asiento** | Cada documento genera su asiento una sola vez. Al anularlo se suma un asiento de anulación. |
 | **Sin el módulo Contabilidad** | Los documentos funcionan igual, pero no se generan asientos. |
 | **Numeración** | Año + consecutivo, por ejemplo `2026-00042`. |
-| **Anulaciones** | Al anular una compra se elimina su asiento. Ingresos, egresos, traslados, consignaciones, anticipos y liquidaciones crean un **asiento de anulación**. |
+| **Anulaciones** | El asiento original no se borra: al anular una compra, un ingreso, un egreso, un traslado, una consignación, un anticipo, una liquidación o una producción, Inventy crea un **asiento de anulación** que lo reversa. |
+| **Reclasificar** | Desde el detalle de un asiento, **Reclasificar** cambia la cuenta, el tercero o el centro de costo de sus líneas sin tocar los valores. Pide una observación y guarda el historial. No se puede en un período cerrado. |
+| **Cierres contables** | Si la contabilidad está cerrada hasta una fecha (<span class="ruta">Contabilidad › Cierres contables</span>), no se pueden crear, eliminar ni modificar asientos con fecha anterior o igual. |
 
 ## 5. Documentos que generan asientos
 
-Venta y devolución de venta · compra y devolución de compra · ingresos (recaudos) · egresos (pagos) · anticipos de clientes y proveedores · traslados de dinero · consignaciones · compensación de cuentas · GMF (4x1000) · domicilios (pago y liquidación) · propinas · nómina (pago, provisión, liquidación).
+Venta y devolución de venta · compra y devolución de compra · ingresos (recaudos) · egresos (pagos) · anticipos de clientes y proveedores · traslados de dinero · consignaciones · compensación de cuentas · GMF (4x1000) · domicilios (pago y liquidación) · propinas · producción · nómina (pago, provisión, liquidación).
 
 Además: **asientos manuales**, **saldos iniciales** e **importación de asientos** desde Excel en <span class="ruta">Contabilidad › Asientos Contables</span>.
 
@@ -144,6 +147,7 @@ El **Estado de Resultados** agrupa por el inicio del código de cuenta: **41** i
 
 ## Relacionados
 
-- [¿Cómo se implementan las cuentas auxiliares?](cuentas-auxiliares.md)
+- [¿Cómo cargo y creo cuentas auxiliares?](cuentas-auxiliares.md)
+- [¿Cómo hago la configuración contable inicial?](configuracion-contable.md)
 - [¿Qué es y cómo creo un catálogo de impuestos?](../impuestos/catalogo-impuestos.md)
 - [¿Cómo se aplican las retenciones?](../impuestos/retenciones.md)

@@ -24,17 +24,18 @@ pasos:
       - clic: 'button:has-text("Sí, aplicar")'
       - esperar: 'text=Auxiliares por defecto cargados exitosamente'
       - pausa: 1500
+  # Pasos 4-7 no guardan: CAJA MENOR SEDE NORTE ya existe en la demo.
   - paso: 4
     acciones:
       - ir: /{tenant}/accounting/accounts?level=auxiliary
-      - esperar: 'button:has-text("Nueva Cuenta Auxiliar")'
-    resaltar: 'button:has-text("Nueva Cuenta Auxiliar")'
+      - esperar: 'button:has-text("Nueva cuenta propia")'
+    resaltar: 'button:has-text("Nueva cuenta propia")'
   - paso: 5
     acciones:
-      - abrir: 'button:has-text("Nueva Cuenta Auxiliar")'
+      - abrir: 'button:has-text("Nueva cuenta propia")'
       - esperar: 'VENTANA >> text=Cuenta padre'
       - elegir: { 'VENTANA >> text=Buscar por código o nombre...': '110510' }
-    resaltar: 'VENTANA >> text=Cuenta padre * >> xpath=ancestor::div[2]'
+    resaltar: 'VENTANA >> text=Tipo de cuenta >> xpath=ancestor::div[1]'
     recortar: 'VENTANA'
   - paso: 6
     acciones:
@@ -42,9 +43,5 @@ pasos:
     resaltar: 'VENTANA >> input[placeholder="Ej: CAJA MENOR SEDE NORTE"]'
     recortar: 'VENTANA'
   - paso: 7
-    guarda_datos: true
-    resaltar: 'VENTANA >> button:has-text("Crear cuenta")'
+    resaltar: 'VENTANA >> button:has-text("Crear cuenta auxiliar")'
     recortar: 'VENTANA'
-    despues:
-      - clic: 'VENTANA >> button:has-text("Crear cuenta")'
-      - esperar: 'text=Cuenta contable creada exitosamente'

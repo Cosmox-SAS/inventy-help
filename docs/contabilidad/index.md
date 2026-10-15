@@ -4,7 +4,7 @@ description: Plan de cuentas, asientos contables e informes financieros.
 estado: pendiente-validacion
 tipo: indice
 modulo: contabilidad
-revisado: 2026-09-29
+revisado: 2026-10-14
 ---
 
 # Contabilidad
@@ -20,18 +20,19 @@ Inventy genera la contabilidad **automáticamente** ([cómo funciona](como-funci
 | Plan de cuentas | **Plan de Cuentas** | Las cuentas contables de tu empresa (PUC). Se pueden importar. |
 | Movimientos | **Asientos Contables** | Consultar asientos automáticos y registrar asientos manuales. Se pueden importar. |
 | Reportes | **Reporte de Asientos**, **Balance de Prueba**, **Libro Auxiliar**, **Estado de Resultados**, **Balance General**, **Reporte de Impuestos** | Informes contables. |
-| Configuración | **Configuración** | Cuentas por defecto que usa Inventy al contabilizar. |
+| Configuración | **Configuración** | Cuentas por defecto que usa Inventy al contabilizar. Ver [guía](configuracion-contable.md). |
+| | **Cierres contables** | Cerrar la contabilidad hasta una fecha: después no se pueden crear, eliminar ni modificar asientos con fecha anterior o igual. |
 
 !!! info "¿Por qué me sale “El asiento contable no está balanceado”?"
     Algún producto, impuesto, medio de pago o tercero no tiene su **cuenta contable** configurada. Tu contador debe revisar <span class="ruta">Contabilidad › Configuración</span> y el **Catálogo de Impuestos**.
 
-## Guías planificadas
+## Guías
 
 | Guía | Estado |
 |---|---|
-| Configuración contable inicial | [Guía](configuracion-contable.md) |
-| Plan de cuentas y cuentas auxiliares | [Guía](cuentas-auxiliares.md) |
+| [¿Cómo funciona la contabilidad en Inventy?](como-funciona.md) | Disponible |
+| [¿Cómo cargo y creo cuentas auxiliares?](cuentas-auxiliares.md) | Disponible |
+| [¿Cómo hago la configuración contable inicial?](configuracion-contable.md) | Disponible |
 | Asientos contables: consultar y registrar un asiento manual | Por redactar |
-| Cómo funciona la contabilidad (relación con ventas, compras y pagos) | [Guía](como-funciona.md) |
+| Cierres contables: cerrar y reabrir un período | Por redactar |
 | Informes: balance de prueba, libro auxiliar, estado de resultados y balance general | Por redactar |
-| Errores frecuentes de contabilización | Por redactar |
