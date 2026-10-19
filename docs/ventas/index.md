@@ -24,6 +24,7 @@ Usa el menú **Ventas** para facturar a tus clientes desde la oficina (con más 
 - [¿Cómo corrijo los precios de una lista de precios?](corregir-precios-lista.md)
 - [¿Cómo hago una factura de venta?](crear-factura-venta.md)
 - [¿Cómo registro una devolución de venta?](devolucion-venta.md)
+- [¿Cómo regalo un producto al vender otro?](regalar-producto.md)
 
 ## Estados de una factura de venta
 
@@ -36,4 +37,4 @@ Usa el menú **Ventas** para facturar a tus clientes desde la oficina (con más 
 
 ## Próximamente
 
-Facturas recurrentes · Vendedores · Tipos de clientes · Medios de pago · Promociones · Remisiones · Reportes de ventas (Productos vendidos, Rentabilidad por ítem, Ventas).
+Facturas recurrentes · Vendedores · Tipos de clientes · Medios de pago · Remisiones · Reportes de ventas (Productos vendidos, Rentabilidad por ítem, Ventas).

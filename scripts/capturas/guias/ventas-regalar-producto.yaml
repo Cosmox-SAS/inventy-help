@@ -1,0 +1,40 @@
+guia: ventas/regalar-producto.md
+# Requiere en la demo un celular y unos audífonos con existencias. El paso 7
+# necesita la promoción guardada (paso 6 con guarda_datos) para que el POS la aplique.
+pasos:
+  - paso: 1
+    acciones:
+      - menu: Módulos
+      - esperar: 'text=Configuración de módulos'
+      - clic: 'text=MÓDULOS DEL SISTEMA >> xpath=.. >> text=Ventas'
+      - esperar: 'text=Habilitar promociones'
+    resaltar: 'text=Habilitar promociones >> xpath=ancestor::div[2]'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/promotions
+      - esperar: 'text=Nueva promoción'
+    resaltar: 'main a:has-text("Nueva promoción"), main button:has-text("Nueva promoción") >> nth=0'
+  - paso: 3
+    acciones:
+      - ir: /{tenant}/promotions/create
+      - esperar: 'text=Información General'
+      - llenar: { '#name': 'Audífonos gratis con celular' }
+      - elegir: { '#type': 'Compra X lleva Y' }
+      - llenar: { '#buy_quantity': '1', '#reward_quantity': '1', '#discount_value': '100' }
+    resaltar: 'section:has(h2:has-text("Información General"))'
+  - paso: 4
+    resaltar: 'section:has(h2:has-text("Vigencia"))'
+  - paso: 5
+    acciones:
+      - clic: 'button:has-text("Agregar gatillo")'
+    resaltar: 'section:has(h2:has-text("Productos que activan la promoción"))'
+  - paso: 6
+    guarda_datos: true
+    acciones:
+      - clic: 'button:has-text("Agregar premio")'
+    resaltar: 'section:has(h2:has-text("Productos de premio"))'
+    despues:
+      - clic: 'button:has-text("Guardar")'
+      - pausa: 2500
+  - paso: 7
+    manual: 'POS con el celular en el carrito y los audífonos agregados en $0 con la etiqueta Promoción.'

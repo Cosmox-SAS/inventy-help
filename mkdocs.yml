@@ -131,6 +131,7 @@ nav:
       - ¿Cómo creo un medio de pago y por qué no me sale Crédito en el POS?: ventas/medios-de-pago.md
       - ¿Cómo hago una factura de venta?: ventas/crear-factura-venta.md
       - ¿Cómo registro una devolución de venta?: ventas/devolucion-venta.md
+      - ¿Cómo regalo un producto al vender otro?: ventas/regalar-producto.md
   - Punto de venta:
       - pos/index.md
       - ¿Cómo creo una caja?: pos/crear-caja.md
