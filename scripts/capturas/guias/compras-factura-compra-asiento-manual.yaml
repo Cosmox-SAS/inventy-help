@@ -1,0 +1,37 @@
+guia: compras/factura-compra-asiento-manual.md
+# Factura de servicios en modo Asiento Manual al proveedor de compras/crear-proveedor (orden 58).
+# Requiere Contabilidad activa y las cuentas auxiliares 513535001 y 220525001.
+# No guarda datos: la foto del paso 6 se toma antes de Registrar Factura.
+orden: 61
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/purchase-invoices
+      - esperar: 'text=Facturas de Compra'
+    resaltar: 'main a:has-text("Nueva Factura"), main button:has-text("Nueva Factura") >> nth=0'
+  - paso: 2
+    acciones:
+      - ir: /{tenant}/purchase-invoices/create
+      - esperar: 'text=Información General'
+      - pausa: 1000
+      - clic: 'button:has-text("Asiento Manual")'
+      - esperar: 'text=Líneas del Asiento'
+    resaltar: 'button:has-text("Asiento Manual") >> xpath=..'
+  - paso: 3
+    acciones:
+      - elegir: { 'button:has-text("Buscar proveedor...")': 'DISTRIBUIDORA' }
+      - llenar: { '#supplier_invoice_number': 'FE-{sufijo}' }
+      - pausa: 800
+    resaltar: 'section:has(:is(h2,h3):has-text("Información General"))'
+  - paso: 4
+    acciones:
+      - elegir: { 'section:has(:is(h2,h3):has-text("Líneas del Asiento")) >> tbody tr >> nth=0 >> button:has-text("Buscar cuenta...")': '513535001' }
+      - llenar: { 'section:has(:is(h2,h3):has-text("Líneas del Asiento")) >> tbody tr >> nth=0 >> input >> nth=0': '150000' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Líneas del Asiento")) >> tbody tr >> nth=1 >> button:has-text("Buscar cuenta...")': '220525001' }
+      - llenar: { 'section:has(:is(h2,h3):has-text("Líneas del Asiento")) >> tbody tr >> nth=1 >> input >> nth=1': '150000' }
+      - pausa: 1000
+    resaltar: 'section:has(:is(h2,h3):has-text("Líneas del Asiento"))'
+  - paso: 5
+    resaltar: 'text=Asiento balanceado >> xpath=ancestor::div[2]'
+  - paso: 6
+    resaltar: '[data-testid="purchase-invoice-form-submit"]'

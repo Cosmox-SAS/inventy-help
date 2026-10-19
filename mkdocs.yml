@@ -121,6 +121,7 @@ nav:
       - compras/index.md
       - ¿Cómo creo un proveedor?: compras/crear-proveedor.md
       - ¿Cómo registro una factura de compra?: compras/registrar-factura-compra.md
+      - ¿Cómo registro un gasto de un proveedor con asiento manual?: compras/factura-compra-asiento-manual.md
   - Ventas:
       - ventas/index.md
       - ¿Cómo creo un tipo de cliente?: ventas/tipos-de-cliente.md
