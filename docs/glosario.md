@@ -168,7 +168,7 @@ Documento electrónico que corrige o anula total o parcialmente una factura de v
 ## O
 
 ### Obsequio { #obsequio }
-Producto que se entrega gratis en una venta. Requiere permiso **Autorizar obsequios en venta**. Una venta no puede ser solo de obsequios.
+Producto que se entrega gratis en una venta. Requiere permiso **Autorizar obsequios en venta**. Una venta no puede ser solo de obsequios. · [Guía](ventas/regalar-producto.md)
 
 ### Orden de compra { #orden-de-compra }
 Pedido al proveedor antes de recibir la mercancía. Luego se convierte en factura de compra. · <span class="ruta">Compras › Órdenes de Compra</span>
@@ -194,7 +194,7 @@ Pedido que toma un vendedor en ruta (app móvil) y la oficina luego factura. · 
 Opción para emitir las ventas como proforma, con consecutivo propio y sin datos de la empresa. Inventario, cartera y contabilidad funcionan igual. · <span class="ruta">Configuración › Módulos › Ventas</span>
 
 ### Promoción { #promocion }
-Descuento o beneficio automático sobre ciertos productos. · <span class="ruta">Ventas › Ajustes › Promociones</span>
+Descuento o beneficio automático sobre ciertos productos. · <span class="ruta">Ventas › Ajustes › Promociones</span> · [Guía](ventas/regalar-producto.md)
 
 ## R
 

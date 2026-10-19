@@ -118,7 +118,7 @@ async function sesion(page, env) {
 
 async function irAlMenu(page, opcion) {
     await page.keyboard.press('Control+k');
-    const buscador = page.getByPlaceholder('Buscar en el menú…');
+    const buscador = page.getByPlaceholder(/^Buscar en el menú/);
     await buscador.waitFor({ timeout: ESPERA_MS });
     await buscador.fill(opcion);
     const exacta = page.getByRole('option', { name: opcion, exact: true }).first();
