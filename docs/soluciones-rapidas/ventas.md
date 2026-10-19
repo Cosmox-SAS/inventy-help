@@ -1,10 +1,10 @@
 ---
 title: "Soluciones rápidas: ventas"
-description: Pide cuenta por cobrar, sin cupo de crédito, fecha futura, no puedo anular, asiento no balanceado.
+description: Pide cuenta por cobrar, sin cupo de crédito, fecha futura, no puedo anular, medio de pago equivocado, asiento no balanceado.
 estado: pendiente-validacion
 tipo: solucion
 modulo: ventas
-revisado: 2026-10-14
+revisado: 2026-10-17
 tags:
   - Ventas
   - Soluciones rápidas
@@ -86,11 +86,32 @@ Si la venta es del POS, no hay factura que editar: después de los pasos 1 a 3, 
 
 **CAUSA:** las facturas validadas no se pueden editar.
 
-**SOLUCIÓN:** registra una [devolución](../ventas/devolucion-venta.md) (total o parcial) y crea una factura nueva con los datos correctos.
+**SOLUCIÓN:** registra una [devolución](../ventas/devolucion-venta.md) (total o parcial) y crea una factura nueva con los datos correctos. Si solo está mal el medio de pago, no hagas devolución: ver [Me equivoqué en el medio de pago de una factura](#me-equivoque-en-el-medio-de-pago-de-una-factura).
 
 **ESCALAR A SOPORTE:** si la factura ya fue aceptada por la DIAN y tienes dudas sobre cómo corregirla.
 
 **INFORMACIÓN PARA SOPORTE:** número de la factura, qué dato está mal.
+
+## "Me equivoqué en el medio de pago de una factura"
+
+**PROBLEMA:** registré la venta en **Efectivo** y el cliente pagó por **Transferencia** (o al revés). Ahora la caja no cuadra.
+
+**CAUSA:** el medio de pago de una factura validada no se puede cambiar. Inventy cuenta ese dinero en la caja o en el banco equivocado.
+
+**SOLUCIÓN:** si la venta, el cliente y los valores están bien, no hagas una devolución: mueve el dinero a donde realmente está. Hazlo **antes de cerrar la caja**.
+
+1. **Registraste Efectivo y pagaron por Transferencia:** ingresa a <span class="ruta">Tesorería › Consignaciones</span> y haz clic en **Realizar consignación**. Elige la **Caja abierta**, la **Cuenta bancaria** donde entró la transferencia y el **Monto (COP)** de la venta. En **Referencia (opcional)** escribe el número de la factura. Haz clic en **Registrar consignación** y luego en **Confirmar consignación**.
+2. **Registraste Transferencia y pagaron en Efectivo:** ingresa a <span class="ruta">Tesorería › Traslados</span> y crea un **Nuevo traslado**. En **Dirección** elige **Banco → Caja**, la **Cuenta bancaria de origen**, la **Caja de destino**, la **Fecha** y el **Monto**. En **Observación** escribe el número de la factura. Haz clic en **Registrar traslado** y confirma.
+3. Cierra la caja con el efectivo que contaste.
+
+[PENDIENTE DE VALIDACIÓN FUNCIONAL: confirmar en la interfaz los pasos de la consignación y del traslado para corregir un medio de pago, y con contabilidad si la factura electrónica necesita nota crédito por este error.]
+
+!!! warning "Si el error cambia contado por crédito"
+    Si la factura quedó a crédito y era de contado (o al revés), sí afecta la cartera y la factura electrónica: haz una [devolución](../ventas/devolucion-venta.md) total y una factura nueva.
+
+**ESCALAR A SOPORTE:** si la caja ya se cerró, o si no ves la caja abierta en la lista.
+
+**INFORMACIÓN PARA SOPORTE:** número de la factura, medio registrado y medio real, valor, caja y fecha.
 
 ## "Dice que el asiento contable no está balanceado"
 
