@@ -8,7 +8,7 @@ menu: "Ventas › Ajustes › Listas de precios"
 permisos:
   - Ver listas de precios
   - Editar productos
-revisado: 2026-10-01
+revisado: 2026-11-10
 search:
   boost: 2
 tags:

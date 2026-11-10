@@ -7,7 +7,7 @@ modulo: recursos-humanos
 menu: "Nómina › Nómina › Período Nómina"
 permisos:
   - Gestionar nómina (parámetros, períodos, novedades)
-revisado: 2026-10-05
+revisado: 2026-11-10
 tags:
   - Nómina
   - Facturación electrónica
@@ -25,7 +25,7 @@ tags:
 
 ![Paso 1: período pagado en la lista](../assets/capturas/recursos-humanos/nomina-electronica/paso-1.webp)
 
-**Paso 2.** En **Nómina Electrónica (DIAN)**, haz clic en **Enviar todos los pendientes**. Para enviar solo algunos empleados, márcalos en el **Detalle por Empleado** y haz clic en **Enviar seleccionados**.
+**Paso 2.** En **Nómina Electrónica (DIAN)**, haz clic en **Transmitir pendientes**. Para enviar solo algunos empleados, márcalos en el **Detalle por Empleado** y haz clic en **Enviar seleccionados**.
 
 ![Paso 2: botones de envío de nómina electrónica](../assets/capturas/recursos-humanos/nomina-electronica/paso-2.webp)
 

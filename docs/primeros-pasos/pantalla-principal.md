@@ -6,7 +6,7 @@ tipo: concepto
 modulo: primeros-pasos
 menu: Inicio
 permisos: []
-revisado: 2026-10-01
+revisado: 2026-11-10
 tags:
   - Primeros pasos
   - Navegación
@@ -56,7 +56,7 @@ En el manual verás rutas como <span class="ruta">Ventas › Ajustes › Tipos d
 
 ## Búsqueda rápida en el menú
 
-¿No sabes dónde está una opción? Presiona <kbd>Ctrl</kbd> + <kbd>K</kbd> (en Mac, <kbd>⌘</kbd> + <kbd>K</kbd>). Se abre el campo **Buscar en el menú…**: escribe parte del nombre (por ejemplo, *tipos de clientes*, *cierre* o *kardex*) y presiona <kbd>Enter</kbd>.
+¿No sabes dónde está una opción? Presiona <kbd>Ctrl</kbd> + <kbd>K</kbd> (en Mac, <kbd>⌘</kbd> + <kbd>K</kbd>). Se abre el campo **Buscar en el menú, clientes, proveedores o empleados…**: escribe parte del nombre (por ejemplo, *tipos de clientes*, *cierre* o *kardex*, o el nombre de un cliente, proveedor o empleado) y presiona <kbd>Enter</kbd>.
 
 ![Buscador del menú con Ctrl + K](../assets/capturas/primeros-pasos/pantalla-principal/paso-2.webp)
 

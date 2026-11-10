@@ -7,7 +7,7 @@ modulo: finanzas
 menu: "Tesorería › Ingresos"
 permisos:
   - Gestionar ingresos
-revisado: 2026-09-30
+revisado: 2026-11-10
 tags:
   - Tesorería
   - Cartera
@@ -49,7 +49,7 @@ tags:
 |---|---|
 | *No hay destinos disponibles: habilita el módulo bancario o abre una caja.* | [Abre una caja](../pos/abrir-caja.md) o crea una cuenta bancaria. |
 | *La suma de las asignaciones debe ser igual al valor total* | Ajusta hasta que **Por distribuir** quede en cero. |
-| *Ingresa el valor de abono para la factura con retención antes de finalizar* | Escribe cuánto abona a esa factura. |
+| *Cada factura debe tener un valor de abono o una retención para finalizar el ingreso* | Escribe cuánto abona a esa factura (o registra una retención) antes de finalizar. |
 
 ## Relacionados
 

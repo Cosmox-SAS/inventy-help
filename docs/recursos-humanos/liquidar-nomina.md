@@ -8,7 +8,7 @@ menu: "Nómina › Nómina › Período Nómina"
 permisos:
   - Gestionar nómina (parámetros, períodos, novedades)
   - Procesar preliquidación de nómina
-revisado: 2026-10-05
+revisado: 2026-11-10
 tags:
   - Nómina
 ---
@@ -25,7 +25,7 @@ tags:
 
 ![Paso 1: botón Nuevo Período](../assets/capturas/recursos-humanos/liquidar-nomina/paso-1.webp)
 
-**Paso 2.** Elige **Parámetros del Año**, **Tipo** (**Quincenal** o **Mensual**), el **Mes** y, si es quincenal, la **Quincena**: Inventy llena el nombre y las fechas. Revisa la **Fecha de Pago**, deja **Todos los empleados activos** y haz clic en **Crear Período**.
+**Paso 2.** Elige **Parámetros del Año**, **Tipo** (**Quincenal** o **Mensual**), el **Mes** y, si es quincenal, la **Quincena**: Inventy llena el nombre y las fechas. Revisa la **Fecha de Pago**, en **Empleados a incluir** deja **Todos** (o elige **Específicos**, **Centros de costo** o **Línea de negocio** si solo quieres liquidar a una parte del personal) y haz clic en **Crear Período**.
 
 ![Paso 2: formulario del nuevo período](../assets/capturas/recursos-humanos/liquidar-nomina/paso-2.webp)
 
