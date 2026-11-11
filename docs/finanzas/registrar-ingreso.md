@@ -33,7 +33,7 @@ tags:
 
 ![Paso 3: información del ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-3.webp)
 
-**Paso 4.** En **Distribución del ingreso**, haz clic en el **Saldo pendiente** de cada factura que paga: se llena su **Valor abono**. Sigue hasta que **Por distribuir** diga **Distribución completa**.
+**Paso 4.** En **Distribución del ingreso**, haz clic en el **Saldo pendiente** de cada factura que paga: se llena su **Valor abono**. Sigue hasta que **Por distribuir** diga **Distribución completa**. Si una factura pide **Cuenta de cartera (factura importada)**, elige la cuenta por cobrar del cliente (ej. *130505001 — Clientes nacionales*), nunca una cuenta de caja o de banco.
 
 ![Paso 4: distribución del ingreso](../assets/capturas/finanzas/registrar-ingreso/paso-4.webp)
 
@@ -50,6 +50,8 @@ tags:
 | *No hay destinos disponibles: habilita el módulo bancario o abre una caja.* | [Abre una caja](../pos/abrir-caja.md) o crea una cuenta bancaria. |
 | *La suma de las asignaciones debe ser igual al valor total* | Ajusta hasta que **Por distribuir** quede en cero. |
 | *Cada factura debe tener un valor de abono o una retención para finalizar el ingreso* | Escribe cuánto abona a esa factura (o registra una retención) antes de finalizar. |
+| *La factura … no tiene una cuenta contable de cartera configurada. Selecciona una cuenta para continuar.* | Es una factura importada (saldo inicial). En **Cuenta de cartera (factura importada)** elige la cuenta por cobrar (ej. *130505001 — Clientes nacionales*). Si eliges una cuenta de caja o banco, la contabilidad queda mal. Solo se pide la primera vez. |
+| *No hay una cuenta contable configurada para el destino o la cartera de una de las facturas.* | Al destino le falta cuenta contable. Con **Banco**: en <span class="ruta">Tesorería › Cuentas bancarias</span> edita la cuenta, elige su **Cuenta contable** y haz clic en **Guardar cambios**. Con **Caja**: en <span class="ruta">Tesorería › Caja › Cajas</span> edita la caja y elige su **Cuenta contable**. Con **Anticipo** o **Nota crédito**: pide a tu contador que configure esas cuentas en <span class="ruta">Contabilidad › Configuración</span>. |
 
 ## Relacionados
 
