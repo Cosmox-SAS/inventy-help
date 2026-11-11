@@ -2,7 +2,7 @@
 
 > Generado con `python scripts/check_docs.py --estado > gestion/estado-articulos.md`. No editar a mano.
 
-**Pendiente de validación:** 82
+**Pendiente de validación:** 85
 
 | Módulo | Artículo | Tipo | Estado | Capturas pendientes | Validaciones pendientes | Revisado |
 |---|---|---|---|---|---|---|
@@ -11,22 +11,22 @@
 | compras | [Compras](../docs/compras/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | compras | [¿Cómo creo un proveedor?](../docs/compras/crear-proveedor.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
 | compras | [¿Cómo registro una factura de compra?](../docs/compras/registrar-factura-compra.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
-| contabilidad | [Contabilidad](../docs/contabilidad/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
-| contabilidad | [¿Cómo funciona la contabilidad en Inventy?](../docs/contabilidad/como-funciona.md) | concepto | Pendiente de validación | 4 | 0 | 2026-10-01 |
-| contabilidad | [¿Cómo hago la configuración contable inicial?](../docs/contabilidad/configuracion-contable.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
-| contabilidad | [¿Cómo se implementan las cuentas auxiliares?](../docs/contabilidad/cuentas-auxiliares.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
+| contabilidad | [Contabilidad](../docs/contabilidad/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-10-14 |
+| contabilidad | [¿Cómo cargo y creo cuentas auxiliares?](../docs/contabilidad/cuentas-auxiliares.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-14 |
+| contabilidad | [¿Cómo funciona la contabilidad en Inventy?](../docs/contabilidad/como-funciona.md) | concepto | Pendiente de validación | 0 | 0 | 2026-10-14 |
+| contabilidad | [¿Cómo hago la configuración contable inicial?](../docs/contabilidad/configuracion-contable.md) | rapida | Pendiente de validación | 0 | 0 | 2026-11-10 |
 | distribucion | [Distribución](../docs/distribucion/index.md) | indice | Pendiente de validación | 0 | 1 | 2026-09-29 |
 | facturacion-electronica | [Facturación electrónica](../docs/facturacion-electronica/index.md) | indice | Pendiente de validación | 0 | 2 | 2026-09-29 |
 | facturacion-electronica | [Soluciones rápidas: facturación electrónica](../docs/soluciones-rapidas/facturacion-electronica.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |
-| facturacion-electronica | [¿Cómo emito un documento soporte electrónico?](../docs/facturacion-electronica/documento-soporte.md) | rapida | Pendiente de validación | 1 | 0 | 2026-10-01 |
-| facturacion-electronica | [¿Cómo emito una factura electrónica?](../docs/facturacion-electronica/emitir-factura-electronica.md) | rapida | Pendiente de validación | 2 | 0 | 2026-09-30 |
+| facturacion-electronica | [¿Cómo emito un documento soporte electrónico?](../docs/facturacion-electronica/documento-soporte.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
+| facturacion-electronica | [¿Cómo emito una factura electrónica?](../docs/facturacion-electronica/emitir-factura-electronica.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | facturacion-electronica | [¿Cómo registro una resolución de la DIAN?](../docs/facturacion-electronica/resoluciones.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
-| facturacion-electronica | [¿Qué hago si un documento electrónico es rechazado?](../docs/facturacion-electronica/documento-rechazado.md) | rapida | Pendiente de validación | 3 | 0 | 2026-09-30 |
+| facturacion-electronica | [¿Qué hago si un documento electrónico es rechazado?](../docs/facturacion-electronica/documento-rechazado.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | facturacion-electronica | [¿Qué significa cada estado de un documento electrónico?](../docs/facturacion-electronica/estados-documento.md) | concepto | Pendiente de validación | 1 | 0 | 2026-09-29 |
 | finanzas | [Finanzas](../docs/finanzas/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | finanzas | [¿Cómo hago una compensación de cuentas?](../docs/finanzas/compensacion-cuentas.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-02 |
 | finanzas | [¿Cómo registro un pago a un proveedor?](../docs/finanzas/registrar-egreso.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
-| finanzas | [¿Cómo registro un pago de un cliente?](../docs/finanzas/registrar-ingreso.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
+| finanzas | [¿Cómo registro un pago de un cliente?](../docs/finanzas/registrar-ingreso.md) | rapida | Pendiente de validación | 0 | 0 | 2026-11-10 |
 | finanzas | [¿Cómo veo cuánto me deben mis clientes?](../docs/finanzas/cartera-clientes.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-05 |
 | finanzas | [¿Qué es un anticipo y cómo se maneja en Inventy?](../docs/finanzas/anticipos.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
 | impuestos | [Impuestos y retenciones](../docs/impuestos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
@@ -34,22 +34,22 @@
 | impuestos | [¿Cómo se aplican las retenciones?](../docs/impuestos/retenciones.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
 | impuestos | [¿Qué es y cómo creo un catálogo de impuestos?](../docs/impuestos/catalogo-impuestos.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
 | pos | [Punto de venta (POS)](../docs/pos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
-| pos | [Soluciones rápidas: POS y caja](../docs/soluciones-rapidas/pos-caja.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |
+| pos | [Soluciones rápidas: POS y caja](../docs/soluciones-rapidas/pos-caja.md) | solucion | Pendiente de validación | 0 | 0 | 2026-10-14 |
 | pos | [¿Cómo abro la caja?](../docs/pos/abrir-caja.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | pos | [¿Cómo cierro la caja?](../docs/pos/cierre-de-caja.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-06 |
 | pos | [¿Cómo creo una caja?](../docs/pos/crear-caja.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
-| pos | [¿Cómo vendo en el POS?](../docs/pos/vender-en-pos.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
+| pos | [¿Cómo vendo en el POS?](../docs/pos/vender-en-pos.md) | rapida | Pendiente de validación | 0 | 0 | 2026-11-10 |
 | primeros-pasos | [Bienvenido a Inventy](../docs/primeros-pasos/bienvenida.md) | concepto | Pendiente de validación | 0 | 0 | 2026-09-29 |
-| primeros-pasos | [Conociendo la pantalla principal](../docs/primeros-pasos/pantalla-principal.md) | concepto | Pendiente de validación | 0 | 0 | 2026-10-01 |
+| primeros-pasos | [Conociendo la pantalla principal](../docs/primeros-pasos/pantalla-principal.md) | concepto | Pendiente de validación | 0 | 0 | 2026-11-10 |
 | primeros-pasos | [Primeros pasos](../docs/primeros-pasos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | primeros-pasos | [Recomendaciones para comenzar](../docs/primeros-pasos/recomendaciones.md) | concepto | Pendiente de validación | 0 | 0 | 2026-09-29 |
-| primeros-pasos | [Todas las opciones de Configuración › Módulos (y por qué no me aparece una)](../docs/primeros-pasos/opciones-modulos.md) | referencia | Pendiente de validación | 0 | 0 | 2026-09-29 |
-| primeros-pasos | [¿Cómo activo o desactivo módulos?](../docs/primeros-pasos/activar-modulos.md) | rapida | Pendiente de validación | 1 | 0 | 2026-09-30 |
-| primeros-pasos | [¿Cómo agrego usuarios a mi empresa?](../docs/primeros-pasos/crear-usuarios.md) | rapida | Pendiente de validación | 1 | 0 | 2026-09-30 |
-| primeros-pasos | [¿Cómo configuro los datos de mi empresa?](../docs/primeros-pasos/configurar-empresa.md) | rapida | Pendiente de validación | 6 | 0 | 2026-09-30 |
+| primeros-pasos | [Todas las opciones de Configuración › Módulos (y por qué no me aparece una)](../docs/primeros-pasos/opciones-modulos.md) | referencia | Pendiente de validación | 0 | 0 | 2026-11-10 |
+| primeros-pasos | [¿Cómo activo o desactivo módulos?](../docs/primeros-pasos/activar-modulos.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
+| primeros-pasos | [¿Cómo agrego usuarios a mi empresa?](../docs/primeros-pasos/crear-usuarios.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
+| primeros-pasos | [¿Cómo configuro los datos de mi empresa?](../docs/primeros-pasos/configurar-empresa.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | primeros-pasos | [¿Cómo creo un rol y le doy permisos?](../docs/primeros-pasos/roles-y-permisos.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
 | primeros-pasos | [¿Cómo ingreso a Inventy?](../docs/primeros-pasos/ingresar.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
-| primeros-pasos | [¿Cómo recupero mi contraseña?](../docs/primeros-pasos/recuperar-contrasena.md) | rapida | Pendiente de validación | 2 | 0 | 2026-09-30 |
+| primeros-pasos | [¿Cómo recupero mi contraseña?](../docs/primeros-pasos/recuperar-contrasena.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | primeros-pasos | [¿Qué es un centro de costo y cómo lo uso?](../docs/primeros-pasos/centros-de-costo.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-02 |
 | produccion | [Producción](../docs/produccion/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-10-09 |
 | produccion | [¿Cómo creo una receta de producción?](../docs/produccion/crear-receta.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-09 |
@@ -60,32 +60,35 @@
 | productos-inventario | [¿Cómo creo productos con variantes (talla, color, medida)?](../docs/productos-inventario/variantes.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-07 |
 | productos-inventario | [¿Cómo creo un producto?](../docs/productos-inventario/crear-producto.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | productos-inventario | [¿Cómo hago un ajuste de inventario?](../docs/productos-inventario/ajuste-inventario.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
-| productos-inventario | [¿Cómo hago un traslado entre sedes?](../docs/productos-inventario/traslados.md) | rapida | Pendiente de validación | 4 | 0 | 2026-10-01 |
+| productos-inventario | [¿Cómo hago un traslado entre sedes?](../docs/productos-inventario/traslados.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
 | productos-inventario | [¿Cómo manejo las presentaciones de compra y de venta?](../docs/productos-inventario/presentaciones.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
 | productos-inventario | [¿Cómo registro un celular con su IMEI?](../docs/productos-inventario/registrar-imei.md) | rapida | Pendiente de validación | 7 | 0 | 2026-10-05 |
 | recursos-humanos | [Nómina y recursos humanos](../docs/recursos-humanos/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-10-05 |
-| recursos-humanos | [¿Cómo envío la nómina electrónica a la DIAN?](../docs/recursos-humanos/nomina-electronica.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-05 |
-| recursos-humanos | [¿Cómo liquido y pago la nómina?](../docs/recursos-humanos/liquidar-nomina.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-05 |
+| recursos-humanos | [¿Cómo calculo y pago las comisiones de los vendedores?](../docs/recursos-humanos/comisiones-vendedores.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-14 |
+| recursos-humanos | [¿Cómo envío la nómina electrónica a la DIAN?](../docs/recursos-humanos/nomina-electronica.md) | rapida | Pendiente de validación | 0 | 0 | 2026-11-10 |
+| recursos-humanos | [¿Cómo liquido y pago la nómina?](../docs/recursos-humanos/liquidar-nomina.md) | rapida | Pendiente de validación | 0 | 0 | 2026-11-10 |
 | recursos-humanos | [¿Cómo registro las vacaciones de un empleado?](../docs/recursos-humanos/registrar-vacaciones.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-05 |
 | recursos-humanos | [¿Cómo registro un empleado?](../docs/recursos-humanos/registrar-empleado.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-05 |
 | recursos-humanos | [¿Cómo registro una incapacidad?](../docs/recursos-humanos/registrar-incapacidad.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-05 |
 | recursos-humanos | [¿Cómo registro una novedad de nómina?](../docs/recursos-humanos/registrar-novedad.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-05 |
 | restaurante | [Restaurante](../docs/restaurante/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
-| restaurante | [¿Cómo activo varias cuentas en una misma mesa?](../docs/restaurante/varias-cuentas-mesa.md) | rapida | Pendiente de validación | 2 | 1 | 2026-09-30 |
+| restaurante | [¿Cómo activo varias cuentas en una misma mesa?](../docs/restaurante/varias-cuentas-mesa.md) | rapida | Pendiente de validación | 0 | 1 | 2026-09-30 |
 | restaurante | [¿Cómo creo los meseros?](../docs/restaurante/crear-meseros.md) | rapida | Pendiente de validación | 3 | 0 | 2026-10-07 |
-| restaurante | [¿Cómo manejo los domicilios y le pago a los domiciliarios?](../docs/restaurante/domicilios.md) | rapida | Pendiente de validación | 7 | 0 | 2026-09-30 |
+| restaurante | [¿Cómo manejo los domicilios y le pago a los domiciliarios?](../docs/restaurante/domicilios.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | soporte | [Contactar a soporte](../docs/soporte.md) | referencia | Pendiente de validación | 0 | 1 | 2026-09-29 |
 | soporte | [Glosario: ¿qué es…?](../docs/glosario.md) | referencia | Pendiente de validación | 0 | 0 | 2026-09-29 |
-| soporte | [Preguntas frecuentes](../docs/preguntas-frecuentes.md) | faq | Pendiente de validación | 0 | 1 | 2026-09-29 |
+| soporte | [Preguntas frecuentes](../docs/preguntas-frecuentes.md) | faq | Pendiente de validación | 0 | 1 | 2026-11-10 |
 | soporte | [Soluciones rápidas: acceso al sistema](../docs/soluciones-rapidas/acceso.md) | solucion | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | soporte | [Soluciones rápidas](../docs/soluciones-rapidas/index.md) | indice | Pendiente de validación | 0 | 1 | 2026-09-29 |
-| ventas | [Soluciones rápidas: ventas](../docs/soluciones-rapidas/ventas.md) | solucion | Pendiente de validación | 0 | 0 | 2026-10-01 |
+| ventas | [Soluciones rápidas: ventas](../docs/soluciones-rapidas/ventas.md) | solucion | Pendiente de validación | 0 | 0 | 2026-10-14 |
 | ventas | [Ventas](../docs/ventas/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
-| ventas | [¿Cómo creo un cliente?](../docs/ventas/crear-cliente.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
+| ventas | [¿Cómo corrijo los precios de una lista de precios?](../docs/ventas/corregir-precios-lista.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-15 |
+| ventas | [¿Cómo creo un cliente?](../docs/ventas/crear-cliente.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-14 |
 | ventas | [¿Cómo creo un medio de pago y por qué no me sale Crédito en el POS?](../docs/ventas/medios-de-pago.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-07 |
 | ventas | [¿Cómo creo un tipo de cliente?](../docs/ventas/tipos-de-cliente.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | ventas | [¿Cómo hago una factura de venta?](../docs/ventas/crear-factura-venta.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
-| ventas | [¿Cómo manejo las listas de precios?](../docs/ventas/listas-de-precios.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-01 |
+| ventas | [¿Cómo manejo las listas de precios?](../docs/ventas/listas-de-precios.md) | rapida | Pendiente de validación | 0 | 0 | 2026-11-10 |
+| ventas | [¿Cómo regalo un producto al vender otro?](../docs/ventas/regalar-producto.md) | rapida | Pendiente de validación | 2 | 0 | 2026-10-16 |
 | ventas | [¿Cómo registro una devolución de venta?](../docs/ventas/devolucion-venta.md) | rapida | Pendiente de validación | 0 | 0 | 2026-09-30 |
 | ventas | [¿Para qué sirve el rol de cliente y cuál elijo?](../docs/ventas/rol-de-cliente.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-02 |
 

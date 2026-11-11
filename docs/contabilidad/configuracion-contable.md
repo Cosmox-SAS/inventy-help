@@ -7,7 +7,7 @@ modulo: contabilidad
 menu: "Contabilidad › Configuración"
 permisos:
   - Ver configuración contable
-revisado: 2026-10-14
+revisado: 2026-11-10
 tags:
   - Contabilidad
   - Configuración
@@ -52,7 +52,7 @@ tags:
 ✅ **Listo:** los cambios se guardan solos (verás *Configuración actualizada.*). Ya puedes registrar compras, anticipos y devoluciones con contabilidad.
 
 !!! info "¿Y el ajuste al peso?"
-    Ya no está en esta pantalla. Su cuenta y su tope se configuran en <span class="ruta">Tesorería › Cartera › Conceptos de ajuste de pagos</span>.
+    Ya no está en esta pantalla. Ve a <span class="ruta">Tesorería › Cartera › Conceptos de ajuste de pagos</span> y edita los conceptos del sistema **Ajuste al peso (descuento)** y **Ajuste al peso (cargo)** para cambiar su cuenta contable y el monto máximo por pago.
 
 ## Si algo falla
 
@@ -61,7 +61,7 @@ tags:
 | Al registrar una compra: *No hay cuentas configuradas. Configura las cuentas en Contabilidad → Configuración.* | Agrega al menos una cuenta en **Cuentas a Pagar (Compras)** (pasos 2 y 3). |
 | No aparecen cuentas para elegir | Carga las [cuentas auxiliares por defecto](cuentas-auxiliares.md) o crea la que necesites. |
 | No veo **Configuración** en el menú Contabilidad | Tu rol necesita el permiso **Ver configuración contable**. |
-| No encuentro **Ajuste al Peso** | Ahora está en <span class="ruta">Tesorería › Cartera › Conceptos de ajuste de pagos</span>. |
+| No encuentro **Ajuste al Peso** | Ahora son los conceptos del sistema **Ajuste al peso (descuento)** y **Ajuste al peso (cargo)** en <span class="ruta">Tesorería › Cartera › Conceptos de ajuste de pagos</span>. |
 
 ## Relacionados
 

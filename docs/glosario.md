@@ -31,6 +31,9 @@ Cancelar un documento validado dejando registro del motivo. No se puede deshacer
 ### Arqueo { #arqueo }
 Contar el efectivo de la caja al cerrarla y compararlo con lo esperado. · <span class="ruta">Ventas › POS › Cerrar caja</span> · [Guía](pos/cierre-de-caja.md)
 
+### Asiento manual { #asiento-manual }
+Registro contable que se escribe a mano, cuenta por cuenta. En **Compras** es una factura de proveedor sin productos (arriendo, servicios) que queda como deuda con el proveedor; en **Contabilidad** es un ajuste sin documento de por medio (depreciaciones, provisiones, reclasificaciones). · <span class="ruta">Compras › Facturas</span> o <span class="ruta">Contabilidad › Asientos Contables</span> · [Guía](compras/factura-compra-asiento-manual.md)
+
 ### Atributos y variantes { #atributos-y-variantes }
 Atributos = características (talla, color). Variantes = cada combinación (camiseta roja talla M), que se maneja como producto propio. Se activa en <span class="ruta">Configuración › Módulos › Inventario</span>. Ver [¿Cómo creo productos con variantes?](productos-inventario/variantes.md).
 

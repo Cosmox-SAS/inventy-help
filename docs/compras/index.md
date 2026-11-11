@@ -4,7 +4,7 @@ description: Registra facturas de proveedores, órdenes de compra y devoluciones
 estado: pendiente-validacion
 tipo: indice
 modulo: compras
-revisado: 2026-09-29
+revisado: 2026-10-19
 ---
 
 # Compras
@@ -15,6 +15,7 @@ Usa el menú **Compras** para registrar lo que le compras a tus proveedores. Al 
 
 - [¿Cómo creo un proveedor?](crear-proveedor.md)
 - [¿Cómo registro una factura de compra?](registrar-factura-compra.md)
+- [¿Cómo registro un gasto de un proveedor con asiento manual?](factura-compra-asiento-manual.md)
 - [¿Cómo emito un documento soporte electrónico?](../facturacion-electronica/documento-soporte.md) (compras a proveedores no obligados a facturar)
 
 ## ¿Qué hay en el menú Compras?
@@ -31,7 +32,7 @@ Usa el menú **Compras** para registrar lo que le compras a tus proveedores. Al 
 | **Reportes › Compras** | Reporte de compras. |
 
 !!! tip "¿Cómo registro un gasto?"
-    - Si el gasto tiene **factura del proveedor** (arriendo, servicios, papelería): regístralo como una [factura de compra](registrar-factura-compra.md).
+    - Si el gasto tiene **factura del proveedor** (arriendo, servicios, papelería): regístralo como una [factura de compra](registrar-factura-compra.md). Si usas Contabilidad y quieres elegir las cuentas, usa el modo [Asiento Manual](factura-compra-asiento-manual.md).
     - Si son **varias facturas pequeñas de servicios** que se pagaron con un mismo dinero: usa **Legalización de gastos**.
     - Para registrar el **pago** al proveedor: usa [Egresos](../finanzas/registrar-egreso.md).
 

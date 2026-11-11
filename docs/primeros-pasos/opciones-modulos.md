@@ -6,7 +6,7 @@ tipo: referencia
 modulo: primeros-pasos
 menu: Configuración › Módulos
 permisos: []
-revisado: 2026-09-29
+revisado: 2026-11-10
 search:
   boost: 2
 tags:
@@ -39,7 +39,7 @@ tags:
 | **Mostrar el PDF de la factura en el POS** | Abre el PDF en vez de imprimir tirilla. | — |
 | **Habilitar remisiones de venta** | Entregar mercancía con remisión y facturar después. | — |
 | **Exigir vendedor en el POS** | Obliga a elegir vendedor al cobrar. | — |
-| **Descuento manual por producto en el POS** | Descuento de 0 % a 99 % por producto. | — |
+| **Descuento manual por producto** | Descuento de 0 % a 99 % por producto en el POS. | — |
 | **Orden de pedido** | Registrar número y fecha de la orden del cliente. | — |
 | **Descuentos financiados por proveedor** | Descuentos que asume el proveedor. | — |
 | **Modo Proforma** | Emitir ventas como proforma. | — |
@@ -92,14 +92,8 @@ tags:
 | **Tarifa GMF (4x1000)** | Calcula el 4x1000. | — |
 | **Cuenta contable del GMF (4x1000)** | Cuenta del gasto GMF. | Módulo de Contabilidad |
 
-## Cartera
-
-| Opción | Qué hace | Solo aparece si… |
-|---|---|---|
-| **Descuento máximo a clientes** | Descuento máximo permitido a clientes. | — |
-| **Cuenta contable de descuentos a clientes** | Cuenta de esos descuentos. | Módulo de Contabilidad |
-| **Descuento máximo a proveedores** | Descuento máximo permitido con proveedores. | — |
-| **Cuenta contable de descuentos a proveedores** | Cuenta de esos descuentos. | Módulo de Contabilidad |
+!!! info "¿Y el descuento por pronto pago a clientes/proveedores?"
+    Ya no está en <span class="ruta">Configuración › Módulos</span>. Edita los conceptos del sistema **Descuento pronto pago clientes** y **Descuento pronto pago proveedores** en <span class="ruta">Tesorería › Cartera › Conceptos de ajuste de pagos</span> para cambiar su cuenta contable y su tope.
 
 ## Tienda web
 

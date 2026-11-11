@@ -7,7 +7,7 @@ modulo: compras
 menu: "Compras › Facturas"
 permisos:
   - Crear facturas de compra
-revisado: 2026-09-30
+revisado: 2026-10-19
 tags:
   - Compras
   - Proveedores
@@ -29,7 +29,7 @@ tags:
 
 ![Paso 2: lectura del documento del proveedor](../assets/capturas/compras/registrar-factura-compra/paso-2.webp)
 
-**Paso 3.** Elige el modo: **Compra Directa** o **Con Orden de Compra**.
+**Paso 3.** Elige el modo: **Compra Directa** o **Con Orden de Compra**. Si la factura no tiene productos (arriendo, servicios, honorarios), usa **Asiento Manual**: ver [¿Cómo registro un gasto de un proveedor con asiento manual?](factura-compra-asiento-manual.md).
 
 ![Paso 3: modo de registro](../assets/capturas/compras/registrar-factura-compra/paso-3.webp)
 
@@ -61,5 +61,6 @@ tags:
 
 ## Relacionados
 
+- [¿Cómo registro un gasto de un proveedor con asiento manual?](factura-compra-asiento-manual.md)
 - [¿Cómo registro un pago a un proveedor?](../finanzas/registrar-egreso.md)
 - [¿Cómo emito un documento soporte electrónico?](../facturacion-electronica/documento-soporte.md)

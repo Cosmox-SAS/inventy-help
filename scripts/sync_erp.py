@@ -52,7 +52,13 @@ FRONT_MATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 
 
 def git(erp: Path, *args: str) -> str:
-    resultado = subprocess.run(["git", "-C", str(erp), *args], capture_output=True, text=True)
+    resultado = subprocess.run(
+        ["git", "-C", str(erp), *args],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
     if resultado.returncode != 0:
         raise RuntimeError(resultado.stderr.strip() or f"git {' '.join(args)} falló")
     return resultado.stdout

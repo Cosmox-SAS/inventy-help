@@ -7,7 +7,7 @@ modulo: pos
 menu: Ventas › POS
 permisos:
   - Acceder al POS
-revisado: 2026-09-30
+revisado: 2026-11-10
 search:
   boost: 2
 tags:
@@ -70,7 +70,7 @@ tags:
 | *El saldo a crédito supera el cupo disponible del cliente…* | Cobra una parte con otro medio, o un supervisor autoriza con su **PIN**. |
 | *No hay medios de pago configurados…* | El administrador los crea en <span class="ruta">Ventas › Ajustes › Medios de Pago</span>. |
 | *No se pudo abrir el PDF de la factura…* | Permite las ventanas emergentes para Inventy en el navegador. |
-| No aparece **Editar descuento** | Se activa en <span class="ruta">Configuración › Módulos › Ventas › Descuento manual por producto en el POS</span>. |
+| No aparece **Editar descuento** | Se activa en <span class="ruta">Configuración › Módulos › Ventas › Descuento manual por producto</span>. |
 
 ## Relacionados
 

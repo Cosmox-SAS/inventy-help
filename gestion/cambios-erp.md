@@ -2,6 +2,940 @@
 
 > Generado por `scripts/sync_erp.py` después de cada `git pull` en inventy-erp. Lo más reciente, arriba.
 
+## 2026-11-10 11:26 · inventy-erp `a90cbe5b4..9f6b419d4`
+
+Último commit: feat(contacts): reject contact emails whose domain receives no mail (#1985)
+
+**891** archivos de interfaz cambiaron · **227** textos quitados · **9** guías afectadas.
+
+### Guías que requieren actualización
+
+- [ ] [contabilidad\configuracion-contable.md](../docs/contabilidad/configuracion-contable.md)
+    - «Ajuste al Peso» ya no existe en Inventy → posible reemplazo: «Cuenta de recargos por datáfono», «Cuenta de saldos a favor de aliados», «Recargos por pago con datáfono»
+- [ ] [finanzas\registrar-ingreso.md](../docs/finanzas/registrar-ingreso.md)
+    - «Ingresa el valor de abono para la factura con retención antes de finalizar» ya no existe en Inventy → posible reemplazo: «Aliado de recaudo *», «Aplica al menos una factura: el ingreso total debe ser igual a lo aplicado a las facturas menos los saldos a favor cruzados», «Aplicar saldos a favor»
+- [ ] [pos\vender-en-pos.md](../docs/pos/vender-en-pos.md)
+    - «Descuento manual por producto en el POS» ya no existe en Inventy → posible reemplazo: «Activar vendedores por sede», «Aliados de recaudo», «Aviso en el PDF de la factura de venta»
+- [ ] [preguntas-frecuentes.md](../docs/preguntas-frecuentes.md)
+    - «Descuento manual por producto en el POS» ya no existe en Inventy → posible reemplazo: «Activar vendedores por sede», «Aliados de recaudo», «Aviso en el PDF de la factura de venta»
+- [ ] [primeros-pasos\opciones-modulos.md](../docs/primeros-pasos/opciones-modulos.md)
+    - «Cuenta contable de descuentos a clientes» ya no existe en Inventy
+    - «Cuenta contable de descuentos a proveedores» ya no existe en Inventy
+    - «Descuento manual por producto en el POS» ya no existe en Inventy → posible reemplazo: «Activar vendedores por sede», «Aliados de recaudo», «Aviso en el PDF de la factura de venta»
+    - «Descuento máximo a clientes» ya no existe en Inventy
+    - «Descuento máximo a proveedores» ya no existe en Inventy
+- [ ] [primeros-pasos\pantalla-principal.md](../docs/primeros-pasos/pantalla-principal.md)
+    - «Buscar en el menú…» ya no existe en Inventy → posible reemplazo: «Buscar en el menú, clientes, proveedores o empleados…»
+- [ ] [recursos-humanos\liquidar-nomina.md](../docs/recursos-humanos/liquidar-nomina.md)
+    - «Todos los empleados activos» ya no existe en Inventy → posible reemplazo: «Buscar centros de costo...», «Centros de costo», «Incluye a los empleados activos cuyo centro de costo pertenece a una sede de esta línea de negocio.»
+- [ ] [recursos-humanos\nomina-electronica.md](../docs/recursos-humanos/nomina-electronica.md)
+    - «Enviar todos los pendientes» ya no existe en Inventy → posible reemplazo: «Confirmar anulación», «Descargar Excel», «Editar fechas»
+- [ ] [ventas\listas-de-precios.md](../docs/ventas/listas-de-precios.md)
+    - «Permitir cambiar la lista de precios desde la venta POS» ya no existe en Inventy
+
+### Cambios en el menú
+
+- ➕ Ajustes de costo
+- ➕ Alertas de mantenimiento
+- ➕ Aliados de recaudo
+- ➕ Auditoría nocturna
+- ➕ Autorizaciones
+- ➕ CRM
+- ➕ Calificaciones
+- ➕ Campañas
+- ➕ Cierres contables
+- ➕ Citas
+- ➕ Conceptos de ajuste de pagos
+- ➕ Conceptos de cargo de compras
+- ➕ Conexión
+- ➕ Consolidado de rutas
+- ➕ Costos anómalos
+- ➕ Cotizaciones
+- ➕ Detalle documentos de entrega
+- ➕ Devoluciones documentos de entrega
+- ➕ Disciplinario
+- ➕ Documentos de entrega
+- ➕ Documentos recibidos
+- ➕ Embudos
+- ➕ Envases retornables
+- ➕ Exclusiones
+- ➕ Facturas sin asiento
+- ➕ Faltas del reglamento
+- ➕ Gastos
+- ➕ Habitaciones
+- ➕ Hotel
+- ➕ Housekeeping
+- ➕ Huéspedes
+- ➕ Liquidación mano de obra
+- ➕ Llamados de atención
+- ➕ Líneas de negocio
+- ➕ Mapa de vendedores
+- ➕ Metas de venta
+- ➕ Mi cuenta
+- ➕ Mis tareas
+- ➕ Monedas
+- ➕ Movimientos de clientes
+- ➕ Movimientos de envases
+- ➕ Movimientos de proveedores
+- ➕ Notas débito
+- ➕ Notificaciones
+- ➕ Ofertas de proveedor
+- ➕ Oportunidades
+- ➕ Orden rápida
+- ➕ Planes de tarifa
+- ➕ Plantillas
+- ➕ Políticas
+- ➕ Predespachos
+- ➕ Prefacturas de costo
+- ➕ Procesos disciplinarios
+- ➕ Prospectos
+- ➕ Provisiones por empleado
+- ➕ Puestos de trabajo
+- ➕ Rack
+- ➕ Razones de no venta
+- ➕ Recepción
+- ➕ Recorrido de vendedores
+- ➕ Registro de actividad
+- ➕ Remisiones de compra
+- ➕ Rentabilidad
+- ➕ Reporte de ventas documentos de entrega
+- ➕ Reporte fiscal de caja
+- ➕ Requisiciones
+- ➕ Reservas
+- ➕ Saldos de envases
+- ➕ Solicitudes de autorización
+- ➕ Sugerido de compras
+- ➕ TRA y SIRE
+- ➕ Tablero
+- ➕ Taller
+- ➕ Tarifas
+- ➕ Temporadas
+- ➕ Tiempos de técnicos
+- ➕ Tipos de envase
+- ➕ Tipos de habitación
+- ➕ Técnicos
+- ➕ Ventas por vendedor
+- ➕ WhatsApp
+- ➕ Órdenes de servicio
+
+### Pantallas nuevas (revisar si necesitan guía)
+
+- `resources/js/pages/accounting/entries/reclassify.tsx`
+- `resources/js/pages/accounting/entries/revision-history.tsx`
+- `resources/js/pages/accounting/period-locks/index.tsx`
+- `resources/js/pages/accounting/sale-entry-regeneration/index.tsx`
+- `resources/js/pages/accounting/sale-entry-regeneration/regenerate-bulk-bar.tsx`
+- `resources/js/pages/admin/activity-log/index.tsx`
+- `resources/js/pages/admin/banks/components/bank-form.tsx`
+- `resources/js/pages/admin/banks/create.tsx`
+- `resources/js/pages/admin/banks/edit.tsx`
+- `resources/js/pages/admin/banks/index.tsx`
+- `resources/js/pages/admin/deleted-tenants/index.tsx`
+- `resources/js/pages/admin/settings/support.tsx`
+- `resources/js/pages/admin/tenants/components/delete-tenant-modal.tsx`
+- `resources/js/pages/authorizations/index.tsx`
+- `resources/js/pages/authorizations/settings.tsx`
+- `resources/js/pages/authorizations/show.tsx`
+- `resources/js/pages/banks/accounts/overdraft-status.tsx`
+- `resources/js/pages/brands/index.tsx`
+- `resources/js/pages/business-lines/index.tsx`
+- `resources/js/pages/cashregister/fiscal-report/index.tsx`
+- `resources/js/pages/cashregister/registers/cash-register-discrepancy-fields.tsx`
+- `resources/js/pages/cashregister/registers/cash-register-fields.tsx`
+- `resources/js/pages/cashregister/registers/cash-register-form-page.tsx`
+- `resources/js/pages/cashregister/registers/create.tsx`
+- `resources/js/pages/cashregister/registers/edit.tsx`
+- `resources/js/pages/crm/contacts/show.tsx`
+- `resources/js/pages/crm/dashboard/index.tsx`
+- `resources/js/pages/crm/deals/components/deal-card.tsx`
+- `resources/js/pages/crm/deals/components/deal-form.tsx`
+- `resources/js/pages/crm/deals/components/deal-quote-section.tsx`
+- `resources/js/pages/crm/deals/components/lose-deal-modal.tsx`
+- `resources/js/pages/crm/deals/create.tsx`
+- `resources/js/pages/crm/deals/edit.tsx`
+- `resources/js/pages/crm/deals/index.tsx`
+- `resources/js/pages/crm/deals/show.tsx`
+- `resources/js/pages/crm/leads/components/convert-lead-modal.tsx`
+- `resources/js/pages/crm/leads/components/lead-bulk-bar.tsx`
+- `resources/js/pages/crm/leads/components/lead-form.tsx`
+- `resources/js/pages/crm/leads/create.tsx`
+- `resources/js/pages/crm/leads/edit.tsx`
+- `resources/js/pages/crm/leads/imports/create.tsx`
+- `resources/js/pages/crm/leads/imports/show.tsx`
+- `resources/js/pages/crm/leads/index.tsx`
+- `resources/js/pages/crm/leads/show.tsx`
+- `resources/js/pages/crm/loss-reasons/index.tsx`
+- `resources/js/pages/crm/pipelines/index.tsx`
+- `resources/js/pages/crm/pipelines/show.tsx`
+- `resources/js/pages/crm/reports/activities.tsx`
+- `resources/js/pages/crm/reports/forecast.tsx`
+- `resources/js/pages/crm/reports/funnel.tsx`
+- `resources/js/pages/crm/reports/won-lost.tsx`
+- `resources/js/pages/crm/tasks/index.tsx`
+- `resources/js/pages/currencies/currency-form-modal.tsx`
+- `resources/js/pages/currencies/exchange-rate-history-modal.tsx`
+- `resources/js/pages/currencies/index.tsx`
+- `resources/js/pages/distribution/dispatches/settlement.tsx`
+- `resources/js/pages/distribution/pre-dispatches/adjust-product-modal.tsx`
+- `resources/js/pages/distribution/pre-dispatches/finalization-panel.tsx`
+- `resources/js/pages/distribution/pre-dispatches/index.tsx`
+- `resources/js/pages/distribution/pre-dispatches/show.tsx`
+- `resources/js/pages/distribution/presales/pre-dispatch-form-modal.tsx`
+- `resources/js/pages/distribution/presales/presale-bulk-bar.tsx`
+- `resources/js/pages/distribution/report/route-consolidated/index.tsx`
+- `resources/js/pages/distribution/report/seller-trail/index.tsx`
+- `resources/js/pages/distribution/report/seller-trail/seller-trail-canvas.tsx`
+- `resources/js/pages/distribution/report/seller-trail/trail-events.tsx`
+- `resources/js/pages/distribution/report/seller-trail/visit-order-card.tsx`
+- `resources/js/pages/distribution/sales-routes/route-customer-assign-modal.tsx`
+- `resources/js/pages/distribution/seller-map/index.tsx`
+- `resources/js/pages/distribution/seller-map/invalidate-size-on-resize.tsx`
+- `resources/js/pages/distribution/seller-map/map-fullscreen.tsx`
+- `resources/js/pages/distribution/seller-map/seller-map-canvas.tsx`
+- `resources/js/pages/distribution/visit-reasons/index.tsx`
+- `resources/js/pages/distribution/visit-reasons/visit-reason-form-modal.tsx`
+- `resources/js/pages/electronic-documents/bulk-issue-bar.tsx`
+- `resources/js/pages/electronic-documents/bulk-retry-bar.tsx`
+- `resources/js/pages/electronic-documents/electronic-documents-tabs.tsx`
+- `resources/js/pages/electronic-documents/pending-invoices.tsx`
+- `resources/js/pages/electronic-documents/received/index.tsx`
+- `resources/js/pages/electronic-documents/received/shared.tsx`
+- `resources/js/pages/electronic-documents/received/show.tsx`
+- `resources/js/pages/hotel/guests/index.tsx`
+- `resources/js/pages/hotel/housekeeping/index.tsx`
+- `resources/js/pages/hotel/index.tsx`
+- `resources/js/pages/hotel/night-audit/index.tsx`
+- `resources/js/pages/hotel/rack/index.tsx`
+- `resources/js/pages/hotel/rate-plans/index.tsx`
+- `resources/js/pages/hotel/rates/index.tsx`
+- `resources/js/pages/hotel/registry/index.tsx`
+- `resources/js/pages/hotel/reports/index.tsx`
+- `resources/js/pages/hotel/reservations/components/check-out-modal.tsx`
+- `resources/js/pages/hotel/reservations/components/folio-section.tsx`
+- `resources/js/pages/hotel/reservations/components/stay-modals.tsx`
+- `resources/js/pages/hotel/reservations/form.tsx`
+- `resources/js/pages/hotel/reservations/index.tsx`
+- `resources/js/pages/hotel/reservations/show.tsx`
+- `resources/js/pages/hotel/room-types/components/room-type-form-modal.tsx`
+- `resources/js/pages/hotel/room-types/index.tsx`
+- `resources/js/pages/hotel/rooms/components/room-form-modal.tsx`
+- `resources/js/pages/hotel/rooms/imports/components/import-preview-table.tsx`
+- `resources/js/pages/hotel/rooms/imports/create.tsx`
+- `resources/js/pages/hotel/rooms/imports/show.tsx`
+- `resources/js/pages/hotel/rooms/index.tsx`
+- `resources/js/pages/hotel/seasons/index.tsx`
+- `resources/js/pages/hotel/settings/index.tsx`
+- `resources/js/pages/hr/disciplinary/faults/index.tsx`
+- `resources/js/pages/hr/disciplinary/processes/components/stage-modals.tsx`
+- `resources/js/pages/hr/disciplinary/processes/create.tsx`
+- `resources/js/pages/hr/disciplinary/processes/index.tsx`
+- `resources/js/pages/hr/disciplinary/processes/show.tsx`
+- `resources/js/pages/hr/disciplinary/warnings/index.tsx`
+- `resources/js/pages/hr/payroll/pila/components/PilaPaymentModals.tsx`
+- `resources/js/pages/hr/payroll/reports/provisions-by-employee.tsx`
+- `resources/js/pages/income/components/AllyIncomeDocumentsTables.tsx`
+- `resources/js/pages/income/components/DisbursementDeductionsPanel.tsx`
+- `resources/js/pages/income/components/IncomeAdjustmentsModal.tsx`
+- `resources/js/pages/inventory/adjustment-concepts/concept-form-modal.tsx`
+- `resources/js/pages/inventory/adjustment-concepts/index.tsx`
+- `resources/js/pages/inventory/cost-adjustments/create.tsx`
+- `resources/js/pages/inventory/cost-adjustments/index.tsx`
+- `resources/js/pages/inventory/cost-adjustments/shared.tsx`
+- `resources/js/pages/inventory/cost-adjustments/show.tsx`
+- `resources/js/pages/inventory/cost-anomalies-report/index.tsx`
+- `resources/js/pages/inventory/returnable-containers/balances/index.tsx`
+- `resources/js/pages/inventory/returnable-containers/movements/create.tsx`
+- `resources/js/pages/inventory/returnable-containers/movements/index.tsx`
+- `resources/js/pages/inventory/returnable-containers/movements/void-movement-modal.tsx`
+- `resources/js/pages/inventory/returnable-containers/types/container-type-form-modal.tsx`
+- `resources/js/pages/inventory/returnable-containers/types/index.tsx`
+- `resources/js/pages/inventory/stocks/stock-branch-values.tsx`
+- `resources/js/pages/notifications/components/notification-bulk-bar.tsx`
+- `resources/js/pages/notifications/index.tsx`
+- `resources/js/pages/payment-allies/index.tsx`
+- `resources/js/pages/payment-allies/payment-ally-form-modal.tsx`
+- `resources/js/pages/production/novelties/annul-novelty-modal.tsx`
+- `resources/js/pages/production/novelties/concept-select-with-actions.tsx`
+- `resources/js/pages/production/novelties/create.tsx`
+- `resources/js/pages/production/novelties/index.tsx`
+- `resources/js/pages/production/novelties/show.tsx`
+- `resources/js/pages/products/parts/PharmaceuticalInfoSection.tsx`
+- `resources/js/pages/products/parts/TaxContentFields.tsx`
+- `resources/js/pages/promotions/order-total-fields.tsx`
+- `resources/js/pages/purchases/charge-concepts/concept-form-modal.tsx`
+- `resources/js/pages/purchases/charge-concepts/index.tsx`
+- `resources/js/pages/purchases/cost-pre-invoices/index.tsx`
+- `resources/js/pages/purchases/cost-pre-invoices/show.tsx`
+- `resources/js/pages/purchases/delivery-notes/create.tsx`
+- `resources/js/pages/purchases/delivery-notes/index.tsx`
+- `resources/js/pages/purchases/delivery-notes/show.tsx`
+- `resources/js/pages/purchases/report/expenses/index.tsx`
+- `resources/js/pages/purchases/report/purchase-suggestion/index.tsx`
+- `resources/js/pages/purchases/report/supplier-movements/index.tsx`
+- `resources/js/pages/purchases/requisitions/create.tsx`
+- `resources/js/pages/purchases/requisitions/edit.tsx`
+- `resources/js/pages/purchases/requisitions/form.tsx`
+- `resources/js/pages/purchases/requisitions/index.tsx`
+- `resources/js/pages/purchases/requisitions/show.tsx`
+- `resources/js/pages/receivables/adjustment-concepts/concept-form-modal.tsx`
+- `resources/js/pages/receivables/adjustment-concepts/index.tsx`
+- `resources/js/pages/receivables/components/balance-summary-section.tsx`
+- `resources/js/pages/receivables/customer-balances/ally-show.tsx`
+- `resources/js/pages/receivables/whatsapp-reminders/index.tsx`
+- `resources/js/pages/sales/customer-credit-notes/ExternalInvoiceFields.tsx`
+- `resources/js/pages/sales/customer-debit-notes/CustomerDebitNoteForm.tsx`
+- `resources/js/pages/sales/customer-debit-notes/create.tsx`
+- `resources/js/pages/sales/customer-debit-notes/edit.tsx`
+- `resources/js/pages/sales/customer-debit-notes/index.tsx`
+- `resources/js/pages/sales/customer-debit-notes/show.tsx`
+- `resources/js/pages/sales/delivery-documents/index.tsx`
+- `resources/js/pages/sales/delivery-documents/resolutions/index.tsx`
+- `resources/js/pages/sales/delivery-documents/returns.tsx`
+- `resources/js/pages/sales/goals/index.tsx`
+- `resources/js/pages/sales/quotes/SaleQuoteStatusBadge.tsx`
+- `resources/js/pages/sales/quotes/index.tsx`
+- `resources/js/pages/sales/quotes/show.tsx`
+- `resources/js/pages/sales/report/customer-movements/index.tsx`
+- `resources/js/pages/sales/report/goals/index.tsx`
+- `resources/js/pages/sales/report/sellers/index.tsx`
+- `resources/js/pages/sales/returns/CorrectExternalInvoiceModal.tsx`
+- `resources/js/pages/sales/returns/create-standalone.tsx`
+- `resources/js/pages/sales/supplier-offers/create.tsx`
+- `resources/js/pages/sales/supplier-offers/edit.tsx`
+- `resources/js/pages/sales/supplier-offers/index.tsx`
+- `resources/js/pages/sales/supplier-offers/show.tsx`
+- `resources/js/pages/sales/supplier-offers/supplier-offer-composition.tsx`
+- `resources/js/pages/sales/supplier-offers/supplier-offer-form.tsx`
+- `resources/js/pages/settings/components/distribution-section.tsx`
+- `resources/js/pages/settings/components/purchases-section.tsx`
+- `resources/js/pages/users/activity-log/index.tsx`
+- `resources/js/pages/users/assigned-branches-field.tsx`
+- `resources/js/pages/users/imports/create.tsx`
+- `resources/js/pages/users/imports/show.tsx`
+- `resources/js/pages/whatsapp/campaigns/create.tsx`
+- `resources/js/pages/whatsapp/campaigns/index.tsx`
+- `resources/js/pages/whatsapp/campaigns/show.tsx`
+- `resources/js/pages/whatsapp/index.tsx`
+- `resources/js/pages/whatsapp/opt-outs/index.tsx`
+- `resources/js/pages/whatsapp/templates/create.tsx`
+- `resources/js/pages/whatsapp/templates/edit.tsx`
+- `resources/js/pages/whatsapp/templates/index.tsx`
+- `resources/js/pages/whatsapp/templates/show.tsx`
+- `resources/js/pages/whatsapp/templates/template-form.tsx`
+- `resources/js/pages/workshop/alerts/index.tsx`
+- `resources/js/pages/workshop/appointments/components/appointment-form-modal.tsx`
+- `resources/js/pages/workshop/appointments/components/cancel-appointment-modal.tsx`
+- `resources/js/pages/workshop/appointments/components/reschedule-appointment-modal.tsx`
+- `resources/js/pages/workshop/appointments/index.tsx`
+- `resources/js/pages/workshop/appointments/settings.tsx`
+- `resources/js/pages/workshop/bays/components/generate-workshop-bays-modal.tsx`
+- `resources/js/pages/workshop/bays/components/workshop-bay-form-modal.tsx`
+- `resources/js/pages/workshop/bays/index.tsx`
+- `resources/js/pages/workshop/dashboard/components/received-delivered-chart.tsx`
+- `resources/js/pages/workshop/dashboard/components/workshop-capacity-modal.tsx`
+- `resources/js/pages/workshop/dashboard/index.tsx`
+- `resources/js/pages/workshop/orders/components/order-form.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-alert-modal.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-bay-modal.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-documents-section.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-invoice-modal.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-link-document-modal.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-notes-section.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-parking-card.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-pause-modal.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-photo-qr-modal.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-photos-section.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-portal-card.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-quote-authorization-modal.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-rating-card.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-signature-modal.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-signatures-section.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-status-badge.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-tasks-section.tsx`
+- `resources/js/pages/workshop/orders/components/service-order-timer-card.tsx`
+- `resources/js/pages/workshop/orders/create.tsx`
+- `resources/js/pages/workshop/orders/edit.tsx`
+- `resources/js/pages/workshop/orders/index.tsx`
+- `resources/js/pages/workshop/orders/quick-create.tsx`
+- `resources/js/pages/workshop/orders/show.tsx`
+- `resources/js/pages/workshop/public/booking-invalid.tsx`
+- `resources/js/pages/workshop/public/booking.tsx`
+- `resources/js/pages/workshop/public/photo-upload-invalid.tsx`
+- `resources/js/pages/workshop/public/photo-upload.tsx`
+- `resources/js/pages/workshop/public/portal-invalid.tsx`
+- `resources/js/pages/workshop/public/portal.tsx`
+- `resources/js/pages/workshop/public/rating-invalid.tsx`
+- `resources/js/pages/workshop/public/rating.tsx`
+- `resources/js/pages/workshop/public/yard-invalid.tsx`
+- `resources/js/pages/workshop/public/yard.tsx`
+- `resources/js/pages/workshop/reports/labor-settlement/index.tsx`
+- `resources/js/pages/workshop/reports/profitability/index.tsx`
+- `resources/js/pages/workshop/reports/ratings/index.tsx`
+- `resources/js/pages/workshop/reports/technicians/index.tsx`
+- `resources/js/pages/workshop/technicians/form.tsx`
+- `resources/js/pages/workshop/technicians/index.tsx`
+- `resources/js/pages/workshop/vehicles/components/dismiss-maintenance-alert-modal.tsx`
+- `resources/js/pages/workshop/vehicles/components/maintenance-alert-list.tsx`
+- `resources/js/pages/workshop/vehicles/components/maintenance-alert-modal.tsx`
+- `resources/js/pages/workshop/vehicles/components/vehicle-form-fields.tsx`
+- `resources/js/pages/workshop/vehicles/create.tsx`
+- `resources/js/pages/workshop/vehicles/edit.tsx`
+- `resources/js/pages/workshop/vehicles/index.tsx`
+- `resources/js/pages/workshop/vehicles/show.tsx`
+
+<details><summary>Archivos con cambios de texto</summary>
+
+- `resources/js/components/accounting/AccountCategorySelectWithActions.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/components/accounting/AuxiliaryAccountFormFields.tsx` (modificado): 1 texto(s) quitados, 3 agregados
+- `resources/js/components/accounting/CloseFiscalYearModal.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/accounting/CounterLinesReadTable.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/accounting/CounterLinesSummary.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/accounting/EntryPreviewModal.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/accounting/LockAccountingPeriodModal.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/components/accounting/ManualEntryLinesTable.tsx` (modificado): 1 texto(s) quitados, 2 agregados
+- `resources/js/components/accounting/RelatedAccountingEntries.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/accounting/ReopenAccountingPeriodModal.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/components/accounting/RevertFiscalYearClosingModal.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/accounting/counter-lines.ts` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/components/accounting/source-account-reference.ts` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/components/active-status-filter-params.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/app-admin-sidebar.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/app-header.tsx` (eliminado): 2 texto(s) quitados, 0 agregados
+- `resources/js/components/authorizations/PendingAuthorizationNotice.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/cashregister/cash-disposition-fields.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/cashregister/close-cash-modal.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/cashregister/print-cash-fiscal-report.ts` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/components/contacts/contact-movements-filters.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/contacts/contact-movements-report.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/components/core/TaxFormFields.tsx` (modificado): 2 texto(s) quitados, 5 agregados
+- `resources/js/components/core/TaxSelectWithActions.tsx` (modificado): 2 texto(s) quitados, 7 agregados
+- `resources/js/components/core/allowed-branch-select.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/core/branch-filter.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/core/document-date-range-filter.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/core/document-date-range-params.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/core/location-form.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/crm/activity-form-modal.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/crm/activity-timeline.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/components/crm/next-activity-label.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/crm/report-toolbar.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/distribution/dispatch-detail.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/distribution/pre-dispatch.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/distribution/settlement-summary.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/documents/clone-invoice-confirm-modal.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/components/electronic-documents/electronic-document-reference.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/electronic-documents/import-resolutions-modal.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/components/hotel/guest-form-modal.tsx` (nuevo): 0 texto(s) quitados, 28 agregados
+- `resources/js/components/hotel/room-charge-modal.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/income/income-ticket.ts` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/item-imports/import-preview-table.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/kanban/kanban-board.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/kanban/kanban-state.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/navigation/command-palette.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/components/navigation/nav-link.tsx` (modificado): 1 texto(s) quitados, 0 agregados
+- `resources/js/components/navigation/navigation-registry.ts` (modificado): 0 texto(s) quitados, 50 agregados
+- `resources/js/components/navigation/whatsapp-support-button.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/notifications/notification-bell.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/components/payment-adjustments/PaymentAdjustmentsModal.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/components/payment-adjustments/adjustment-allocation.ts` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/components/pos/cart-line.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/pos/order-totals.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/pos/orders/order-card.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/pos/orders/order-detail-modal.tsx` (modificado): 0 texto(s) quitados, 4 agregados
+- `resources/js/components/pos/orders/print-delta-ticket.ts` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/pos/pos-cash-consign-modal.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/pos/pos-customer-advance-modal.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/components/pos/pos-customer-collection-modal.tsx` (nuevo): 0 texto(s) quitados, 15 agregados
+- `resources/js/components/pos/pos-expense-modal.tsx` (nuevo): 0 texto(s) quitados, 14 agregados
+- `resources/js/components/pos/pos-topbar.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/components/pos/quote-print-choice-modal.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/components/pos/quotes-load-modal.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/components/pos/types.ts` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/pos/use-pos-quotes.ts` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/components/preline/image-editor-modal.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/components/preline/image-upload.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/preline/option-with-invoice.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/preline/pagination.tsx` (modificado): 0 texto(s) quitados, 4 agregados
+- `resources/js/components/preline/select.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/production/cascade-stage-tree.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/production/find-production-novelty-modal.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/components/products/BrandSelect.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/components/products/BusinessLineSelect.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/components/products/PresentationSelect.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/products/SortCategoriesModal.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/components/products/SubcategoriesModal.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/components/products/SubcategorySelect.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/components/products/variant-matrix/VariantMatrixEditor.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/purchases/ChargesSection.tsx` (nuevo): 0 texto(s) quitados, 18 agregados
+- `resources/js/components/purchases/DocumentStatusBadge.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/purchases/FreightSection.tsx` (eliminado): 15 texto(s) quitados, 0 agregados
+- `resources/js/components/purchases/ItemSelectWithActions.tsx` (modificado): 2 texto(s) quitados, 1 agregados
+- `resources/js/components/purchases/LegalizationLinesTable.tsx` (modificado): 3 texto(s) quitados, 1 agregados
+- `resources/js/components/purchases/PreInvoiceLegalizationsSection.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/components/purchases/PreInvoiceLegalizationsTable.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/purchases/PurchaseEntryPreviewModal.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/purchases/PurchaseFiscalBreakdown.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/purchases/PurchaseItemsTable.tsx` (modificado): 1 texto(s) quitados, 0 agregados
+- `resources/js/components/purchases/SendPurchaseOrderModal.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/purchases/delivery-notes/DeliveryNoteInvoiceLinesTable.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/components/purchases/delivery-notes/PendingDeliveryNotesModal.tsx` (nuevo): 0 texto(s) quitados, 17 agregados
+- `resources/js/components/purchases/delivery-notes/pending-delivery-note-selection.ts` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/purchases/delivery-notes/use-delivery-note-charge-lock.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/purchases/purchase-charges.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/purchases/purchase-order-line-errors.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/purchases/requisitions/requisition-resolution.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/receivables/customer-details-modal.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/components/sales/CustomerSelectWithActions.tsx` (modificado): 1 texto(s) quitados, 2 agregados
+- `resources/js/components/sales/SaleInvoiceReturnableContainersSection.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/components/sales/SaleItemsTable.tsx` (modificado): 0 texto(s) quitados, 5 agregados
+- `resources/js/components/sales/advance-allocation-modal.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/sales/payment-ally.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/sales/quote-ticket.ts` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/components/sales/returns/SaleReturnForm.tsx` (modificado): 1 texto(s) quitados, 0 agregados
+- `resources/js/components/sales/returns/SaleReturnRefundSection.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/components/sales/returns/refund-method-label.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/sales/sale-ticket.ts` (modificado): 9 texto(s) quitados, 11 agregados
+- `resources/js/components/sales/save-as-dropdown.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/status-filter-params.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/users/suggested-password-fields.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/whatsapp/template-send-fields.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/components/workshop/CustomerVehicleSelectWithActions.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/components/workshop/appointments.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/workshop/service-order-form.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/workshop/service-order-index.ts` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/workshop/service-order-invoice-payments.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/workshop/service-order-profitability.ts` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/components/workshop/signature-pad.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/components/workshop/technician-labor-rate.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/components/zoomable-image.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/accounting/account-imports/show.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/accounting/accounts/AuxiliaryAccountFormModal.tsx` (modificado): 4 texto(s) quitados, 8 agregados
+- `resources/js/pages/accounting/accounts/index.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/accounting/entries/index.tsx` (modificado): 2 texto(s) quitados, 8 agregados
+- `resources/js/pages/accounting/entries/reclassify.tsx` (nuevo): 0 texto(s) quitados, 14 agregados
+- `resources/js/pages/accounting/entries/revision-history.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/accounting/entries/show.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/accounting/period-locks/index.tsx` (nuevo): 0 texto(s) quitados, 13 agregados
+- `resources/js/pages/accounting/puc-master/index.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/accounting/reports/journal-entry-report.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/accounting/sale-entry-regeneration/index.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/accounting/sale-entry-regeneration/regenerate-bulk-bar.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/accounting/settings.tsx` (modificado): 3 texto(s) quitados, 4 agregados
+- `resources/js/pages/admin/activity-log/index.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/admin/banks/components/bank-form.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/admin/banks/index.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/admin/billing/plans/index.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/admin/deleted-tenants/index.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/admin/electronic-documents/onboarding.tsx` (modificado): 2 texto(s) quitados, 94 agregados
+- `resources/js/pages/admin/settings/support.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/admin/tenants/components/delete-tenant-modal.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/admin/tenants/create.tsx` (modificado): 1 texto(s) quitados, 4 agregados
+- `resources/js/pages/admin/tenants/index.tsx` (modificado): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/admin/tenants/users/index.tsx` (modificado): 2 texto(s) quitados, 10 agregados
+- `resources/js/pages/authorizations/index.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/authorizations/settings.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/authorizations/show.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/banks/accounts/bank-account-confirmation.ts` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/banks/accounts/bank-account-form-modal.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/banks/accounts/index.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/banks/accounts/initial-balance-modal.tsx` (modificado): 1 texto(s) quitados, 2 agregados
+- `resources/js/pages/banks/accounts/overdraft-summary.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/banks/accounts/show.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/banks/consignations/components/VoidCashDepositDialog.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/banks/consignations/index.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/branches/create.tsx` (modificado): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/branches/edit.tsx` (modificado): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/branches/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/brands/index.tsx` (nuevo): 0 texto(s) quitados, 14 agregados
+- `resources/js/pages/business-lines/index.tsx` (nuevo): 0 texto(s) quitados, 23 agregados
+- `resources/js/pages/cashregister/fiscal-report/index.tsx` (nuevo): 0 texto(s) quitados, 24 agregados
+- `resources/js/pages/cashregister/registers/cash-register-discrepancy-fields.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/cashregister/registers/cash-register-fields.tsx` (nuevo): 0 texto(s) quitados, 37 agregados
+- `resources/js/pages/cashregister/registers/cash-register-form-modal.tsx` (modificado): 16 texto(s) quitados, 0 agregados
+- `resources/js/pages/cashregister/registers/cash-register-form-page.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/cashregister/registers/index.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/contacts/index.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/contacts/show.tsx` (modificado): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/crm/contacts/show.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/crm/dashboard/index.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/crm/deals/components/deal-form.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/crm/deals/components/deal-quote-section.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/crm/deals/components/lose-deal-modal.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/crm/deals/create.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/crm/deals/edit.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/crm/deals/index.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/crm/deals/show.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/pages/crm/leads/components/convert-lead-modal.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/crm/leads/components/lead-bulk-bar.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/pages/crm/leads/components/lead-form.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/crm/leads/create.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/crm/leads/edit.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/crm/leads/imports/create.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/crm/leads/imports/show.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/crm/leads/index.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/crm/leads/show.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/crm/loss-reasons/index.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/crm/pipelines/index.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/crm/pipelines/show.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/crm/reports/activities.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/crm/reports/forecast.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/crm/reports/funnel.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/crm/reports/won-lost.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/crm/tasks/index.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/currencies/currency-form-modal.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/currencies/exchange-rate-history-modal.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/currencies/index.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/distribution/dispatches/add-invoices-modal.tsx` (modificado): 1 texto(s) quitados, 4 agregados
+- `resources/js/pages/distribution/dispatches/index.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/distribution/dispatches/settlement.tsx` (nuevo): 0 texto(s) quitados, 15 agregados
+- `resources/js/pages/distribution/dispatches/show.tsx` (modificado): 3 texto(s) quitados, 11 agregados
+- `resources/js/pages/distribution/pre-dispatches/adjust-product-modal.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/distribution/pre-dispatches/finalization-panel.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/distribution/pre-dispatches/index.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/distribution/pre-dispatches/show.tsx` (nuevo): 0 texto(s) quitados, 16 agregados
+- `resources/js/pages/distribution/presales/index.tsx` (modificado): 1 texto(s) quitados, 5 agregados
+- `resources/js/pages/distribution/presales/pre-dispatch-form-modal.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/distribution/presales/presale-bulk-bar.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/distribution/presales/presale-form.tsx` (modificado): 1 texto(s) quitados, 7 agregados
+- `resources/js/pages/distribution/presales/presale-lines.ts` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/distribution/presales/show.tsx` (modificado): 1 texto(s) quitados, 8 agregados
+- `resources/js/pages/distribution/report/route-consolidated/index.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/distribution/report/seller-trail/index.tsx` (nuevo): 0 texto(s) quitados, 31 agregados
+- `resources/js/pages/distribution/report/seller-trail/seller-trail-utils.ts` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/distribution/report/seller-trail/trail-events.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/distribution/report/seller-trail/visit-order-card.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/distribution/sales-routes/index.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/distribution/sales-routes/route-customer-assign-modal.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/distribution/sales-routes/sales-route-form-modal.tsx` (modificado): 1 texto(s) quitados, 4 agregados
+- `resources/js/pages/distribution/sales-routes/show.tsx` (modificado): 3 texto(s) quitados, 6 agregados
+- `resources/js/pages/distribution/seller-map/index.tsx` (nuevo): 0 texto(s) quitados, 13 agregados
+- `resources/js/pages/distribution/seller-map/map-fullscreen.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/distribution/seller-map/seller-map-utils.ts` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/distribution/vehicles/index.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/distribution/visit-reasons/index.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/distribution/visit-reasons/visit-reason-form-modal.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/electronic-documents/bulk-issue-bar.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/electronic-documents/bulk-retry-bar.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/electronic-documents/electronic-documents-tabs.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/electronic-documents/index.tsx` (modificado): 2 texto(s) quitados, 10 agregados
+- `resources/js/pages/electronic-documents/pending-invoices.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/electronic-documents/received/index.tsx` (nuevo): 0 texto(s) quitados, 33 agregados
+- `resources/js/pages/electronic-documents/received/shared.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/electronic-documents/received/show.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/electronic-documents/resolutions/index.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/expenses/components/CounterLinesEditor.tsx` (eliminado): 10 texto(s) quitados, 0 agregados
+- `resources/js/pages/expenses/components/ExpenseAllocationsTable.tsx` (modificado): 2 texto(s) quitados, 1 agregados
+- `resources/js/pages/expenses/components/ExpenseWithholdingsModal.tsx` (modificado): 1 texto(s) quitados, 8 agregados
+- `resources/js/pages/expenses/components/VoidExpenseDialog.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/expenses/form.tsx` (modificado): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/expenses/index.tsx` (modificado): 2 texto(s) quitados, 4 agregados
+- `resources/js/pages/expenses/movement-type.ts` (modificado): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/expenses/show.tsx` (modificado): 1 texto(s) quitados, 15 agregados
+- `resources/js/pages/expenses/source-account-reference.ts` (eliminado): 6 texto(s) quitados, 0 agregados
+- `resources/js/pages/hotel/guests/index.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/hotel/housekeeping/index.tsx` (nuevo): 0 texto(s) quitados, 20 agregados
+- `resources/js/pages/hotel/index.tsx` (nuevo): 0 texto(s) quitados, 13 agregados
+- `resources/js/pages/hotel/night-audit/index.tsx` (nuevo): 0 texto(s) quitados, 14 agregados
+- `resources/js/pages/hotel/rack/index.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/hotel/rate-plans/index.tsx` (nuevo): 0 texto(s) quitados, 17 agregados
+- `resources/js/pages/hotel/rates/index.tsx` (nuevo): 0 texto(s) quitados, 15 agregados
+- `resources/js/pages/hotel/registry/index.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/hotel/reports/index.tsx` (nuevo): 0 texto(s) quitados, 15 agregados
+- `resources/js/pages/hotel/reservations/components/check-out-modal.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/pages/hotel/reservations/components/folio-section.tsx` (nuevo): 0 texto(s) quitados, 14 agregados
+- `resources/js/pages/hotel/reservations/components/stay-modals.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/hotel/reservations/form.tsx` (nuevo): 0 texto(s) quitados, 20 agregados
+- `resources/js/pages/hotel/reservations/index.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/hotel/reservations/show.tsx` (nuevo): 0 texto(s) quitados, 24 agregados
+- `resources/js/pages/hotel/room-types/components/room-type-form-modal.tsx` (nuevo): 0 texto(s) quitados, 16 agregados
+- `resources/js/pages/hotel/room-types/index.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/hotel/rooms/components/room-form-modal.tsx` (nuevo): 0 texto(s) quitados, 13 agregados
+- `resources/js/pages/hotel/rooms/imports/components/import-preview-table.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/hotel/rooms/imports/create.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/hotel/rooms/imports/show.tsx` (nuevo): 0 texto(s) quitados, 19 agregados
+- `resources/js/pages/hotel/rooms/index.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/hotel/seasons/index.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/hotel/settings/index.tsx` (nuevo): 0 texto(s) quitados, 16 agregados
+- `resources/js/pages/hr/configuration/index.tsx` (modificado): 4 texto(s) quitados, 13 agregados
+- `resources/js/pages/hr/contratos/templates/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/hr/disciplinary/faults/index.tsx` (nuevo): 0 texto(s) quitados, 18 agregados
+- `resources/js/pages/hr/disciplinary/processes/components/stage-modals.tsx` (nuevo): 0 texto(s) quitados, 54 agregados
+- `resources/js/pages/hr/disciplinary/processes/create.tsx` (nuevo): 0 texto(s) quitados, 15 agregados
+- `resources/js/pages/hr/disciplinary/processes/index.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/hr/disciplinary/processes/show.tsx` (nuevo): 0 texto(s) quitados, 19 agregados
+- `resources/js/pages/hr/disciplinary/shared.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/hr/disciplinary/warnings/index.tsx` (nuevo): 0 texto(s) quitados, 22 agregados
+- `resources/js/pages/hr/employees/create.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/hr/employees/edit.tsx` (modificado): 7 texto(s) quitados, 9 agregados
+- `resources/js/pages/hr/employees/imports/components/EmployeeImportPreviewTable.tsx` (modificado): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/hr/employees/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/hr/employees/show.tsx` (modificado): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/hr/payroll/concept-accounts/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/hr/payroll/dashboard/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/hr/payroll/electronic-payroll/index.tsx` (modificado): 3 texto(s) quitados, 5 agregados
+- `resources/js/pages/hr/payroll/liquidaciones/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/hr/payroll/liquidaciones/show.tsx` (modificado): 1 texto(s) quitados, 6 agregados
+- `resources/js/pages/hr/payroll/parameters/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/hr/payroll/pay/index.tsx` (modificado): 2 texto(s) quitados, 21 agregados
+- `resources/js/pages/hr/payroll/periods/create.tsx` (modificado): 2 texto(s) quitados, 8 agregados
+- `resources/js/pages/hr/payroll/periods/index.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/hr/payroll/periods/show.tsx` (modificado): 1 texto(s) quitados, 9 agregados
+- `resources/js/pages/hr/payroll/pila/components/PilaPaymentModals.tsx` (nuevo): 0 texto(s) quitados, 13 agregados
+- `resources/js/pages/hr/payroll/pila/create.tsx` (modificado): 3 texto(s) quitados, 6 agregados
+- `resources/js/pages/hr/payroll/pila/show.tsx` (modificado): 5 texto(s) quitados, 16 agregados
+- `resources/js/pages/hr/payroll/provisions/index.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/hr/payroll/provisions/provision-totals.ts` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/hr/payroll/provisions/show.tsx` (modificado): 2 texto(s) quitados, 7 agregados
+- `resources/js/pages/hr/payroll/reports/provisions-by-employee.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/hr/payroll/vacaciones/vacation-payment-summary.tsx` (modificado): 1 texto(s) quitados, 0 agregados
+- `resources/js/pages/income/advance-copy.ts` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/income/ally-income.ts` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/income/balances-in-favor.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/income/components/AllyIncomeDocumentsTables.tsx` (nuevo): 0 texto(s) quitados, 21 agregados
+- `resources/js/pages/income/components/DisbursementDeductionsPanel.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/income/components/IncomeAllocationsTable.tsx` (modificado): 2 texto(s) quitados, 1 agregados
+- `resources/js/pages/income/components/IncomeWithholdingsModal.tsx` (modificado): 1 texto(s) quitados, 8 agregados
+- `resources/js/pages/income/components/VoidIncomeDialog.tsx` (modificado): 1 texto(s) quitados, 3 agregados
+- `resources/js/pages/income/edit.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/income/form.tsx` (modificado): 8 texto(s) quitados, 22 agregados
+- `resources/js/pages/income/index.tsx` (modificado): 5 texto(s) quitados, 4 agregados
+- `resources/js/pages/income/non-caused.ts` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/income/show.tsx` (modificado): 1 texto(s) quitados, 10 agregados
+- `resources/js/pages/inventory/adjustment-concepts/concept-form-modal.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/inventory/adjustment-concepts/index.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/inventory/adjustment-imports/show.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/inventory/adjustments/form.tsx` (modificado): 2 texto(s) quitados, 9 agregados
+- `resources/js/pages/inventory/adjustments/index.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/inventory/adjustments/show.tsx` (modificado): 3 texto(s) quitados, 7 agregados
+- `resources/js/pages/inventory/cost-adjustments/create.tsx` (nuevo): 0 texto(s) quitados, 25 agregados
+- `resources/js/pages/inventory/cost-adjustments/index.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/inventory/cost-adjustments/show.tsx` (nuevo): 0 texto(s) quitados, 18 agregados
+- `resources/js/pages/inventory/cost-anomalies-report/index.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/pages/inventory/expiring-lots/index.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/inventory/movements/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/inventory/movements/show.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/inventory/physical-counts/create.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/inventory/physical-counts/edit.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/inventory/physical-counts/show.tsx` (modificado): 4 texto(s) quitados, 4 agregados
+- `resources/js/pages/inventory/reports/kardex.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/inventory/returnable-containers/balances/index.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/pages/inventory/returnable-containers/movements/create.tsx` (nuevo): 0 texto(s) quitados, 16 agregados
+- `resources/js/pages/inventory/returnable-containers/movements/index.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/inventory/returnable-containers/movements/void-movement-modal.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/inventory/returnable-containers/types/container-type-form-modal.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/inventory/returnable-containers/types/index.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/inventory/stocks/index.tsx` (modificado): 2 texto(s) quitados, 4 agregados
+- `resources/js/pages/inventory/stocks/stock-branch-values.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/inventory/stocks/stock-filters.ts` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/inventory/transfers/serial-approval.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/inventory/transfers/show.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/notifications/components/notification-bulk-bar.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/notifications/index.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/pages/payment-allies/index.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/payment-allies/payment-ally-form-modal.tsx` (nuevo): 0 texto(s) quitados, 17 agregados
+- `resources/js/pages/payment-methods/payment-method-form-modal.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/pos/index.tsx` (modificado): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/production/novelties/annul-novelty-modal.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/production/novelties/concept-select-with-actions.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/production/novelties/create.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/production/novelties/index.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/production/novelties/novelty-lines.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/production/novelties/show.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/production/productions/form.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/production/productions/index.tsx` (modificado): 1 texto(s) quitados, 2 agregados
+- `resources/js/pages/production/productions/show.tsx` (modificado): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/production/recipes/form.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/production/recipes/show.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/products/attributes/index.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/products/create.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/products/edit.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/products/index.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/products/parts/PharmaceuticalInfoSection.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/products/parts/TaxContentFields.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/products/show.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/products/stores/product-filters-store.ts` (eliminado): 1 texto(s) quitados, 0 agregados
+- `resources/js/pages/promotions/index.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/promotions/order-total-fields.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/purchases/charge-concepts/concept-form-modal.tsx` (nuevo): 0 texto(s) quitados, 17 agregados
+- `resources/js/pages/purchases/charge-concepts/index.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/pages/purchases/cost-pre-invoices/index.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/purchases/cost-pre-invoices/show.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/purchases/delivery-notes/create.tsx` (nuevo): 0 texto(s) quitados, 23 agregados
+- `resources/js/pages/purchases/delivery-notes/index.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/pages/purchases/delivery-notes/show.tsx` (nuevo): 0 texto(s) quitados, 23 agregados
+- `resources/js/pages/purchases/expense-legalizations/LegalizationForm.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/purchases/expense-legalizations/index.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/purchases/expense-legalizations/show.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/purchases/purchase-invoices/create.tsx` (modificado): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/purchases/purchase-invoices/edit.tsx` (modificado): 1 texto(s) quitados, 7 agregados
+- `resources/js/pages/purchases/purchase-invoices/index.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/purchases/purchase-invoices/order-lines.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/purchases/purchase-invoices/show.tsx` (modificado): 4 texto(s) quitados, 7 agregados
+- `resources/js/pages/purchases/purchase-invoices/validate-warning.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/purchases/purchase-orders/create.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/purchases/purchase-orders/edit.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/purchases/purchase-orders/show.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/purchases/purchase-returns/create.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/purchases/purchase-returns/index.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/purchases/purchase-returns/show.tsx` (modificado): 4 texto(s) quitados, 4 agregados
+- `resources/js/pages/purchases/report/expenses/index.tsx` (nuevo): 0 texto(s) quitados, 15 agregados
+- `resources/js/pages/purchases/report/purchase-suggestion/index.tsx` (nuevo): 0 texto(s) quitados, 21 agregados
+- `resources/js/pages/purchases/report/purchases/index.tsx` (modificado): 1 texto(s) quitados, 4 agregados
+- `resources/js/pages/purchases/report/supplier-movements/index.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/purchases/requisitions/create.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/purchases/requisitions/edit.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/purchases/requisitions/form.tsx` (nuevo): 0 texto(s) quitados, 17 agregados
+- `resources/js/pages/purchases/requisitions/index.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/purchases/requisitions/show.tsx` (nuevo): 0 texto(s) quitados, 22 agregados
+- `resources/js/pages/purchases/suppliers/create.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/purchases/suppliers/edit.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/purchases/suppliers/show.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/receivables/adjustment-concepts/concept-form-modal.tsx` (nuevo): 0 texto(s) quitados, 17 agregados
+- `resources/js/pages/receivables/adjustment-concepts/index.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/receivables/components/balance-summary-section.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/receivables/customer-balances/ally-show.tsx` (nuevo): 0 texto(s) quitados, 18 agregados
+- `resources/js/pages/receivables/customer-balances/index.tsx` (modificado): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/receivables/customer-balances/show.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/receivables/customer-imports/show.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/receivables/supplier-balances/show.tsx` (modificado): 1 texto(s) quitados, 0 agregados
+- `resources/js/pages/receivables/whatsapp-reminders/index.tsx` (nuevo): 0 texto(s) quitados, 32 agregados
+- `resources/js/pages/sales/customer-credit-notes/CreditNoteLinesTable.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/sales/customer-credit-notes/CustomerCreditNoteForm.tsx` (modificado): 1 texto(s) quitados, 6 agregados
+- `resources/js/pages/sales/customer-credit-notes/ExternalInvoiceFields.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/sales/customer-credit-notes/external-invoice.ts` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/sales/customer-credit-notes/show.tsx` (modificado): 7 texto(s) quitados, 18 agregados
+- `resources/js/pages/sales/customer-debit-notes/CustomerDebitNoteForm.tsx` (nuevo): 0 texto(s) quitados, 40 agregados
+- `resources/js/pages/sales/customer-debit-notes/create.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/sales/customer-debit-notes/debit-note-form.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/sales/customer-debit-notes/index.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/sales/customer-debit-notes/show.tsx` (nuevo): 0 texto(s) quitados, 27 agregados
+- `resources/js/pages/sales/customers/show.tsx` (modificado): 1 texto(s) quitados, 7 agregados
+- `resources/js/pages/sales/delivery-documents/index.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/sales/delivery-documents/resolutions/index.tsx` (nuevo): 0 texto(s) quitados, 14 agregados
+- `resources/js/pages/sales/delivery-documents/returns.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/sales/delivery-notes/show.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/sales/goals/index.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/sales/quotes/index.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/sales/quotes/show.tsx` (nuevo): 0 texto(s) quitados, 16 agregados
+- `resources/js/pages/sales/recurring-sale-invoices/form.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/sales/recurring-sale-invoices/index.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/sales/report/customer-movements/index.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/sales/report/goals/index.tsx` (nuevo): 0 texto(s) quitados, 15 agregados
+- `resources/js/pages/sales/report/products/index.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/sales/report/sales/index.tsx` (modificado): 2 texto(s) quitados, 4 agregados
+- `resources/js/pages/sales/report/sellers/index.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/sales/returns/CorrectExternalInvoiceModal.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/pages/sales/returns/create-standalone.tsx` (nuevo): 0 texto(s) quitados, 25 agregados
+- `resources/js/pages/sales/returns/create.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/sales/returns/index.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/sales/returns/show.tsx` (modificado): 1 texto(s) quitados, 5 agregados
+- `resources/js/pages/sales/sale-invoices/create.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/sales/sale-invoices/document-label.ts` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/sales/sale-invoices/edit.tsx` (modificado): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/sales/sale-invoices/index.tsx` (modificado): 2 texto(s) quitados, 2 agregados
+- `resources/js/pages/sales/sale-invoices/show.tsx` (modificado): 2 texto(s) quitados, 7 agregados
+- `resources/js/pages/sales/sellers/form.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/sales/supplier-offers/create.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/sales/supplier-offers/edit.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/sales/supplier-offers/index.tsx` (nuevo): 0 texto(s) quitados, 13 agregados
+- `resources/js/pages/sales/supplier-offers/show.tsx` (nuevo): 0 texto(s) quitados, 16 agregados
+- `resources/js/pages/sales/supplier-offers/supplier-offer-calc.ts` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/sales/supplier-offers/supplier-offer-composition.tsx` (nuevo): 0 texto(s) quitados, 18 agregados
+- `resources/js/pages/sales/supplier-offers/supplier-offer-form.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/services/components/service-fields.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/services/edit.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/services/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/settings/components/distribution-section.tsx` (nuevo): 0 texto(s) quitados, 15 agregados
+- `resources/js/pages/settings/components/fiscal-section.tsx` (modificado): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/settings/components/inventory-section.tsx` (modificado): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/settings/components/module-detail-panel.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/settings/components/products-section.tsx` (modificado): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/settings/components/purchases-section.tsx` (nuevo): 0 texto(s) quitados, 17 agregados
+- `resources/js/pages/settings/components/receivables-section.tsx` (eliminado): 9 texto(s) quitados, 0 agregados
+- `resources/js/pages/settings/components/sales-section.tsx` (modificado): 3 texto(s) quitados, 22 agregados
+- `resources/js/pages/taxes/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/treasury/account-compensations/components/VoidAccountCompensationDialog.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/treasury/account-compensations/show.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/treasury/money-transfers/components/VoidMoneyTransferDialog.tsx` (modificado): 1 texto(s) quitados, 1 agregados
+- `resources/js/pages/treasury/money-transfers/create.tsx` (modificado): 1 texto(s) quitados, 3 agregados
+- `resources/js/pages/treasury/money-transfers/show.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/units/index.tsx` (modificado): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/users/activity-log/index.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/users/assigned-branches-field.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/users/create.tsx` (modificado): 2 texto(s) quitados, 1 agregados
+- `resources/js/pages/users/edit.tsx` (modificado): 2 texto(s) quitados, 1 agregados
+- `resources/js/pages/users/imports/create.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/users/imports/show.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/pages/users/index.tsx` (modificado): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/users/invitations/index.tsx` (modificado): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/whatsapp/campaigns/create.tsx` (nuevo): 0 texto(s) quitados, 46 agregados
+- `resources/js/pages/whatsapp/campaigns/index.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/whatsapp/campaigns/show.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/whatsapp/index.tsx` (nuevo): 0 texto(s) quitados, 17 agregados
+- `resources/js/pages/whatsapp/opt-outs/index.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/whatsapp/templates/create.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/whatsapp/templates/edit.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/whatsapp/templates/index.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/whatsapp/templates/show.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/whatsapp/templates/template-form.tsx` (nuevo): 0 texto(s) quitados, 32 agregados
+- `resources/js/pages/workshop/alerts/index.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/pages/workshop/appointments/components/appointment-form-modal.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/workshop/appointments/components/cancel-appointment-modal.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/workshop/appointments/components/reschedule-appointment-modal.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/pages/workshop/appointments/index.tsx` (nuevo): 0 texto(s) quitados, 13 agregados
+- `resources/js/pages/workshop/appointments/settings.tsx` (nuevo): 0 texto(s) quitados, 33 agregados
+- `resources/js/pages/workshop/bays/components/generate-workshop-bays-modal.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/workshop/bays/components/workshop-bay-form-modal.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/workshop/bays/index.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/workshop/dashboard/components/workshop-capacity-modal.tsx` (nuevo): 0 texto(s) quitados, 25 agregados
+- `resources/js/pages/workshop/dashboard/index.tsx` (nuevo): 0 texto(s) quitados, 23 agregados
+- `resources/js/pages/workshop/orders/components/order-form.tsx` (nuevo): 0 texto(s) quitados, 32 agregados
+- `resources/js/pages/workshop/orders/components/service-order-bay-modal.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/workshop/orders/components/service-order-documents-section.tsx` (nuevo): 0 texto(s) quitados, 13 agregados
+- `resources/js/pages/workshop/orders/components/service-order-invoice-modal.tsx` (nuevo): 0 texto(s) quitados, 19 agregados
+- `resources/js/pages/workshop/orders/components/service-order-link-document-modal.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/pages/workshop/orders/components/service-order-notes-section.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/workshop/orders/components/service-order-parking-card.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/workshop/orders/components/service-order-pause-modal.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/pages/workshop/orders/components/service-order-photo-qr-modal.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/workshop/orders/components/service-order-photos-section.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/workshop/orders/components/service-order-portal-card.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/pages/workshop/orders/components/service-order-quote-authorization-modal.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/workshop/orders/components/service-order-rating-card.tsx` (nuevo): 0 texto(s) quitados, 8 agregados
+- `resources/js/pages/workshop/orders/components/service-order-signature-modal.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/workshop/orders/components/service-order-signatures-section.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/workshop/orders/components/service-order-tasks-section.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/workshop/orders/components/service-order-timer-card.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/workshop/orders/create.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/pages/workshop/orders/edit.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/workshop/orders/index.tsx` (nuevo): 0 texto(s) quitados, 13 agregados
+- `resources/js/pages/workshop/orders/quick-create.tsx` (nuevo): 0 texto(s) quitados, 4 agregados
+- `resources/js/pages/workshop/orders/show.tsx` (nuevo): 0 texto(s) quitados, 52 agregados
+- `resources/js/pages/workshop/public/booking-invalid.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/workshop/public/booking.tsx` (nuevo): 0 texto(s) quitados, 21 agregados
+- `resources/js/pages/workshop/public/photo-upload-invalid.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/workshop/public/photo-upload.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/workshop/public/portal-invalid.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/workshop/public/portal.tsx` (nuevo): 0 texto(s) quitados, 6 agregados
+- `resources/js/pages/workshop/public/rating-invalid.tsx` (nuevo): 0 texto(s) quitados, 5 agregados
+- `resources/js/pages/workshop/public/rating.tsx` (nuevo): 0 texto(s) quitados, 9 agregados
+- `resources/js/pages/workshop/public/yard-invalid.tsx` (nuevo): 0 texto(s) quitados, 2 agregados
+- `resources/js/pages/workshop/public/yard.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/workshop/reports/labor-settlement/index.tsx` (nuevo): 0 texto(s) quitados, 16 agregados
+- `resources/js/pages/workshop/reports/profitability/index.tsx` (nuevo): 0 texto(s) quitados, 16 agregados
+- `resources/js/pages/workshop/reports/ratings/index.tsx` (nuevo): 0 texto(s) quitados, 11 agregados
+- `resources/js/pages/workshop/reports/technicians/index.tsx` (nuevo): 0 texto(s) quitados, 13 agregados
+- `resources/js/pages/workshop/technicians/form.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+- `resources/js/pages/workshop/technicians/index.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/workshop/vehicles/components/dismiss-maintenance-alert-modal.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/workshop/vehicles/components/maintenance-alert-modal.tsx` (nuevo): 0 texto(s) quitados, 10 agregados
+- `resources/js/pages/workshop/vehicles/components/vehicle-form-fields.tsx` (nuevo): 0 texto(s) quitados, 18 agregados
+- `resources/js/pages/workshop/vehicles/create.tsx` (nuevo): 0 texto(s) quitados, 3 agregados
+- `resources/js/pages/workshop/vehicles/edit.tsx` (nuevo): 0 texto(s) quitados, 1 agregados
+- `resources/js/pages/workshop/vehicles/index.tsx` (nuevo): 0 texto(s) quitados, 7 agregados
+- `resources/js/pages/workshop/vehicles/show.tsx` (nuevo): 0 texto(s) quitados, 12 agregados
+
+</details>
+
 ## 2026-10-01 19:06 · inventy-erp `d6fb7d41..a90cbe5b`
 
 Último commit: fix(pos): permitir vender sin stock cuando "Vender con stock en negativo" está activo (#1542)
