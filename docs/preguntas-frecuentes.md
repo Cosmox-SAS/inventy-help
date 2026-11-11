@@ -125,6 +125,11 @@ tags:
 ??? question "¿Cómo hago que un proveedor también sea cliente (o al revés)?"
     En <span class="ruta">Configuración › Contactos</span> abre el tercero y usa la pestaña **Rol Cliente** › **Asignar como Cliente** (o **Rol Proveedor**). Para venderle a crédito, ponle además el **Tipo de cliente** en <span class="ruta">Ventas › Clientes › Editar</span>. Ver [¿Para qué sirve el rol de cliente y cuál elijo?](ventas/rol-de-cliente.md).
 
+??? question "¿Cuándo uso el asiento manual de Compras y cuándo el de Contabilidad?"
+    - **Compras › Facturas › Asiento Manual:** cuando hay una **factura de proveedor** sin productos (arriendo, servicios, honorarios, un activo fijo). Queda la deuda con el proveedor y la pagas con un egreso. Ver [guía](compras/factura-compra-asiento-manual.md).
+    - **Contabilidad › Asientos Contables:** para ajustes **sin proveedor ni cliente** de por medio (depreciaciones, provisiones, reclasificaciones). Solo mueve la contabilidad.
+    - Si compras **mercancía para vender**, no uses ninguno: usa [Compra Directa](compras/registrar-factura-compra.md).
+
 ??? question "¿Qué es un centro de costo?"
     Una etiqueta para separar en qué área del negocio entra o sale cada peso (ej. *Mostrador*, *Domicilios*). Cada sede trae uno llamado **Principal**; si no necesitas separar áreas, no tienes que tocar nada. Ver [¿Qué es un centro de costo y cómo lo uso?](primeros-pasos/centros-de-costo.md).
 
