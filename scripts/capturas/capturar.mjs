@@ -293,7 +293,9 @@ async function main() {
             // --pasos 4-7: repetir solo una parte de la guía (ej. cuando un paso ya creó datos).
             if (pasoDesde && (Number(paso.paso) < pasoDesde || Number(paso.paso) > (pasoHasta || pasoDesde))) continue;
             const destino = path.join(dirGuia, `paso-${paso.paso}.png`);
-            const relativo = path.relative(path.join(RAIZ, 'docs'), destino);
+            // pendientes.txt siempre usa '/': en Windows path.relative() devuelve '\', y el
+            // Set nunca hacía match (la entrada nunca se borraba aunque la captura fuera real).
+            const relativo = path.relative(path.join(RAIZ, 'docs'), destino).split(path.sep).join('/');
             if (paso.manual) {
                 // Pantallas que el robot no puede alcanzar (correos, otra persona, app móvil).
                 resultados.push({ guia: guia.guia, paso: paso.paso, ok: false, detalle: `Captura manual: ${paso.manual}` });

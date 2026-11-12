@@ -47,6 +47,11 @@ class BuildDocsTests(unittest.TestCase):
             "pathlib.Path(os.environ['BUILD_TRACE']).open('a').write('build\\n')\n"
             "sys.exit(os.environ.get('BUILD_FAIL') == 'build')\n"
         )
+        (self.root / "scripts" / "search_accent_fold.py").write_text(
+            "import os, pathlib, sys\n"
+            "pathlib.Path(os.environ['BUILD_TRACE']).open('a').write('fold\\n')\n"
+            "sys.exit(os.environ.get('BUILD_FAIL') == 'fold')\n"
+        )
 
     def run_build(
         self, *, optimize: bool = False, fail: str = "", provider: str = ""
@@ -73,7 +78,7 @@ class BuildDocsTests(unittest.TestCase):
     def test_default_build_does_not_modify_screenshots(self) -> None:
         code, trace = self.run_build()
         self.assertEqual(code, 0)
-        self.assertEqual(trace, ["check", "test", "build"])
+        self.assertEqual(trace, ["check", "test", "build", "fold"])
 
     def test_optimization_requires_ci_checkout(self) -> None:
         code, trace = self.run_build(optimize=True)
@@ -88,7 +93,7 @@ class BuildDocsTests(unittest.TestCase):
             with self.subTest(provider=provider):
                 code, trace = self.run_build(optimize=True, provider=provider)
                 self.assertEqual(code, 0)
-                self.assertEqual(trace, ["optimize", "check", "test", "build"])
+                self.assertEqual(trace, ["optimize", "check", "test", "build", "fold"])
 
     def test_each_failed_step_stops_later_steps(self) -> None:
         for failed, expected in {
@@ -96,6 +101,7 @@ class BuildDocsTests(unittest.TestCase):
             "check": ["optimize", "check"],
             "test": ["optimize", "check", "test"],
             "build": ["optimize", "check", "test", "build"],
+            "fold": ["optimize", "check", "test", "build", "fold"],
         }.items():
             with self.subTest(failed=failed):
                 code, trace = self.run_build(optimize=True, provider="github", fail=failed)

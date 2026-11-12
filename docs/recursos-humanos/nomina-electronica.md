@@ -15,7 +15,7 @@ tags:
 
 # ¿Cómo envío la nómina electrónica a la DIAN?
 
-<p class="tambien-se-busca">También se busca como: nómina electrónica, documento soporte de pago de nómina, transmitir nómina, enviar nómina a la DIAN, CUNE.</p>
+<p class="tambien-se-busca">También se busca como: nómina electrónica, nomina electronica, documento soporte de pago de nómina, transmitir nómina, enviar nómina a la DIAN, CUNE.</p>
 
 **Antes de empezar:** el período debe estar **Pagada** ([¿Cómo liquido y pago la nómina?](liquidar-nomina.md)) y tu empresa debe estar habilitada para nómina electrónica ante la DIAN. La habilitación la hace el equipo de Inventy: [contacta a soporte](../soporte.md).
 

@@ -36,6 +36,7 @@ def main() -> int:
             [sys.executable, str(ROOT / "scripts" / "check_docs.py")],
             [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"],
             [sys.executable, "-m", "mkdocs", "build", "--strict"],
+            [sys.executable, str(ROOT / "scripts" / "search_accent_fold.py")],
         ]
     )
 

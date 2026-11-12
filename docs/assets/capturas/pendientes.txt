@@ -18,11 +18,6 @@ assets/capturas/primeros-pasos/crear-usuarios/paso-5.png
 assets/capturas/primeros-pasos/recuperar-contrasena/paso-3.png
 assets/capturas/primeros-pasos/recuperar-contrasena/paso-4.png
 assets/capturas/productos-inventario/presentaciones/paso-8.png
-assets/capturas/productos-inventario/registrar-imei/paso-1.png
-assets/capturas/productos-inventario/registrar-imei/paso-2.png
-assets/capturas/productos-inventario/registrar-imei/paso-3.png
-assets/capturas/productos-inventario/registrar-imei/paso-4.png
-assets/capturas/productos-inventario/registrar-imei/paso-5.png
 assets/capturas/productos-inventario/registrar-imei/paso-6.png
 assets/capturas/productos-inventario/registrar-imei/paso-7.png
 assets/capturas/productos-inventario/traslados/paso-4.png

@@ -19,7 +19,7 @@ pasos:
   - paso: 2
     guarda_datos: true
     acciones:
-      - abrir: '[role=switch][aria-label="Activar rastreo por seriales"]'
+      - abrir: 'button[role="switch"]:has-text("Activar rastreo por seriales")'
       - pausa: 500
     resaltar: 'section:has(h2:has-text("Comportamiento del producto"))'
     despues:
@@ -63,13 +63,13 @@ pasos:
   - paso: 6
     acciones:
       - ir: /{tenant}/products
-      - escribir: { 'main input[placeholder*="Buscar"] >> nth=0': 'XIAOMI' }
+      - llenar: { 'main input[placeholder*="Buscar"] >> nth=0': 'XIAOMI REDMI' }
       - pausa: 1500
-      - abrir: 'main tbody tr:has-text("XIAOMI") >> nth=0'
+      - abrir: 'main tbody tr:has-text("XIAOMI REDMI") >> nth=0'
       - pausa: 1500
       - abrir: 'main :is(a,button):has-text("Editar") >> nth=0'
-      - esperar: '[role=switch][aria-label="Activar rastreo por seriales"]'
-      - abrir: '[role=switch][aria-label="Activar rastreo por seriales"]'
+      - esperar: 'button[role="switch"]:has-text("Activar rastreo por seriales")'
+      - abrir: 'button[role="switch"]:has-text("Activar rastreo por seriales")'
       - esperar: 'text=Registro de series por sede'
       - pausa: 500
     resaltar: 'text=Registro de series por sede >> xpath=ancestor::div[2]'

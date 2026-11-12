@@ -1,11 +1,11 @@
 # Reporte de capturas
 
-> Generado por `npm run capturas` el 19/10/2026, 5:08:12 p. m.. Ambiente: https://erp.cosmox.tech
+> Generado por `npm run capturas` el 11/11/2026, 12:05:43 p. m.. Ambiente: https://erp.cosmox.tech
 
-**5** capturas tomadas · **1** fallas · **45** imágenes siguen pendientes.
+**0** capturas tomadas · **1** fallas · **40** imágenes siguen pendientes.
 
 ## Fallas
 
 | Guía | Paso | Detalle |
 |---|---|---|
-| ventas/regalar-producto.md | 6 | Bloqueado: "Guardar" guardaría datos. Marca el paso con guarda_datos: true y usa CAPTURAS_PERMITIR_GUARDAR=1. (ver .logs/capturas-fallas/ventas_regalar-producto_md-paso-6.png · https://erp.cosmox.tech/cosmox/promotions/create) |
+| productos-inventario/registrar-imei.md | 6 | locator.waitFor: Timeout 10000ms exceeded. (ver .logs\capturas-fallas\productos-inventario_registrar-imei_md-paso-6.png · https://erp.cosmox.tech/cosmox/products/01a1cb73-f518-736c-8be2-9a70c6933429/edit#general) |

@@ -9,7 +9,7 @@ revisado: 2026-10-05
 
 # Nómina y recursos humanos
 
-<p class="tambien-se-busca">También se busca como: empleados, nómina, liquidar nómina, vacaciones, incapacidades, prestaciones, seguridad social, nómina electrónica.</p>
+<p class="tambien-se-busca">También se busca como: empleados, nómina, nomina, liquidar nómina, liquidar nomina, vacaciones, incapacidades, prestaciones, seguridad social, nómina electrónica.</p>
 
 El menú **Nómina** está disponible si tu plan incluye el módulo de recursos humanos.
 

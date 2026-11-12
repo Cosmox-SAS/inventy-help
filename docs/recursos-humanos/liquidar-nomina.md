@@ -15,7 +15,7 @@ tags:
 
 # ¿Cómo liquido y pago la nómina?
 
-<p class="tambien-se-busca">También se busca como: liquidar nómina, pagar nómina, quincena, período de nómina, preliquidar, desprendible de pago, pagar a los empleados.</p>
+<p class="tambien-se-busca">También se busca como: liquidar nómina, liquidar nomina, pagar nómina, pagar nomina, quincena, período de nómina, preliquidar, desprendible de pago, pagar a los empleados.</p>
 
 **Antes de empezar:** registra a tus empleados ([¿Cómo registro un empleado?](registrar-empleado.md)) y las novedades del período (horas extra, incapacidades, vacaciones).
 
