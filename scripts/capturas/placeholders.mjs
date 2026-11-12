@@ -53,7 +53,8 @@ if (faltantes.length) {
             </body>`);
         fs.mkdirSync(path.dirname(destino), { recursive: true });
         await page.screenshot({ path: destino });
-        pendientes.add(path.relative(DOCS, destino));
+        // pendientes.txt siempre usa '/': en Windows path.relative() devuelve '\'.
+        pendientes.add(path.relative(DOCS, destino).split(path.sep).join('/'));
     }
     await navegador.close();
 }

@@ -19,4 +19,6 @@ pasos:
   - paso: 6
     resaltar: 'div.rounded-xl:has(h3:has-text("Saldos a favor de aliados de recaudo"))'
   - paso: 7
+    resaltar: 'div.rounded-xl:has(h3:has-text("Recargos por pago con datáfono"))'
+  - paso: 8
     resaltar: 'div.rounded-xl:has(h3:has-text("Anticipo a Proveedores"))'

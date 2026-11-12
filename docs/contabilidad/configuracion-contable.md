@@ -1,13 +1,13 @@
 ---
 title: "¿Cómo hago la configuración contable inicial?"
-description: "Pasos para configurar las cuentas que Inventy usa en compras, anticipos, notas crédito y aliados de recaudo."
+description: "Pasos para configurar las cuentas que Inventy usa en compras, anticipos, notas crédito, aliados de recaudo y recargos por datáfono."
 estado: pendiente-validacion
 tipo: rapida
 modulo: contabilidad
 menu: "Contabilidad › Configuración"
 permisos:
   - Ver configuración contable
-revisado: 2026-11-10
+revisado: 2026-11-11
 tags:
   - Contabilidad
   - Configuración
@@ -15,7 +15,7 @@ tags:
 
 # ¿Cómo hago la configuración contable inicial?
 
-<p class="tambien-se-busca">También se busca como: configuración contable, cuentas a pagar, cuenta de proveedores, no hay cuentas configuradas, cuenta de anticipos, notas crédito, Addi, Sistecrédito, parametrizar contabilidad.</p>
+<p class="tambien-se-busca">También se busca como: configuración contable, cuentas a pagar, cuenta de proveedores, no hay cuentas configuradas, cuenta de anticipos, notas crédito, Addi, Sistecrédito, parametrizar contabilidad, recargo por datáfono, cuenta de recargos.</p>
 
 **Antes de empezar:** carga primero las [cuentas auxiliares por defecto](cuentas-auxiliares.md): asignan casi todo solo.
 
@@ -45,9 +45,13 @@ tags:
 
 ![Paso 6: bloque Saldos a favor de aliados de recaudo](../assets/capturas/contabilidad/configuracion-contable/paso-6.webp)
 
-**Paso 7.** En **Anticipo a Proveedores**, revisa la **Cuenta de anticipo** (activo).
+**Paso 7.** Si cobras con datáfono, en **Recargos por pago con datáfono** revisa la **Cuenta de recargos por datáfono** (ingreso donde queda el recargo que cobra el datáfono sobre el valor pagado con tarjeta).
 
-![Paso 7: bloque Anticipo a Proveedores](../assets/capturas/contabilidad/configuracion-contable/paso-7.webp)
+![Paso 7: bloque Recargos por pago con datáfono](../assets/capturas/contabilidad/configuracion-contable/paso-7.webp)
+
+**Paso 8.** En **Anticipo a Proveedores**, revisa la **Cuenta de anticipo** (activo).
+
+![Paso 8: bloque Anticipo a Proveedores](../assets/capturas/contabilidad/configuracion-contable/paso-8.webp)
 
 ✅ **Listo:** los cambios se guardan solos (verás *Configuración actualizada.*). Ya puedes registrar compras, anticipos y devoluciones con contabilidad.
 
