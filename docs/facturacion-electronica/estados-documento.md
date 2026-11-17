@@ -41,7 +41,7 @@ Consulta el estado de cualquier documento en <span class="ruta">Fiscal › Docum
 | **Ver observaciones** | Muestra los comentarios de la DIAN en documentos aceptados con observaciones. |
 | **Ver error** | Muestra el motivo del rechazo o del fallo. |
 | **Ver en DIAN** | Abre el documento en el portal de la DIAN. |
-| **Enviar email** | Envía el documento a uno o varios correos (sepáralos con punto y coma `;`). |
+| **Enviar email** | Envía el documento a uno o varios correos (sepáralos con punto y coma `;`). Ver [guía paso a paso](enviar-documento-email.md). |
 | **Reenviar documento electrónico** | Vuelve a enviar el **mismo consecutivo** con los datos actuales. Solo para documentos Pendientes, Desconocidos, Rechazados o que Fallaron la prevalidación. Requiere el permiso **Reenviar documentos electrónicos**. |
 
 ## CUFE y CUDE

@@ -23,6 +23,7 @@ Usa el menú **Ventas** para facturar a tus clientes desde la oficina (con más 
 - [¿Cómo manejo las listas de precios?](listas-de-precios.md)
 - [¿Cómo corrijo los precios de una lista de precios?](corregir-precios-lista.md)
 - [¿Cómo hago una factura de venta?](crear-factura-venta.md)
+- [¿Cómo anulo una factura de venta?](anular-factura.md)
 - [¿Cómo registro una devolución de venta?](devolucion-venta.md)
 - [¿Cómo regalo un producto al vender otro?](regalar-producto.md)
 

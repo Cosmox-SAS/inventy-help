@@ -1,0 +1,15 @@
+guia: facturacion-electronica/enviar-documento-email.md
+# La demo no tiene facturación electrónica habilitada (igual que
+# documento-rechazado.md): no hay documentos Aceptados con ZIP para mostrar
+# "Enviar email" de verdad. Los 4 pasos se capturan a mano en una empresa
+# habilitada.
+orden: 47
+pasos:
+  - paso: 1
+    manual: lista Documentos electrónicos con un documento Aceptado (requiere empresa habilitada)
+  - paso: 2
+    manual: menú de acciones de ese documento con la opción Enviar email
+  - paso: 3
+    manual: ventana Reenviar documento electrónico con el campo Correos electrónicos lleno
+  - paso: 4
+    manual: botón Enviar de la misma ventana

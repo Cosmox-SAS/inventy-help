@@ -70,11 +70,11 @@ Si la venta es del POS, no hay factura que editar: después de los pasos 1 a 3, 
 
 ## "No puedo anular una factura"
 
-**PROBLEMA:** aparece *“No puedes anular una venta con movimientos de inventario.”* o *“…que incluye líneas convertidas desde una remisión.”*
+**PROBLEMA:** el botón **Anular** no aparece, o Inventy rechaza la anulación con un mensaje (pagos registrados, despacho, remisión, orden de servicio, preventa, DIAN pendiente…).
 
-**CAUSA:** esas facturas no se pueden anular porque ya afectaron el inventario o vienen de una remisión.
+**CAUSA:** la factura tiene movimientos posteriores que la anulación no puede revertir sola.
 
-**SOLUCIÓN:** registra una [devolución de venta](../ventas/devolucion-venta.md) total.
+**SOLUCIÓN:** revisa la [tabla de casos en la guía de anulación](../ventas/anular-factura.md#si-algo-falla) para identificar el motivo exacto. En casi todos los casos, la salida es registrar una [devolución de venta](../ventas/devolucion-venta.md) total.
 
 **ESCALAR A SOPORTE:** si la devolución tampoco es posible.
 

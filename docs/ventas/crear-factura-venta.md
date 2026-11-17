@@ -66,9 +66,10 @@ tags:
 | A crédito: *Configura una cuenta de cuentas por cobrar en el tipo de cliente…* | El cliente no tiene tipo de cliente o el tipo no tiene **Cuenta por cobrar**. Ver [solución](../soluciones-rapidas/ventas.md#al-validar-la-factura-a-credito-me-pide-configurar-la-cuenta-contable). |
 | *El asiento contable no está balanceado* | Usa **Ver asientos**: la línea sin cuenta dice qué falta. Si dice *Configura la cuenta por cobrar en el tipo de cliente*, asígnale al cliente un [tipo de cliente](tipos-de-cliente.md) con cuenta por cobrar. |
 | *El centro de costo es obligatorio.* | Crea uno en <span class="ruta">Configuración › Centros de Costo</span>. |
-| Me equivoqué en una factura validada | Haz una [devolución](devolucion-venta.md). Anular solo es posible si no movió inventario. |
+| Me equivoqué en una factura validada | Si no tiene pagos, devoluciones ni otros movimientos, puedes [anularla](anular-factura.md). Si no, haz una [devolución](devolucion-venta.md). |
 
 ## Relacionados
 
+- [¿Cómo anulo una factura de venta?](anular-factura.md)
 - [¿Cómo emito una factura electrónica?](../facturacion-electronica/emitir-factura-electronica.md)
 - [¿Cómo registro un pago de un cliente?](../finanzas/registrar-ingreso.md)

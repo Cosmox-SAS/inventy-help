@@ -18,6 +18,8 @@ tags:
 
 <p class="tambien-se-busca">También se busca como: asiento manual en compras, factura sin productos, registrar arriendo, registrar servicios públicos, honorarios, factura de gasto, compra de activo fijo, contabilizar factura de proveedor.</p>
 
+**Qué es:** un modo de la factura de compra donde, en vez de agregar productos, **tú (o tu contador) escribes directamente las cuentas contables** que se debitan y se acreditan. No mueve inventario ni usa el catálogo de impuestos del producto: la cuenta y el valor de cada línea los decides tú.
+
 **Antes de empezar:** la empresa debe tener **Contabilidad** activa. Úsalo para facturas que **no son mercancía para vender** (arriendo, servicios, honorarios, un computador para la oficina). Si compras mercancía, usa [Compra Directa](registrar-factura-compra.md): el asiento manual **no mueve inventario**.
 
 ## Pasos

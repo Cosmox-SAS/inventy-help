@@ -7,6 +7,10 @@ assets/capturas/facturacion-electronica/documento-rechazado/paso-4.png
 assets/capturas/facturacion-electronica/documento-soporte/paso-4.png
 assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-2.png
 assets/capturas/facturacion-electronica/emitir-factura-electronica/paso-3.png
+assets/capturas/facturacion-electronica/enviar-documento-email/paso-1.png
+assets/capturas/facturacion-electronica/enviar-documento-email/paso-2.png
+assets/capturas/facturacion-electronica/enviar-documento-email/paso-3.png
+assets/capturas/facturacion-electronica/enviar-documento-email/paso-4.png
 assets/capturas/primeros-pasos/activar-modulos/paso-4.png
 assets/capturas/primeros-pasos/configurar-empresa/paso-1.png
 assets/capturas/primeros-pasos/configurar-empresa/paso-2.png
@@ -27,11 +31,6 @@ assets/capturas/productos-inventario/traslados/paso-7.png
 assets/capturas/restaurante/crear-meseros/paso-3.png
 assets/capturas/restaurante/crear-meseros/paso-4.png
 assets/capturas/restaurante/crear-meseros/paso-5.png
-assets/capturas/restaurante/domicilios/paso-1.png
-assets/capturas/restaurante/domicilios/paso-2.png
-assets/capturas/restaurante/domicilios/paso-3.png
-assets/capturas/restaurante/domicilios/paso-4.png
-assets/capturas/restaurante/domicilios/paso-5.png
 assets/capturas/restaurante/domicilios/paso-6.png
 assets/capturas/restaurante/domicilios/paso-7.png
 assets/capturas/restaurante/varias-cuentas-mesa/paso-4.png

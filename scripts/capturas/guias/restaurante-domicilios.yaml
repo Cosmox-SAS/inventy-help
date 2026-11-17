@@ -1,4 +1,10 @@
 guia: restaurante/domicilios.md
+# Requiere una caja ya abierta en esta empresa demo (maxxo-restaurante). Si
+# está cerrada, el paso 2 falla esperando pos-order-type-selector: agrega
+# temporalmente antes de ese "esperar" las líneas
+#   - abrir: 'button:has-text("Abrir caja")'
+#   - pausa: 1000
+# con `guarda_datos: true` en el paso, y corre con CAPTURAS_PERMITIR_GUARDAR=1.
 pasos:
   - paso: 1
     acciones:
@@ -14,15 +20,28 @@ pasos:
       - esperar: '[data-testid="pos-order-type-selector"]'
     resaltar: '[data-testid="pos-order-type-selector"]'
   - paso: 3
+    guarda_datos: true
     acciones:
       - abrir: '[data-testid="pos-order-type-selector"] >> text=Domicilio'
       - esperar: '[data-testid="pos-modal-delivery"]'
-    resaltar: '[data-testid="pos-modal-delivery"]'
+      - escribir: { 'VENTANA >> input[type="tel"]': '3009876543' }
+      - pausa: 1800
+      - llenar: { 'VENTANA >> input[placeholder="Nombre"]': 'Carlos', 'VENTANA >> input[placeholder="Apellido"]': 'Ramírez', 'VENTANA >> input[placeholder="Calle, carrera, número..."]': 'Calle 10 # 5-20', 'VENTANA >> input[placeholder="0"]': '5000' }
+      - pausa: 500
+    resaltar: 'VENTANA'
     recortar: 'VENTANA'
+    despues:
+      - clic: 'VENTANA >> button:has-text("Confirmar domicilio")'
+      - pausa: 1500
   - paso: 4
+    guarda_datos: true
     acciones:
-      - tecla: Escape
+      - abrir: 'text=Hamburguesa Clásica'
+      - pausa: 600
     resaltar: 'aside [data-testid="pos-submit-order"]'
+    despues:
+      - clic: 'aside [data-testid="pos-submit-order"]'
+      - pausa: 2000
   - paso: 5
     acciones:
       - menu: Tablero de pedidos

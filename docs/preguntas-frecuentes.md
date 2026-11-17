@@ -101,7 +101,7 @@ tags:
     Se genera desde la **factura de compra** de un proveedor marcado como **No obligado a facturar**. Ver [¿Cómo emito un documento soporte electrónico?](facturacion-electronica/documento-soporte.md).
 
 ??? question "¿Cómo le reenvío la factura al cliente?"
-    En <span class="ruta">Fiscal › Documentos</span>, usa **Enviar email**.
+    En <span class="ruta">Fiscal › Documentos</span>, usa **Enviar email**. Sirve también si el cliente no tenía correo activo o no le llegó. Ver [guía paso a paso](facturacion-electronica/enviar-documento-email.md).
 
 ## Usuarios
 

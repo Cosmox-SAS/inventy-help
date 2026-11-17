@@ -41,6 +41,9 @@ tags:
 
 ![Paso 5: ítems de la factura](../assets/capturas/compras/registrar-factura-compra/paso-5.webp)
 
+!!! info "¿Compraste celulares u otro producto con seriales (IMEI)?"
+    Si el producto tiene **Rastrear seriales** activado, bajo su línea aparece un botón **0 / N seriales**. Haz clic y captura el **IMEI1**, **IMEI2** o **SERIAL** de cada unidad que llegó — uno por uno, hasta que el contador quede igual a la cantidad. No puedes validar la factura sin completarlo. Ver [¿Cómo registro un celular con su IMEI?](../productos-inventario/registrar-imei.md).
+
 **Paso 6.** Revisa el **Total a pagar** (abajo) y haz clic en **Registrar Factura**. En **¿Validar factura?** haz clic en **Validar factura**: se genera una **recepción automática de mercancía**.
 
 ![Paso 6: botón Registrar Factura](../assets/capturas/compras/registrar-factura-compra/paso-6.webp)
@@ -56,6 +59,7 @@ tags:
 | *No encontramos este proveedor* | Usa **Crear proveedor** o elige uno existente. |
 | *No se pudo leer el documento.* | Usa el XML o ZIP original, o registra a mano. |
 | *El precio debe ser mayor a 0.* | Todos los ítems deben tener precio. |
+| *Completa la captura de seriales antes de continuar.* | Un producto con **Rastrear seriales** no tiene todos sus IMEI o seriales capturados. Haz clic en su badge **N / N seriales** y termina de registrarlos. |
 | *El asiento contable no está balanceado* | Falta una cuenta contable: pide a tu contador revisar productos, impuestos o la cuenta a pagar. |
 | El proveedor no está obligado a facturar | Ver [documento soporte](../facturacion-electronica/documento-soporte.md). |
 

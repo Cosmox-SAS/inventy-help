@@ -1,0 +1,39 @@
+guia: ventas/anular-factura.md
+# Crea su propia factura de contado para LAURA y la anula de verdad al final
+# (el punto del artículo es mostrar la anulación real). No toca la factura de
+# ventas/crear-factura-venta ni la de ventas/devolucion-venta.
+orden: 56
+pasos:
+  - paso: 1
+    guarda_datos: true
+    acciones:
+      - ir: /{tenant}/sale-invoices/create
+      - esperar: 'text=Información General'
+      - elegir: { 'button:has-text("Buscar cliente...")': 'LAURA' }
+      - elegir: { 'section:has(:is(h2,h3):has-text("Ítems de la Factura")) >> button:has-text("Buscar producto...")': 'CAFÉ' }
+      - llenar: { 'input#sale-line-quantity-_tmp_1': '1' }
+      - pausa: 800
+      - clic: '[data-testid="sale-invoice-form-submit"]'
+      - esperar: 'VENTANA'
+      - clic: 'VENTANA >> button:has-text("Validar")'
+      - esperar: 'text=Detalle de la factura de venta.'
+      - pausa: 1000
+    resaltar: 'main'
+  - paso: 2
+    acciones:
+      - abrir: 'button:has-text("Más acciones")'
+      - pausa: 500
+    resaltar: 'li:has-text("Anular"), button:has-text("Anular") >> nth=0'
+  - paso: 3
+    acciones:
+      - abrir: 'li:has-text("Anular"), button:has-text("Anular") >> nth=0'
+      - esperar: '#annul_reason'
+      - llenar: { '#annul_reason': 'Factura de prueba para el Centro de Ayuda, se anula de inmediato.' }
+      - pausa: 500
+    resaltar: '#annul_reason'
+  - paso: 4
+    guarda_datos: true
+    resaltar: 'button:has-text("Confirmar anulación")'
+    despues:
+      - clic: 'button:has-text("Confirmar anulación")'
+      - pausa: 2000

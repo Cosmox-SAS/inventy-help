@@ -33,6 +33,7 @@ Inventy envía tus documentos a la DIAN a través de un proveedor tecnológico y
 
 - [¿Qué significa cada estado?](estados-documento.md)
 - [¿Cómo emito una factura electrónica?](emitir-factura-electronica.md)
+- [¿Cómo le reenvío por correo un documento electrónico al cliente?](enviar-documento-email.md)
 - [¿Qué hago si un documento es rechazado?](documento-rechazado.md)
 - [¿Cómo emito un documento soporte electrónico?](documento-soporte.md)
 - [¿Cómo registro una resolución de la DIAN?](resoluciones.md)
