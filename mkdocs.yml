@@ -162,6 +162,7 @@ nav:
       - Contabilidad:
           - contabilidad/index.md
           - ¿Cómo funciona la contabilidad en Inventy?: contabilidad/como-funciona.md
+          - ¿Cómo parametrizo la contabilidad de una empresa nueva?: contabilidad/parametrizar-empresa-nueva.md
           - ¿Cómo cargo y creo cuentas auxiliares?: contabilidad/cuentas-auxiliares.md
           - ¿Cómo hago la configuración contable inicial?: contabilidad/configuracion-contable.md
       - Producción:

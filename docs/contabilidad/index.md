@@ -31,6 +31,7 @@ Inventy genera la contabilidad **automáticamente** ([cómo funciona](como-funci
 | Guía | Estado |
 |---|---|
 | [¿Cómo funciona la contabilidad en Inventy?](como-funciona.md) | Disponible |
+| [¿Cómo parametrizo la contabilidad de una empresa nueva?](parametrizar-empresa-nueva.md) | Disponible |
 | [¿Cómo cargo y creo cuentas auxiliares?](cuentas-auxiliares.md) | Disponible |
 | [¿Cómo hago la configuración contable inicial?](configuracion-contable.md) | Disponible |
 | Asientos contables: consultar y registrar un asiento manual | Por redactar |
