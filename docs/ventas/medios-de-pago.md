@@ -79,6 +79,7 @@ Al elegirlo verás el **Cupo disponible** del cliente. Si el saldo a crédito lo
 
 ## Relacionados
 
+- [¿Cómo configuro un aliado de recaudo (Sistecrédito, Addi, Interrapidísimo, datáfono)?](aliados-recaudo.md)
 - [¿Para qué sirve el rol de cliente y cuál elijo?](rol-de-cliente.md)
 - [¿Cómo vendo en el POS?](../pos/vender-en-pos.md)
 - [¿Qué es un anticipo y cómo se maneja en Inventy?](../finanzas/anticipos.md)

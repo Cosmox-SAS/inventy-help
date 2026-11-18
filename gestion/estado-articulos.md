@@ -2,7 +2,7 @@
 
 > Generado con `python scripts/check_docs.py --estado > gestion/estado-articulos.md`. No editar a mano.
 
-**Pendiente de validación:** 89
+**Pendiente de validación:** 90
 
 | Módulo | Artículo | Tipo | Estado | Capturas pendientes | Validaciones pendientes | Revisado |
 |---|---|---|---|---|---|---|
@@ -86,6 +86,7 @@
 | ventas | [Soluciones rápidas: ventas](../docs/soluciones-rapidas/ventas.md) | solucion | Pendiente de validación | 0 | 1 | 2026-10-17 |
 | ventas | [Ventas](../docs/ventas/index.md) | indice | Pendiente de validación | 0 | 0 | 2026-09-29 |
 | ventas | [¿Cómo anulo una factura de venta?](../docs/ventas/anular-factura.md) | rapida | Pendiente de validación | 0 | 0 | 2026-11-13 |
+| ventas | [¿Cómo configuro un aliado de recaudo (Sistecrédito, Addi, Interrapidísimo, datáfono)?](../docs/ventas/aliados-recaudo.md) | rapida | Pendiente de validación | 6 | 0 | 2026-11-17 |
 | ventas | [¿Cómo corrijo los precios de una lista de precios?](../docs/ventas/corregir-precios-lista.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-15 |
 | ventas | [¿Cómo creo un cliente?](../docs/ventas/crear-cliente.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-14 |
 | ventas | [¿Cómo creo un medio de pago y por qué no me sale Crédito en el POS?](../docs/ventas/medios-de-pago.md) | rapida | Pendiente de validación | 0 | 0 | 2026-10-07 |

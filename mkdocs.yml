@@ -130,6 +130,7 @@ nav:
       - ¿Cómo manejo las listas de precios?: ventas/listas-de-precios.md
       - ¿Cómo corrijo los precios de una lista de precios?: ventas/corregir-precios-lista.md
       - ¿Cómo creo un medio de pago y por qué no me sale Crédito en el POS?: ventas/medios-de-pago.md
+      - ¿Cómo configuro un aliado de recaudo (Sistecrédito, Addi, Interrapidísimo, datáfono)?: ventas/aliados-recaudo.md
       - ¿Cómo hago una factura de venta?: ventas/crear-factura-venta.md
       - ¿Cómo anulo una factura de venta?: ventas/anular-factura.md
       - ¿Cómo registro una devolución de venta?: ventas/devolucion-venta.md

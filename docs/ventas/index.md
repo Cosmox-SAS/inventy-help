@@ -22,6 +22,8 @@ Usa el menú **Ventas** para facturar a tus clientes desde la oficina (con más 
 - [¿Para qué sirve el rol de cliente y cuál elijo?](rol-de-cliente.md)
 - [¿Cómo manejo las listas de precios?](listas-de-precios.md)
 - [¿Cómo corrijo los precios de una lista de precios?](corregir-precios-lista.md)
+- [¿Cómo creo un medio de pago y por qué no me sale Crédito en el POS?](medios-de-pago.md)
+- [¿Cómo configuro un aliado de recaudo (Sistecrédito, Addi, Interrapidísimo, datáfono)?](aliados-recaudo.md)
 - [¿Cómo hago una factura de venta?](crear-factura-venta.md)
 - [¿Cómo anulo una factura de venta?](anular-factura.md)
 - [¿Cómo registro una devolución de venta?](devolucion-venta.md)
@@ -38,4 +40,4 @@ Usa el menú **Ventas** para facturar a tus clientes desde la oficina (con más 
 
 ## Próximamente
 
-Facturas recurrentes · Vendedores · Tipos de clientes · Medios de pago · Remisiones · Reportes de ventas (Productos vendidos, Rentabilidad por ítem, Ventas).
+Facturas recurrentes · Vendedores · Remisiones · Reportes de ventas (Productos vendidos, Rentabilidad por ítem, Ventas).

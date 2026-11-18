@@ -1,0 +1,36 @@
+guia: ventas/aliados-recaudo.md
+# No guarda nada: el formulario se fotografía lleno, nunca se hace clic en Crear.
+# Requiere activo Aliados de recaudo en Configuración › Módulos › Ventas.
+orden: 36
+pasos:
+  - paso: 1
+    acciones:
+      - ir: /{tenant}/payment-allies
+      - esperar: 'text=Aliados de recaudo'
+    resaltar: 'main button:has-text("Nuevo aliado")'
+  - paso: 2
+    acciones:
+      - abrir: 'main button:has-text("Nuevo aliado")'
+      - esperar: 'text=Nuevo aliado de recaudo'
+      - llenar: { 'VENTANA >> #payment_ally_name': 'Sistecrédito' }
+      - elegir: { 'VENTANA >> text=Seleccionar tipo...': 'Crédito' }
+      - pausa: 500
+    resaltar: 'VENTANA >> #payment_ally_name >> xpath=ancestor::div[2]'
+    recortar: 'VENTANA'
+  - paso: 3
+    resaltar: 'VENTANA >> #payment_ally_settlement_days >> xpath=ancestor::div[1]'
+    recortar: 'VENTANA'
+  - paso: 4
+    acciones:
+      - elegir: { 'VENTANA >> text=Crédito >> xpath=ancestor::button[1]': 'Datáfono' }
+      - pausa: 500
+    resaltar: 'VENTANA >> text=Comisión y retenciones del datáfono >> xpath=ancestor::div[2]'
+    recortar: 'VENTANA'
+  - paso: 5
+    resaltar: 'VENTANA >> text=Proveedor >> xpath=ancestor::div[1]'
+    recortar: 'VENTANA'
+  - paso: 6
+    resaltar: 'VENTANA >> button:has-text("Crear")'
+    recortar: 'VENTANA'
+    despues:
+      - tecla: Escape
